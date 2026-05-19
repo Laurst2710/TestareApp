@@ -29,7 +29,7 @@ header { padding: 1.2rem 2rem; border-bottom: 1px solid var(--border); display: 
 .logo { font-size: 1.3rem; font-weight: 700; color: var(--violet-light); letter-spacing: -.02em; }
 .logo span { color: var(--text2); font-weight: 400; font-size: .85rem; margin-left: .5rem; }
 
-.screen { display: none; max-width: 680px; margin: 0 auto; padding: 2rem 1.5rem; }
+.screen { display: none; max-width: 900px; margin: 0 auto; padding: 2rem 2rem; }
 .screen.active { display: block; }
 
 .card { background: var(--surface); border: 1px solid var(--border); border-radius: var(--radius); padding: 1.5rem; margin-bottom: 1rem; }
@@ -142,10 +142,16 @@ header { padding: 1.2rem 2rem; border-bottom: 1px solid var(--border); display: 
     <div class="grid2">
       <div class="field"><label>Temă</label>
         <select id="inp-tema">
-          <option value="T1">T1 — Sistemul zecimal</option>
-          <option value="T2">T2 — Scrierea/citirea</option>
-          <option value="T3">T3 — Cifre romane</option>
-          <option value="T4">T4 — Axa numerelor</option>
+          <option value="T1">T1 — Sistemul zecimal; cifre, clase, ordine poziționale</option>
+          <option value="T2">T2 — Scrierea/citirea până la miliarde; descompunere pozițională</option>
+          <option value="T3">T3 — Cifre romane: I,V,X,L,C,D,M; reguli scriere/citire</option>
+          <option value="T4">T4 — Pozitionarea pe axa; succesor, predecesor</option>
+          <option disabled>T5 — Compararea a două numere; semne &lt;, &gt;, = (în curând)</option>
+          <option disabled>T6 — Ordonarea crescătoare și descrescătoare (în curând)</option>
+          <option disabled>T7 — Rotunjirea la zeci, sute, mii (în curând)</option>
+          <option disabled>T8 — Aproximare prin lipsă și prin adaos (în curând)</option>
+          <option disabled>T9 — Termeni, sumă; comutativitate, asociativitate (în curând)</option>
+          <option disabled>T10–T33 (în curând)</option>
         </select>
       </div>
       <div class="field"><label>Test</label>
@@ -171,8 +177,8 @@ header { padding: 1.2rem 2rem; border-bottom: 1px solid var(--border); display: 
     <p id="teorie-subtitlu">Regulile esențiale pentru această temă</p>
   </div>
   <div id="teorie-list"></div>
-  <button class="btn-primary" onclick="startQuiz()">Începem →</button>
-  <span class="link-skip" onclick="startQuiz()">Sari peste</span>
+  <button class="btn-primary" onclick="startQuiz()">Începe testul →</button>
+  <button class="btn-sec" style="width:100%;margin-top:.75rem;text-align:center;" onclick="document.getElementById('teorie-list').scrollIntoView({behavior:'smooth'})">↑ Revedeți teoria</button>
 </div>
 
 <div id="screen-quiz" class="screen">
