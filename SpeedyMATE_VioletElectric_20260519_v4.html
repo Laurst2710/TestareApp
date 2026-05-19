@@ -142,10 +142,10 @@ header { padding: 1.2rem 2rem; border-bottom: 1px solid var(--border); display: 
     <div class="grid2">
       <div class="field"><label>Temă</label>
         <select id="inp-tema">
-          <option value="T1">T1 — Sistemul zecimal; cifre, clase, ordine poziționale</option>
-          <option value="T2">T2 — Scrierea/citirea până la miliarde; descompunere pozițională</option>
-          <option value="T3">T3 — Cifre romane: I,V,X,L,C,D,M; reguli scriere/citire</option>
-          <option value="T4">T4 — Pozitionarea pe axa; succesor, predecesor</option>
+          <option value="Tema1">T1 — Sistemul zecimal; cifre, clase, ordine poziționale</option>
+          <option value="Tema2">T2 — Scrierea/citirea până la miliarde; descompunere pozițională</option>
+          <option value="Tema3">T3 — Cifre romane: I,V,X,L,C,D,M; reguli scriere/citire</option>
+          <option value="Tema4">T4 — Pozitionarea pe axa; succesor, predecesor</option>
           <option disabled>T5 — Compararea a două numere; semne &lt;, &gt;, = (în curând)</option>
           <option disabled>T6 — Ordonarea crescătoare și descrescătoare (în curând)</option>
           <option disabled>T7 — Rotunjirea la zeci, sute, mii (în curând)</option>
@@ -231,7 +231,7 @@ async function loadTest(){
   const unitate=document.getElementById('inp-unitate').value;
   const tema=document.getElementById('inp-tema').value;
   const test=document.getElementById('inp-test').value;
-  const path=`./data/${nivel}_${unitate}_${tema}.json`;
+  const path=`./data/MANUAL_${unitate}_${tema}.json`;
 
   document.getElementById('loading-overlay').classList.add('active');
   try {
