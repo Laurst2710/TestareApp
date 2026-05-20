@@ -1,0 +1,584 @@
+<!DOCTYPE html>
+<html lang="ro">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>SpeedyMATE Clasa 5</title>
+<link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;700&display=swap" rel="stylesheet">
+<style>
+:root {
+  --bg:      #0d0b1a;
+  --surface: #16132a;
+  --surf2:   #1e1a38;
+  --surf3:   #252042;
+  --accent:  #6c5ce7;
+  --acl:     #8b7ff0;
+  --text:    #ffffff;
+  --dim:     #9b9abf;
+  --ok:      #00c853;
+  --err:     #dc143c;
+  --grey:    #2a2645;
+  --grey-t:  #5a567a;
+  --max:     900px;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html,body{min-height:100%;background:var(--bg);color:var(--text);font-family:'Outfit',sans-serif}
+body{display:flex;flex-direction:column;align-items:center;padding:20px 16px 40px}
+
+.screen{display:none;width:100%;max-width:var(--max);animation:fadeIn .3s ease}
+.screen.active{display:block}
+@keyframes fadeIn{from{opacity:0;transform:translateY(8px)}to{opacity:1;transform:none}}
+
+/* ── LOGO ── */
+.logo{font-family:'JetBrains Mono',monospace;font-size:1.5rem;font-weight:700;color:var(--accent);letter-spacing:-1px;margin-bottom:2px}
+.logo span{color:var(--text)}
+.logo-sub{font-size:.72rem;color:var(--dim);letter-spacing:.1em;text-transform:uppercase;margin-bottom:24px}
+
+/* ── SQUIRREL SVG ── */
+.mascot{width:90px;height:90px;margin:0 auto 16px;display:block}
+
+/* ── SETUP ── */
+#s-setup{padding-top:16px}
+.fields-row{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-bottom:24px}
+.field label{display:block;font-size:.7rem;font-weight:600;color:var(--dim);text-transform:uppercase;letter-spacing:.07em;margin-bottom:7px}
+.field input{width:100%;background:var(--surface);border:1.5px solid var(--surf3);border-radius:10px;padding:11px 13px;color:var(--text);font-family:'Outfit',sans-serif;font-size:.92rem;outline:none;transition:border-color .2s}
+.field input:focus{border-color:var(--accent)}
+.field input::placeholder{color:var(--grey-t)}
+
+/* ── CATALOG ── */
+.catalog-section{margin-bottom:20px}
+.cat-header{display:flex;align-items:center;gap:10px;margin-bottom:4px}
+.cat-unit{font-size:.95rem;font-weight:700;color:var(--text);margin-bottom:2px}
+.cat-sub{font-size:.72rem;color:var(--dim);margin-bottom:12px;letter-spacing:.04em}
+.cat-badge{font-size:.62rem;padding:2px 8px;border-radius:20px;font-weight:600}
+.badge-active{background:rgba(108,92,231,.2);color:var(--accent);border:1px solid rgba(108,92,231,.4)}
+.badge-soon{background:rgba(90,86,122,.15);color:var(--grey-t);border:1px solid rgba(90,86,122,.25)}
+
+.themes-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:10px;max-height:420px;overflow-y:auto;padding-right:4px}
+.themes-grid::-webkit-scrollbar{width:4px}
+.themes-grid::-webkit-scrollbar-track{background:var(--surf3);border-radius:2px}
+.themes-grid::-webkit-scrollbar-thumb{background:var(--accent);border-radius:2px}
+
+.theme-card{background:var(--surface);border:1.5px solid var(--surf3);border-radius:12px;padding:13px;cursor:pointer;position:relative;transition:border-color .2s,background .2s}
+.theme-card:hover{border-color:var(--accent)}
+.theme-card.selected{border-color:var(--accent);background:rgba(108,92,231,.08)}
+.theme-card.mastered{border-color:var(--ok)}
+.theme-card.locked{cursor:default;opacity:.5}
+.theme-card.locked:hover{border-color:var(--surf3)}
+.theme-mastered-badge{position:absolute;top:8px;right:8px;font-size:.6rem;background:rgba(0,200,83,.15);color:var(--ok);border:1px solid rgba(0,200,83,.3);padding:2px 7px;border-radius:20px;font-weight:600}
+.theme-locked-badge{position:absolute;top:8px;right:8px;font-size:.6rem;color:var(--grey-t);font-weight:600}
+
+.theme-nr{font-size:.62rem;color:var(--dim);font-weight:600;margin-bottom:3px;text-transform:uppercase;letter-spacing:.06em}
+.theme-name{font-size:.82rem;font-weight:600;margin-bottom:9px;padding-right:50px;line-height:1.35}
+.tests-row{display:flex;gap:5px;flex-wrap:wrap}
+.test-pip{width:32px;height:26px;border-radius:6px;border:1.5px solid var(--surf3);display:flex;align-items:center;justify-content:center;font-size:.65rem;font-weight:600;cursor:pointer;transition:all .15s;color:var(--dim);position:relative}
+.test-pip:hover{border-color:var(--accent);color:var(--text)}
+.test-pip.pip-selected{background:var(--accent);border-color:var(--accent);color:#fff}
+.test-pip.pip-ok{border-color:var(--ok);color:var(--ok)}
+.test-pip.pip-ok.pip-selected{background:var(--ok)}
+.test-pip.pip-rev{border-color:var(--err);color:var(--err)}
+.test-pip.pip-rev.pip-selected{background:var(--err)}
+.test-pip .tip{display:none;position:absolute;bottom:calc(100% + 5px);left:50%;transform:translateX(-50%);background:#1a1730;border:1px solid var(--surf3);border-radius:5px;padding:3px 7px;font-size:.6rem;white-space:nowrap;color:var(--text);z-index:10}
+.test-pip:hover .tip{display:block}
+
+/* diff2 */
+.diff2-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:10px;margin-top:10px}
+.diff2-card{background:var(--grey);border:1.5px solid rgba(90,86,122,.25);border-radius:12px;padding:13px;opacity:.55;position:relative}
+.diff2-card::after{content:'Urmează';position:absolute;bottom:8px;right:10px;font-size:.6rem;color:var(--grey-t);font-weight:600;letter-spacing:.05em;text-transform:uppercase}
+.diff2-name{font-size:.82rem;font-weight:600;color:var(--grey-t);margin-bottom:4px}
+.diff2-sub{font-size:.7rem;color:var(--grey-t);opacity:.7}
+
+.setup-action{margin-top:20px;text-align:center}
+.err-inline{color:var(--err);font-size:.78rem;margin-top:8px;min-height:18px;text-align:center}
+
+/* ── BUTTONS ── */
+.btn-primary{background:var(--accent);color:#fff;border:none;border-radius:10px;padding:13px 32px;font-size:.95rem;font-weight:600;cursor:pointer;font-family:'Outfit',sans-serif;transition:all .2s}
+.btn-primary:hover{background:var(--acl);transform:translateY(-1px)}
+.btn-sec{background:var(--surface);border:1.5px solid var(--surf3);color:var(--text);border-radius:10px;padding:11px 20px;font-size:.88rem;font-weight:600;cursor:pointer;font-family:'Outfit',sans-serif;transition:all .2s}
+.btn-sec:hover{border-color:var(--accent)}
+
+/* ── GLOSSARY BUTTON ── */
+.glossary-btn{position:fixed;bottom:20px;right:20px;background:var(--surf2);border:1.5px solid var(--surf3);color:var(--dim);border-radius:50px;padding:8px 16px;font-size:.75rem;font-weight:600;cursor:pointer;font-family:'Outfit',sans-serif;transition:all .2s;z-index:100}
+.glossary-btn:hover{border-color:var(--accent);color:var(--text)}
+
+/* ── GLOSSARY MODAL ── */
+.modal-overlay{display:none;position:fixed;inset:0;background:rgba(0,0,0,.7);z-index:200;align-items:center;justify-content:center}
+.modal-overlay.open{display:flex}
+.modal{background:var(--surface);border:1px solid var(--surf3);border-radius:16px;padding:24px;max-width:560px;width:90%;max-height:80vh;overflow-y:auto}
+.modal h2{font-size:1rem;font-weight:700;margin-bottom:16px;color:var(--accent)}
+.glos-table{width:100%;border-collapse:collapse}
+.glos-table th{font-size:.68rem;text-transform:uppercase;letter-spacing:.07em;color:var(--dim);text-align:left;padding:6px 8px;border-bottom:1px solid var(--surf3)}
+.glos-table td{font-size:.82rem;padding:8px 8px;border-bottom:1px solid rgba(37,32,66,.5);vertical-align:top}
+.glos-table td:first-child{font-weight:600;color:var(--accent);white-space:nowrap;width:160px}
+.modal-close{float:right;background:none;border:none;color:var(--dim);font-size:1.2rem;cursor:pointer;margin-top:-4px}
+
+/* ── READY ── */
+#s-ready{padding-top:24px;text-align:center}
+.ready-meta{font-size:.72rem;color:var(--dim);margin-bottom:6px;text-transform:uppercase;letter-spacing:.06em}
+.ready-title{font-size:1.5rem;font-weight:700;margin-bottom:5px}
+.ready-test{font-size:.95rem;color:var(--accent);font-weight:600;margin-bottom:28px}
+.ready-btns{display:flex;flex-direction:column;align-items:center;gap:10px}
+.btn-theory{background:transparent;border:1.5px solid var(--surf3);color:var(--dim);border-radius:10px;padding:11px 26px;font-size:.88rem;font-weight:500;cursor:pointer;font-family:'Outfit',sans-serif;transition:all .2s;width:240px}
+.btn-theory:hover{border-color:var(--accent);color:var(--text)}
+.btn-start{background:var(--accent);color:#fff;border:none;border-radius:10px;padding:13px 26px;font-size:.95rem;font-weight:700;cursor:pointer;font-family:'Outfit',sans-serif;transition:all .2s;width:240px}
+.btn-start:hover{background:var(--acl);transform:translateY(-1px)}
+.theory-panel{display:none;background:var(--surface);border:1px solid var(--surf3);border-radius:12px;padding:20px;margin:18px auto 0;max-width:540px;text-align:left}
+.theory-panel.open{display:block}
+.theory-panel h3{font-size:.7rem;text-transform:uppercase;letter-spacing:.08em;color:var(--accent);margin-bottom:12px}
+.theory-panel ol{padding-left:16px}
+.theory-panel li{font-size:.88rem;line-height:1.65;color:var(--dim);margin-bottom:7px}
+
+/* ── QUIZ ── */
+#s-quiz{padding-top:16px}
+.quiz-header{display:flex;align-items:center;justify-content:space-between;margin-bottom:18px}
+.quiz-meta{font-size:.75rem;color:var(--dim);max-width:200px;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.quiz-prog-wrap{flex:1;margin:0 16px;height:3px;background:var(--surf3);border-radius:2px}
+.quiz-prog-bar{height:100%;background:var(--accent);border-radius:2px;transition:width .3s}
+.quiz-counter{font-family:'JetBrains Mono',monospace;font-size:.82rem;color:var(--accent);font-weight:700}
+.q-card{background:var(--surface);border:1px solid var(--surf3);border-radius:14px;padding:24px;margin-bottom:14px}
+.q-text{font-size:1rem;line-height:1.6;margin-bottom:20px;font-weight:500}
+.opts{display:flex;flex-direction:column;gap:9px}
+.opt{background:var(--surf2);border:1.5px solid var(--surf3);border-radius:9px;padding:12px 14px;cursor:pointer;transition:all .15s;font-size:.92rem;text-align:left;color:var(--text);font-family:'Outfit',sans-serif;display:flex;align-items:center;gap:10px}
+.opt:hover:not(:disabled){border-color:var(--accent);background:rgba(108,92,231,.08)}
+.opt.opt-ok{border-color:var(--ok);background:rgba(0,200,83,.08);color:var(--ok)}
+.opt.opt-err{border-color:var(--err);background:rgba(220,20,60,.08);color:var(--err)}
+.opt.opt-reveal{border-color:var(--ok);background:rgba(0,200,83,.05)}
+.opt:disabled{cursor:default}
+.opt-letter{width:24px;height:24px;border-radius:50%;background:var(--surf3);display:flex;align-items:center;justify-content:center;font-size:.7rem;font-weight:700;flex-shrink:0}
+.opt.opt-ok .opt-letter{background:var(--ok);color:#fff}
+.opt.opt-err .opt-letter{background:var(--err);color:#fff}
+.feedback-box{display:none;background:var(--surf2);border-radius:10px;padding:14px;margin-top:10px}
+.feedback-box.show{display:block}
+.fb-label{font-size:.7rem;font-weight:700;text-transform:uppercase;letter-spacing:.06em;margin-bottom:7px}
+.fb-ok .fb-label{color:var(--ok)}
+.fb-err .fb-label{color:var(--err)}
+.fb-text{font-size:.85rem;color:var(--dim);line-height:1.6}
+.btn-next{margin-top:12px;background:var(--surf3);border:none;color:var(--text);border-radius:7px;padding:9px 20px;font-size:.85rem;font-weight:600;cursor:pointer;font-family:'Outfit',sans-serif;transition:background .2s}
+.btn-next:hover{background:var(--accent)}
+
+/* ── RESULT ── */
+#s-result{padding-top:36px;text-align:center}
+.result-emoji{font-size:3rem;margin-bottom:14px}
+.result-score{font-family:'JetBrains Mono',monospace;font-size:2.8rem;font-weight:700;color:var(--accent);margin-bottom:6px}
+.result-label{font-size:.95rem;color:var(--dim);margin-bottom:22px}
+.result-status{display:inline-block;padding:7px 18px;border-radius:22px;font-size:.82rem;font-weight:700;margin-bottom:22px}
+.status-ok{background:rgba(0,200,83,.15);color:var(--ok);border:1px solid rgba(0,200,83,.3)}
+.status-rev{background:rgba(220,20,60,.12);color:var(--err);border:1px solid rgba(220,20,60,.25)}
+.mastery-banner{background:rgba(0,200,83,.1);border:1px solid rgba(0,200,83,.3);border-radius:10px;padding:14px 18px;margin:0 auto 20px;max-width:460px;display:none}
+.mastery-banner.show{display:block}
+.mastery-banner p{color:var(--ok);font-weight:600;font-size:.92rem}
+.mastery-banner small{color:var(--dim);font-size:.77rem}
+.result-breakdown{background:var(--surface);border:1px solid var(--surf3);border-radius:12px;padding:18px;margin:0 auto 24px;max-width:460px;text-align:left}
+.rb-row{display:flex;justify-content:space-between;align-items:center;padding:7px 0;border-bottom:1px solid var(--surf3);font-size:.84rem}
+.rb-row:last-child{border-bottom:none}
+.rb-ok{color:var(--ok)}
+.rb-err{color:var(--err)}
+.result-btns{display:flex;gap:10px;justify-content:center;flex-wrap:wrap}
+
+/* ── FOOTER ── */
+.meta-footer{font-size:.65rem;color:var(--grey-t);text-align:center;margin-top:28px;padding-top:14px;border-top:1px solid var(--surf3)}
+
+@media(max-width:560px){
+  .fields-row{grid-template-columns:1fr}
+  .themes-grid{grid-template-columns:1fr}
+  .diff2-grid{grid-template-columns:1fr}
+  .result-btns{flex-direction:column;align-items:center}
+}
+</style>
+</head>
+<body>
+
+<!-- GLOSSARY BUTTON -->
+<button class="glossary-btn" onclick="openGlossar()">📖 Glosar</button>
+
+<!-- GLOSSARY MODAL -->
+<div class="modal-overlay" id="modal-glosar" onclick="closeGlossar(event)">
+  <div class="modal">
+    <h2>📖 Glosar de termeni matematici <button class="modal-close" onclick="closeGlossar()">×</button></h2>
+    <table class="glos-table">
+      <thead><tr><th>Termen</th><th>Definiție</th></tr></thead>
+      <tbody>
+        <tr><td>Cifră</td><td>Simbol folosit pentru scrierea numerelor (0-9 în sistemul zecimal).</td></tr>
+        <tr><td>Număr natural</td><td>Element din mulțimea N = {0, 1, 2, 3, ...}.</td></tr>
+        <tr><td>Ordine</td><td>Poziția cifrelor: unități, zeci, sute, mii, zeci de mii, sute de mii, milioane.</td></tr>
+        <tr><td>Clasă</td><td>Grup de 3 ordine: clasa unităților, clasa miilor, clasa milioanelor.</td></tr>
+        <tr><td>Succesor</td><td>Numărul imediat următor: succesorul lui n este n + 1.</td></tr>
+        <tr><td>Predecesor</td><td>Numărul imediat anterior: predecesorul lui n este n − 1.</td></tr>
+        <tr><td>Cifre romane</td><td>Sistem de numerație: I=1, V=5, X=10, L=50, C=100, D=500, M=1000.</td></tr>
+        <tr><td>Comparare</td><td>Stabilirea relației dintre două numere cu ajutorul semnelor &lt;, &gt;, =.</td></tr>
+        <tr><td>Ordonare crescătoare</td><td>Aranjarea numerelor de la cel mai mic la cel mai mare.</td></tr>
+        <tr><td>Ordonare descrescătoare</td><td>Aranjarea numerelor de la cel mai mare la cel mai mic.</td></tr>
+        <tr><td>Rotunjire</td><td>Aproximarea unui număr la un anumit ordin (zeci, sute, mii).</td></tr>
+        <tr><td>Aproximare prin lipsă</td><td>Cifra ordinului vizat rămâne neschimbată; cifrele inferioare → 0.</td></tr>
+        <tr><td>Aproximare prin adaos</td><td>Cifra ordinului vizat crește cu 1; cifrele inferioare → 0.</td></tr>
+        <tr><td>Termeni (adunare)</td><td>Numerele care se adună.</td></tr>
+        <tr><td>Sumă</td><td>Rezultatul adunării.</td></tr>
+        <tr><td>Element neutru (+)</td><td>Numărul 0: a + 0 = a pentru orice număr natural a.</td></tr>
+        <tr><td>Comutativitate</td><td>a + b = b + a (ordinea termenilor nu schimbă suma).</td></tr>
+        <tr><td>Asociativitate</td><td>(a+b)+c = a+(b+c) (gruparea nu schimbă suma).</td></tr>
+        <tr><td>Descăzut</td><td>Numărul din care se scade.</td></tr>
+        <tr><td>Scăzător</td><td>Numărul care se scade.</td></tr>
+        <tr><td>Diferență</td><td>Rezultatul scăderii.</td></tr>
+        <tr><td>Proba scăderii</td><td>diferență + scăzător = descăzut.</td></tr>
+        <tr><td>Putere</td><td>a^n = a × a × ... × a (n factori). a = baza, n = exponentul.</td></tr>
+        <tr><td>Bază (putere)</td><td>Numărul care se înmulțește repetat.</td></tr>
+        <tr><td>Exponent</td><td>Numărul de ori care se înmulțește baza.</td></tr>
+        <tr><td>Pătrat perfect</td><td>Număr natural egal cu pătratul unui număr natural (1, 4, 9, 16, 25...).</td></tr>
+      </tbody>
+    </table>
+  </div>
+</div>
+
+<!-- SETUP SCREEN -->
+<div id="s-setup" class="screen active">
+  <div style="text-align:center;padding-top:12px;margin-bottom:20px">
+    <svg class="mascot" viewBox="0 0 120 120" xmlns="http://www.w3.org/2000/svg">
+      <!-- Body -->
+      <ellipse cx="60" cy="82" rx="28" ry="26" fill="#8b5cf6"/>
+      <!-- Belly -->
+      <ellipse cx="60" cy="88" rx="16" ry="16" fill="#a78bfa" opacity=".5"/>
+      <!-- Head -->
+      <ellipse cx="60" cy="52" rx="26" ry="24" fill="#7c3aed"/>
+      <!-- Ears -->
+      <ellipse cx="38" cy="32" rx="9" ry="12" fill="#7c3aed"/>
+      <ellipse cx="38" cy="32" rx="5" ry="8" fill="#c4b5fd"/>
+      <ellipse cx="82" cy="32" rx="9" ry="12" fill="#7c3aed"/>
+      <ellipse cx="82" cy="32" rx="5" ry="8" fill="#c4b5fd"/>
+      <!-- Eyes -->
+      <circle cx="50" cy="50" r="5" fill="#1a0a3c"/>
+      <circle cx="70" cy="50" r="5" fill="#1a0a3c"/>
+      <circle cx="51.5" cy="48.5" r="1.8" fill="#fff"/>
+      <circle cx="71.5" cy="48.5" r="1.8" fill="#fff"/>
+      <!-- Nose -->
+      <ellipse cx="60" cy="60" rx="4" ry="3" fill="#c4b5fd"/>
+      <!-- Mouth -->
+      <path d="M55 64 Q60 68 65 64" stroke="#a78bfa" stroke-width="1.5" fill="none" stroke-linecap="round"/>
+      <!-- Whiskers -->
+      <line x1="30" y1="59" x2="52" y2="62" stroke="#c4b5fd" stroke-width="1" opacity=".7"/>
+      <line x1="30" y1="63" x2="52" y2="63" stroke="#c4b5fd" stroke-width="1" opacity=".7"/>
+      <line x1="68" y1="62" x2="90" y2="59" stroke="#c4b5fd" stroke-width="1" opacity=".7"/>
+      <line x1="68" y1="63" x2="90" y2="63" stroke="#c4b5fd" stroke-width="1" opacity=".7"/>
+      <!-- Tail -->
+      <path d="M86 90 Q110 70 105 45 Q100 25 88 35 Q95 50 88 65 Q80 80 86 90" fill="#6d28d9"/>
+      <!-- Acorn -->
+      <ellipse cx="48" cy="98" rx="8" ry="6" fill="#92400e"/>
+      <ellipse cx="48" cy="93" rx="9" ry="5" fill="#78350f"/>
+      <line x1="48" y1="88" x2="48" y2="86" stroke="#65a30d" stroke-width="1.5"/>
+      <!-- Paws holding acorn -->
+      <ellipse cx="38" cy="96" rx="6" ry="4" fill="#7c3aed"/>
+      <ellipse cx="58" cy="96" rx="6" ry="4" fill="#7c3aed"/>
+    </svg>
+    <div class="logo">Speedy<span>MATE</span></div>
+    <div class="logo-sub">Clasa 5 · Matematică</div>
+  </div>
+
+  <div class="fields-row">
+    <div class="field">
+      <label>Numele tău</label>
+      <input id="inp-name" type="text" placeholder="ex. Maria Ionescu" autocomplete="off">
+    </div>
+    <div class="field">
+      <label>Clasa</label>
+      <input id="inp-clasa" type="text" placeholder="ex. 5A" autocomplete="off">
+    </div>
+  </div>
+
+  <!-- U1 -->
+  <div class="catalog-section">
+    <div class="cat-unit">Unitate de Învățare 1 — Numere Naturale</div>
+    <div class="cat-sub">33 teme · SpeedyMATE Clasa 5</div>
+    <div class="themes-grid" id="themes-grid"></div>
+  </div>
+
+  <!-- Dificultate 2 -->
+  <div class="catalog-section" style="margin-top:16px">
+    <div class="cat-header">
+      <div class="cat-unit" style="font-size:.85rem">Recapitulare · Unitate · Clasă</div>
+      <span class="cat-badge badge-soon">Dificultate 2 — Urmează</span>
+    </div>
+    <div class="diff2-grid">
+      <div class="diff2-card"><div class="diff2-name">Recapitulare</div><div class="diff2-sub">Mix teme · 20 Q</div></div>
+      <div class="diff2-card"><div class="diff2-name">Test Unitate</div><div class="diff2-sub">Unitate completă · 20 Q</div></div>
+      <div class="diff2-card"><div class="diff2-name">Test Clasă</div><div class="diff2-sub">Toate unitățile · 20 Q</div></div>
+    </div>
+  </div>
+
+  <div class="setup-action">
+    <button class="btn-primary" onclick="goReady()">Continuă →</button>
+    <div class="err-inline" id="setup-err"></div>
+  </div>
+  <div class="meta-footer">SpeedyMATE Clasa 5 · OMENCS 3393/2017</div>
+</div>
+
+<!-- READY SCREEN -->
+<div id="s-ready" class="screen">
+  <div style="text-align:center;margin-bottom:8px">
+    <div class="logo">Speedy<span>MATE</span></div>
+    <div class="logo-sub">Clasa 5 · Matematică</div>
+  </div>
+  <div class="ready-meta" id="ready-meta">Unitate de Învățare 1</div>
+  <div class="ready-title" id="ready-title">—</div>
+  <div class="ready-test" id="ready-test">Test 1 din 4</div>
+  <div class="ready-btns">
+    <button class="btn-theory" onclick="toggleTheory()">📚 Recapitulare teorie</button>
+    <button class="btn-start" onclick="startQuiz()">▶ Ia testul</button>
+  </div>
+  <div class="theory-panel" id="theory-panel">
+    <h3>Amintește-ți!</h3>
+    <ol id="theory-list"></ol>
+  </div>
+  <div class="meta-footer" id="ready-footer">SpeedyMATE Clasa 5</div>
+</div>
+
+<!-- QUIZ SCREEN -->
+<div id="s-quiz" class="screen">
+  <div class="quiz-header">
+    <div class="quiz-meta" id="quiz-meta-left">—</div>
+    <div class="quiz-prog-wrap"><div class="quiz-prog-bar" id="quiz-prog" style="width:0%"></div></div>
+    <div class="quiz-counter" id="quiz-counter">1 / 10</div>
+  </div>
+  <div class="q-card">
+    <div class="q-text" id="q-text">—</div>
+    <div class="opts" id="opts-wrap"></div>
+    <div class="feedback-box" id="feedback-box">
+      <div class="fb-label" id="fb-label"></div>
+      <div class="fb-text" id="fb-text"></div>
+      <button class="btn-next" id="btn-next" onclick="nextQ()">Următoarea →</button>
+    </div>
+  </div>
+  <div class="meta-footer" id="quiz-footer">SpeedyMATE Clasa 5</div>
+</div>
+
+<!-- RESULT SCREEN -->
+<div id="s-result" class="screen">
+  <div style="text-align:center;margin-bottom:8px">
+    <div class="logo">Speedy<span>MATE</span></div>
+    <div class="logo-sub">Clasa 5 · Matematică</div>
+  </div>
+  <div class="result-emoji" id="res-emoji">🎉</div>
+  <div class="result-score" id="res-score">—</div>
+  <div class="result-label" id="res-label">din 10 întrebări corecte</div>
+  <div class="result-status" id="res-status"></div>
+  <div class="mastery-banner" id="mastery-banner">
+    <p>🏆 Temă antrenată!</p>
+    <small id="mastery-msg"></small>
+  </div>
+  <div class="result-breakdown" id="res-breakdown"></div>
+  <div class="result-btns">
+    <button class="btn-primary" onclick="goSetup()">Alt test</button>
+    <button class="btn-sec" onclick="retryTest()">Încearcă din nou</button>
+  </div>
+  <div class="meta-footer" id="res-footer">SpeedyMATE Clasa 5</div>
+</div>
+
+<script>
+const BASE_URL = 'https://raw.githubusercontent.com/Laurst2710/TestareApp/main/data/';
+
+// Toate cele 33 teme U1 — active = au JSON pe GitHub
+const THEMES = [
+  { key:'Tema1',  label:'Sistemul zecimal',                        file:'MANUAL_U1_Tema1.json',  active:true  },
+  { key:'Tema2',  label:'Scrierea și citirea numerelor',           file:'MANUAL_U1_Tema2.json',  active:true  },
+  { key:'Tema3',  label:'Cifre romane',                            file:'MANUAL_U1_Tema3.json',  active:true  },
+  { key:'Tema4',  label:'Axa numerelor. Succesor și predecesor',   file:'MANUAL_U1_Tema4.json',  active:true  },
+  { key:'Tema5',  label:'Compararea a două numere; <, >, =',       file:'MANUAL_U1_Tema5.json',  active:true  },
+  { key:'Tema6',  label:'Ordonarea crescătoare și descrescătoare', file:'MANUAL_U1_Tema6.json',  active:true  },
+  { key:'Tema7',  label:'Rotunjirea la zeci, sute, mii',           file:'MANUAL_U1_Tema7.json',  active:true  },
+  { key:'Tema8',  label:'Aproximare prin lipsă și prin adaos',     file:'MANUAL_U1_Tema8.json',  active:true  },
+  { key:'Tema9',  label:'Adunarea. Termeni, sumă; proprietăți',    file:'MANUAL_U1_Tema9.json',  active:true  },
+  { key:'Tema10', label:'Scăderea. Descăzut, scăzător, diferență', file:'MANUAL_U1_Tema10.json', active:true  },
+  { key:'Tema11', label:'Înmulțirea. Factori, produs; proprietăți',file:'MANUAL_U1_Tema11.json', active:false },
+  { key:'Tema12', label:'Factor comun; scoaterea factorului comun',file:'MANUAL_U1_Tema12.json', active:false },
+  { key:'Tema13', label:'Împărțirea exactă; deîmpărțit, împărțitor, cât',file:'MANUAL_U1_Tema13.json',active:false},
+  { key:'Tema14', label:'Împărțirea cu rest; D=I×C+R',            file:'MANUAL_U1_Tema14.json', active:false },
+  { key:'Tema15', label:'Puterea. Bază, exponent; a⁰=1, a¹=a',    file:'MANUAL_U1_Tema15.json', active:true  },
+  { key:'Tema16', label:'Pătratul unui număr; pătrate perfecte',   file:'MANUAL_U1_Tema16.json', active:false },
+  { key:'Tema17', label:'Cubul unui număr; cuburi perfecte',       file:'MANUAL_U1_Tema17.json', active:false },
+  { key:'Tema18', label:'Produs de puteri: aᵐ × aⁿ = aᵐ⁺ⁿ',       file:'MANUAL_U1_Tema18.json', active:false },
+  { key:'Tema19', label:'Cât de puteri: aᵐ ÷ aⁿ = aᵐ⁻ⁿ',          file:'MANUAL_U1_Tema19.json', active:false },
+  { key:'Tema20', label:'Puterea unei puteri: (aᵐ)ⁿ = aᵐˣⁿ',       file:'MANUAL_U1_Tema20.json', active:false },
+  { key:'Tema21', label:'Puterea unui produs: (a×b)ⁿ = aⁿ×bⁿ',    file:'MANUAL_U1_Tema21.json', active:false },
+  { key:'Tema22', label:'Compararea puterilor — aceeași bază',     file:'MANUAL_U1_Tema22.json', active:false },
+  { key:'Tema23', label:'Compararea puterilor — același exponent', file:'MANUAL_U1_Tema23.json', active:false },
+  { key:'Tema24', label:'Descompunere pozițională; baza 10 și baza 2',file:'MANUAL_U1_Tema24.json',active:false},
+  { key:'Tema25', label:'Scrierea în baza 2; conversie',           file:'MANUAL_U1_Tema25.json', active:false },
+  { key:'Tema26', label:'Ordinea operațiilor: putere > × ÷ > + −', file:'MANUAL_U1_Tema26.json', active:false },
+  { key:'Tema27', label:'Paranteze: ( ), [ ] și { }',              file:'MANUAL_U1_Tema27.json', active:false },
+  { key:'Tema28', label:'Metoda reducerii la unitate',             file:'MANUAL_U1_Tema28.json', active:false },
+  { key:'Tema29', label:'Metoda comparației',                      file:'MANUAL_U1_Tema29.json', active:false },
+  { key:'Tema30', label:'Metoda figurativă (segmente)',             file:'MANUAL_U1_Tema30.json', active:false },
+  { key:'Tema31', label:'Metoda mersului invers',                  file:'MANUAL_U1_Tema31.json', active:false },
+  { key:'Tema32', label:'Metoda falsei ipoteze',                   file:'MANUAL_U1_Tema32.json', active:false },
+  { key:'Tema33', label:'Istoria numerelor: sisteme antice',       file:'MANUAL_U1_Tema33.json', active:false },
+];
+
+const TESTS = ['T1','T2','T3','T4'];
+const PASS  = 0.8;
+const MASTERY_MIN = 3;
+const LS_KEY = 'speedymate_scores_v2';
+
+let state = { name:'', clasa:'', themeIdx:null, testKey:null, data:null, questions:[], cur:0, correct:0, answers:[] };
+
+function getScores(){ try{ return JSON.parse(localStorage.getItem(LS_KEY)||'{}'); }catch(e){ return {}; } }
+function saveScore(tk,tt,pct){ const sc=getScores(); if(!sc[tk])sc[tk]={}; sc[tk][tt]=pct; localStorage.setItem(LS_KEY,JSON.stringify(sc)); }
+function themeScores(tk){ return getScores()[tk]||{}; }
+function isMastered(tk){ return TESTS.filter(t=>(themeScores(tk)[t]||0)>=PASS).length>=MASTERY_MIN; }
+function pipClass(tk,tt){ const s=themeScores(tk)[tt]; if(s===undefined)return ''; return s>=PASS?'pip-ok':'pip-rev'; }
+function pipTitle(tk,tt){ const s=themeScores(tk)[tt]; return s===undefined?'':Math.round(s*100)+'%'; }
+
+function show(id){ document.querySelectorAll('.screen').forEach(s=>s.classList.remove('active')); document.getElementById(id).classList.add('active'); window.scrollTo(0,0); }
+
+function goSetup(){ renderCatalog(); show('s-setup'); }
+
+function renderCatalog(){
+  const grid = document.getElementById('themes-grid');
+  grid.innerHTML = '';
+  THEMES.forEach((th, idx) => {
+    const mastered = th.active && isMastered(th.key);
+    const card = document.createElement('div');
+    card.className = 'theme-card' + (!th.active?' locked':'') + (mastered?' mastered':'');
+    const nr = `Tema ${idx+1}`;
+    card.innerHTML = `
+      ${mastered?'<div class="theme-mastered-badge">✓ Antrenată</div>':''}
+      ${!th.active?'<div class="theme-locked-badge">Urmează</div>':''}
+      <div class="theme-nr">${nr}</div>
+      <div class="theme-name">${th.label}</div>
+      ${th.active?`<div class="tests-row" id="tr-${idx}"></div>`:''}
+    `;
+    grid.appendChild(card);
+    if(th.active){
+      const row = document.getElementById('tr-'+idx);
+      TESTS.forEach(t => {
+        const pc = pipClass(th.key,t);
+        const tip = pipTitle(th.key,t);
+        const pip = document.createElement('div');
+        pip.className = `test-pip ${pc}`;
+        pip.innerHTML = `${t}${tip?`<span class="tip">${tip}</span>`:''}`;
+        pip.onclick = () => selectTest(idx, t, pip);
+        row.appendChild(pip);
+      });
+    }
+  });
+}
+
+function selectTest(themeIdx, testKey, pipEl){
+  document.querySelectorAll('.test-pip').forEach(p=>p.classList.remove('pip-selected'));
+  document.querySelectorAll('.theme-card').forEach(c=>c.classList.remove('selected'));
+  pipEl.classList.add('pip-selected');
+  pipEl.closest('.theme-card').classList.add('selected');
+  state.themeIdx = themeIdx;
+  state.testKey  = testKey;
+}
+
+async function goReady(){
+  const n = document.getElementById('inp-name').value.trim();
+  const c = document.getElementById('inp-clasa').value.trim();
+  const err = document.getElementById('setup-err');
+  err.textContent = '';
+  if(!n||!c){ err.textContent='Completează numele și clasa.'; return; }
+  if(state.themeIdx===null){ err.textContent='Selectează un test din catalog.'; return; }
+  state.name=n; state.clasa=c;
+  const th = THEMES[state.themeIdx];
+  try{
+    const res = await fetch(BASE_URL+th.file);
+    if(!res.ok) throw new Error('HTTP '+res.status);
+    state.data = await res.json();
+  }catch(e){ err.textContent='Eroare la încărcarea testului. Verifică conexiunea.'; return; }
+  document.getElementById('ready-meta').textContent = `SpeedyMATE Clasa 5 · Unitate de Învățare 1`;
+  document.getElementById('ready-title').textContent = state.data.meta?.titlu_tema || th.label;
+  document.getElementById('ready-test').textContent = `Test ${TESTS.indexOf(state.testKey)+1} din 4`;
+  document.getElementById('ready-footer').textContent = `${state.name} · Clasa ${state.clasa} · OMENCS 3393/2017`;
+  const theorie = state.data.teorie||[];
+  document.getElementById('theory-list').innerHTML = theorie.map(t=>`<li>${t}</li>`).join('')||'<li>—</li>';
+  document.getElementById('theory-panel').classList.remove('open');
+  show('s-ready');
+}
+
+function toggleTheory(){
+  const p=document.getElementById('theory-panel');
+  p.classList.toggle('open');
+  document.querySelector('.btn-theory').textContent = p.classList.contains('open')? '▲ Ascunde teoria':'📚 Recapitulare teorie';
+}
+
+function startQuiz(){
+  const qs=state.data.teste?.[state.testKey];
+  if(!qs||!qs.length){ return; }
+  state.questions=qs; state.cur=0; state.correct=0; state.answers=[];
+  renderQ();
+  document.getElementById('quiz-footer').textContent = `${state.name} · Clasa ${state.clasa} · ${THEMES[state.themeIdx].label} · ${state.testKey}`;
+  show('s-quiz');
+}
+
+function renderQ(){
+  const q=state.questions[state.cur], tot=state.questions.length;
+  document.getElementById('quiz-meta-left').textContent = THEMES[state.themeIdx].label;
+  document.getElementById('quiz-counter').textContent = `${state.cur+1} / ${tot}`;
+  document.getElementById('quiz-prog').style.width = (state.cur/tot*100)+'%';
+  document.getElementById('q-text').textContent = q.q;
+  const wrap=document.getElementById('opts-wrap');
+  wrap.innerHTML='';
+  ['A','B','C','D'].forEach((l,i)=>{
+    const btn=document.createElement('button');
+    btn.className='opt';
+    btn.innerHTML=`<span class="opt-letter">${l}</span>${q.opts[i]}`;
+    btn.onclick=()=>answer(i,q);
+    wrap.appendChild(btn);
+  });
+  document.getElementById('feedback-box').className='feedback-box';
+  document.getElementById('btn-next').textContent = state.cur<tot-1?'Următoarea →':'Vezi rezultatul →';
+}
+
+function answer(idx,q){
+  document.querySelectorAll('.opt').forEach(o=>o.disabled=true);
+  const isOk=idx===q.ok;
+  if(isOk)state.correct++;
+  state.answers.push({q:q.q,chosen:idx,ok:q.ok,correct:isOk});
+  document.querySelectorAll('.opt')[idx].classList.add(isOk?'opt-ok':'opt-err');
+  if(!isOk)document.querySelectorAll('.opt')[q.ok].classList.add('opt-reveal');
+  const fb=document.getElementById('feedback-box');
+  fb.className='feedback-box show '+(isOk?'fb-ok':'fb-err');
+  document.getElementById('fb-label').textContent=isOk?'✓ Corect!':'✗ De revăzut';
+  document.getElementById('fb-text').textContent=isOk?(q.exOk||'Răspuns corect.'):(q.exGr||`Răspuns corect: ${q.opts[q.ok]}`);
+}
+
+function nextQ(){
+  state.cur++;
+  if(state.cur>=state.questions.length){showResult();return;}
+  renderQ(); window.scrollTo(0,0);
+}
+
+function showResult(){
+  const tot=state.questions.length, pct=state.correct/tot, pass=pct>=PASS, thKey=THEMES[state.themeIdx].key;
+  saveScore(thKey,state.testKey,pct);
+  document.getElementById('res-emoji').textContent = pct===1?'🏆':pct>=.8?'🎉':pct>=.5?'💪':'📖';
+  document.getElementById('res-score').textContent = `${state.correct}/${tot}`;
+  document.getElementById('res-label').textContent = `${Math.round(pct*100)}% — ${state.correct} din ${tot} corecte`;
+  const st=document.getElementById('res-status');
+  st.textContent=pass?'✓ Promovat':'✗ De revăzut';
+  st.className='result-status '+(pass?'status-ok':'status-rev');
+  const banner=document.getElementById('mastery-banner');
+  if(isMastered(thKey)){
+    const passed=TESTS.filter(t=>(themeScores(thKey)[t]||0)>=PASS);
+    banner.classList.add('show');
+    document.getElementById('mastery-msg').textContent=`Ai trecut ${passed.length} teste cu 80%+ la ${THEMES[state.themeIdx].label}`;
+  } else { banner.classList.remove('show'); }
+  document.getElementById('res-breakdown').innerHTML = state.answers.map((a,i)=>`
+    <div class="rb-row">
+      <span style="color:var(--dim);font-size:.77rem">Î${i+1}</span>
+      <span style="flex:1;margin:0 8px;font-size:.8rem;color:var(--dim)">${state.questions[i].q.substring(0,55)}…</span>
+      <span class="${a.correct?'rb-ok':'rb-err'}">${a.correct?'✓':'✗'}</span>
+    </div>`).join('');
+  document.getElementById('res-footer').textContent=`${state.name} · Clasa ${state.clasa} · ${THEMES[state.themeIdx].label} · ${state.testKey} · OMENCS 3393/2017`;
+  show('s-result');
+}
+
+function retryTest(){ startQuiz(); }
+
+function openGlossar(){ document.getElementById('modal-glosar').classList.add('open'); }
+function closeGlossar(e){ if(!e||e.target===document.getElementById('modal-glosar')||e.currentTarget.classList.contains('modal-close')){ document.getElementById('modal-glosar').classList.remove('open'); } }
+
+// INIT
+show('s-setup');
+renderCatalog();
+</script>
+</body>
+</html>
