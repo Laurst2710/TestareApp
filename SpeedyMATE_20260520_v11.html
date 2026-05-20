@@ -481,10 +481,9 @@ function toggleTheory(){
 }
 
 function startQuiz(){
-  if(!all || !all.length){ showErr('Testul nu are exerciții.'); return; }
-  // SHUFFLE → take first Q_PER_TEST
   // Support both old (teste.T1-T4) and new (items) format
   const all = state.data.items || Object.values(state.data.teste||{}).flat();
+  if(!all || !all.length){ showErr('Testul nu are exerciții.'); return; }
   state.questions = shuffle(all).slice(0, Q_PER_TEST);
   state.cur = 0; state.correct = 0; state.answers = [];
   renderQ();
