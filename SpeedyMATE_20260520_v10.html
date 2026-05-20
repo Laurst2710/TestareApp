@@ -481,9 +481,10 @@ function toggleTheory(){
 }
 
 function startQuiz(){
-  const all = state.data.items;
   if(!all || !all.length){ showErr('Testul nu are exerciții.'); return; }
   // SHUFFLE → take first Q_PER_TEST
+  // Support both old (teste.T1-T4) and new (items) format
+  const all = state.data.items || Object.values(state.data.teste||{}).flat();
   state.questions = shuffle(all).slice(0, Q_PER_TEST);
   state.cur = 0; state.correct = 0; state.answers = [];
   renderQ();
@@ -557,7 +558,7 @@ function showResult(){
   const tot = state.questions.length, pct = state.correct/tot, pass = pct >= PASS;
   const th = THEMES[state.themeIdx];
   saveScore(th.key, pct);
-  saveToSheets(th, pct);
+  
   document.getElementById('res-emoji').textContent = pct===1?'🏆':pct>=.8?'🎉':pct>=.5?'💪':'📖';
   document.getElementById('res-score').textContent = `${state.correct}/${tot}`;
   document.getElementById('res-label').textContent = `${Math.round(pct*100)}% — ${state.correct} din ${tot} corecte`;
