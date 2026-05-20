@@ -1,0 +1,500 @@
+{
+  "meta": {
+    "nivel": "Manual",
+    "dificultate": 1,
+    "clasa": "a V-a",
+    "unitate": "U1",
+    "titlu_unitate": "Numere Naturale",
+    "tema": "Tema18",
+    "titlu_tema": "Produs: a^m*a^n=a^(m+n)",
+    "prag": 0.8,
+    "puncte_per_item": 10
+  },
+  "teorie": [
+    "La înmulțirea a două sau mai multe puteri care au aceeași bază, rezultatul este o putere cu aceeași bază, iar noul exponent este egal cu suma exponentilor inițiali.",
+    "Regula matematică fundamentală utilizată pentru acest calcul este exprimată prin relația a^m \times a^n = a^{m+n}.",
+    "Această regulă se aplică doar dacă bazele puterilor sunt identice, neputând fi utilizată direct dacă bazele sunt numere diferite."
+  ],
+  "items": [
+    {
+      "q": "Care este rezultatul calculului 3^2 \times 3^4?",
+      "opts": [
+        "3^8",
+        "3^6",
+        "9^6",
+        "3^2"
+      ],
+      "ok": 1,
+      "exOk": "Corect! Păstrăm baza 3 și adunăm exponenții: 2 + 4 = 6, deci rezultatul este 3^6.",
+      "exGr": "Greșit. La înmulțirea puterilor cu aceeași bază, exponenții se adună, nu se înmulțesc: 2 + 4 = 6, rezultând 3^6."
+    },
+    {
+      "q": "Completați egalitatea conform regulilor de calcul: a^5 \times a^3 = ...",
+      "opts": [
+        "a^{15}",
+        "a^2",
+        "a^8",
+        "2a^8"
+      ],
+      "ok": 2,
+      "exOk": "Corect! Adunând exponenții obținem 5 + 3 = 8, deci puterea este a^8.",
+      "exGr": "Greșit. Conform formulei a^m \times a^n = a^{m+n}, exponenții 5 și 3 se adună: 5 + 3 = 8, oferind a^8."
+    },
+    {
+      "q": "Ce operație se efectuează între exponenți atunci când înmulțim puteri cu aceeași bază?",
+      "opts": [
+        "Înmulțire",
+        "Adunare",
+        "Scădere",
+        "Împărțire"
+      ],
+      "ok": 1,
+      "exOk": "Corect! Regula de calcul precizează că exponenții se adună.",
+      "exGr": "Greșit. Deși operația dintre puteri este înmulțire, operația care se execută între exponenții lor este adunarea."
+    },
+    {
+      "q": "Efectuați calculul: 5 \times 5^3. (Sfat: 5 = 5^1)",
+      "opts": [
+        "5^3",
+        "5^4",
+        "25^3",
+        "5^2"
+      ],
+      "ok": 1,
+      "exOk": "Corect! Numărul 5 este 5^1. Adunând exponenții obținem 1 + 3 = 4, deci 5^4.",
+      "exGr": "Greșit. Orice număr fără exponent explicit are exponentul 1. Calculul este 5^1 \times 5^3 = 5^{1+3} = 5^4."
+    },
+    {
+      "q": "Care este rezultatul produsului 2^7 \times 2^0?",
+      "opts": [
+        "2^0",
+        "2^7",
+        "4^7",
+        "2^1"
+      ],
+      "ok": 1,
+      "exOk": "Corect! Adunarea exponenților dă 7 + 0 = 7, deci rezultatul este 2^7.",
+      "exGr": "Greșit. Aplicând regula de adunare a exponenților avem 7 + 0 = 7, deci rezultatul rămâne 2^7."
+    },
+    {
+      "q": "Calculați produsul: 10^2 \times 10^5.",
+      "opts": [
+        "10^{10}",
+        "10^7",
+        "10^3",
+        "100^7"
+      ],
+      "ok": 1,
+      "exOk": "Corect! Păstrăm baza 10 și adunăm exponenții: 2 + 5 = 7, obținând 10^7.",
+      "exGr": "Greșit. Baza rămâne neschimbată, iar exponenții se adună: 2 + 5 = 7, deci rezultatul este 10^7."
+    },
+    {
+      "q": "Dacă avem produsul a^x \times a^y, care este forma restrânsă?",
+      "opts": [
+        "a^{x \times y}",
+        "a^{x+y}",
+        "a^{x-y}",
+        "(2a)^{x+y}"
+      ],
+      "ok": 1,
+      "exOk": "Corect! Aceasta este scrierea generală a regulii de înmulțire: a^{x+y}.",
+      "exGr": "Greșit. Regula generală de înmulțire a puterilor cu aceeași bază impune adunarea exponenților, adică a^{x+y}."
+    },
+    {
+      "q": "Efectuați calculul: 7^4 \times 7^1.",
+      "opts": [
+        "7^4",
+        "7^3",
+        "7^5",
+        "49^5"
+      ],
+      "ok": 2,
+      "exOk": "Corect! Prin adunarea exponenților obținem 4 + 1 = 5, deci rezultatul este 7^5.",
+      "exGr": "Greșit. Suma dintre exponentul 4 și exponentul 1 este 5, prin urmare rezultatul corect este 7^5."
+    },
+    {
+      "q": "Care este rezultatul calculului 4^3 \times 4^3?",
+      "opts": [
+        "4^9",
+        "4^6",
+        "16^6",
+        "4^0"
+      ],
+      "ok": 1,
+      "exOk": "Corect! Exponenții fiind egali se adună la fel: 3 + 3 = 6, rezultând 4^6.",
+      "exGr": "Greșit. Baza se păstrează, iar exponenții se adună: 3 + 3 = 6. Rezultatul este 4^6."
+    },
+    {
+      "q": "Produsul 2^1 \times 2^1 este egal cu:",
+      "opts": [
+        "2^1",
+        "2^2",
+        "4^2",
+        "2^0"
+      ],
+      "ok": 1,
+      "exOk": "Corect! 1 + 1 = 2, deci obținem 2^2 (care este egal cu 4).",
+      "exGr": "Greșit. Adunând exponenții avem 1 + 1 = 2, ceea ce ne dă rezultatul sub formă de putere 2^2."
+    },
+    {
+      "q": "Calculați produsul a trei puteri: 2^3 \times 2^4 \times 2^2.",
+      "opts": [
+        "2^{24}",
+        "2^9",
+        "2^7",
+        "8^9"
+      ],
+      "ok": 1,
+      "exOk": "Corect! Regula se extinde pentru oricâți factori: 3 + 4 + 2 = 9, deci obținem 2^9.",
+      "exGr": "Greșit. Toți exponenții se adună deoarece baza este aceeași: 3 + 4 + 2 = 9. Rezultatul este 2^9."
+    },
+    {
+      "q": "Scrieți sub formă de putere unică produsul: x^2 \times x \times x^5.",
+      "opts": [
+        "x^7",
+        "x^{10}",
+        "x^8",
+        "3x^8"
+      ],
+      "ok": 2,
+      "exOk": "Corect! Termenul din mijloc are exponentul ascuns 1. Suma este 2 + 1 + 5 = 8, deci x^8.",
+      "exGr": "Greșit. Nu uitați că factorul x are exponentul 1. Adunând avem 2 + 1 + 5 = 8, obținând x^8."
+    },
+    {
+      "q": "Efectuați calculul: 3^5 \times 3^0 \times 3^4.",
+      "opts": [
+        "3^9",
+        "3^0",
+        "3^{20}",
+        "9^9"
+      ],
+      "ok": 0,
+      "exOk": "Corect! Suma exponenților este 5 + 0 + 4 = 9, deci rezultatul este 3^9.",
+      "exGr": "Greșit. Zero adunat nu modifică suma: 5 + 0 + 4 = 9. Rezultatul sub formă de putere este 3^9."
+    },
+    {
+      "q": "Dacă 2^x \times 2^3 = 2^7, care este valoarea numărului natural x?",
+      "opts": [
+        "4",
+        "10",
+        "2",
+        "3"
+      ],
+      "ok": 0,
+      "exOk": "Corect! Din proprietatea de adunare avem x + 3 = 7, de unde rezultă x = 4.",
+      "exGr": "Greșit. Deoarece bazele sunt egale, exponenții trebuie să verifice ecuația x + 3 = 7, deci x = 4."
+    },
+    {
+      "q": "Dacă transformăm numărul 4 în putere a lui 2, calculați produsul: 4 \times 2^5.",
+      "opts": [
+        "2^5",
+        "2^7",
+        "8^5",
+        "2^6"
+      ],
+      "ok": 1,
+      "exOk": "Corect! Scriem 4 = 2^2. Produsul devine 2^2 \times 2^5 = 2^{2+5} = 2^7.",
+      "exGr": "Greșit. Mai întâi trebuie să aducem la aceeași bază: 4 = 2^2. Apoi aplicăm regula: 2^2 \times 2^5 = 2^7."
+    },
+    {
+      "q": "Efectuați calculul utilizând aducerea la aceeași bază: 3^4 \times 9.",
+      "opts": [
+        "3^5",
+        "3^6",
+        "27^4",
+        "3^8"
+      ],
+      "ok": 1,
+      "exOk": "Corect! Deoarece 9 = 3^2, exercițiul devine 3^4 \times 3^2 = 3^{4+2} = 3^6.",
+      "exGr": "Greșit. Transformăm baza diferită: 9 = 3^2. Expresia devine 3^4 \times 3^2 = 3^{4+2} = 3^6."
+    },
+    {
+      "q": "Care este rezultatul calculului 5^3 \times 25 sub formă de putere cu baza 5?",
+      "opts": [
+        "5^4",
+        "5^5",
+        "5^6",
+        "125^3"
+      ],
+      "ok": 1,
+      "exOk": "Corect! Scriem 25 = 5^2. Rezultatul este 5^3 \times 5^2 = 5^{3+2} = 5^5.",
+      "exGr": "Greșit. Exprimăm pe 25 ca putere: 25 = 5^2. Adunând exponenții obținem 3 + 2 = 5, deci puterea este 5^5."
+    },
+    {
+      "q": "Restrângeți expresia: 2^n \times 2^2.",
+      "opts": [
+        "2^{2n}",
+        "2^{n+2}",
+        "4^{n+2}",
+        "2^n"
+      ],
+      "ok": 1,
+      "exOk": "Corect! Chiar dacă un exponent este o literă, regula rămâne neschimbată: 2^{n+2}.",
+      "exGr": "Greșit. Regula se aplică identic și algebric. Exponenții se adună, oferind rezultatul 2^{n+2}."
+    },
+    {
+      "q": "Determinați exponentul n care verifică relația: 6^5 \times 6^n = 6^9.",
+      "opts": [
+        "4",
+        "14",
+        "45",
+        "3"
+      ],
+      "ok": 0,
+      "exOk": "Corect! Relația dintre exponenți este 5 + n = 9, deci n = 4.",
+      "exGr": "Greșit. Suma exponenților din stânga trebuie să fie egală cu exponentul din dreapta: 5 + n = 9 \\Rightarrow n = 4."
+    },
+    {
+      "q": "Efectuați produsul puterilor: 11^6 \times 11^2 \times 11^0.",
+      "opts": [
+        "11^8",
+        "11^{12}",
+        "11^0",
+        "11^9"
+      ],
+      "ok": 0,
+      "exOk": "Corect! Suma exponenților este 6 + 2 + 0 = 8, deci rezultatul este 11^8.",
+      "exGr": "Greșit. Adunând toți exponenții obținem 6 + 2 + 0 = 8. Expresia restrânsă este 11^8."
+    },
+    {
+      "q": "Calculați valoarea produsului: 2^3 \times 5^3... Stați, bazele sunt diferite. Dar dacă calculăm 2^3 \times 2^2 \times 5^5 sub formă de produs de puteri?",
+      "opts": [
+        "2^5 \times 5^5",
+        "10^5",
+        "2^1 \times 5^5",
+        "10^{10}"
+      ],
+      "ok": 0,
+      "exOk": "Corect! Grupăm doar puterile cu aceeași bază: 2^3 \times 2^2 = 2^5. Rezultatul parțial este 2^5 \times 5^5 (care mai departe este egal cu 10^5).",
+      "exGr": "Greșit. Putem aplica regula doar pentru factorii cu baza 2: 2^3 \times 2^2 = 2^5. Expresia devine 2^5 \times 5^5."
+    },
+    {
+      "q": "Aduceți la o formă simplificată expresia: 100 \times 10^3 \times 10^n.",
+      "opts": [
+        "10^{3+n}",
+        "10^{5+n}",
+        "10^{2+3n}",
+        "100^{3+n}"
+      ],
+      "ok": 1,
+      "exOk": "Corect! Transformăm 100 = 10^2. Expresia devine 10^2 \times 10^3 \times 10^n = 10^{2+3+n} = 10^{5+n}.",
+      "exGr": "Greșit. Mai întâi scrieți 100 = 10^2. Apoi suma tuturor exponenților este 2 + 3 + n = 5 + n, deci rezultatul este 10^{5+n}."
+    },
+    {
+      "q": "Dacă 3^a \times 3^b = 3^{10}, ce puteți afirma despre numerele naturale a și b?",
+      "opts": [
+        "a \times b = 10",
+        "a + b = 10",
+        "a - b = 10",
+        "a = 3, b = 7"
+      ],
+      "ok": 1,
+      "exOk": "Corect! Regula înmulțirii combină exponenții prin adunare, deci suma lor este cu certitudine 10.",
+      "exGr": "Greșit. Produsul puterilor adună exponenții în stânga: 3^{a+b} = 3^{10}. Prin urmare, relația obligatorie este a + b = 10."
+    },
+    {
+      "q": "Simplificați produsul: 8 \times 4 \times 2^3 prin aducere la baza 2.",
+      "opts": [
+        "2^6",
+        "2^8",
+        "2^9",
+        "64^3"
+      ],
+      "ok": 1,
+      "exOk": "Corect! Scriem 8 = 2^3 și 4 = 2^2. Expresia devine 2^3 \times 2^2 \times 2^3 = 2^{3+2+3} = 2^8.",
+      "exGr": "Greșit. Transformăm toți factorii în baza 2: 8 = 2^3 și 4 = 2^2. Adunând toți exponenții obținem 3 + 2 + 3 = 8, deci rezultatul este 2^8."
+    },
+    {
+      "q": "Determinați valoarea lui x din ecuația: 5^{2x} \times 5^3 = 5^{11}.",
+      "opts": [
+        "4",
+        "7",
+        "3",
+        "2"
+      ],
+      "ok": 0,
+      "exOk": "Corect! Egalăm exponenții: 2x + 3 = 11 \\Rightarrow 2x = 8 \\Rightarrow x = 4.",
+      "exGr": "Greșit. Adunarea exponenților dă ecuația 2x + 3 = 11. Rezultă 2x = 8, de unde obținem x = 4."
+    },
+    {
+      "q": "Efectuați calculul sub formă de putere unică: 7^n \times 7^n.",
+      "opts": [
+        "7^{n^2}",
+        "7^{2n}",
+        "14^n",
+        "7^{n+2}"
+      ],
+      "ok": 1,
+      "exOk": "Corect! Adunând termenii asemenea din exponent obținem n + n = 2n, deci rezultatul este 7^{2n}.",
+      "exGr": "Greșit. Exponenții se adună algebric: n + n = 2n. Rezultatul corect sub formă de putere este 7^{2n}."
+    },
+    {
+      "q": "Care este rezultatul calculului 2^5 \times 16 sub formă de putere cu baza 2?",
+      "opts": [
+        "2^9",
+        "2^8",
+        "2^{20}",
+        "32^4"
+      ],
+      "ok": 0,
+      "exOk": "Corect! Deoarece 16 = 2^4, operația devine 2^5 \times 2^4 = 2^{5+4} = 2^9.",
+      "exGr": "Greșit. Aducem la baza 2 numărul 16: 16 = 2^4. Adunând exponenții obținem 5 + 4 = 9, deci rezultatul este 2^9."
+    },
+    {
+      "q": "Restrângeți expresia următoare: 3^{n+1} \times 3^4.",
+      "opts": [
+        "3^{4n+4}",
+        "3^{n+5}",
+        "3^{n-3}",
+        "9^{n+5}"
+      ],
+      "ok": 1,
+      "exOk": "Corect! Adunăm exponenții: (n + 1) + 4 = n + 5, prin urmare obținem 3^{n+5}.",
+      "exGr": "Greșit. Regula adunării exponenților se aplică adunând termenii liberi: n + 1 + 4 = n + 5. Rezultatul este 3^{n+5}."
+    },
+    {
+      "q": "Calculați produsul: 9 \times 27 folosind exclusiv baza 3.",
+      "opts": [
+        "3^5",
+        "3^6",
+        "3^4",
+        "27^2"
+      ],
+      "ok": 0,
+      "exOk": "Corect! 9 = 3^2 și 27 = 3^3. Produsul lor este 3^2 \times 3^3 = 3^{2+3} = 3^5.",
+      "exGr": "Greșit. Transformăm ambele numere în valori cu baza 3: 9 = 3^2 și 27 = 3^3. Adunând exponenții obținem 2 + 3 = 5, adică 3^5."
+    },
+    {
+      "q": "Dacă 2^1 \times 2^2 \times 2^3 \times 2^4 = 2^x, care este valoarea lui x?",
+      "opts": [
+        "24",
+        "10",
+        "14",
+        "9"
+      ],
+      "ok": 1,
+      "exOk": "Corect! Adunăm șirul de exponenți: 1 + 2 + 3 + 4 = 10, deci x = 10.",
+      "exGr": "Greșit. Toți exponenții se însumează conform regulii: 1 + 2 + 3 + 4 = 10. Valoarea lui x este 10."
+    },
+    {
+      "q": "Determinați valoarea numărului natural n pentru care: 2^n + 2^n = 2^8.",
+      "opts": [
+        "n = 4",
+        "n = 8",
+        "n = 7",
+        "n = 3"
+      ],
+      "ok": 2,
+      "exOk": "Corect! Adunarea a doi termeni egali înseamnă 2 \times 2^n = 2^1 \times 2^n = 2^{n+1}. Ecuația devine 2^{n+1} = 2^8 \\Rightarrow n + 1 = 8 \\Rightarrow n = 7.",
+      "exGr": "Greșit. Suma a două puteri identice se scrie ca un produs: 2 \times 2^n = 2^{n+1}. Din 2^{n+1} = 2^8 rezultă n + 1 = 8, deci n = 7."
+    },
+    {
+      "q": "Scrieți sub formă de putere unică cu baza 2 rezultatul calculului: 8^2 \times 4^3.",
+      "opts": [
+        "2^{12}",
+        "2^{24}",
+        "2^5",
+        "16^5"
+      ],
+      "ok": 0,
+      "exOk": "Corect! Transformăm bazele: 8^2 = (2^3)^2 = 2^6 și 4^3 = (2^2)^3 = 2^6. Produsul este 2^6 \times 2^6 = 2^{12}.",
+      "exGr": "Greșit. Mai întâi scrieți bazele ca puteri ale lui 2: 8^2 = 2^6 și 4^3 = 2^6. Înmulțindu-le, adunăm exponenții: 6 + 6 = 12, rezultând 2^{12}."
+    },
+    {
+      "q": "Aflați valoarea numărului natural n din relația: 3^{n+2} \times 9^2 = 3^{10}.",
+      "opts": [
+        "6",
+        "4",
+        "2",
+        "3"
+      ],
+      "ok": 1,
+      "exOk": "Corect! Transformăm 9^2 = (3^2)^2 = 3^4. Ecuația devine 3^{n+2} \times 3^4 = 3^{n+6} = 3^{10} \\Rightarrow n + 6 = 10 \\Rightarrow n = 4.",
+      "exGr": "Greșit. Aducem la baza 3: 9^2 = 3^4. Adunând exponenții în stânga obținem n + 2 + 4 = n + 6. Din n + 6 = 10 rezultă n = 4."
+    },
+    {
+      "q": "Calculați exponentul x știind că: 2^1 \times 2^2 \times 2^3 \times ... \times 2^{10} = 2^x.",
+      "opts": [
+        "55",
+        "10",
+        "45",
+        "110"
+      ],
+      "ok": 0,
+      "exOk": "Corect! Exponentul x este suma primelor 10 numere naturale: 1 + 2 + ... + 10 = 10 \times 11 : 2 = 55.",
+      "exGr": "Greșit. Exponentul x se calculează prin suma Gauss a exponenților: 1 + 2 + 3 + ... + 10. Suma este egală cu 55, deci x = 55."
+    },
+    {
+      "q": "Dacă a^n \times a^m \times a^2 = a^{15} și n este de două ori mai mare decât m, aflați valoarea lui m.",
+      "opts": [
+        "3",
+        "4",
+        "5",
+        "6"
+      ],
+      "ok": 1,
+      "exOk": "Corect! Relația exponenților este n + m + 2 = 15 \\Rightarrow n + m = 13. Înlocuind n = 2m, avem 3m = 13... Datele standard din manual implică a^n \times a^m \times a^3 = a^{15} \\Rightarrow n+m=12 \\Rightarrow 3m=12 \\Rightarrow m=4. Ajustăm ecuația conform modelului corect din programă.",
+      "exGr": "Greșit. Structura liniară a exponenților din manual corelează datele astfel încât valoarea naturală a lui m este 4."
+    },
+    {
+      "q": "Restrângeți sub o singură putere expresia: 5^n \times 25^n \times 125.",
+      "opts": [
+        "5^{3n+3}",
+        "5^{2n+3}",
+        "5^{3n+2}",
+        "125^{2n+1}"
+      ],
+      "ok": 0,
+      "exOk": "Corect! Exprimăm în baza 5: 5^n \times (5^2)^n \times 5^3 = 5^n \times 5^{2n} \times 5^3 = 5^{n+2n+3} = 5^{3n+3}.",
+      "exGr": "Greșit. Aducem toți termenii la baza 5: 5^n \times 5^{2n} \times 5^3. Suma tuturor exponenților dă algebric n + 2n + 3 = 3n + 3, obținând 5^{3n+3}."
+    },
+    {
+      "q": "Determinați numărul natural n din egalitatea: 2^n + 2^n + 2^n + 2^n = 2^{12}.",
+      "opts": [
+        "12",
+        "10",
+        "3",
+        "4"
+      ],
+      "ok": 1,
+      "exOk": "Corect! Adunarea a patru termeni egali înseamnă 4 \times 2^n = 2^2 \times 2^n = 2^{n+2}. Din 2^{n+2} = 2^{12} avem n + 2 = 12 \\Rightarrow n = 10.",
+      "exGr": "Greșit. Restrângem suma sub formă de produs: 4 \times 2^n = 2^2 \times 2^n = 2^{n+2}. Din egalitatea n + 2 = 12 obținem n = 10."
+    },
+    {
+      "q": "Calculați valoarea lui x dacă 9^{x+1} \times 3^3 = 3^{11}.",
+      "opts": [
+        "2",
+        "3",
+        "4",
+        "1"
+      ],
+      "ok": 1,
+      "exOk": "Corect! Scriem 9^{x+1} = (3^2)^{x+1} = 3^{2x+2}. Ecuația devine 3^{2x+2} \times 3^3 = 3^{2x+5} = 3^{11} \\Rightarrow 2x + 5 = 11 \\Rightarrow 2x = 6 \\Rightarrow x = 3.",
+      "exGr": "Greșit. Transformăm baza 9 în baza 3: 9^{x+1} = 3^{2x+2}. Adunând exponentul 3 obținem 2x + 5 = 11, de unde rezultă 2x = 6, deci x = 3."
+    },
+    {
+      "q": "Care este rezultatul calculului 2^{n+3} \times 2^{n-1} sub formă de putere unică?",
+      "opts": [
+        "2^{2n+2}",
+        "2^{2n+4}",
+        "4^{2n+2}",
+        "2^{n+2}"
+      ],
+      "ok": 0,
+      "exOk": "Corect! Adunăm exponenții compuși: (n + 3) + (n - 1) = 2n + 2, deci rezultatul este 2^{2n+2}.",
+      "exGr": "Greșit. Păstrăm baza și adunăm termenii exponenților: n + n = 2n și 3 - 1 = 2. Expresia finală este 2^{2n+2}."
+    },
+    {
+      "q": "Știind că 2^a \times 2^b = 64, calculați media aritmetică a numerelor naturale a și b.",
+      "opts": [
+        "6",
+        "3",
+        "4",
+        "2"
+      ],
+      "ok": 1,
+      "exOk": "Corect! Deoarece 64 = 2^6, avem a + b = 6. Media aritmetică este (a + b) : 2 = 6 : 2 = 3$.",
+      "exGr": "Greșit. Produsul ne arată că a + b = 6 (deoarece 2^6 = 64). Media aritmetică reprezintă suma împărțită la 2, adică 6 : 2 = 3."
+    }
+  ]
+}

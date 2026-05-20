@@ -1,0 +1,500 @@
+{
+  "meta": {
+    "nivel": "Manual",
+    "dificultate": 1,
+    "clasa": "a V-a",
+    "unitate": "U1",
+    "titlu_unitate": "Numere Naturale",
+    "tema": "Tema20",
+    "titlu_tema": "Puterea unei puteri: (a^m)^n=a^(m*n)",
+    "prag": 0.8,
+    "puncte_per_item": 10
+  },
+  "teorie": [
+    "La ridicarea unei puteri la o altă putere, rezultatul este o putere care păstrează baza inițială, iar noul exponent se obține prin înmulțirea celor doi exponenți.",
+    "Regula matematică fundamentală utilizată pentru acest tip de calcul este exprimată prin relația $(a^m)^n = a^{m \times n}$.",
+    "Această proprietate permite simplificarea expresiilor complexe prin transformarea succesivă a bazelor și este valabilă pentru orice numere naturale $a$, $m$ și $n$."
+  ],
+  "items": [
+    {
+      "q": "Care este rezultatul calculului $(2^3)^4$?",
+      "opts": [
+        "2^7",
+        "2^{12}",
+        "2^1",
+        "8^4"
+      ],
+      "ok": 1,
+      "exOk": "Corect! Conform regulii, păstrăm baza 2 și înmulțim exponenții: $3 \times 4 = 12$, obținând $2^{12}$.",
+      "exGr": "Greșit. La puterea unei puteri, exponenții se înmulțesc, nu se adună: $3 \times 4 = 12$. Rezultatul este $2^{12}$."
+    },
+    {
+      "q": "Completați egalitatea conform proprietăților învățate: $(a^5)^2 = ...$",
+      "opts": [
+        "a^7",
+        "a^{10}",
+        "a^3",
+        "2a^5"
+      ],
+      "ok": 1,
+      "exOk": "Corect! Înmulțind exponenții obținem $5 \times 2 = 10$, deci rezultatul este $a^{10}$.",
+      "exGr": "Greșit. Se aplică formula $(a^m)^n = a^{m \times n}$. Exponenții 5 și 2 se înmulțesc: $5 \times 2 = 10$, rezultând $a^{10}$."
+    },
+    {
+      "q": "Ce operație se efectuează între exponenți atunci când ridicăm o putere la o altă putere?",
+      "opts": [
+        "Adunare",
+        "Scădere",
+        "Înmulțire",
+        "Împărțire"
+      ],
+      "ok": 2,
+      "exOk": "Corect! Regula de calcul precizează că exponenții se înmulțesc între ei.",
+      "exGr": "Greșit. Adunarea se face la înmulțirea puterilor cu aceeași bază. La puterea unei puteri, operația dintre exponenți este înmulțirea."
+    },
+    {
+      "q": "Care este rezultatul calculului $(5^2)^3$?",
+      "opts": [
+        "5^5",
+        "5^6",
+        "5^8",
+        "25^3"
+      ],
+      "ok": 1,
+      "exOk": "Corect! Păstrăm baza 5 și multiplicăm exponenții: $2 \times 3 = 6$, deci rezultatul este $5^6$.",
+      "exGr": "Greșit. Exponentul final este produsul celor doi exponenți: $2 \times 3 = 6$. Rezultatul sub formă de putere este $5^6$."
+    },
+    {
+      "q": "Efectuați calculul: $(3^4)^0$.",
+      "opts": [
+        "3^4",
+        "3^0",
+        "3^1",
+        "0"
+      ],
+      "ok": 1,
+      "exOk": "Corect! Prin înmulțire obținem $4 \times 0 = 0$, deci rezultatul este $3^0$ (care este egal cu 1).",
+      "exGr": "Greșit. Orice număr natural înmulțit cu 0 dă 0. Exponentul devine $4 \times 0 = 0$, deci rezultatul este $3^0$."
+    },
+    {
+      "q": "Calculați valoarea expresiei: $(10^5)^2$.",
+      "opts": [
+        "10^7",
+        "10^{10}",
+        "10^3",
+        "100^5"
+      ],
+      "ok": 1,
+      "exOk": "Corect! Baza 10 se păstrează, iar exponenții se înmulțesc: $5 \times 2 = 10$, obținând $10^{10}$.",
+      "exGr": "Greșit. Regula cere înmulțirea exponenților: $5 \times 2 = 10$. Rezultatul corect este $10^{10}$."
+    },
+    {
+      "q": "Dacă avem scrierea generală $(a^x)^y$, care este forma ei restrânsă?",
+      "opts": [
+        "a^{x+y}",
+        "a^{x-y}",
+        "a^{x \times y}",
+        "a^{x^y}"
+      ],
+      "ok": 2,
+      "exOk": "Corect! Aceasta este formula standard pentru ridicarea unei puteri la o putere: $a^{x \times y}$.",
+      "exGr": "Greșit. Formula corectă impune înmulțirea directă a exponenților, reprezentată prin $a^{x \times y}$."
+    },
+    {
+      "q": "Efectuați calculul: $(7^1)^5$.",
+      "opts": [
+        "7^1",
+        "7^6",
+        "7^5",
+        "35^1"
+      ],
+      "ok": 2,
+      "exOk": "Corect! Prin înmulțirea exponenților obținem $1 \times 5 = 5$, deci rezultatul este $7^5$.",
+      "exGr": "Greșit. Multiplicăm exponenții: $1 \times 5 = 5$. Rezultatul sub formă de putere este $7^5$."
+    },
+    {
+      "q": "Care este rezultatul calculului $(4^3)^3$?",
+      "opts": [
+        "4^6",
+        "4^9",
+        "4^1",
+        "12^3"
+      ],
+      "ok": 1,
+      "exOk": "Corect! Deși exponenții sunt egali, ei se înmulțesc conform regulii: $3 \times 3 = 9$, rezultând $4^9$.",
+      "exGr": "Greșit. Exponenții nu se adună și nu se păstrează pur și simplu; ei se înmulțesc: $3 \times 3 = 9$. Rezultatul este $4^9$."
+    },
+    {
+      "q": "Expresia $(2^2)^2$ este egală cu:",
+      "opts": [
+        "2^2",
+        "2^4",
+        "4^4",
+        "2^0"
+      ],
+      "ok": 1,
+      "exOk": "Corect! Produsul exponenților este $2 \times 2 = 4$, deci obținem $2^4$ (care este egal cu 16).",
+      "exGr": "Greșit. Calculând exponentul avem $2 \times 2 = 4$, ceea ce ne oferă rezultatul $2^4$."
+    },
+    {
+      "q": "Scrieți numărul $4^5$ ca o putere cu baza 2.",
+      "opts": [
+        "2^7",
+        "2^{10}",
+        "2^5",
+        "23"
+      ],
+      "ok": 1,
+      "exOk": "Corect! Substituim $4 = 2^2$, iar expresia devine $(2^2)^5 = 2^{2 \times 5} = 2^{10}$.",
+      "exGr": "Greșit. Mai întâi transformăm baza: $4 = 2^2$. Expresia devine o putere a unei puteri: $(2^2)^5 = 2^{2 \times 5} = 2^{10}$."
+    },
+    {
+      "q": "Scrieți numărul $9^4$ sub formă de putere cu baza 3.",
+      "opts": [
+        "3^6",
+        "3^8",
+        "3^{16}",
+        "3^4"
+      ],
+      "ok": 1,
+      "exOk": "Corect! Deoarece $9 = 3^2$, obținem $(3^2)^4 = 3^{2 \times 4} = 3^8$.",
+      "exGr": "Greșit. Aducem la baza 3: $9 = 3^2$. Aplicând regula înmulțirii exponenților avem $2 \times 4 = 8$, deci $3^8$."
+    },
+    {
+      "q": "Transformați numărul $27^2$ într-o putere cu baza 3.",
+      "opts": [
+        "3^5",
+        "3^6",
+        "3^9",
+        "3^8"
+      ],
+      "ok": 1,
+      "exOk": "Corect! $27 = 3^3$, deci expresia devine $(3^3)^2 = 3^{3 \times 2} = 3^6$.",
+      "exGr": "Greșit. Exprimăm pe 27 ca bază 3: $27 = 3^3$. Înmulțind exponenții obținem $3 \times 2 = 6$, deci rezultatul este $3^6$."
+    },
+    {
+      "q": "Dacă $(2^x)^3 = 2^{15}$, care este valoarea numărului natural x?",
+      "opts": [
+        "5",
+        "12",
+        "45",
+        "18"
+      ],
+      "ok": 0,
+      "exOk": "Corect! Relația dintre exponenți este $x \times 3 = 15$, de unde rezultă $x = 15 : 3 = 5$.",
+      "exGr": "Greșit. Deoarece bazele sunt identice, egalăm exponenții: $3x = 15$, ceea ce înseamnă că $x = 5$."
+    },
+    {
+      "q": "Dacă $(5^4)^y = 5^8$, care este valoarea numărului natural y?",
+      "opts": [
+        "4",
+        "2",
+        "32",
+        "12"
+      ],
+      "ok": 1,
+      "exOk": "Corect! Din ecuația exponenților avem $4 \times y = 8$, deci $y = 8 : 4 = 2$.",
+      "exGr": "Greșit. Produsul dintre 4 și y trebuie să fie egal cu 8. Prin urmare, $y = 2$."
+    },
+    {
+      "q": "Efectuați calculul și restrângeți sub o singură putere: $(x^n)^3$.",
+      "opts": [
+        "x^{n+3}",
+        "x^{3n}",
+        "x^{n^3}",
+        "3x^n"
+      ],
+      "ok": 1,
+      "exOk": "Corect! Regula se aplică identic și în formă algebrică, înmulțind $n$ cu 3, adică $3n$.",
+      "exGr": "Greșit. Exponenții se multiplică între ei, chiar dacă unul dintre ei este o literă: $n \times 3 = 3n$, obținând $x^{3n}$."
+    },
+    {
+      "q": "Care dintre următoarele expresii este egală cu $16^2$?",
+      "opts": [
+        "(2^3)^2",
+        "(2^4)^2",
+        "(2^2)^2",
+        "(2^4)^4"
+      ],
+      "ok": 1,
+      "exOk": "Corect! Numărul 16 este $2^4$, deci $16^2 = (2^4)^2$ (care dă $2^8$).",
+      "exGr": "Greșit. Trebuie să scrieți mai întâi baza 16 ca putere a lui 2: $16 = 2^4$. Înlocuind obținem $(2^4)^2$."
+    },
+    {
+      "q": "Restrângeți sub formă de putere unică expresia: $[(2^2)^3]^2$.",
+      "opts": [
+        "2^7",
+        "2^{12}",
+        "2^{10}",
+        "2^8"
+      ],
+      "ok": 1,
+      "exOk": "Corect! Regula se aplică succesiv pentru toate straturile de paranteze: $2 \times 3 \times 2 = 12$, deci $2^{12}$.",
+      "exGr": "Greșit. Înmulțim pe rând toți exponenții lăsând baza neschimbată: $2 \times 3 \times 2 = 12$. Rezultatul este $2^{12}$."
+    },
+    {
+      "q": "Determinați exponentul n pentru care relația este adevărată: $(11^n)^5 = 11^{20}$.",
+      "opts": [
+        "4",
+        "15",
+        "25",
+        "2"
+      ],
+      "ok": 0,
+      "exOk": "Corect! Ecuația asociată este $n \times 5 = 20$, ceea ce determină ca $n = 4$.",
+      "exGr": "Greșit. Produsul dintre n și 5 trebuie să dea exponentul din dreapta: $n \times 5 = 20 \\Rightarrow n = 4$."
+    },
+    {
+      "q": "Efectuați calculul sub formă de putere unică: $(6^2)^4 \times 6^2$.",
+      "opts": [
+        "6^8",
+        "6^{10}",
+        "6^{16}",
+        "36^{10}"
+      ],
+      "ok": 1,
+      "exOk": "Corect! Prima parte dă $(6^2)^4 = 6^8$. Apoi înmulțim cu $6^2$ și adunăm exponenții: $8 + 2 = 10$, rezultând $6^{10}$.",
+      "exGr": "Greșit. Combinați cele două reguli: întâi puterea unei puteri dă $6^8$, iar apoi înmulțirea adună exponenții: $6^8 \times 6^2 = 6^{8+2} = 6^{10}$."
+    },
+    {
+      "q": "Comparați numerele $2^{30}$ și $3^{20}$ folosind scrierea sub formă de putere a unei puteri.",
+      "opts": [
+        "2^{30} > 3^{20}",
+        "2^{30} < 3^{20}",
+        "Sunt egale",
+        "Nu se pot compara"
+      ],
+      "ok": 1,
+      "exOk": "Corect! Rescriem exponenții ca produse: $2^{30} = (2^3)^{10} = 8^{10}$ și $3^{20} = (3^2)^{10} = 9^{10}$. Deoarece $8 < 9$, rezultă $2^{30} < 3^{20}$.",
+      "exGr": "Greșit. Aducem la același exponent folosind regula inversă: $2^{30} = (2^3)^{10} = 8^{10}$ și $3^{20} = (3^2)^{10} = 9^{10}$. Cum $8^{10} < 9^{10}$, relația este mai mic."
+    },
+    {
+      "q": "Aduceți la o formă simplificată expresia: $(2^{n+1})^3$.",
+      "opts": [
+        "2^{n+4}",
+        "2^{3n+3}",
+        "2^{3n+1}",
+        "2^{3n}"
+      ],
+      "ok": 1,
+      "exOk": "Corect! Înmulțim exponentul compus cu 3 folosind distributivitatea: $3 \times (n + 1) = 3n + 3$, obținând $2^{3n+3}$.",
+      "exGr": "Greșit. Întreg exponentul bazei se înmulțește cu 3: $3 \times (n + 1) = 3n + 3$. Rezultatul este $2^{3n+3}$."
+    },
+    {
+      "q": "Determinați valoarea lui x dacă $(25^3)^2 = 5^x$.",
+      "opts": [
+        "12",
+        "6",
+        "24",
+        "10"
+      ],
+      "ok": 0,
+      "exOk": "Corect! Transformăm baza 25: $((5^2)^3)^2 = 5^{2 \times 3 \times 2} = 5^{12}$, deci $x = 12$.",
+      "exGr": "Greșit. Aducem complet la baza 5: $25 = 5^2$. Exponenții se multiplică succesiv: $2 \times 3 \times 2 = 12$, prin urmare $x = 12$."
+    },
+    {
+      "q": "Care este rezultatul calculului $(2^3)^2 : 2^2$?",
+      "opts": [
+        "2^4",
+        "2^3",
+        "2^1",
+        "2^6"
+      ],
+      "ok": 0,
+      "exOk": "Corect! Ridicarea la putere dă $(2^3)^2 = 2^6$. Împărțirea scade exponenții: $6 - 2 = 4$, deci rezultatul este $2^4$.",
+      "exGr": "Greșit. Întâi simplificăm puterea unei puteri: $2^6$. La împărțire se scad exponenții: $6 - 2 = 4$, obținând $2^4$."
+    },
+    {
+      "q": "Determinați numărul natural x din ecuația: $(3^x)^4 = 81^2$.",
+      "opts": [
+        "2",
+        "4",
+        "3",
+        "1"
+      ],
+      "ok": 0,
+      "exOk": "Corect! Membrul drept este $81^2 = (3^4)^2 = 3^8$. Membrul stâng este $3^{4x}$. Egalând avem $4x = 8, deci x = 2$.",
+      "exGr": "Greșit. Transformăm 81 în baza 3: $81^2 = (3^4)^2 = 3^8$. Din egalitatea exponenților avem $4x = 8$, de unde rezultă $x = 2$."
+    },
+    {
+      "q": "Scrieți sub formă de putere unică cu baza 2 rezultatul calculului: $4^3 \times (2^2)^4$.",
+      "opts": [
+        "2^{11}",
+        "2^{14}",
+        "2^{24}",
+        "4^7"
+      ],
+      "ok": 1,
+      "exOk": "Corect! $4^3 = (2^2)^3 = 2^6$. A doua parte este $(2^2)^4 = 2^8$. Înmulțirea dă $2^6 \times 2^8 = 2^{14}$.",
+      "exGr": "Greșit. Transformăm în baza 2 amândouă componentele: $2^6 \times 2^8$. Adunând exponenții obținem $6 + 8 = 14$, deci $2^{14}$."
+    },
+    {
+      "q": "Aflați valoarea lui n din relația: $(2^n)^n = 2^{16}$.",
+      "opts": [
+        "8",
+        "4",
+        "2",
+        "16"
+      ],
+      "ok": 1,
+      "exOk": "Corect! Înmulțirea exponenților dă $n \times n = n^2$. Din $n^2 = 16$ obținem valoarea naturală $n = 4$.",
+      "exGr": "Greșit. Relația exponenților este $n \times n = 16$, adică $n^2 = 16$. Numărul natural al cărui pătrat este 16 este 4."
+    },
+    {
+      "q": "Restrângeți sub o singură putere expresia: $(5^2)^{n+3}$.",
+      "opts": [
+        "5^{2n+3}",
+        "5^{2n+6}",
+        "5^{n+5}",
+        "25^{n+3}"
+      ],
+      "ok": 1,
+      "exOk": "Corect! Înmulțim 2 cu fiecare termen al exponentului compus: $2 \times n + 2 \times 3 = 2n + 6$, obținând $5^{2n+6}$.",
+      "exGr": "Greșit. Distribuim factorul 2 la tot grupul din paranteză: $2(n+3) = 2n + 6$. Rezultatul sub formă de putere este $5^{2n+6}$."
+    },
+    {
+      "q": "Efectuați operațiile: $[(3^2)^5 : (3^3)^2]$.",
+      "opts": [
+        "3^4",
+        "3^0",
+        "3^2",
+        "3^1"
+      ],
+      "ok": 0,
+      "exOk": "Corect! Prima putere este $3^{10}$, a doua este $3^6$. Scăzând exponenții pentru împărțire obținem $10 - 6 = 4$, deci $3^4$.",
+      "exGr": "Greșit. Reducem pe rând puterile: $3^{10} : 3^6$. Efectuând scăderea exponenților rezultă $10 - 6 = 4$, deci $3^4$."
+    },
+    {
+      "q": "Dacă $a = (2^2)^3$ și $b = 2^{2^3}$, stabiliți relația dintre a și b.",
+      "opts": [
+        "a = b",
+        "a > b",
+        "a < b",
+        "nu se pot compara"
+      ],
+      "ok": 2,
+      "exOk": "Corect! La 'a' avem puterea unei puteri: $a = 2^{2 \times 3} = 2^6 = 64$. La 'b' avem o putere cu turn, unde se calculează de sus în jos: $2^3 = 8$, deci $b = 2^8 = 256$. Prin urmare, $a < b$.",
+      "exGr": "Greșit. Atenție la prezența parantezelor! $a = (2^2)^3 = 2^{2 \times 3} = 2^6$. În schimb, $b = 2^{2^3} = 2^8$. Deoarece $2^6 < 2^8$, relația este $a < b$."
+    },
+    {
+      "q": "Arătați care este valoarea numărului natural n pentru care: $(2^n)^3 + (4^1)^3 = 72$.",
+      "opts": [
+        "n = 2",
+        "n = 3",
+        "n = 1",
+        "n = 0"
+      ],
+      "ok": 2,
+      "exOk": "Corect! Al doilea termen este $4^3 = 64$. Ecuația devine $2^{3n} + 64 = 72 \\Rightarrow 2^{3n} = 8$. Cum $8 = 2^3$, avem $3n = 3 \\Rightarrow n = 1$. Stați, $3n = 3 \\Rightarrow n = 1$. Răspunsul este $n = 1$, localizat la indexul 2. Reevaluăm 'ok' la valoarea 2.",
+      "exGr": "Greșit. Izolăm termenul necunoscut: $(2^n)^3 = 72 - 64 = 8$. Deoarece $8 = 2^3$, rezultă că $(2^n)^3 = (2^1)^3$, deci $n = 1$."
+    },
+    {
+      "q": "Scrieți sub formă de putere unică cu cea mai mică bază naturală posibilă rezultatul calculului: $(16^2)^3 : (8^3)^2$.",
+      "opts": [
+        "2^6",
+        "2^0",
+        "2^4",
+        "4^3"
+      ],
+      "ok": 0,
+      "exOk": "Corect! Transformăm în baza 2: $(16^2)^3 = 16^6 = (2^4)^6 = 2^{24}$. Pentru a doua parte: $(8^3)^2 = 8^6 = (2^3)^6 = 2^{18}$. Împărțirea dă $2^{24} : 2^{18} = 2^6$.",
+      "exGr": "Greșit. Aduceți toți termenii în baza 2: prima parte devine $2^{24}$, iar a doua devine $2^{18}$. Scăzând exponenții obținem $24 - 18 = 6$, deci rezultatul este $2^6$."
+    },
+    {
+      "q": "Determinați numărul natural n din egalitatea: $(3^{n+1})^2 = 81^3 : 9$.",
+      "opts": [
+        "3",
+        "4",
+        "2",
+        "5"
+      ],
+      "ok": 1,
+      "exOk": "Corect! Membrul stâng este $3^{2n+2}$. Membrul drept în baza 3 este $(3^4)^3 : 3^2 = 3^{12} : 3^2 = 3^{10}$. Egalând exponenții avem $2n + 2 = 10 \\Rightarrow 2n = 8 \\Rightarrow n = 4$.",
+      "exGr": "Greșit. Exprimăm totul în baza 3. Membrul stâng oferă $3^{2n+2}$, iar cel drept oferă $3^{10}$. Rezolvând ecuația $2n + 2 = 10$ obținem $n = 4$."
+    },
+    {
+      "q": "Calculați exponentul x din următoarea relație: $((2^1)^2)^3)^4 = 2^x$.",
+      "opts": [
+        "10",
+        "24",
+        "14",
+        "48"
+      ],
+      "ok": 1,
+      "exOk": "Corect! Pentru puteri imbricate succesiv, înmulțim absolut toți exponenții: $1 \times 2 \times 3 \times 4 = 24$, deci $x = 24$.",
+      "exGr": "Greșit. Exponentul final se obține prin produsul tuturor exponenților din structură: $1 \times 2 \times 3 \times 4 = 24$. Valoarea lui x este 24."
+    },
+    {
+      "q": "Comparați numerele $A = (5^4)^3$ și $B = 25^7$.",
+      "opts": [
+        "A > B",
+        "A < B",
+        "A = B",
+        "nu se pot încadra"
+      ],
+      "ok": 1,
+      "exOk": "Corect! Calculăm $A = 5^{12}$. Pentru B, scriem $25^7 = (5^2)^7 = 5^{14}$. Deoarece $12 < 14$, avem $5^{12} < 5^{14}$, deci $A < B$.",
+      "exGr": "Greșit. Aducem ambele numere la baza 5: $A = 5^{12}$ și $B = (5^2)^7 = 5^{14}$. Comparând exponenții observăm că $12 < 14$, deci $A < B$."
+    },
+    {
+      "q": "Aflați valoarea numărului natural n dacă $(2^n)^4 \times 2^3 = (2^5)^3$.",
+      "opts": [
+        "2",
+        "3",
+        "4",
+        "1"
+      ],
+      "ok": 1,
+      "exOk": "Corect! Ecuația se scrie sub formă de exponenți: $4n + 3 = 15 \\Rightarrow 4n = 12 \\Rightarrow n = 3$.",
+      "exGr": "Greșit. Transformăm prin reguli: $2^{4n+3} = 2^{15}$. Din egalitatea exponenților rezultă $4n + 3 = 15 \\Rightarrow 4n = 12$, deci $n = 3$."
+    },
+    {
+      "q": "Restrângeți sub o singură putere expresia: $[(x^2)^n]^3 : x^3$.",
+      "opts": [
+        "x^{6n-3}",
+        "x^{5n-3}",
+        "x^{6n+3}",
+        "1^{6n-3}"
+      ],
+      "ok": 0,
+      "exOk": "Corect! Partea stângă devine $x^{2 \times n \times 3} = x^{6n}$. Împărțirea cu $x^3$ scade exponentul, rezultând $x^{6n-3}$.",
+      "exGr": "Greșit. Înmulțirea succesivă dă puterea $x^{6n}$. Efectuând împărțirea, scădem exponentul 3, obținând forma restrânsă $x^{6n-3}$."
+    },
+    {
+      "q": "Determinați numărul natural n din egalitatea: $(3^4)^n = (27^2)^2$.",
+      "opts": [
+        "3",
+        "4",
+        "2",
+        "6"
+      ],
+      "ok": 0,
+      "exOk": "Corect! Membrul stâng este $3^{4n}$. Membrul drept este $((3^3)^2)^2 = 3^{12}$. Din $4n = 12$ obținem $n = 3$.",
+      "exGr": "Greșit. Exprimăm membrul drept ca putere în baza 3: $27^4 = (3^3)^4 = 3^{12}$. Egalând exponenții avem $4n = 12$, de unde rezultă $n = 3$."
+    },
+    {
+      "q": "Care este rezultatul calculului $[(2^{n+2})^3]^2 : 2^{12}$ sub formă de putere unică?",
+      "opts": [
+        "2^{6n}",
+        "2^{6n+12}",
+        "2^{6n-12}",
+        "4^{3n}"
+      ],
+      "ok": 0,
+      "exOk": "Corect! Produsul primilor exponenți este $3 \times 2 = 6$. Exponentul devine $6(n + 2) = 6n + 12$. Împărțirea scade 12, deci rămâne $2^{6n}$.",
+      "exGr": "Greșit. Multiplicarea puterilor dă $2^{6(n+2)} = 2^{6n+12}$. Scăzând exponentul 12 datorat împărțirii, obținem rezultatul final $2^{6n}$."
+    },
+    {
+      "q": "Știind că $(2^a)^b = 2^{18}$ și $a + b = 9$ cu $a < b$, aflați valoarea lui b.",
+      "opts": [
+        "6",
+        "3",
+        "9",
+        "2"
+      ],
+      "ok": 0,
+      "exOk": "Corect! Din prima relație avem $a \times b = 18$. Căutăm numerele care adunate dau 9 și înmulțite dau 18: acestea sunt 3 și 6. Cum $a < b$, rezultă $b = 6$.",
+      "exGr": "Greșit. Relațiile matematice stabilite sunt $a \times b = 18$ și $a + b = 9$. Perechea de numere naturale este (3, 6). Condiția $a < b$ impune ca $b = 6$."
+    }
+  ]
+}

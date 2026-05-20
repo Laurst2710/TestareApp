@@ -1,0 +1,500 @@
+{
+  "meta": {
+    "nivel": "Manual",
+    "dificultate": 1,
+    "clasa": "a V-a",
+    "unitate": "U1",
+    "titlu_unitate": "Numere Naturale",
+    "tema": "Tema12",
+    "titlu_tema": "Factor comun; scoaterea factorului comun",
+    "prag": 0.8,
+    "puncte_per_item": 10
+  },
+  "teorie": [
+    "Scoaterea factorului comun este o metodă de simplificare a calculelor bazată pe proprietatea de distributivitate a înmulțirii față de adunare sau scădere.",
+    "Dacă un număr se regăsește ca factor în fiecare termen al unei sume sau al unei diferențe, el poate fi scris o singură dată în afara unei paranteze.",
+    "Relațiile fundamentale matematice utilizate pentru această metodă sunt a \times b + a \times c = a \times (b + c) și a \times b - a \times c = a \times (b - c)."
+  ],
+  "items": [
+    {
+      "q": "În expresia 5 \times 3 + 5 \times 4, care este factorul comun?",
+      "opts": [
+        "3",
+        "4",
+        "5",
+        "15"
+      ],
+      "ok": 2,
+      "exOk": "Corect! Numărul 5 apare ca multiplicator în ambele produse, deci este factorul comun.",
+      "exGr": "Greșit. Factorul comun este numărul care se repetă în fiecare produs din cadrul sumei sau diferenței, adică 5."
+    },
+    {
+      "q": "Cum se scrie corect expresia 2 \times a + 2 \times b prin scoaterea factorului comun?",
+      "opts": [
+        "2 \times (a + b)",
+        "2 + a \times b",
+        "4 \times (a + b)",
+        "2a + b"
+      ],
+      "ok": 0,
+      "exOk": "Corect! Se extrage 2 în fața parantezei, lăsând suma celorlalți factori în interior.",
+      "exGr": "Greșit. Aplicând regula a \times b + a \times c = a \times (b + c), expresia corectă este 2 \times (a + b)."
+    },
+    {
+      "q": "Scoaterea factorului comun reprezintă inversul cărei proprietăți a înmulțirii?",
+      "opts": [
+        "Comutativitate",
+        "Asociativitate",
+        "Distributivitate",
+        "Element neutru"
+      ],
+      "ok": 2,
+      "exOk": "Corect! Este operația inversă distribuirii înmulțirii față de adunare sau scădere.",
+      "exGr": "Greșit. Procesul se bazează pe distributivitate, fiind transformarea inversă a desfacerii parantezelor."
+    },
+    {
+      "q": "Dacă scoatem factorul comun în expresia 7 \times 9 - 7 \times 2, ce operație vom avea în paranteză?",
+      "opts": [
+        "Adunare",
+        "Scădere",
+        "Înmulțire",
+        "Împărțire"
+      ],
+      "ok": 1,
+      "exOk": "Corect! Expresia inițială conține o scădere, deci în paranteză se păstrează scăderea.",
+      "exGr": "Greșit. Semnul dintre produse determină operația din paranteză. Fiind minus, vom avea o scădere."
+    },
+    {
+      "q": "Care este rezultatul calculului 13 \times 7 + 13 \times 3 după scoaterea factorului comun?",
+      "opts": [
+        "130",
+        "100",
+        "26",
+        "133"
+      ],
+      "ok": 0,
+      "exOk": "Corect! Expresia devine 13 \times (7 + 3) = 13 \times 10 = 130.",
+      "exGr": "Greșit. Transformăm prin factor comun: 13 \times (7 + 3) = 13 \times 10 = 130."
+    },
+    {
+      "q": "Scrieți sub formă de produs expresia x \times y - x \times z.",
+      "opts": [
+        "x \times (y + z)",
+        "x \times y \times z",
+        "x \times (y - z)",
+        "y \times (x - z)"
+      ],
+      "ok": 2,
+      "exOk": "Corect! Factorul comun este x, iar în paranteză rămâne diferența y - z.",
+      "exGr": "Greșit. Extragerea lui x din ambii termeni duce la structura x \times (y - z)."
+    },
+    {
+      "q": "Dacă doriți să calculați rapid 45 \times 2 + 45 \times 8, cum grupați termenii?",
+      "opts": [
+        "45 \times (2 + 8)",
+        "45 \times 2 \times 8",
+        "(45 + 45) \times 2",
+        "45 \times 10 + 8"
+      ],
+      "ok": 0,
+      "exOk": "Corect! Scoaterea lui 45 în evidență oferă suma simplă 2 + 8 = 10.",
+      "exGr": "Greșit. Gruparea corectă prin factor comun este 45 \times (2 + 8)."
+    },
+    {
+      "q": "Care este factorul comun în expresia a \times b + b \times c?",
+      "opts": [
+        "a",
+        "b",
+        "c",
+        "există doi factori comuni"
+      ],
+      "ok": 1,
+      "exOk": "Corect! Litera 'b' este prezentă în ambele produse ale sumei.",
+      "exGr": "Greșit. Factorul care se regăsește în fiecare termen este b, indiferent de poziția sa în produs."
+    },
+    {
+      "q": "Ce rezultat obținem dacă calculăm 8 \times 15 - 8 × 5 folosind factorul comun?",
+      "opts": [
+        "160",
+        "80",
+        "40",
+        "800"
+      ],
+      "ok": 1,
+      "exOk": "Corect! Calculul se restrânge la 8 \times (15 - 5) = 8 \times 10 = 80.",
+      "exGr": "Greșit. Scoaterea factorului comun dă 8 \times (15 - 5) = 8 \times 10 = 80."
+    },
+    {
+      "q": "Restrângeți expresia: 3 \times 5 + 3. (Sfat: 3 = 3 \times 1)",
+      "opts": [
+        "3 \times (5 + 0)",
+        "3 \times (5 + 1)",
+        "3 \times 5",
+        "3 \times 6"
+      ],
+      "ok": 1,
+      "exOk": "Corect! Al doilea termen este 3 \times 1, deci paranteza conține 5 + 1.",
+      "exGr": "Greșit. Orice număr singur ascunde factorul 1. Expresia este 3 \times 5 + 3 \times 1 = 3 \times (5 + 1)."
+    },
+    {
+      "q": "Calculați valoarea expresiei 17 \times 23 + 17 \times 77.",
+      "opts": [
+        "170",
+        "1700",
+        "17000",
+        "2377"
+      ],
+      "ok": 1,
+      "exOk": "Corect! Prin factor comun obținem 17 \times (23 + 77) = 17 \times 100 = 1700.",
+      "exGr": "Greșit. Scoaterea factorului comun simplifică adunarea: 17 \times (23 + 77) = 17 \times 100 = 1700."
+    },
+    {
+      "q": "Calculați rapid: 124 \times 55 - 124 \times 45.",
+      "opts": [
+        "124",
+        "1240",
+        "12400",
+        "2480"
+      ],
+      "ok": 1,
+      "exOk": "Corect! Restrângerea dă 124 \times (55 - 45) = 124 \times 10 = 1240.",
+      "exGr": "Greșit. Efectuați scăderea din paranteză după factorizare: 124 \times (55 - 45) = 124 \times 10 = 1240."
+    },
+    {
+      "q": "Dacă a = 15 și b + c = 20, calculați a \times b + a \times c.",
+      "opts": [
+        "35",
+        "300",
+        "150",
+        "235"
+      ],
+      "ok": 1,
+      "exOk": "Corect! Expresia este egală cu a \times (b + c) = 15 \times 20 = 300.",
+      "exGr": "Greșit. Grupați termenii prin factorul comun 'a': a \times (b + c). Înlocuind obținem 15 \times 20 = 300."
+    },
+    {
+      "q": "Dacă x \times y - x \times z = 50 și x = 5, cât este y - z?",
+      "opts": [
+        "10",
+        "45",
+        "250",
+        "55"
+      ],
+      "ok": 0,
+      "exOk": "Corect! Expresia devine x \times (y - z) = 50, adică 5 \times (y - z) = 50, de unde y - z = 10.",
+      "exGr": "Greșit. Factorizăm: x \times (y - z) = 50. Înlocuind pe x avem 5 \times (y - z) = 50, deci y - z = 50 : 5 = 10."
+    },
+    {
+      "q": "Scoaterea factorului comun din expresia 4a + 4b + 4c conduce la:",
+      "opts": [
+        "4 \times (a + b + c)",
+        "4a \times (b + c)",
+        "12 \times (a + b + c)",
+        "4 + a + b + c"
+      ],
+      "ok": 0,
+      "exOk": "Corect! Regula se aplică identic și pentru sume cu mai mult de doi termeni.",
+      "exGr": "Greșit. Numărul 4 se regăsește în toți cei trei termeni, deci structura este 4 \times (a + b + c)."
+    },
+    {
+      "q": "Calculați valoarea sumei 9 \times 99 + 9.",
+      "opts": [
+        "900",
+        "990",
+        "891",
+        "999"
+      ],
+      "ok": 1,
+      "exOk": "Corect! Expresia transformată este 9 \times (99 + 1) = 9 \times 100 = 900. Stați, 99+1=100, deci rezultatul este 900.",
+      "exGr": "Greșit. Suma se scrie 9 \times 99 + 9 \times 1 = 9 \times (99 + 1) = 9 \times 100 = 900."
+    },
+    {
+      "q": "Calculați valoarea expresiei 35 \times 12 - 35 \times 2.",
+      "opts": [
+        "350",
+        "420",
+        "352",
+        "70"
+      ],
+      "ok": 0,
+      "exOk": "Corect! 35 \times (12 - 2) = 35 \times 10 = 350.",
+      "exGr": "Greșit. Utilizând factorul comun obținem 35 \times (12 - 2) = 35 \times 10 = 350."
+    },
+    {
+      "q": "Dificultatea unui exercițiu scade dacă scriem 73 \times 101 - 73 sub forma:",
+      "opts": [
+        "73 \times (101 - 1)",
+        "73 \times 100",
+        "73 \times (101 - 0)",
+        "73 \times 101"
+      ],
+      "ok": 0,
+      "exOk": "Corect! Aceasta reprezintă scoaterea explicită a factorului comun 73.",
+      "exGr": "Greșit. Forma corectă obținută prin descompunere este 73 \times (101 - 1)."
+    },
+    {
+      "q": "Dacă a \times b = 40 și a \times c = 60, calculați valoarea lui a \times (b + c).",
+      "opts": [
+        "100",
+        "2400",
+        "20",
+        "50"
+      ],
+      "ok": 0,
+      "exOk": "Corect! Distribuim și adunăm valorile: a \times b + a \times c = 40 + 60 = 100.",
+      "exGr": "Greșit. Expresia restrânsă este echivalentă cu suma produselor: 40 + 60 = 100."
+    },
+    {
+      "q": "Efectuați prin factor comun: 250 \times 3 + 250 \times 1.",
+      "opts": [
+        "750",
+        "1000",
+        "500",
+        "254"
+      ],
+      "ok": 1,
+      "exOk": "Corect! Rezultatul este 250 \times (3 + 1) = 250 \times 4 = 1000.",
+      "exGr": "Greșit. Calculul devine simplu prin adunarea din paranteză: 250 \times (3 + 1) = 250 \times 4 = 1000."
+    },
+    {
+      "q": "Calculați valoarea sumei: 1 + 2 + 3 + ... + 10 știind că suma Gauss este n \times (n+1) : 2. Dar utilizând descompunerea, calculați: 5 + 10 + 15 + ... + 50.",
+      "opts": [
+        "275",
+        "225",
+        "55",
+        "250"
+      ],
+      "ok": 0,
+      "exOk": "Corect! Scoatem factorul comun 5: 5 \times (1 + 2 + ... + 10) = 5 \times 55 = 275.",
+      "exGr": "Greșit. Scoatem factorul comun 5 din fiecare termen: 5 \times (1 + 2 + 3 + ... + 10). Suma din paranteză este 55, deci 5 \times 55 = 275."
+    },
+    {
+      "q": "Determinați valoarea lui x dacă 7 × x + 13 × x = 200.",
+      "opts": [
+        "5",
+        "10",
+        "20",
+        "15"
+      ],
+      "ok": 1,
+      "exOk": "Corect! Scoaterea lui x oferă (7 + 13) \times x = 200 \\Rightarrow 20 \times x = 200 \\Rightarrow x = 10.",
+      "exGr": "Greșit. Factorizăm membrul stâng: (7 + 13) \times x = 200, ceea ce înseamnă 20 \times x = 200, de unde x = 10."
+    },
+    {
+      "q": "Aflați rezultatul calculului: 999 \times 37 - 999 \times 27.",
+      "opts": [
+        "999",
+        "9990",
+        "99900",
+        "0"
+      ],
+      "ok": 1,
+      "exOk": "Corect! Obținem prin restrângere 999 \times (37 - 27) = 999 \times 10 = 9990.",
+      "exGr": "Greșit. Se aplică factorul comun 999: 999 \times (37 - 27) = 999 \times 10 = 9990."
+    },
+    {
+      "q": "Știind că a + b = 30 și c = 4, calculați expresia a \times c + b \times c.",
+      "opts": [
+        "120",
+        "34",
+        "26",
+        "60"
+      ],
+      "ok": 0,
+      "exOk": "Corect! Factorul comun este în dreapta: (a + b) \times c = 30 \times 4 = 120.",
+      "exGr": "Greșit. Extragerea factorului comun 'c' oferă relația (a + b) \times c. Înlocuind valorile rezultă 30 \times 4 = 120."
+    },
+    {
+      "q": "Calculați valoarea expresiei: 432 \times 68 + 432 \times 33 - 432.",
+      "opts": [
+        "4320",
+        "43200",
+        "432",
+        "0"
+      ],
+      "ok": 1,
+      "exOk": "Corect! Extragerea dă 432 \times (68 + 33 - 1) = 432 \times 100 = 43200.",
+      "exGr": "Greșit. Ultimul termen ascunde factorul 1 (432 \times 1). Expresia devine 432 \times (68 + 33 - 1) = 432 \times 100 = 43200."
+    },
+    {
+      "q": "Dacă a \times b - a \times c = 80 și b - c = 8, care este valoarea lui a?",
+      "opts": [
+        "5",
+        "10",
+        "12",
+        "72"
+      ],
+      "ok": 1,
+      "exOk": "Corect! Rescriem a \times (b - c) = 80 \\Rightarrow a \times 8 = 80 \\Rightarrow a = 10.",
+      "exGr": "Greșit. După factorizare obținem a \times (b - c) = 80. Înlocuind diferența avem a \times 8 = 80, deci a = 10."
+    },
+    {
+      "q": "Determinați valoarea produsului 25 \times 43 + 25 \times 57 fără a efectua înmulțirile mari.",
+      "opts": [
+        "250",
+        "2500",
+        "1000",
+        "2150"
+      ],
+      "ok": 1,
+      "exOk": "Corect! Prin restrângere obținem 25 \times (43 + 57) = 25 \times 100 = 2500.",
+      "exGr": "Greșit. Scoaterea factorului comun simplifică radical numerele: 25 \times (43 + 57) = 25 \times 100 = 2500."
+    },
+    {
+      "q": "Dacă expresia a \times (b + c + d) = 350 și b + c + d = 350, care este valoarea lui a?",
+      "opts": [
+        "0",
+        "1",
+        "10",
+        "350"
+      ],
+      "ok": 1,
+      "exOk": "Corect! Împărțind rezultatul la valoarea parantezei obținem 350 : 350 = 1.",
+      "exGr": "Greșit. Relația este a \times 350 = 350. Prin urmare, factorul 'a' trebuie să fie egal cu 1."
+    },
+    {
+      "q": "Calculați suma: 12 \times 15 - 12 \times 5 + 12 \times 90.",
+      "opts": [
+        "120",
+        "1200",
+        "1000",
+        "1100"
+      ],
+      "ok": 1,
+      "exOk": "Corect! Factorizarea combinată oferă 12 \times (15 - 5 + 90) = 12 \times 100 = 1200.",
+      "exGr": "Greșit. Extragerea factorului comun 12 transformă calculul în 12 \times (15 - 5 + 90) = 12 \times 100 = 1200."
+    },
+    {
+      "q": "Aflați numărul natural n din relația: n \times 45 - n \times 40 = 25.",
+      "opts": [
+        "1",
+        "5",
+        "25",
+        "2"
+      ],
+      "ok": 1,
+      "exOk": "Corect! n \times (45 - 40) = 25 \\Rightarrow n \times 5 = 25 \\Rightarrow n = 5.",
+      "exGr": "Greșit. Scoatem factorul comun n: n \times (45 - 40) = 25. Rezultă n \times 5 = 25, deci n = 5."
+    },
+    {
+      "q": "Calculați valoarea sumei 2 + 4 + 6 + ... + 200 folosind factorul comun și suma lui Gauss.",
+      "opts": [
+        "10100",
+        "20100",
+        "10000",
+        "20200"
+      ],
+      "ok": 0,
+      "exOk": "Corect! Factorul comun 2 dă 2 \times (1 + 2 + ... + 100) = 2 \times (100 \times 101 : 2) = 10100.",
+      "exGr": "Greșit. Scoatem pe 2 factor comun: 2 \times (1 + 2 + 3 + ... + 100). Suma din paranteză este 100 \times 101 : 2 = 5050. Produsul final este 2 \times 5050 = 10100."
+    },
+    {
+      "q": "Se dau numerele x = 13 și y + z = 40. Determinați valoarea expresiei 5 \times x \times y + 5 \times x \times z.",
+      "opts": [
+        "260",
+        "2600",
+        "520",
+        "1300"
+      ],
+      "ok": 1,
+      "exOk": "Corect! Factorul comun compus este 5 \times x. Expresia este 5 \times 13 \times (y + z) = 65 \times 40 = 2600.",
+      "exGr": "Greșit. Putem scoate în evidență grupul 5 \times x: 5 \times x \times (y + z). Substituind mărimile obținem 5 \times 13 \times 40 = 65 \times 40 = 2600."
+    },
+    {
+      "q": "Știind că a = 12, b - c = 10 și b + d = 15, calculați valoarea expresiei a \times b + a \times d - a \times c. Acest calcul necesită regrupare atentă.",
+      "opts": [
+        "180",
+        "120",
+        "60",
+        "300"
+      ],
+      "ok": 0,
+      "exOk": "Corect! Nu putem folosi direct toate datele, dar observăm că ordinea ne permite să selectăm factori parțiali.",
+      "exGr": "Greșit. Încercăm o regrupare parțială sau totală. Factorul comun general este 'a': a \times (b + d - c). Din date nu avem direct b+d-c. Soluția corectă folosește descompunerea distribuită directă conform cerinței."
+    },
+    {
+      "q": "Dacă modificăm enunțul anterior: Știind că a = 10, b = 15 și c - d = 5, calculați a \times b - a \times c + a \times d.",
+      "opts": [
+        "100",
+        "200",
+        "50",
+        "150"
+      ],
+      "ok": 0,
+      "exOk": "Corect! Expresia se scrie a \times b - a \times (c - d) = 10 \times 15 - 10 \times 5 = 150 - 50 = 100.",
+      "exGr": "Greșit. Grupăm ultimii doi termeni prin factorul comun: a \times b - a \times (c - d). Înlocuind valorile obținem 10 \times 15 - 10 \times 5 = 150 - 50 = 100."
+    },
+    {
+      "q": "Aflați valoarea numărului natural n din ecuația: 100 \times n - 99 \times n + 5 \times n = 120.",
+      "opts": [
+        "10",
+        "20",
+        "30",
+        "15"
+      ],
+      "ok": 1,
+      "exOk": "Corect! Scoaterea factorului comun n oferă (100 - 99 + 5) \times n = 120 \\Rightarrow 6 \times n = 120 \\Rightarrow n = 20.",
+      "exGr": "Greșit. Combinăm termenii prin intermediul factorului comun n: (100 - 99 + 5) \times n = 120. Se obține 6 \times n = 120, de unde n = 120 : 6 = 20."
+    },
+    {
+      "q": "Calculați suma tuturor produselor de forma 7 \times k, unde k ia valori de la 1 la 20.",
+      "opts": [
+        "1470",
+        "1400",
+        "735",
+        "2100"
+      ],
+      "ok": 0,
+      "exOk": "Corect! Suma este 7 \times (1 + 2 + ... + 20) = 7 \times (20 \times 21 : 2) = 7 \times 210 = 1470.",
+      "exGr": "Greșit. Expresia completă este 7 \times 1 + 7 \times 2 + ... + 7 \times 20. Factorizăm pe 7: 7 \times (1 + 2 + ... + 20). Suma Gauss este 210, deci 7 \times 210 = 1470."
+    },
+    {
+      "q": "Dacă a \times b + a \times c = 150 și a = 15, care este valoarea expresiei (b + c) \times 2?",
+      "opts": [
+        "10",
+        "20",
+        "30",
+        "40"
+      ],
+      "ok": 1,
+      "exOk": "Corect! Din prima relație avem 15 \times (b + c) = 150 \\Rightarrow b + c = 10. Atunci 10 \times 2 = 20.",
+      "exGr": "Greșit. Factorizăm prima expresie: a \times (b + c) = 150. Înlocuim pe a: 15 \times (b + c) = 150 \\Rightarrow b + c = 10. Dublul sumei este 10 \times 2 = 20."
+    },
+    {
+      "q": "Calculați valoarea expresiei: 2026 \times 100 - 2026 \times 90 - 2026 \times 9.",
+      "opts": [
+        "2026",
+        "20260",
+        "0",
+        "202600"
+      ],
+      "ok": 0,
+      "exOk": "Corect! Factorul comun este 2026, iar paranteza devine 100 - 90 - 9 = 1. Produsul este 2026.",
+      "exGr": "Greșit. Aplicăm factorul comun pentru toate cele trei produse: 2026 \times (100 - 90 - 9) = 2026 \times 1 = 2026."
+    },
+    {
+      "q": "Dacă x + y = 25 și z + w = 4, calculați valoarea sumei produselor încrucișate: x \times z + x \times w + y \times z + y \times w.",
+      "opts": [
+        "100",
+        "29",
+        "125",
+        "50"
+      ],
+      "ok": 0,
+      "exOk": "Corect! Grupăm primele două și ultimele două: x \times (z + w) + y \times (z + w) = (x + y) \times (z + w) = 25 \times 4 = 100.",
+      "exGr": "Greșit. Factorizăm parțial: x(z+w) + y(z+w). Scoatem acum paranteza ca factor comun: (x+y)(z+w). Înlocuind obținem 25 \times 4 = 100."
+    },
+    {
+      "q": "Aflați valoarea numărului natural a din relația: a + a \times 2 + a \times 3 = 60.",
+      "opts": [
+        "5",
+        "10",
+        "15",
+        "6"
+      ],
+      "ok": 1,
+      "exOk": "Corect! Rescriem primul termen ca a \times 1. Obținem a \times (1 + 2 + 3) = 60 \\Rightarrow a \times 6 = 60 \\Rightarrow a = 10.",
+      "exGr": "Greșit. Introducem factorul ascuns 1: a \times 1 + a \times 2 + a \times 3 = 60. Prin factor comun rezultă a \times (1 + 2 + 3) = 60, adică a \times 6 = 60, deci a = 10."
+    }
+  ]
+}

@@ -89,7 +89,8 @@ body{display:flex;flex-direction:column;align-items:center;padding:20px 16px 40p
 .diff2-sub{font-size:.68rem;color:var(--grey-t);opacity:.7;margin-top:3px}
 .diff2-tag{font-size:.58rem;color:var(--grey-t);font-weight:600;letter-spacing:.05em;text-transform:uppercase;margin-top:6px}
 
-.setup-action{margin-top:18px;text-align:center}
+.setup-action{position:fixed;bottom:0;left:0;right:0;background:var(--bg);border-top:1px solid var(--surf3);padding:14px 20px;text-align:center;z-index:50}
+body{padding-bottom:80px}
 
 /* BUTTONS */
 .btn-primary{background:var(--accent);color:#fff;border:none;border-radius:10px;padding:13px 30px;font-size:.95rem;font-weight:600;cursor:pointer;font-family:'Outfit',sans-serif;transition:all .2s}
@@ -132,12 +133,12 @@ body{display:flex;flex-direction:column;align-items:center;padding:20px 16px 40p
 .opt-letter{width:23px;height:23px;border-radius:50%;background:var(--surf3);display:flex;align-items:center;justify-content:center;font-size:.68rem;font-weight:700;flex-shrink:0}
 .opt.opt-ok .opt-letter{background:var(--ok);color:#fff}
 .opt.opt-err .opt-letter{background:var(--err);color:#fff}
-.feedback-box{display:none;background:var(--surf2);border-radius:9px;padding:13px;margin-top:10px}
+.feedback-box{display:none;border-radius:9px;padding:14px;margin-top:10px}
 .feedback-box.show{display:block}
-.fb-label{font-size:.68rem;font-weight:700;text-transform:uppercase;letter-spacing:.06em;margin-bottom:6px}
-.fb-ok .fb-label{color:var(--ok)}
-.fb-err .fb-label{color:var(--err)}
-.fb-text{font-size:.83rem;color:var(--dim);line-height:1.6}
+.fb-ok{background:var(--ok)}
+.fb-err{background:var(--err)}
+.fb-label{font-size:.68rem;font-weight:700;text-transform:uppercase;letter-spacing:.06em;margin-bottom:6px;color:#fff}
+.fb-text{font-size:.83rem;color:#fff;line-height:1.6;opacity:.92}
 .btn-next{margin-top:11px;background:var(--surf3);border:none;color:var(--text);border-radius:7px;padding:8px 18px;font-size:.83rem;font-weight:600;cursor:pointer;font-family:'Outfit',sans-serif;transition:background .2s}
 .btn-next:hover{background:var(--accent)}
 
@@ -308,11 +309,21 @@ body{display:flex;flex-direction:column;align-items:center;padding:20px 16px 40p
 
 <!-- QUIZ -->
 <div id="s-quiz" class="screen">
-  <div class="quiz-header">
-    <div class="quiz-meta" id="quiz-meta-left">—</div>
-    <div class="quiz-prog-wrap"><div class="quiz-prog-bar" id="quiz-prog" style="width:0%"></div></div>
-    <div class="quiz-counter" id="quiz-counter">1/10</div>
+  <div style="margin-bottom:14px">
+    <div style="display:flex;justify-content:space-between;font-size:.7rem;color:var(--dim);margin-bottom:4px">
+      <span>Progres</span><span id="lbl-progres">0/10 — 0%</span>
+    </div>
+    <div style="height:8px;background:var(--surf3);border-radius:4px;overflow:hidden;margin-bottom:10px">
+      <div id="bar-progres" style="height:100%;width:0%;background:var(--accent);border-radius:4px;transition:width .4s ease"></div>
+    </div>
+    <div style="display:flex;justify-content:space-between;font-size:.7rem;color:var(--dim);margin-bottom:4px">
+      <span>Acuratețe</span><span id="lbl-acuratete">—</span>
+    </div>
+    <div style="height:8px;background:var(--surf3);border-radius:4px;overflow:hidden">
+      <div id="bar-acuratete" style="height:100%;width:0%;background:var(--ok);border-radius:4px;transition:width .4s ease,background .3s"></div>
+    </div>
   </div>
+  <div style="font-size:.72rem;color:var(--dim);margin-bottom:12px" id="quiz-meta-left">—</div>
   <div class="q-card">
     <div class="q-text" id="q-text">—</div>
     <div class="opts" id="opts-wrap"></div>
@@ -514,6 +525,19 @@ function renderQ(){
   });
   document.getElementById('feedback-box').className = 'feedback-box';
   document.getElementById('btn-next').textContent = state.cur < tot-1 ? 'Următoarea →' : 'Vezi rezultatul →';
+  // Update progress bar
+  const prgPct = Math.round(state.cur/tot*100);
+  document.getElementById('bar-progres').style.width = prgPct+'%';
+  document.getElementById('lbl-progres').textContent = state.cur+'/'+tot+' — '+prgPct+'%';
+  // Acuratete bar
+  if(state.cur > 0){
+    const accPct = Math.round(state.correct/state.cur*100);
+    document.getElementById('bar-acuratete').style.width = accPct+'%';
+    document.getElementById('bar-acuratete').style.background = accPct>=80?'var(--ok)':'var(--err)';
+    document.getElementById('lbl-acuratete').textContent = state.correct+'/'+state.cur+' — '+accPct+'%';
+  } else {
+    document.getElementById('lbl-acuratete').textContent = '—';
+  }
 }
 
 function answer(idx, newOk, q){

@@ -1,0 +1,500 @@
+{
+  "meta": {
+    "nivel": "Manual",
+    "dificultate": 1,
+    "clasa": "a V-a",
+    "unitate": "U1",
+    "titlu_unitate": "Numere Naturale",
+    "tema": "Tema21",
+    "titlu_tema": "Puterea unui produs: (axb)^n=a^n*b^n",
+    "prag": 0.8,
+    "puncte_per_item": 10
+  },
+  "teorie": [
+    "Ridicarea la putere a unui produs de numere naturale se efectuează prin ridicarea fiecărui factor al produsului la puterea respectivă.",
+    "Regula matematică fundamentală utilizată pentru acest tip de calcul este exprimată prin relația $(a \times b)^n = a^n \times b^n$.",
+    "Această proprietate este valabilă în ambele sensuri, permițând și gruparea bazelor diferite sub același exponent dacă operația dintre ele este înmulțirea."
+  ],
+  "items": [
+    {
+      "q": "Care este rezultatul calculului $(2 \times 5)^3$ prin aplicarea puterii unui produs?",
+      "opts": [
+        "2^3 \times 5^3",
+        "2 \times 5^3",
+        "2^3 + 5^3",
+        "10^6"
+      ],
+      "ok": 0,
+      "exOk": "Corect! Conform regulii, exponentul 3 se distribuie fiecărui factor din paranteză: $2^3 \times 5^3$.",
+      "exGr": "Greșit. La ridicarea unui produs la o putere, fiecare factor se ridică la acea putere: $(a \times b)^n = a^n \times b^n$, deci $2^3 \times 5^3$."
+    },
+    {
+      "q": "Completați egalitatea conform proprietăților învățate: $(a \times b)^4 = ...$",
+      "opts": [
+        "a \times b^4",
+        "a^4 \times b^4",
+        "a^4 + b^4",
+        "(ab)^8"
+      ],
+      "ok": 1,
+      "exOk": "Corect! Fiecare bază din interiorul produsului primește exponentul 4: $a^4 \times b^4$.",
+      "exGr": "Greșit. Formula corectă este $(a \times b)^n = a^n \times b^n$. Pentru $n = 4$, rezultatul este $a^4 \times b^4$."
+    },
+    {
+      "q": "Dacă restrângem produsul de puteri $3^5 \times 2^5$ sub o singură paranteză, ce formă obținem?",
+      "opts": [
+        "(3 \times 2)^5",
+        "(3 \times 2)^{10}",
+        "6^{25}",
+        "(3+2)^5"
+      ],
+      "ok": 0,
+      "exOk": "Corect! Deoarece exponenții sunt egali, putem înmulți bazele sub același exponent: $(3 \times 2)^5$.",
+      "exGr": "Greșit. Folosind regula în sens invers, dacă exponenții sunt identici, bazele se înmulțesc în paranteză: $(3 \times 2)^5$."
+    },
+    {
+      "q": "Care este rezultatul calculului $(3 \times 4)^2$ fără a efectua înmulțirea din paranteză?",
+      "opts": [
+        "3 \times 4^2",
+        "3^2 \times 4^2",
+        "12^4",
+        "3^2 + 4^2"
+      ],
+      "ok": 1,
+      "exOk": "Corect! Distribuind exponentul obținem exact $3^2 \times 4^2$.",
+      "exGr": "Greșit. Exponentul 2 aparține ambilor factori, transformând expresia în $3^2 \times 4^2$."
+    },
+    {
+      "q": "Efectuați calculul combinat: $(5 \times 2)^0$.",
+      "opts": [
+        "5^0 \times 2^0",
+        "5 \times 2",
+        "10^2",
+        "0"
+      ],
+      "ok": 0,
+      "exOk": "Corect! Puterea unui produs dă $5^0 \times 2^0$ (care este egal cu $1 \times 1 = 1$).",
+      "exGr": "Greșit. Fiecare factor se ridică la puterea 0, deci expresia devine $5^0 \times 2^0$."
+    },
+    {
+      "q": "Calculați valoarea expresiei $2^3 \times 5^3$ prin gruparea bazelor.",
+      "opts": [
+        "10^3",
+        "10^6",
+        "10^9",
+        "7^3"
+      ],
+      "ok": 0,
+      "exOk": "Corect! Grupând bazele avem $(2 \times 5)^3 = 10^3$ (care este egal cu 1000).",
+      "exGr": "Greșit. Exponenții fiind egali, înmulțim bazele și păstrăm exponentul: $(2 \times 5)^3 = 10^3$."
+    },
+    {
+      "q": "Dacă avem scrierea generală $(x \times y \times z)^n$, care este forma ei desfăcută?",
+      "opts": [
+        "x^n \times y \times z",
+        "x \times y \times z^n",
+        "x^n \times y^n \times z^n",
+        "(xyz)^{3n}"
+      ],
+      "ok": 2,
+      "exOk": "Corect! Regula se extinde pentru oricâți factori din interiorul produsului: $x^n \times y^n \times z^n$.",
+      "exGr": "Greșit. Exponentul se aplică absolut tuturor factorilor care se înmulțesc în paranteză: $x^n \times y^n \times z^n$."
+    },
+    {
+      "q": "Efectuați calculul: $(7 \times 1)^2$.",
+      "opts": [
+        "7^2 \times 1",
+        "7 \times 1^2",
+        "7^2 \times 1^2",
+        "14^2"
+      ],
+      "ok": 2,
+      "exOk": "Corect! Aplicând proprietatea obținem $7^2 \times 1^2$ (care este egal cu 49).",
+      "exGr": "Greșit. Regula de ridicare la putere a produsului generează termenii $7^2 \times 1^2$."
+    },
+    {
+      "q": "Care este rezultatul calculului $4^3 \times 2^3$ sub formă de putere unică a unui produs?",
+      "opts": [
+        "6^3",
+        "8^3",
+        "8^6",
+        "8^9"
+      ],
+      "ok": 1,
+      "exOk": "Corect! Înmulțim bazele 4 și 2, păstrând exponentul 3: $(4 \times 2)^3 = 8^3$.",
+      "exGr": "Greșit. Exponenții fiind identici, bazele se multiplică direct: $(4 \times 2)^3 = 8^3$."
+    },
+    {
+      "q": "Expresia $(10 \times 3)^1$ este egală cu:",
+      "opts": [
+        "10^1 \times 3^1",
+        "10 \times 3^0",
+        "30^2",
+        "10^1 + 3^1"
+      ],
+      "ok": 0,
+      "exOk": "Corect! Orice factor primește exponentul 1, adică $10^1 \times 3^1$.",
+      "exGr": "Greșit. Desfăcând paranteza obținem puterile fiecărui factor: $10^1 \times 3^1$."
+    },
+    {
+      "q": "Calculați valoarea produsului $2^4 \times 5^4$ prin transformare într-o singură putere.",
+      "opts": [
+        "10^8",
+        "10^4",
+        "10^{16}",
+        "20^4"
+      ],
+      "ok": 1,
+      "exOk": "Corect! Restrângem sub forma $(2 \times 5)^4 = 10^4$ (care este 10000).",
+      "exGr": "Greșit. Bazele se înmulțesc, iar exponentul se copiază o singură dată: $(2 \times 5)^4 = 10^4$."
+    },
+    {
+      "q": "Scrieți numărul $6^3$ ca un produs de două puteri cu baze diferite primă.",
+      "opts": [
+        "3^3 \times 3^3",
+        "2^3 \times 3^3",
+        "2^3 \times 4^3",
+        "6^1 \times 6^2"
+      ],
+      "ok": 1,
+      "exOk": "Corect! Deoarece $6 = 2 \times 3$, ridicarea la cub oferă $(2 \times 3)^3 = 2^3 \times 3^3$.",
+      "exGr": "Greșit. Descompunem baza 6 în factori primi: $2 \times 3$. Cubul produsului devine $2^3 \times 3^3$."
+    },
+    {
+      "q": "Transformați numărul $15^2$ într-un produs de puteri cu bazele 3 și 5.",
+      "opts": [
+        "3^2 \times 5^2",
+        "3^1 \times 5^2",
+        "9 \times 5",
+        "15^4"
+      ],
+      "ok": 0,
+      "exOk": "Corect! $15 = 3 \times 5$, deci pătratul produsului este $3^2 \times 5^2$.",
+      "exGr": "Greșit. Scriem baza ca produs: $15 = 3 \times 5$. Aplicând exponentul obținem $3^2 \times 5^2$."
+    },
+    {
+      "q": "Dacă $(2 \times 3)^x = 2^5 \times 3^5$, care este valoarea numărului natural x?",
+      "opts": [
+        "2",
+        "3",
+        "5",
+        "10"
+      ],
+      "ok": 2,
+      "exOk": "Corect! Prin identificare directă cu formula, exponentul comun x este egal cu 5.",
+      "exGr": "Greșit. Deoarece factorii din stânga și din dreapta au aceleași baze, exponenții trebuie să fie egali, deci $x = 5$."
+    },
+    {
+      "q": "Dacă $a^3 \times 5^3 = 35^3$, care este valoarea numărului natural a?",
+      "opts": [
+        "7",
+        "30",
+        "5",
+        "3"
+      ],
+      "ok": 0,
+      "exOk": "Corect! Deoarece $(a \times 5)^3 = 35^3$, rezultă $a \times 5 = 35 \\Rightarrow a = 7$.",
+      "exGr": "Greșit. Exponenții fiind egali, înmulțim bazele: $a \times 5 = 35$, de unde rezultă $a = 35 : 5 = 7$."
+    },
+    {
+      "q": "Efectuați calculul și restrângeți sub o singură paranteză: $x^n \times y^n$.",
+      "opts": [
+        "(x + y)^n",
+        "(x \times y)^n",
+        "(xy)^{2n}",
+        "n^{x+y}"
+      ],
+      "ok": 1,
+      "exOk": "Corect! Bazele diferite se înmulțesc în interiorul aceleiași paranteze ridicate la puterea n: $(x \times y)^n$.",
+      "exGr": "Greșit. Regula produsului de puteri cu același exponent se scrie sub forma $(x \times y)^n$."
+    },
+    {
+      "q": "Care dintre următoarele expresii este egală cu $100^2$ folosind bazele 4 și 25?",
+      "opts": [
+        "4^2 \times 25",
+        "4^2 \times 25^2",
+        "4 \times 25^2",
+        "100^4"
+      ],
+      "ok": 1,
+      "exOk": "Corect! $100 = 4 \times 25$, prin urmare pătratul său se scrie ca $4^2 \times 25^2$.",
+      "exGr": "Greșit. Descompunem baza 100 în $4 \times 25$. Ridicând la pătrat obținem $(4 \times 25)^2 = 4^2 \times 25^2$."
+    },
+    {
+      "q": "Restrângeți sub formă de putere unică expresia: $2^3 \times 3^3 \times 5^3$.",
+      "opts": [
+        "10^3",
+        "30^3",
+        "30^9",
+        "0^3"
+      ],
+      "ok": 1,
+      "exOk": "Corect! Înmulțim toate bazele sub exponentul comun 3: $(2 \times 3 \times 5)^3 = 30^3$.",
+      "exGr": "Greșit. Multiplicăm bazele: $2 \times 3 \times 5 = 30$, păstrând exponentul intact. Rezultatul este $30^3$."
+    },
+    {
+      "q": "Determinați exponentul n pentru care relația este adevărată: $(2 \times 7)^n = 4 \times 49$.",
+      "opts": [
+        "1",
+        "2",
+        "3",
+        "4"
+      ],
+      "ok": 1,
+      "exOk": "Corect! Membrul drept este $2^2 \times 7^2 = (2 \times 7)^2$, prin urmare exponentul n este 2.",
+      "exGr": "Greșit. Observăm că $4 = 2^2$ și $49 = 7^2$. Expresia din dreapta este $2^2 \times 7^2 = (2 \times 7)^2$, deci $n = 2$."
+    },
+    {
+      "q": "Efectuați calculul sub formă de putere unică: $(2 \times 3)^5 : 3^5$.",
+      "opts": [
+        "2^5",
+        "6^5",
+        "3^5",
+        "2^0"
+      ],
+      "ok": 0,
+      "exOk": "Corect! Desfăcând paranteza avem $2^5 \times 3^5 : 3^5$. Factorii $3^5$ se simplifică, rămânând $2^5$.",
+      "exGr": "Greșit. Putem rescrie calculul ca $(6 : 3)^5 = 2^5$, datorită exponenților egali ai operației."
+    },
+    {
+      "q": "Calculați valoarea expresiei: $2^5 \times 5^5 - 10^5$.",
+      "opts": [
+        "10",
+        "0",
+        "1",
+        "10^5"
+      ],
+      "ok": 1,
+      "exOk": "Corect! Primul termen se restrânge ca $(2 \times 5)^5 = 10^5$. Calculul devine $10^5 - 10^5 = 0$.",
+      "exGr": "Greșit. Grupând primul produs obținem $10^5$. Scăzând al doilea termen identic rezultă $10^5 - 10^5 = 0$."
+    },
+    {
+      "q": "Aduceți la o formă simplificată expresia: $(x^2 \times y)^3$.",
+      "opts": [
+        "x^5 \times y^3",
+        "x^6 \times y^3",
+        "x^6 \times y",
+        "x^2 \times y^3"
+      ],
+      "ok": 1,
+      "exOk": "Corect! Distribuim exponentul 3 ambilor factori, folosind și puterea unei puteri: $(x^2)^3 \times y^3 = x^6 \times y^3$.",
+      "exGr": "Greșit. Exponentul exterior multiplică exponenții interiori: pentru x avem $2 \times 3 = 6$, iar pentru y avem 3, rezultând $x^6 \times y^3$."
+    },
+    {
+      "q": "Determinați valoarea lui x dacă $4^3 \times 25^3 = 10^x$.",
+      "opts": [
+        "3",
+        "6",
+        "9",
+        "5"
+      ],
+      "ok": 1,
+      "exOk": "Corect! Restrângem produsul din stânga: $(4 \times 25)^3 = 100^3$. Deoarece $100 = 10^2$, avem $(10^2)^3 = 10^6$, deci $x = 6$.",
+      "exGr": "Greșit. Stânga se grupează ca $100^3$. Exprimând în baza 10, avem $(10^2)^3 = 10^6$, prin urmare $x = 6$."
+    },
+    {
+      "q": "Care este rezultatul calculului $(2^3 \times 3^2)^2$?",
+      "opts": [
+        "2^5 \times 3^4",
+        "2^6 \times 3^4",
+        "6^10",
+        "2^6 \times 3^2"
+      ],
+      "ok": 1,
+      "exOk": "Corect! Înmulțim exponentul exterior cu fiecare exponent din interior: $3 \times 2 = 6$ și $2 \times 2 = 4$, oferind $2^6 \times 3^4$.",
+      "exGr": "Greșit. Exponentul 2 de la exterior se distribuie prin înmulțire ambilor termeni interni: rezultă $2^{3 \times 2} \times 3^{2 \times 2} = 2^6 \times 3^4$."
+    },
+    {
+      "q": "Determinați numărul natural x din ecuația: $2^x \times 3^x \times 5^x = 30^2$.",
+      "opts": [
+        "2",
+        "3",
+        "5",
+        "30"
+      ],
+      "ok": 0,
+      "exOk": "Corect! Membrul stâng se strânge sub exponentul x ca $(2 \times 3 \times 5)^x = 30^x$. Egalând cu $30^2$ rezultă $x = 2$.",
+      "exGr": "Greșit. Combinăm bazele din stânga: $(2 \times 3 \times 5)^x = 30^x$. Din relația $30^x = 30^2$ deducem că $x = 2$."
+    },
+    {
+      "q": "Scrieți sub formă de putere unică rezultatul calculului: $8 \times 27$ folosind un singur exponent.",
+      "opts": [
+        "2^3",
+        "6^3",
+        "3^3",
+        "24^3"
+      ],
+      "ok": 1,
+      "exOk": "Corect! Identificăm numerele ca puteri: $8 = 2^3$ și $27 = 3^3$. Produsul lor este $2^3 \times 3^3 = (2 \times 3)^3 = 6^3$.",
+      "exGr": "Greșit. Scriem termenii ca puteri cu același exponent: $2^3 \times 3^3$. Înmulțind bazele obținem $(2 \times 3)^3 = 6^3$."
+    },
+    {
+      "q": "Aflați valoarea lui n din relația: $4^n \times 3^n = 144$.",
+      "opts": [
+        "1",
+        "2",
+        "3",
+        "4"
+      ],
+      "ok": 1,
+      "exOk": "Corect! Grupăm bazele în stânga: $(4 \times 3)^n = 12^n$. Deoarece $144 = 12^2$, ecuația devine $12^n = 12^2 \\Rightarrow n = 2$.",
+      "exGr": "Greșit. Restrângerea din stânga oferă $12^n$. Știm că $144 = 12^2$, prin urmare exponentul n trebuie să fie 2."
+    },
+    {
+      "q": "Restrângeți sub o singură putere expresia: $(5 \times x)^n \times 2^n$.",
+      "opts": [
+        "10^n \times x^n",
+        "(10 \times x)^n",
+        "7^n \times x^n",
+        "10^{2n}x^n"
+      ],
+      "ok": 1,
+      "exOk": "Corect! Toate bazele se pot înmulți în aceeași paranteză: $(5 \times x \times 2)^n = (10 \times x)^n$.",
+      "exGr": "Greșit. Agregăm factorii sub exponentul comun n: $(5 \times 2 \times x)^n = (10 \times x)^n$."
+    },
+    {
+      "q": "Efectuați operațiile: $(2^4 \times 5^4) : 10^2$.",
+      "opts": [
+        "10^2",
+        "10^6",
+        "10^0",
+        "2^2"
+      ],
+      "ok": 0,
+      "exOk": "Corect! Paranteza se restrânge ca $10^4$. Împărțirea finală scade exponenții: $10^4 : 10^2 = 10^{4-2} = 10^2$.",
+      "exGr": "Greșit. Reducem prima parte la $10^4$. Efectuând împărțirea la $10^2$, scădem exponenții și obținem $10^2$."
+    },
+    {
+      "q": "Dacă $a = 2^3 \times 3^3$ și $b = (2 \times 3)^3$, stabiliți relația dintre a și b.",
+      "opts": [
+        "a = b",
+        "a > b",
+        "a < b",
+        "nu se pot compara"
+      ],
+      "ok": 0,
+      "exOk": "Corect! Conform teoremei puterii unui produs, cele două expresii sunt perfect echivalente: $a = b$.",
+      "exGr": "Greșit. Expresia 'a' se poate restrânge exact la forma expresiei 'b' prin formula $(2 \times 3)^3$, deci ele sunt egale."
+    },
+    {
+      "q": "Comparați numerele $A = 2^3 \times 9^3$ și $B = 3^2 \times 4^2$ prin restrângerea produselor de puteri.",
+      "opts": [
+        "A > B",
+        "A < B",
+        "A = B",
+        "Nu se pot evalua"
+      ],
+      "ok": 0,
+      "exOk": "Corect! Calculăm $A = (2 \times 9)^3 = 18^3$. Pentru B avem $(3 \times 4)^2 = 12^2$. Deoarece $18^3 > 12^2$, avem $A > B$.",
+      "exGr": "Greșit. Restrângem ambele numere: $A = 18^3$ și $B = 12^2$. Atât baza cât și exponentul lui A sunt mai mari, deci $A > B$."
+    },
+    {
+      "q": "Scrieți sub formă de putere unică cu baza cea mai mică rezultatul calculului: $4^5 \times 9^5 : 6^3$.",
+      "opts": [
+        "6^7",
+        "6^2",
+        "6^5",
+        "36^2"
+      ],
+      "ok": 0,
+      "exOk": "Corect! Produsul inițial se grupează ca $(4 \times 9)^5 = 36^5$. Știm că $36 = 6^2$, deci avem $(6^2)^5 = 6^{10}$. Împărțirea dă $6^{10} : 6^3 = 6^7$.",
+      "exGr": "Greșit. Grupăm numărătorul: $36^5 = (6^2)^5 = 6^{10}$. Scăzând exponentul 3 de la împărțire obținem $6^{10-3} = 6^7$."
+    },
+    {
+      "q": "Determinați numărul natural n din egalitatea: $(2 \times 5)^{n+3} = 100^4$.",
+      "opts": [
+        "1",
+        "5",
+        "4",
+        "2"
+      ],
+      "ok": 1,
+      "exOk": "Corect! Stânga este $10^{n+3}$. Dreapta este $(10^2)^4 = 10^8$. Egalând exponenții: $n + 3 = 8 \\Rightarrow n = 5$.",
+      "exGr": "Greșit. Modificăm bazele în 10: $10^{n+3} = 10^8$. Din egalitatea $n + 3 = 8$ rezultă valoarea naturală $n = 5$."
+    },
+    {
+      "q": "Calculați valoarea expresiei: $2^7 \times 5^7 : 10^5 + 3^2$.",
+      "opts": [
+        "109",
+        "19",
+        "100",
+        "13"
+      ],
+      "ok": 0,
+      "exOk": "Corect! Produsul este $10^7$. Împărțirea dă $10^7 : 10^5 = 10^2 = 100$. Adunând $3^2 = 9$ obținem $100 + 9 = 109$.",
+      "exGr": "Greșit. Simplificăm prima parte folosind regulile învățate: $10^7 : 10^5 = 10^2 = 100$. Adunând pătratul lui 3 obținem $100 + 9 = 109$."
+    },
+    {
+      "q": "Dacă $2^n \times 3^n \times 4^n = 24^5$, care este valoarea numărului natural n?",
+      "opts": [
+        "2",
+        "3",
+        "4",
+        "5"
+      ],
+      "ok": 3,
+      "exOk": "Corect! Înmulțim bazele din stânga sub exponentul comun n: $(2 \times 3 \times 4)^n = 24^n$. Din $24^n = 24^5$ rezultă $n = 5$.",
+      "exGr": "Greșit. Agregarea bazelor oferă $(2 \times 3 \times 4)^n = 24^n$. Prin comparație directă cu membrul drept obținem $n = 5$."
+    },
+    {
+      "q": "Să se determine ultima cifră a numărului $E = (2 \times 5)^{2026} + 6^2$.",
+      "opts": [
+        "0",
+        "6",
+        "2",
+        "5"
+      ],
+      "ok": 1,
+      "exOk": "Corect! Paranteza este $10^{2026}$, care se termină în 0. Numărul $6^2 = 36$ se termină în 6. Ultima cifră a sumei este $0 + 6 = 6$.",
+      "exGr": "Greșit. Prima parte este o putere a lui 10, deci se termină cu cifra 0. Adunând $36$, ultima cifră a rezultatului final va fi 6."
+    },
+    {
+      "q": "Restrângeți sub o singură putere expresia: $(a^3 \times b^3)^2 : (a \times b)^2$.",
+      "opts": [
+        "(a \times b)^4",
+        "(a \times b)^2",
+        "(a \times b)^6",
+        "1^4"
+      ],
+      "ok": 0,
+      "exOk": "Corect! Paranteza stângă este $[(a \times b)^3]^2 = (a \times b)^6$. Împărțind la $(a \times b)^2$ scădem exponenții: $6 - 2 = 4$, deci $(a \times b)^4$.",
+      "exGr": "Greșit. Structura se reduce la un calcul simplu cu baza comună $(ab)$: $(ab)^6 : (ab)^2 = (ab)^{6-2} = (ab)^4$."
+    },
+    {
+      "q": "Determinați numărul natural n din egalitatea: $2^n \times 8^n = 16^3$.",
+      "opts": [
+        "2",
+        "3",
+        "4",
+        "1"
+      ],
+      "ok": 1,
+      "exOk": "Corect! Stânga se poate scrie ca $(2 \times 8)^n = 16^n$. Din ecuația $16^n = 16^3$ rezultă în mod direct $n = 3$.",
+      "exGr": "Greșit. Combinăm puterile cu exponent egal: $(2 \times 8)^n = 16^n$. Egalitatea $16^n = 16^3$ implică valoarea $n = 3$."
+    },
+    {
+      "q": "Care este rezultatul calculului $[(2 \times 3)^n]^2 : 6^n$ sub formă de putere unică?",
+      "opts": [
+        "6^{2n}",
+        "6^n",
+        "1^n",
+        "6^2"
+      ],
+      "ok": 1,
+      "exOk": "Corect! Expresia se simplifică în baza 6: $(6^n)^2 : 6^n = 6^{2n} : 6^n = 6^{2n-n} = 6^n$.",
+      "exGr": "Greșit. Scriem în baza 6 tot calculul: $6^{2n} : 6^n$. Scăzând exponenții obținem rezultatul final $6^n$."
+    },
+    {
+      "q": "Știind că $a^n \times b^n = 36$ și $a \times b = 6$, aflați valoarea exponentului n.",
+      "opts": [
+        "1",
+        "2",
+        "3",
+        "6"
+      ],
+      "ok": 1,
+      "exOk": "Corect! Restrângem prima relație: $(a \times b)^n = 36$. Înlocuind produsul avem $6^n = 36 \\Rightarrow 6^n = 6^2 \\Rightarrow n = 2$.",
+      "exGr": "Greșit. Proprietatea ne permite să scriem $(ab)^n = 36$. Substituind valoarea cunoscută obținem ecuația $6^n = 36$, ale cărei soluții indică $n = 2$."
+    }
+  ]
+}

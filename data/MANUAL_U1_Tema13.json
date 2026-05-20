@@ -1,0 +1,500 @@
+{
+  "meta": {
+    "nivel": "Manual",
+    "dificultate": 1,
+    "clasa": "a V-a",
+    "unitate": "U1",
+    "titlu_unitate": "Numere Naturale",
+    "tema": "Tema13",
+    "titlu_tema": "Impartire cu rest zero; deimpartit, impartitor, cat; proba",
+    "prag": 0.8,
+    "puncte_per_item": 10
+  },
+  "teorie": [
+    "Împărțirea cu rest zero este operația inversă înmulțirii, prin care se află de câte ori un număr natural numit împărțitor se cuprinde într-un alt număr numit deîmpărțit.",
+    "Componentele împărțirii sunt deîmpărțitul și împărțitorul, care trebuie să fie strict diferit de zero, iar rezultatul operației se numește cât.",
+    "Proba împărțirii exacte se efectuează fie prin înmulțirea câtului cu împărțitorul pentru a obține deîmpărțitul, fie prin împărțirea deîmpărțitului la cât pentru a obține împărțitorul."
+  ],
+  "items": [
+    {
+      "q": "În relația $24 : 6 = 4, care este deîmpărțitul?",
+      "opts": [
+        "24",
+        "6",
+        "4",
+        "0"
+      ],
+      "ok": 0,
+      "exOk": "Corect! Deîmpărțitul este primul număr din operație, cel care urmează să fie împărțit.",
+      "exGr": "Greșit. În structura $a : b = c$, termenul 'a' este deîmpărțitul. În acest caz, valoarea este 24."
+    },
+    {
+      "q": "În operația $35 : 5 = 7, cum se numește numărul 5?",
+      "opts": [
+        "Deîmpărțit",
+        "Împărțitor",
+        "Cât",
+        "Rest"
+      ],
+      "ok": 1,
+      "exOk": "Corect! Numărul la care se împarte se numește împărțitor.",
+      "exGr": "Greșit. În structura $a : b = c$, termenul 'b' este împărțitorul. În acest caz, valoarea este 5."
+    },
+    {
+      "q": "Cum se numește rezultatul operației de împărțire?",
+      "opts": [
+        "Produs",
+        "Diferență",
+        "Cât",
+        "Sumă"
+      ],
+      "ok": 2,
+      "exOk": "Corect! Rezultatul obținut în urma unei împărțiri se numește cât.",
+      "exGr": "Greșit. Produsul aparține înmulțirii, diferența aparține scăderii, iar rezultatul împărțirii este câtul."
+    },
+    {
+      "q": "Împărțirea la care număr natural nu are sens și este interzisă?",
+      "opts": [
+        "1",
+        "0",
+        "10",
+        "la orice număr par"
+      ],
+      "ok": 1,
+      "exOk": "Corect! Împărțirea la zero nu are sens în matematică; împărțitorul trebuie să fie nenul.",
+      "exGr": "Greșit. În mulțimea numerelor naturale, împărțirea la zero este complet interzisă și nu are definiție."
+    },
+    {
+      "q": "Care este câtul împărțirii numerelor 42 și 6?",
+      "opts": [
+        "6",
+        "7",
+        "8",
+        "36"
+      ],
+      "ok": 1,
+      "exOk": "Corect! Deoarece $6 \times 7 = 42$, rezultă că $42 : 6 = 7$.",
+      "exGr": "Greșit. Câtul reprezintă rezultatul împărțirii: $42 : 6 = 7$."
+    },
+    {
+      "q": "Efectuați operația și proba: $0 : 15$.",
+      "opts": [
+        "15",
+        "Nu se poate",
+        "0",
+        "1"
+      ],
+      "ok": 2,
+      "exOk": "Corect! Zero împărțit la orice număr natural nenul are ca rezultat 0.",
+      "exGr": "Greșit. Deîmpărțitul poate fi zero, iar câtul este 0 deoarece proba indică $15 \times 0 = 0$."
+    },
+    {
+      "q": "Care este rezultatul calculului $84 : 1$?",
+      "opts": [
+        "1",
+        "0",
+        "84",
+        "841"
+      ],
+      "ok": 2,
+      "exOk": "Corect! Orice număr natural împărțit la 1 rămâne neschimbat.",
+      "exGr": "Greșit. Împărțirea la unitate nu modifică valoarea deîmpărțitului: $84 : 1 = 84$."
+    },
+    {
+      "q": "Dacă împărțim un număr natural nenul la el însuși, ce cât obținem?",
+      "opts": [
+        "0",
+        "1",
+        "Numărul însuși",
+        "Dublul numărului"
+      ],
+      "ok": 1,
+      "exOk": "Corect! Un număr se cuprinde în el însuși exact o singură dată, deci câtul este 1.",
+      "exGr": "Greșit. Când deîmpărțitul este egal cu împărțitorul (nenul), câtul este întotdeauna 1."
+    },
+    {
+      "q": "Efectuați proba împărțirii $48 : 8 = 6$ prin operația de înmulțire.",
+      "opts": [
+        "48 \times 6",
+        "6 \times 8 = 48",
+        "48 : 6 = 8",
+        "8 : 6"
+      ],
+      "ok": 1,
+      "exOk": "Corect! Proba prin înmulțire se realizează multiplicând câtul cu împărțitorul.",
+      "exGr": "Greșit. Proba corectă prin înmulțire verifică dacă produsul dintre cât și împărțitor dă deîmpărțitul: $6 \times 8 = 48$."
+    },
+    {
+      "q": "Efectuați proba împărțirii $60 : 5 = 12$ prin operația de împărțire.",
+      "opts": [
+        "12 \times 5 = 60",
+        "60 : 12 = 5",
+        "60 - 5 = 55",
+        "12 : 5"
+      ],
+      "ok": 1,
+      "exOk": "Corect! Proba prin împărțire constă în împărțirea deîmpărțitului la cât pentru a regăsi împărțitorul.",
+      "exGr": "Greșit. Proba prin împărțire cere să împărțim deîmpărțitul la cât: $60 : 12 = 5$."
+    },
+    {
+      "q": "Aflați numărul necunoscut x din relația: $x : 4 = 25$.",
+      "opts": [
+        "100",
+        "21",
+        "29",
+        "50"
+      ],
+      "ok": 0,
+      "exOk": "Corect! Deîmpărțitul se află înmulțind câtul cu împărțitorul: $25 \times 4 = 100$.",
+      "exGr": "Greșit. x reprezintă deîmpărțitul. Îl calculăm efectuând înmulțirea dintre cât și împărțitor: $25 \times 4 = 100$."
+    },
+    {
+      "q": "Aflați numărul necunoscut y din relația: $72 : y = 8$.",
+      "opts": [
+        "80",
+        "64",
+        "9",
+        "7"
+      ],
+      "ok": 2,
+      "exOk": "Corect! Împărțitorul se află împărțind deîmpărțitul la cât: $72 : 8 = 9$.",
+      "exGr": "Greșit. y reprezintă împărțitorul. Se determină prin împărțirea deîmpărțitului la cât: $72 : 8 = 9$."
+    },
+    {
+      "q": "De câte ori este mai mic numărul 15 decât 150?",
+      "opts": [
+        "de 10 ori",
+        "de 135 de ori",
+        "de 5 ori",
+        "de 20 de ori"
+      ],
+      "ok": 0,
+      "exOk": "Corect! Pentru a afla de câte ori este mai mic, efectuăm împărțirea: $150 : 15 = 10$.",
+      "exGr": "Greșit. Relația 'de câte ori mai mic' implică o împărțire între cele două valori: $150 : 15 = 10$."
+    },
+    {
+      "q": "Dacă micșorăm numărul 120 de 6 ori, ce număr obținem?",
+      "opts": [
+        "114",
+        "20",
+        "30",
+        "126"
+      ],
+      "ok": 1,
+      "exOk": "Corect! A micșora 'de un număr de ori' înseamnă a efectua o împărțire exactă: $120 : 6 = 20$.",
+      "exGr": "Greșit. Micșorarea de un număr de ori se realizează prin împărțire, nu prin scădere: $120 : 6 = 20$."
+    },
+    {
+      "q": "Calculați câtul dintre cel mai mic număr de trei cifre și 10.",
+      "opts": [
+        "100",
+        "1",
+        "0",
+        "10"
+      ],
+      "ok": 3,
+      "exOk": "Corect! Cel mai mic număr de trei cifre este 100, iar $100 : 10 = 10$.",
+      "exGr": "Greșit. Cel mai mic număr de trei cifre este 100. Împărțirea la 10 elimină o cifră de zero: $100 : 10 = 10$."
+    },
+    {
+      "q": "Într-o împărțire exactă, deîmpărțitul este 400, iar câtul este 4. Care este împărțitorul?",
+      "opts": [
+        "1600",
+        "100",
+        "40",
+        "10"
+      ],
+      "ok": 1,
+      "exOk": "Corect! Împărțitorul este deîmpărțitul împărțit la cât: $400 : 4 = 100$.",
+      "exGr": "Greșit. Împărțitorul se află scăzând gradul de multiplicare prin operația: $400 : 4 = 100$."
+    },
+    {
+      "q": "Dacă câtul este 12 și împărțitorul este 5, care este deîmpărțitul?",
+      "opts": [
+        "17",
+        "7",
+        "60",
+        "50"
+      ],
+      "ok": 2,
+      "exOk": "Corect! Deîmpărțitul este egal cu produsul dintre cât și împărțitor: $12 \times 5 = 60$.",
+      "exGr": "Greșit. Pentru a găsi deîmpărțitul, aplicăm proba prin înmulțire: $12 \times 5 = 60$."
+    },
+    {
+      "q": "Efectuați calculul succesiv: $300 : 10 : 3$.",
+      "opts": [
+        "100",
+        "30",
+        "10",
+        "1"
+      ],
+      "ok": 2,
+      "exOk": "Corect! Operațiile se execută de la stânga la dreapta: $300 : 10 = 30$, apoi $30 : 3 = 10$.",
+      "exGr": "Greșit. Împărțirile succesive se fac în ordinea scrierii: $300 : 10 = 30$, după care $30 : 3 = 10$."
+    },
+    {
+      "q": "Dacă $a : b = 24$, cât este $a : (b \times 2)$ pentru o împărțire exactă?",
+      "opts": [
+        "48",
+        "12",
+        "24",
+        "2"
+      ],
+      "ok": 1,
+      "exOk": "Corect! Dacă mărim împărțitorul de 2 ori, câtul se va micșora de 2 ori: $24 : 2 = 12$.",
+      "exGr": "Greșit. Dublarea împărțitorului înseamnă că deîmpărțitul se împarte la o valoare mai mare, deci câtul se înjumătățește: $24 : 2 = 12$."
+    },
+    {
+      "q": "Dacă $a : b = 30$, cât este $(a × 2) : b$?",
+      "opts": [
+        "15",
+        "60",
+        "30",
+        "2"
+      ],
+      "ok": 1,
+      "exOk": "Corect! Mărirea deîmpărțitului de 2 ori determină mărirea directă a câtului tot de 2 ori: $30 \times 2 = 60$.",
+      "exGr": "Greșit. Dacă avem o cantitate dublă de împărțit la același număr de părți, fiecare parte se dublează: $30 \times 2 = 60$."
+    },
+    {
+      "q": "Efectuați împărțirea: $144 : 12$.",
+      "opts": [
+        "11",
+        "12",
+        "14",
+        "10"
+      ],
+      "ok": 1,
+      "exOk": "Corect! $12 \times 12 = 144$, deci câtul este exact 12.",
+      "exGr": "Greșit. Calculul corect al împărțirii este $144 : 12 = 12$."
+    },
+    {
+      "q": "Se știe că $a : b = 8$. Calculați expresia $(a : 2) : b$.",
+      "opts": [
+        "16",
+        "4",
+        "8",
+        "2"
+      ],
+      "ok": 1,
+      "exOk": "Corect! Micșorarea deîmpărțitului de 2 ori micșorează câtul tot de 2 ori: $8 : 2 = 4$.",
+      "exGr": "Greșit. Putem rescrie relația ca $(a : b) : 2$. Cum $a : b = 8$, avem $8 : 2 = 4$."
+    },
+    {
+      "q": "Suma a două numere este 50, iar unul dintre ele este 10. Care este câtul lor?",
+      "opts": [
+        "5",
+        "4",
+        "40",
+        "10"
+      ],
+      "ok": 1,
+      "exOk": "Corect! Celălalt număr este $50 - 10 = 40$. Câtul lor este $40 : 10 = 4$.",
+      "exGr": "Greșit. Al doilea număr este $50 - 10 = 40$. Împărțirea numărului mare la cel mic oferă câtul $40 : 10 = 4$."
+    },
+    {
+      "q": "Dacă împărțim numărul $x$ la 8 obținem 15. Ce rezultat obținem dacă împărțim $x$ la 4?",
+      "opts": [
+        "30",
+        "15",
+        "5",
+        "60"
+      ],
+      "ok": 0,
+      "exOk": "Corect! Împărțitorul s-a micșorat de 2 ori (de la 8 la 4), deci câtul se mărește de 2 ori: $15 \times 2 = 30$.",
+      "exGr": "Greșit. Numărul $x$ este $15 \times 8 = 120$. Noul calcul este $120 : 4 = 30$."
+    },
+    {
+      "q": "Determinați numărul de 15 ori mai mic decât suma numerelor 200 și 100.",
+      "opts": [
+        "300",
+        "20",
+        "15",
+        "25"
+      ],
+      "ok": 1,
+      "exOk": "Corect! Suma este 300, iar $300 : 15 = 20$.",
+      "exGr": "Greșit. Întâi aflăm suma: $200 + 100 = 300$. Apoi, pentru a-l face de 15 ori mai mic, calculăm $300 : 15 = 20$."
+    },
+    {
+      "q": "Dacă într-o cutie sunt 120 de bomboane și vrem să le împărțim în mod egal la 12 copii, câte primește fiecare?",
+      "opts": [
+        "12",
+        "10",
+        "100",
+        "20"
+      ],
+      "ok": 1,
+      "exOk": "Corect! Repartizarea egală înseamnă împărțire: $120 : 12 = 10$.",
+      "exGr": "Greșit. Împărțim numărul total de bomboane la numărul de copii: $120 : 12 = 10$."
+    },
+    {
+      "q": "Calculați valoarea lui x din ecuația: $(x : 3) : 2 = 10$.",
+      "opts": [
+        "15",
+        "60",
+        "30",
+        "20"
+      ],
+      "ok": 1,
+      "exOk": "Corect! Izolăm paranteza: $x : 3 = 10 \times 2 = 20$, deci $x = 20 \times 3 = 60$.",
+      "exGr": "Greșit. Lucrăm prin mers invers: paranteza este $10 \times 2 = 20$. Apoi $x = 20 \times 3 = 60$."
+    },
+    {
+      "q": "Câtul a două numere este 12. Dacă deîmpărțitul este 144, care este scăzătorul... de fapt, care este împărțitorul?",
+      "opts": [
+        "12",
+        "144",
+        "1",
+        "10"
+      ],
+      "ok": 0,
+      "exOk": "Corect! Împărțitorul se află prin operația $144 : 12 = 12$.",
+      "exGr": "Greșit. Împărțitorul reprezintă rezultatul dintre deîmpărțit și cât: $144 : 12 = 12$."
+    },
+    {
+      "q": "Produsul a două numere este 180. Dacă unul dintre ele este 9, aflați-l pe celălalt.",
+      "opts": [
+        "171",
+        "20",
+        "30",
+        "189"
+      ],
+      "ok": 1,
+      "exOk": "Corect! Un factor necunoscut se află împărțind produsul la factorul cunoscut: $180 : 9 = 20$.",
+      "exGr": "Greșit. Operația inversă înmulțirii este împărțirea: $180 : 9 = 20$."
+    },
+    {
+      "q": "Efectuați calculul combinat respectând ordinea operațiilor: $50 + 50 : 5$.",
+      "opts": [
+        "20",
+        "60",
+        "100",
+        "55"
+      ],
+      "ok": 1,
+      "exOk": "Corect! Împărțirea se execută înaintea adunării: $50 + 10 = 60$.",
+      "exGr": "Greșit. Împărțirea are prioritate: $50 : 5 = 10$. Adunând cu primul termen obținem $50 + 10 = 60$."
+    },
+    {
+      "q": "Dacă $a : b = 20$, ce rezultat obținem pentru calculul $(a \times 4) : (b \times 2)$?",
+      "opts": [
+        "40",
+        "10",
+        "20",
+        "80"
+      ],
+      "ok": 0,
+      "exOk": "Corect! Înmulțirea deîmpărțitului mărește câtul de 4 ori ($20 \times 4 = 80$), iar înmulțirea împărțitorului îl micșorează de 2 ori ($80 : 2 = 40$).",
+      "exGr": "Greșit. Structura se reduce astfel: $\frac{a \times 4}{b \times 2} = \frac{a}{b} \times 2 = 20 \times 2 = 40$."
+    },
+    {
+      "q": "Aflați valoarea lui x din ecuația: $400 : (100 - x) = 8$.",
+      "opts": [
+        "50",
+        "60",
+        "40",
+        "20"
+      ],
+      "ok": 0,
+      "exOk": "Corect! Paranteza joacă rol de împărțitor: $100 - x = 400 : 8 = 50$, de unde $x = 100 - 50 = 50$.",
+      "exGr": "Greșit. Notăm paranteza ca termen necunoscut: $400 : P = 8 \\Rightarrow P = 50$. Rezultă $100 - x = 50 \\Rightarrow x = 50$."
+    },
+    {
+      "q": "Dacă $a : b = 5$ și $b : c = 4$, cât este $a : c$?",
+      "opts": [
+        "9",
+        "20",
+        "1",
+        "45"
+      ],
+      "ok": 1,
+      "exOk": "Corect! Din relații avem $a = 5 \times b$ și $b = 4 \times c$, deci $a = 5 \times (4 \times c) = 20 \times c$, ceea ce înseamnă $a : c = 20$.",
+      "exGr": "Greșit. Substituim convenabil: $a = 5b$ și $b = 4c$. Înlocuind pe b obținem $a = 5 \times 4c = 20c$. Prin urmare, $a : c = 20$."
+    },
+    {
+      "q": "Suma a trei numere este 240. Al doilea este dublul primului, iar al treilea este triplul primului. Care este primul număr?",
+      "opts": [
+        "40",
+        "80",
+        "120",
+        "30"
+      ],
+      "ok": 0,
+      "exOk": "Corect! Reprezentând prin segmente avem $1 + 2 + 3 = 6$ părți egale. O parte este $240 : 6 = 40$.",
+      "exGr": "Greșit. Suma totală este compusă din 6 părți egale cu primul număr ($p + 2p + 3p = 6p$). Primul număr este $240 : 6 = 40$."
+    },
+    {
+      "q": "Un număr este de 4 ori mai mare decât altul, iar diferența lor este 60. Care este câtul dintre numărul mare și cel mic?",
+      "opts": [
+        "15",
+        "4",
+        "20",
+        "60"
+      ],
+      "ok": 1,
+      "exOk": "Corect! Prin definiție, dacă un număr este de 4 ori mai mare decât celălalt, câtul împărțirii lor este exact 4.",
+      "exGr": "Greșit. Nu este nevoie să aflați numerele. Enunțul spune direct că cel mare este de 4 ori mai mare, deci câtul lor este 4."
+    },
+    {
+      "q": "Dacă deîmpărțitul este cel mai mic număr de patru cifre divizibil cu 10, iar împărțitorul este 20, care este câtul?",
+      "opts": [
+        "50",
+        "100",
+        "5",
+        "500"
+      ],
+      "ok": 0,
+      "exOk": "Corect! Cel mai mic număr de patru cifre este 1000, iar $1000 : 20 = 50$.",
+      "exGr": "Greșit. Numărul de patru cifre considerat este 1000. Calculul devine $1000 : 20 = 50$."
+    },
+    {
+      "q": "Câtul a două numere este 15. Dacă mărim deîmpărțitul de 3 ori și micșorăm împărțitorul de 3 ori, care va fi noul cât?",
+      "opts": [
+        "15",
+        "45",
+        "135",
+        "5"
+      ],
+      "ok": 2,
+      "exOk": "Corect! Mărirea deîmpărțitului multiplică câtul cu 3 ($15 \times 3 = 45$). Micșorarea împărțitorului multiplică din nou câtul cu 3 ($45 \times 3 = 135$).",
+      "exGr": "Greșit. Ambele modificări acționează în direcția măririi câtului: noul cât va fi $15 \times 3 \times 3 = 15 \times 9 = 135$."
+    },
+    {
+      "q": "Calculați valoarea lui n din relația: $200 : [10 + 2 \times (n : 3)] = 10$.",
+      "opts": [
+        "15",
+        "5",
+        "30",
+        "0"
+      ],
+      "ok": 0,
+      "exOk": "Corect! Paranteza pătrată este $200 : 10 = 20$. Atunci $2 \times (n : 3) = 10$, deci $n : 3 = 5 \\Rightarrow n = 15$.",
+      "exGr": "Greșit. Folosim ordinea inversă: paranteza este 20. Rezultă $2 \times (n : 3) = 10 \\Rightarrow n : 3 = 5 \\Rightarrow n = 15$."
+    },
+    {
+      "q": "Dacă împărțitorul se mărește de 5 ori, iar deîmpărțitul rămâne neschimbat, ce transformare trebuie să-i aplicăm câtului pentru ca egalitatea să se păstreze?",
+      "opts": [
+        "Să-l mărim de 5 ori",
+        "Să-l micșorăm de 5 ori",
+        "Să-l lăsăm neschimbat",
+        "Să-i adunăm 5"
+      ],
+      "ok": 1,
+      "exOk": "Corect! Împărțitorul și câtul sunt invers proporționale când deîmpărțitul este constant.",
+      "exGr": "Greșit. Mărirea împărțitorului înseamnă că grupăm în părți mai mari, deci numărul de părți (câtul) se micșorează de aceeași comunitate de ori: se micșorează de 5 ori."
+    },
+    {
+      "q": "Calculați valoarea expresiei $(a : b) : c$ știind că $a = 2400$, iar $b$ și $c$ verifică relațiile $b = 100 : 5$ și $c = 4$.",
+      "opts": [
+        "30",
+        "120",
+        "12",
+        "60"
+      ],
+      "ok": 0,
+      "exOk": "Corect! Aflăm $b = 20$. Apoi $a : b = 2400 : 20 = 120$. În final, $120 : 4 = 30$.",
+      "exGr": "Greșit. Determinăm valoarea lui b: $100 : 5 = 20$. Înlocuim pe rând: $2400 : 20 = 120$, iar $120 : 4 = 30$."
+    }
+  ]
+}

@@ -1,0 +1,500 @@
+{
+  "meta": {
+    "nivel": "Manual",
+    "dificultate": 1,
+    "clasa": "a V-a",
+    "unitate": "U1",
+    "titlu_unitate": "Numere Naturale",
+    "tema": "Tema11",
+    "titlu_tema": "Factori, produs; comutativitate, asociativitate, distributivitate fata de +/-",
+    "prag": 0.8,
+    "puncte_per_item": 10
+  },
+  "teorie": [
+    "Înmulțirea este operația prin care se calculează suma unor termeni egali, iar componentele sale se numesc factori și rezultatul se numește produs.",
+    "Înmulțirea este comutativă (schimbarea ordinii factorilor nu modifică produsul) și asociativă (gruparea factorilor în mod diferit nu modifică rezultatul).",
+    "Înmulțirea este distributivă față de adunare și scădere, permițând înmulțirea unui număr cu fiecare termen din paranteză."
+  ],
+  "items": [
+    {
+      "q": "În operația 7 \times 8 = 56, cum se numește numărul 56?",
+      "opts": [
+        "Factor",
+        "Sumă",
+        "Produs",
+        "Cât"
+      ],
+      "ok": 2,
+      "exOk": "Corect! Rezultatul operației de înmulțire se numește produs.",
+      "exGr": "Greșit. În structura unei înmulțiri, numerele care se înmulțesc sunt factori, iar rezultatul este produsul."
+    },
+    {
+      "q": "Cum se numesc numerele care se înmulțesc pentru a obține un produs?",
+      "opts": [
+        "Termeni",
+        "Factori",
+        "Diferențe",
+        "Împărțitori"
+      ],
+      "ok": 1,
+      "exOk": "Corect! Numerele care se înmulțesc se numesc factori.",
+      "exGr": "Greșit. Termenii aparțin adunării sau scăderii. La înmulțire, numerele componente se numesc factori."
+    },
+    {
+      "q": "Care proprietate a înmulțirii este ilustrată de relația 4 \times 5 = 5 \times 4?",
+      "opts": [
+        "Asociativitatea",
+        "Comutativitatea",
+        "Distributivitatea",
+        "Elementul neutru"
+      ],
+      "ok": 1,
+      "exOk": "Corect! Comutativitatea afirmă că schimbarea ordinii factorilor nu modifică produsul.",
+      "exGr": "Greșit. Schimbarea ordinii factorilor reprezintă proprietatea de comutativitate."
+    },
+    {
+      "q": "Care este rezultatul calculului 12 \times 1?",
+      "opts": [
+        "0",
+        "1",
+        "12",
+        "121"
+      ],
+      "ok": 2,
+      "exOk": "Corect! Numărul 1 este elementul neutru la înmulțire; orice număr înmulțit cu 1 rămâne neschimbat.",
+      "exGr": "Greșit. Numărul 1 nu modifică valoarea factorului prin înmulțire: 12 \times 1 = 12."
+    },
+    {
+      "q": "Care este rezultatul calculului 435 \times 0?",
+      "opts": [
+        "435",
+        "0",
+        "1",
+        "4350"
+      ],
+      "ok": 1,
+      "exOk": "Corect! Orice număr înmulțit cu 0 are produsul egal cu 0.",
+      "exGr": "Greșit. Numărul 0 este elementul absorbant la înmulțire, deci orice produs în care apare 0 devine 0."
+    },
+    {
+      "q": "Dacă grupăm factorii sub forma (2 \times 3) \times 5 = 2 \times (3 \times 5), ce proprietate aplicăm?",
+      "opts": [
+        "Comutativitate",
+        "Distributivitate",
+        "Asociativitate",
+        "Elementul neutru"
+      ],
+      "ok": 2,
+      "exOk": "Corect! Gruparea diferită a factorilor reprezintă proprietatea de asociativitate.",
+      "exGr": "Greșit. Relația arată că factorii pot fi grupați în orice ordine, proprietate numită asociativitate."
+    },
+    {
+      "q": "Efectuați înmulțirea: 15 \times 3.",
+      "opts": [
+        "18",
+        "45",
+        "35",
+        "55"
+      ],
+      "ok": 1,
+      "exOk": "Corect! 15 \times 3 = 45.",
+      "exGr": "Greșit. Calculul corect este 15 \times 3 = 45."
+    },
+    {
+      "q": "Aplicați distributivitatea pentru a calcula corect: 2 \times (10 + 3).",
+      "opts": [
+        "20 + 3",
+        "2 + 13",
+        "2 \times 10 + 2 \times 3",
+        "2 \times 10 + 3"
+      ],
+      "ok": 2,
+      "exOk": "Corect! Factorul din afara parantezei se înmulțește cu fiecare termen din interior.",
+      "exGr": "Greșit. Distributivitatea înseamnă înmulțirea lui 2 cu 10 și a lui 2 cu 3, adică 2 \times 10 + 2 \times 3."
+    },
+    {
+      "q": "Care este produsul numerelor 25 și 4?",
+      "opts": [
+        "100",
+        "29",
+        "80",
+        "125"
+      ],
+      "ok": 0,
+      "exOk": "Corect! 25 \times 4 = 100.",
+      "exGr": "Greșit. Produsul cere operația de înmulțire: 25 \times 4 = 100."
+    },
+    {
+      "q": "Efectuați operația: 7 \times 2 \times 5.",
+      "opts": [
+        "14",
+        "35",
+        "70",
+        "17"
+      ],
+      "ok": 2,
+      "exOk": "Corect! Asociind 2 \times 5 = 10, obținem 7 \times 10 = 70.",
+      "exGr": "Greșit. Calculul se face secvențial sau prin grupare convenabilă: 7 \times (2 \times 5) = 7 \times 10 = 70."
+    },
+    {
+      "q": "Aflați valoarea lui x din ecuația: x : 5 = 12.",
+      "opts": [
+        "17",
+        "7",
+        "60",
+        "52"
+      ],
+      "ok": 2,
+      "exOk": "Corect! Deimparțitul x se află înmulțind câtul cu împărțitorul: 12 \times 5 = 60.",
+      "exGr": "Greșit. Pentru a afla numărul care împărțit la 5 dă 12, efectuăm înmulțirea 12 \times 5 = 60."
+    },
+    {
+      "q": "Calculați prin cea mai rapidă metodă: 4 \times 17 \times 25.",
+      "opts": [
+        "170",
+        "1700",
+        "68",
+        "425"
+      ],
+      "ok": 1,
+      "exOk": "Corect! Grupăm convenabil (4 \times 25) \times 17 = 100 \times 17 = 1700.",
+      "exGr": "Greșit. Folosind comutativitatea și asociativitatea, grupăm 4 \times 25 = 100, apoi 100 \times 17 = 1700."
+    },
+    {
+      "q": "Dacă mărim numărul 34 de 11 ori, ce rezultat obținem?",
+      "opts": [
+        "45",
+        "341",
+        "374",
+        "364"
+      ],
+      "ok": 2,
+      "exOk": "Corect! Expresia 'de 11 ori' indică înmulțirea: 34 \times 11 = 374.",
+      "exGr": "Greșit. A mări de un număr de ori înseamnă înmulțire: 34 \times 11 = 374."
+    },
+    {
+      "q": "Care este rezultatul calculului: 5 \times (20 - 4)?",
+      "opts": [
+        "96",
+        "80",
+        "16",
+        "76"
+      ],
+      "ok": 1,
+      "exOk": "Corect! 5 \times 16 = 80 sau 5 \times 20 - 5 \times 4 = 100 - 20 = 80.",
+      "exGr": "Greșit. Calculând paranteza obținem 16, iar 5 \times 16 = 80."
+    },
+    {
+      "q": "Dacă un factor este 14 și al doilea factor este de 3 ori mai mare decât primul, care este produsul?",
+      "opts": [
+        "42",
+        "588",
+        "196",
+        "56"
+      ],
+      "ok": 1,
+      "exOk": "Corect! Al doilea factor este 14 \times 3 = 42. Produsul este 14 \times 42 = 588.",
+      "exGr": "Greșit. Al doilea factor este 14 \times 3 = 42. Produsul final este 14 \times 42 = 588."
+    },
+    {
+      "q": "Știind că a \times b = 50, calculați valoarea expresiei a \times (b \times 2).",
+      "opts": [
+        "52",
+        "100",
+        "25",
+        "200"
+      ],
+      "ok": 1,
+      "exOk": "Corect! Folosind asociativitatea, expresia devine (a \times b) \times 2 = 50 \times 2 = 100.",
+      "exGr": "Greșit. Regrupăm factorii: (a \times b) \times 2. Substituind valoarea cunoscută obținem 50 \times 2 = 100."
+    },
+    {
+      "q": "Deschideți paranteza folosind distributivitatea: a \times (b - c).",
+      "opts": [
+        "a \times b - c",
+        "a - b \times c",
+        "a \times b - a \times c",
+        "a \times b - b \times c"
+      ],
+      "ok": 2,
+      "exOk": "Corect! Înmulțirea se distribuie peste fiecare termen al scăderii: a \times b - a \times c.",
+      "exGr": "Greșit. Factorul 'a' trebuie înmulțit atât cu 'b', cât și cu 'c', păstrând semnul minus: a \times b - a \times c."
+    },
+    {
+      "q": "Dacă produsul a două numere este 120, iar unul dintre ele se dublează, care va fi noul produs?",
+      "opts": [
+        "122",
+        "60",
+        "240",
+        "120"
+      ],
+      "ok": 2,
+      "exOk": "Corect! Dacă un factor se înmulțește cu un număr, întreg produsul se înmulțește cu acel număr: 120 \times 2 = 240.",
+      "exGr": "Greșit. Multiplicarea unui factor multiplică direct rezultatul final: 120 \times 2 = 240."
+    },
+    {
+      "q": "Calculați dublul triplului numărului 15.",
+      "opts": [
+        "45",
+        "30",
+        "90",
+        "60"
+      ],
+      "ok": 2,
+      "exOk": "Corect! Triplul este 15 \times 3 = 45, iar dublul lui 45 este 45 \times 2 = 90.",
+      "exGr": "Greșit. Tradus în calcul avem 2 \times (3 \times 15) = 2 \times 45 = 90."
+    },
+    {
+      "q": "Efectuați calculul: 123 \times 3.",
+      "opts": [
+        "369",
+        "366",
+        "323",
+        "396"
+      ],
+      "ok": 0,
+      "exOk": "Corect! Înmulțind fiecare poziție cu 3 obținem 369.",
+      "exGr": "Greșit. Calculul corect realizat poziție cu poziție este 123 \times 3 = 369."
+    },
+    {
+      "q": "Calculați folosind distributivitatea: 99 \times 45.",
+      "opts": [
+        "4455",
+        "4500",
+        "4410",
+        "4545"
+      ],
+      "ok": 0,
+      "exOk": "Corect! Scrieți 99 = 100 - 1. Atunci (100 - 1) \times 45 = 4500 - 45 = 4455.",
+      "exGr": "Greșit. Strategia eficientă este (100 - 1) \times 45 = 4500 - 45 = 4455."
+    },
+    {
+      "q": "Știind că a = 5 și b + c = 14, calculați a \times b + a \times c.",
+      "opts": [
+        "19",
+        "70",
+        "60",
+        "45"
+      ],
+      "ok": 1,
+      "exOk": "Corect! Factorizând pe 'a' obținem a \times (b + c) = 5 \times 14 = 70.",
+      "exGr": "Greșit. Folosim distributivitatea în sens invers (factor comun): a \times (b + c). Înlocuind valorile, rezultă 5 \times 14 = 70."
+    },
+    {
+      "q": "Calculați rezultatul expresiei: 8 \times 125 - 4 \times 250.",
+      "opts": [
+        "1000",
+        "500",
+        "0",
+        "2000"
+      ],
+      "ok": 2,
+      "exOk": "Corect! Ambele produse intermediare sunt egale cu 1000, deci 1000 - 1000 = 0.",
+      "exGr": "Greșit. Efectuăm produsele: 8 \times 125 = 1000 și 4 \times 250 = 1000. Rezultatul este 1000 - 1000 = 0."
+    },
+    {
+      "q": "Dacă x \times y = 24, cât este (x \times 3) \times (y \times 2)?",
+      "opts": [
+        "144",
+        "48",
+        "72",
+        "29"
+      ],
+      "ok": 0,
+      "exOk": "Corect! Modificarea factorilor introduce multiplicatorii 3 și 2, deci noul produs este 24 \times 3 \times 2 = 144.",
+      "exGr": "Greșit. Regrupând factorii obținem (x \times y) \times (3 \times 2) = 24 \times 6 = 144."
+    },
+    {
+      "q": "Într-o livadă sunt 12 rânduri de câte 15 meri fiecare. Câți meri sunt în total?",
+      "opts": [
+        "170",
+        "180",
+        "150",
+        "165"
+      ],
+      "ok": 1,
+      "exOk": "Corect! Numărul total se determină prin înmulțire: 12 \times 15 = 180.",
+      "exGr": "Greșit. Determinarea numărului total se face multiplicând rândurile cu pomii de pe un rând: 12 \times 15 = 180."
+    },
+    {
+      "q": "Dacă a \times b = 15 și a \times c = 25, calculați valoarea lui a \times (b + c).",
+      "opts": [
+        "40",
+        "10",
+        "375",
+        "200"
+      ],
+      "ok": 0,
+      "exOk": "Corect! Distribuim factorul: a \times b + a \times c = 15 + 25 = 40.",
+      "exGr": "Greșit. Conform proprietății de distributivitate, a \times (b + c) = a \times b + a \times c. Însumând valorile avem 15 + 25 = 40."
+    },
+    {
+      "q": "Efectuați calculul combinat: 10 + 5 \times 4.",
+      "opts": [
+        "60",
+        "30",
+        "20",
+        "50"
+      ],
+      "ok": 1,
+      "exOk": "Corect! Înmulțirea are prioritate în fața adunării: 10 + 20 = 30.",
+      "exGr": "Greșit. Respectați ordinea operațiilor. Efectuați întâi înmulțirea: 5 \times 4 = 20, apoi adunarea: 10 + 20 = 30."
+    },
+    {
+      "q": "O revistă costă 8 lei. Câți lei vor costa 12 reviste de același fel?",
+      "opts": [
+        "20",
+        "86",
+        "96",
+        "84"
+      ],
+      "ok": 2,
+      "exOk": "Corect! Costul total este produsul dintre prețul unitar și numărul de bucăți: 12 \times 8 = 96.",
+      "exGr": "Greșit. Prețul total se calculează prin înmulțire: 12 \times 8 = 96 lei."
+    },
+    {
+      "q": "Dacă a \times b = 80 și a \times c = 30, calculați valoarea lui a \times (b - c).",
+      "opts": [
+        "110",
+        "50",
+        "2400",
+        "55"
+      ],
+      "ok": 1,
+      "exOk": "Corect! Aplicând distributivitatea obținem a \times b - a \times c = 80 - 30 = 50.",
+      "exGr": "Greșit. Expresia este echivalentă cu a \times b - a \times c. Înlocuind termenii, obținem 80 - 30 = 50."
+    },
+    {
+      "q": "Efectuați înmulțirea: 204 \times 5.",
+      "opts": [
+        "1020",
+        "1000",
+        "1040",
+        "209"
+      ],
+      "ok": 0,
+      "exOk": "Corect! 204 \times 5 = 1020.",
+      "exGr": "Greșit. Calculul corect este 204 \times 5 = 1020."
+    },
+    {
+      "q": "Determinați ultima cifră a produsului următoarelor numere: 1 \times 3 \times 5 \times 7 \times 9 \times 11.",
+      "opts": [
+        "0",
+        "1",
+        "5",
+        "9"
+      ],
+      "ok": 2,
+      "exOk": "Corect! Produsul dintre 5 și orice număr impar oferă întotdeauna ultima cifră 5.",
+      "exGr": "Greșit. Observăm că în șir avem factorul 5, iar restul factorilor sunt numere impare. Produsul numerelor impare cu 5 are mereu ultima cifră 5."
+    },
+    {
+      "q": "Calculați valoarea expresiei: 13 \times 47 + 13 \times 53.",
+      "opts": [
+        "1300",
+        "1400",
+        "130",
+        "1000"
+      ],
+      "ok": 0,
+      "exOk": "Corect! Factorizăm pe 13 și obținem 13 \times (47 + 53) = 13 \times 100 = 1300.",
+      "exGr": "Greșit. Extragerea factorului comun simplifică calculul: 13 \times (47 + 53) = 13 \times 100 = 1300."
+    },
+    {
+      "q": "Suma a două numere este 25. Dacă multiplicăm primul număr cu 4 și pe al doilea cu 4, care va fi noua sumă?",
+      "opts": [
+        "29",
+        "100",
+        "50",
+        "75"
+      ],
+      "ok": 1,
+      "exOk": "Corect! Noua sumă este descrisă de 4 \times a + 4 \times b = 4 \times (a + b) = 4 \times 25 = 100.",
+      "exGr": "Greșit. Expresia simbolică este 4a + 4b = 4(a + b). Înlocuind suma inițială obținem 4 \times 25 = 100."
+    },
+    {
+      "q": "Calculați valoarea lui x folosind proprietățile operațiilor: 37 \times 25 - 37 \times 15 = 37 \times x.",
+      "opts": [
+        "40",
+        "10",
+        "5",
+        "370"
+      ],
+      "ok": 1,
+      "exOk": "Corect! Factorizând în partea stângă obținem 37 \times (25 - 15) = 37 \times 10, deci x = 10.",
+      "exGr": "Greșit. Restrângem membrul stâng utilizând factorul comun: 37 \times (25 - 15) = 37 \times 10. Prin comparație directă rezultă x = 10."
+    },
+    {
+      "q": "Dacă a \times b = 200, iar factorul 'a' se micșorează de 4 ori în timp ce 'b' se dublează, care este valoarea noului produs?",
+      "opts": [
+        "400",
+        "100",
+        "50",
+        "200"
+      ],
+      "ok": 1,
+      "exOk": "Corect! Noul produs suferă transformările factorilor: 200 : 4 \times 2 = 50 \times 2 = 100.",
+      "exGr": "Greșit. Structura noului produs este (a : 4) \times (b \times 2) = (a \times b) : 4 \times 2 = 200 : 4 \times 2 = 100."
+    },
+    {
+      "q": "Un număr x este de 5 ori mai mare decât diferența numerelor 40 și 28. Determinați valoarea lui x.",
+      "opts": [
+        "172",
+        "60",
+        "200",
+        "12"
+      ],
+      "ok": 1,
+      "exOk": "Corect! Diferența este 40 - 28 = 12, iar x = 5 \times 12 = 60.",
+      "exGr": "Greșit. Scrierea matematică este x = 5 \times (40 - 28). Calculăm paranteza: 12, apoi 5 \times 12 = 60."
+    },
+    {
+      "q": "Suma a trei numere consecutive este multiplicată cu 10. Dacă numărul din mijloc este 8, care este produsul final?",
+      "opts": [
+        "240",
+        "80",
+        "160",
+        "250"
+      ],
+      "ok": 0,
+      "exOk": "Corect! Numerele sunt 7, 8 și 9. Suma lor este 24, iar rezultatul final este 24 \times 10 = 240.",
+      "exGr": "Greșit. Numerele consecutive sunt 7, 8, 9. Suma lor reprezintă 7 + 8 + 9 = 24. Înmulțind cu 10 obținem 24 \times 10 = 240."
+    },
+    {
+      "q": "Calculați valoarea expresiei: 25 \times 13 \times 4 - 10 \times 13 \times 10.",
+      "opts": [
+        "1300",
+        "130",
+        "0",
+        "13"
+      ],
+      "ok": 2,
+      "exOk": "Corect! Regrupând factorii avem (25 \times 4) \times 13 - (10 \times 10) \times 13 = 100 \times 13 - 100 \times 13 = 0.",
+      "exGr": "Greșit. Folosiți comutativitatea pentru simplificare: primul termen devine 100 \times 13 = 1300, al doilea termen devine 100 \times 13 = 1300. Rezultatul este 1300 - 1300 = 0."
+    },
+    {
+      "q": "Determinați valoarea lui n din relația: 2 \times [3 \times (n + 1)] = 18.",
+      "opts": [
+        "1",
+        "2",
+        "3",
+        "0"
+      ],
+      "ok": 1,
+      "exOk": "Corect! Paranteza dreaptă este 18 : 2 = 9. Paranteza rotundă este 9 : 3 = 3. Deci n + 1 = 3, de unde n = 2.",
+      "exGr": "Greșit. Împărțim succesiv prin factorii cunoscuți: 3 \times (n + 1) = 9, apoi n + 1 = 3. Astfel obținem n = 2."
+    },
+    {
+      "q": "Calculați valoarea expresiei a \times b + a \times c - a \times d, știind că a = 10 și b + c - d = 7.",
+      "opts": [
+        "70",
+        "17",
+        "10",
+        "700"
+      ],
+      "ok": 0,
+      "exOk": "Corect! Scoatem pe 'a' factor comun: a \times (b + c - d) = 10 \times 7 = 70.",
+      "exGr": "Greșit. Restrângem prin factor comun: a \times (b + c - d). Substituind cu valorile din enunț obținem 10 \times 7 = 70."
+    }
+  ]
+}

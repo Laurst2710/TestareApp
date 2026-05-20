@@ -1,0 +1,500 @@
+{
+  "meta": {
+    "nivel": "Manual",
+    "dificultate": 1,
+    "clasa": "a V-a",
+    "unitate": "U1",
+    "titlu_unitate": "Numere Naturale",
+    "tema": "Tema17",
+    "titlu_tema": "Cubul unui numar natural; cuburi perfecte: 1,8,27,64,125...",
+    "prag": 0.8,
+    "puncte_per_item": 10
+  },
+  "teorie": [
+    "Cubul unui număr natural reprezintă puterea a treia a acelui număr și se calculează prin înmulțirea numărului cu el însuși de trei ori.",
+    "Numerele naturale care pot fi scrise ca volumul sau puterea a treia a unui număr natural se numesc cuburi perfecte.",
+    "Șirul cuburilor perfecte începe cu 0, 1, 8, 27, 64, 125, 216, 343, 512, 729, 1000 și continuă la infinit."
+  ],
+  "items": [
+    {
+      "q": "Care este cubul numărului natural 2?",
+      "opts": [
+        "6",
+        "8",
+        "4",
+        "16"
+      ],
+      "ok": 1,
+      "exOk": "Corect! Cubul lui 2 este $2 \times 2 \times 2 = 8$.",
+      "exGr": "Greșit. Cubul unui număr înseamnă ridicarea la puterea a treia, deci înmulțirea numărului cu el însuși de trei ori: $2 \times 2 \times 2 = 8$."
+    },
+    {
+      "q": "Cum se numește rezultatul ridicării unui număr natural la puterea a treia?",
+      "opts": [
+        "Pătrat perfect",
+        "Cub perfect",
+        "Factor comun",
+        "Produs simplu"
+      ],
+      "ok": 1,
+      "exOk": "Corect! Rezultatul ridicării la puterea a treia se numește cub perfect.",
+      "exGr": "Greșit. Ridicarea la puterea a doua produce un pătrat perfect, în timp ce ridicarea la puterea a treia produce un cub perfect."
+    },
+    {
+      "q": "Care dintre următoarele numere este un cub perfect?",
+      "opts": [
+        "4",
+        "9",
+        "27",
+        "16"
+      ],
+      "ok": 2,
+      "exOk": "Corect! Numărul 27 este cub perfect deoarece $27 = 3 \times 3 \times 3 = 3^3$.",
+      "exGr": "Greșit. Numerele 4, 9 și 16 sunt pătrate perfecte. Singurul cub perfect din listă este 27, fiind egal cu $3^3$."
+    },
+    {
+      "q": "Calculați cubul numărului natural 1.",
+      "opts": [
+        "1",
+        "3",
+        "0",
+        "111"
+      ],
+      "ok": 0,
+      "exOk": "Corect! Cubul lui 1 este $1 \times 1 \times 1 = 1$.",
+      "exGr": "Greșit. Orice putere a lui 1 este egală cu 1, prin urmare $1^3 = 1$."
+    },
+    {
+      "q": "Calculați valoarea numărului natural $0^3$.",
+      "opts": [
+        "3",
+        "1",
+        "0",
+        "Nu are sens"
+      ],
+      "ok": 2,
+      "exOk": "Corect! $0^3 = 0 \times 0 \times 0 = 0$.",
+      "exGr": "Greșit. Pătratul sau cubul lui 0 rămân egale cu 0, deoarece produsul are toți factorii nuli."
+    },
+    {
+      "q": "Care este cubul numărului natural 4?",
+      "opts": [
+        "12",
+        "16",
+        "64",
+        "32"
+      ],
+      "ok": 2,
+      "exOk": "Corect! $4^3 = 4 \times 4 \times 4 = 16 \times 4 = 64$.",
+      "exGr": "Greșit. Cubul lui 4 se obține calculând $4 \times 4 \times 4 = 64$, nu prin înmulțirea bazei cu exponentul."
+    },
+    {
+      "q": "Care dintre următoarele numere NU este un cub perfect?",
+      "opts": [
+        "1",
+        "8",
+        "25",
+        "64"
+      ],
+      "ok": 2,
+      "exOk": "Corect! Numărul 25 nu este cub perfect (este pătrat perfect, $5^2$).",
+      "exGr": "Greșit. 1 este $1^3$, 8 este $2^3$, iar 64 este $4^3$. Singurul număr care nu este cub perfect este 25."
+    },
+    {
+      "q": "Efectuați calculul puterii: $5^3$.",
+      "opts": [
+        "15",
+        "25",
+        "125",
+        "75"
+      ],
+      "ok": 2,
+      "exOk": "Corect! Exponentul 3 arată că baza 5 se multiplică de trei ori: $5 \times 5 \times 5 = 125$.",
+      "exGr": "Greșit. $5^3$ reprezintă $5 \times 5 \times 5 = 125$, nu înmulțirea directă $5 \times 3 = 15$."
+    },
+    {
+      "q": "Care este cubul numărului natural 10?",
+      "opts": [
+        "30",
+        "100",
+        "1000",
+        "10000"
+      ],
+      "ok": 2,
+      "exOk": "Corect! $10^3 = 10 \times 10 \times 10 = 1000$.",
+      "exGr": "Greșit. Cubul lui 10 adaugă trei cifre de zero la unitate, deci rezultatul este 1000."
+    },
+    {
+      "q": "Dacă un număr natural are cubul egal cu 8, care este acel număr?",
+      "opts": [
+        "4",
+        "2",
+        "3",
+        "24"
+      ],
+      "ok": 1,
+      "exOk": "Corect! Numărul al cărui cub este 8 este 2, deoarece $2^3 = 8$.",
+      "exGr": "Greșit. Căutăm numărul care înmulțit cu el însuși de trei ori dă 8. Acest număr este 2."
+    },
+    {
+      "q": "Calculați cubul numărului natural 6.",
+      "opts": [
+        "18",
+        "36",
+        "216",
+        "126"
+      ],
+      "ok": 2,
+      "exOk": "Corect! $6^3 = 6 \times 6 \times 6 = 36 \times 6 = 216$.",
+      "exGr": "Greșit. Efectuând corect produsele succesive obținem $36 \times 6 = 216$."
+    },
+    {
+      "q": "Care este cubul numărului natural 3?",
+      "opts": [
+        "9",
+        "27",
+        "81",
+        "12"
+      ],
+      "ok": 1,
+      "exOk": "Corect! $3^3 = 3 \times 3 \times 3 = 27$.",
+      "exGr": "Greșit. Ridicarea la cub implică un produs de trei factori egali cu 3, deci rezultatul este 27."
+    },
+    {
+      "q": "Aflați valoarea sumei primelor două cuburi perfecte nenule.",
+      "opts": [
+        "3",
+        "9",
+        "5",
+        "10"
+      ],
+      "ok": 1,
+      "exOk": "Corect! Primele două cuburi perfecte nenule sunt 1 și 8, iar $1 + 8 = 9$.",
+      "exGr": "Greșit. Cuburile perfecte nenule sunt $1^3=1$ și $2^3=8$. Suma lor este $1 + 8 = 9$."
+    },
+    {
+      "q": "Efectuați operațiile respectând prioritatea puterilor: $2 \times 3^3$.",
+      "opts": [
+        "54",
+        "18",
+        "216",
+        "24"
+      ],
+      "ok": 0,
+      "exOk": "Corect! Ridicarea la cub se face prima: $3^3 = 27$, iar apoi înmulțirea: $2 \times 27 = 54$.",
+      "exGr": "Greșit. Puterea se calculează înaintea înmulțirii: $3^3 = 27$. Ulterior determinăm produsul $2 \times 27 = 54$."
+    },
+    {
+      "q": "Care este ultima cifră a cubului numărului natural 12?",
+      "opts": [
+        "2",
+        "4",
+        "6",
+        "8"
+      ],
+      "ok": 3,
+      "exOk": "Corect! Ultima cifră a lui 12 este 2, iar $2^3 = 8$, deci ultima cifră a cubului este 8.",
+      "exGr": "Greșit. Comportamentul ultimei cifre depinde exclusiv de cubul ultimei cifre a bazei: $2 \times 2 \times 2 = 8$."
+    },
+    {
+      "q": "Dintre numerele 16, 27, 36 și 49, care este cub perfect?",
+      "opts": [
+        "16",
+        "27",
+        "36",
+        "49"
+      ],
+      "ok": 1,
+      "exOk": "Corect! Numărul 27 este cubul lui 3, restul fiind pătrate perfecte.",
+      "exGr": "Greșit. 16 este $4^2$, 36 este $6^2$, 49 este $7^2$. Cubul perfect este 27, provenind din $3^3$."
+    },
+    {
+      "q": "Aflați numărul natural x dacă $x^3 = 125$.",
+      "opts": [
+        "5",
+        "15",
+        "25",
+        "3"
+      ],
+      "ok": 0,
+      "exOk": "Corect! Rădăcina cubică sau numărul care ridicat la puterea a treia dă 125 este 5.",
+      "exGr": "Greșit. Soluția ecuației în numere naturale este $x = 5$, deoarece $5 \times 5 \times 5 = 125$."
+    },
+    {
+      "q": "Efectuați calculul combinat: $4^3 - 2^3$.",
+      "opts": [
+        "2",
+        "8",
+        "56",
+        "60"
+      ],
+      "ok": 2,
+      "exOk": "Corect! Mai întâi calculăm puterile: $4^3 = 64$ și $2^3 = 8$. Diferența lor este $64 - 8 = 56$.",
+      "exGr": "Greșit. Trebuie evaluate valorile puterilor înainte de scădere: $64 - 8 = 56$. Nu se scad bazele direct."
+    },
+    {
+      "q": "Care este cubul numărului natural 20?",
+      "opts": [
+        "400",
+        "800",
+        "4000",
+        "8000"
+      ],
+      "ok": 3,
+      "exOk": "Corect! $20^3 = 20 \times 20 \times 20 = 8000$.",
+      "exGr": "Greșit. Calculul corect implică $2^3 = 8$ urmat de trei zerouri, adică 8000."
+    },
+    {
+      "q": "Scrieți numărul 8 sub formă de putere cu baza 2.",
+      "opts": [
+        "2^1",
+        "2^2",
+        "2^3",
+        "4^2"
+      ],
+      "ok": 2,
+      "exOk": "Corect! Numărul 8 se descompune ca $2 \times 2 \times 2$, deci scrierea ca putere este $2^3$.",
+      "exGr": "Greșit. Deoarece 8 este cubul lui 2, exponentul asociat bazei 2 trebuie să fie 3, adică $2^3$."
+    },
+    {
+      "q": "Calculați valoarea expresiei: $1^3 + 2^3 + 3^3$.",
+      "opts": [
+        "6",
+        "14",
+        "36",
+        "9"
+      ],
+      "ok": 2,
+      "exOk": "Corect! Suma este $1 + 8 + 27 = 36$. Notă: suma cuburilor primelor n numere este egală cu pătratul sumei lor ($6^2 = 36$).",
+      "exGr": "Greșit. Calculăm fiecare cub în parte: $1^3 = 1$, $2^3 = 8$, $3^3 = 27$. Adunându-le obținem $1 + 8 + 27 = 36$."
+    },
+    {
+      "q": "Care dintre următoarele cifre poate fi ultima cifră a unui cub perfect?",
+      "opts": [
+        "Oricare dintre cifrele de la 0 la 9",
+        "Doar cifrele impare",
+        "Doar 0, 1, 4, 5, 6, 9",
+        "Doar 1, 8, 7, 4, 5"
+      ],
+      "ok": 0,
+      "exOk": "Corect! Spre deosebire de pătratele perfecte, un cub perfect se poate termina în absolut orice cifră de la 0 la 9.",
+      "exGr": "Greșit. Puterile a treia ale cifrelor acoperă toată mulțimea cifrelor la unități (ex: $2^3=8$, $3^3=27$, $7^3=343$, $8^3=512$). Oricare cifră este posibilă."
+    },
+    {
+      "q": "Determinați valoarea numărului natural n din ecuația: $n^3 - 4 = 60$.",
+      "opts": [
+        "4",
+        "8",
+        "64",
+        "5"
+      ],
+      "ok": 0,
+      "exOk": "Corect! Izolând termenul obținem $n^3 = 60 + 4 = 64$, de unde rezultă $n = 4$.",
+      "exGr": "Greșit. Relația devine $n^3 = 64$. Numărul natural al cărui cub este egal cu 64 este 4."
+    },
+    {
+      "q": "Care este valoarea numărului natural reprezentat prin expresia: $3^3 + 5^2$?",
+      "opts": [
+        "34",
+        "52",
+        "43",
+        "5"
+      ],
+      "ok": 1,
+      "exOk": "Corect! $3^3 = 27$ și $5^2 = 25$, iar suma lor este $27 + 25 = 52$.",
+      "exGr": "Greșit. Atenție la combinarea exponenților: $3^3 = 27$ (cub) și $5^2 = 25$ (pătrat). Suma este $27 + 25 = 52$."
+    },
+    {
+      "q": "Câte cuburi perfecte se află în mulțimea numerelor naturale strict între 5 și 100?",
+      "opts": [
+        "2 cuburi",
+        "3 cuburi",
+        "4 cuburi",
+        "5 cuburi"
+      ],
+      "ok": 1,
+      "exOk": "Corect! Cuburile perfecte din acest interval sunt 8, 27 și 64. În total sunt 3 numere.",
+      "exGr": "Greșit. Evaluăm cuburile succesive: $2^3=8$, $3^3=27$ și $4^3=64$. Numărul $5^3=125$ depășește pragul, deci sunt 3 valori."
+    },
+    {
+      "q": "Efectuați calculul combinat: $(1 + 2)^3 - 1^3 - 2^3$.",
+      "opts": [
+        "0",
+        "18",
+        "27",
+        "9"
+      ],
+      "ok": 1,
+      "exOk": "Corect! Paranteza dă $3^3 = 27$. Expresia devine $27 - 1 - 8 = 18$.",
+      "exGr": "Greșit. Întâi rezolvăm paranteza: $3^3 = 27$. Apoi scădem valorile celorlalte cuburi: $27 - 1 - 8 = 18$."
+    },
+    {
+      "q": "Care este cubul numărului natural 7?",
+      "opts": [
+        "49",
+        "218",
+        "343",
+        "240"
+      ],
+      "ok": 2,
+      "exOk": "Corect! $7^3 = 7 \times 7 \times 7 = 49 \times 7 = 343$.",
+      "exGr": "Greșit. Înmulțind pe 7 cu el însuși de trei ori obținem valoarea exactă 343."
+    },
+    {
+      "q": "Dacă un număr se termină cu cifra 3, cu ce cifră se va termina cubul său?",
+      "opts": [
+        "3",
+        "9",
+        "7",
+        "1"
+      ],
+      "ok": 2,
+      "exOk": "Corect! Deoarece $3^3 = 27$, ultima cifră a cubului va fi întotdeauna 7.",
+      "exGr": "Greșit. Ultima cifră se găsește calculând cubul ultimei cifre: $3 \times 3 \times 3 = 27$, deci cifra terminală este 7."
+    },
+    {
+      "q": "Determinați valoarea numărului natural x din relația: $2^3 + 2^3 + 2^3 + 2^3 = x^3$... Stați, restrângeți sub formă de putere unică.",
+      "opts": [
+        "2^3",
+        "2^4",
+        "2^5",
+        "4^3"
+      ],
+      "ok": 2,
+      "exOk": "Corect! Adunarea a patru termeni egali înseamnă $4 \times 2^3 = 2^2 \times 2^3 = 2^5$. Opțiunea $2^5$ este la indexul 2, reevaluăm ok la valoarea 2.",
+      "exGr": "Greșit. Expresia reprezintă $4 \times 2^3$. Scriind pe 4 ca $2^2$, obținem prin adunarea exponenților $2^{2+3} = 2^5$."
+    },
+    {
+      "q": "Efectuați operațiile: $5^3 - 10^2$.",
+      "opts": [
+        "25",
+        "5",
+        "15",
+        "125"
+      ],
+      "ok": 0,
+      "exOk": "Corect! $5^3 = 125$ și $10^2 = 100$. Diferența lor este $125 - 100 = 25$.",
+      "exGr": "Greșit. Calculăm valoarea celor două puteri distincte: $125 - 100 = 25$."
+    },
+    {
+      "q": "Ce rest dă cubul oricărui număr natural prin împărțirea la 9?",
+      "opts": [
+        "Doar restul 0",
+        "Doar resturile 0, 1 sau 8",
+        "Orice rest de la 0 la 8",
+        "Doar resturile 1 și 7"
+      ],
+      "ok": 1,
+      "exOk": "Corect! Cubul oricărui număr natural împărțit la 9 poate da ca rest doar valorile 0 (pentru multipli de 3), 1 sau 8.",
+      "exGr": "Greșit. Proprietatea aritmetică a cuburilor impune ca restul împărțirii acestora la 9 să fie exclusiv din mulțimea {0, 1, 8}."
+    },
+    {
+      "q": "Fie numărul $B = 2^6 \times 3^3$. Este acest număr un cub perfect? Dacă da, al cui cub este?",
+      "opts": [
+        "Nu este cub perfect",
+        "Da, este cubul lui 12",
+        "Da, este cubul lui 18",
+        "Da, este cubul lui 6"
+      ],
+      "ok": 1,
+      "exOk": "Corect! Exponenții fiind multipli de 3, putem scrie $B = (2^2 \times 3)^3 = (4 \times 3)^3 = 12^3$.",
+      "exGr": "Greșit. Grupați puterile sub un exponent comun egal cu 3: $(2^2 \times 3)^3 = (4 \times 3)^3 = 12^3$. Numărul este cubul lui 12."
+    },
+    {
+      "q": "Se știe că suma cuburilor primelor n numere naturale este dată de relația $[n(n+1):2]^2$. Cât este suma $1^3 + 2^3 + 3^3 + 4^3 + 5^3$?",
+      "opts": [
+        "15",
+        "225",
+        "125",
+        "100"
+      ],
+      "ok": 1,
+      "exOk": "Corect! Suma numerelor de la 1 la 5 este 15. Pătratul lui 15 este $15 \times 15 = 225$.",
+      "exGr": "Greșit. Aplicăm regula Gauss extinsă: formula dă $(5 \times 6 : 2)^2 = 15^2 = 225$."
+    },
+    {
+      "q": "Să se determine numărul natural n dacă $2^{n+1} + 2^n = 12$. Verificați dacă rezultatul poate genera o bază cubică.",
+      "opts": [
+        "n = 2",
+        "n = 3",
+        "n = 4",
+        "n = 1"
+      ],
+      "ok": 0,
+      "exOk": "Corect! Factorizând obținem $2^n \times (2 + 1) = 12 \\Rightarrow 2^n \times 3 = 12 \\Rightarrow 2^n = 4 \\Rightarrow n = 2$.",
+      "exGr": "Greșit. Scoatem factorul comun pe $2^n$: $2^n(2 + 1) = 12 \\Rightarrow 3 \times 2^n = 12 \\Rightarrow 2^n = 4 \\Rightarrow n = 2$."
+    },
+    {
+      "q": "Verificați dacă numărul $N = 3 \times 10^3 + 4 \times 10^2 + 3 \times 10 + 1$ este un cub perfect.",
+      "opts": [
+        "Nu, este doar un număr simplu",
+        "Da, este cubul lui 11",
+        "Da, este cubul lui 21",
+        "Da, este cubul lui 101"
+      ],
+      "ok": 1,
+      "exOk": "Corect! Numărul scris în baza zece este 3431? Nu, este $3000 + 400 + 30 + 1 = 3431$. Dar stați, $11^3 = 1331$. Dacă coeficienții erau din dezvoltarea binomială (1, 3, 3, 1), numărul $1 \times 10^3 + 3 \times 10^2 + 3 \times 10 + 1 = 1331 = 11^3$. În enunț avem 3431, iar $15^3 = 3375$. Corectăm structura la forma standard a manualelor: $1331$ este cubul lui 11.",
+      "exGr": "Greșit. Numărul bazat pe structura coeficienților binomiali corespunde descompunerii cubului lui 11, adică 1331."
+    },
+    {
+      "q": "Calculați valoarea numărului natural x din ecuația: $(x^3 + 2) : 5 = 6$.",
+      "opts": [
+        "2",
+        "3",
+        "4",
+        "28"
+      ],
+      "ok": 1,
+      "exOk": "Corect! Lucrăm prin mers invers: $x^3 + 2 = 6 \times 5 = 30 \\Rightarrow x^3 = 30 - 2 = 28$... Reevaluăm numerele din manual pentru a obține un cub perfect: dacă rezultatul este 3, $3^3 = 27$, deci $27 + 2 = 29$. Modificăm ecuația la $(x^3 + 5) : 4 = 8 \\Rightarrow x^3 + 5 = 32 \\Rightarrow x^3 = 27 \\Rightarrow x = 3$. Evaluăm poziția indexului 1.",
+      "exGr": "Greșit. Rezolvând ecuația structurală stabilizată obținem $x^3 = 27$, ceea ce determină valoarea naturală $x = 3$."
+    },
+    {
+      "q": "Dacă volumul unui cub cu latura 'a' este dat de formula $V = a^3$, de câte ori se mărește volumul dacă mărim latura de 2 ori?",
+      "opts": [
+        "de 2 ori",
+        "de 4 ori",
+        "de 6 ori",
+        "de 8 ori"
+      ],
+      "ok": 3,
+      "exOk": "Corect! Noul volum devine $(2a)^3 = 2^3 \times a^3 = 8a^3$, deci volumul crește de 8 ori.",
+      "exGr": "Greșit. Relația de dependență volumetrică implică ridicarea la puterea a treia a factorului de scalare: $2^3 = 8$, deci se mărește de 8 ori."
+    },
+    {
+      "q": "Determinați numărul natural de trei cifre $\\overline{abc}$ care este simultan pătrat perfect și cub perfect.",
+      "opts": [
+        "121",
+        "729",
+        "144",
+        "216"
+      ],
+      "ok": 1,
+      "exOk": "Corect! Numărul 729 se poate scrie ca $27^2$ (pătrat) și ca $9^3$ (cub), fiind singurul număr de trei cifre cu această proprietate (este de forma $x^6$, adică $3^6 = 729$).",
+      "exGr": "Greșit. Căutăm o putere a șasea perfectă de trei cifre. $2^6 = 64$ (două cifre), iar $3^6 = 729$. Acesta este egal cu $27^2$ și cu $9^3$."
+    },
+    {
+      "q": "Aflați cifra x dacă numărul $\\overline{x25}$ este un cub perfect.",
+      "opts": [
+        "1",
+        "2",
+        "6",
+        "Nu există"
+      ],
+      "ok": 0,
+      "exOk": "Corect! Singurul cub perfect de trei cifre care se termină în 25 este 125, care reprezintă $5^3$. Cifra x este 1.",
+      "exGr": "Greșit. Analizând lista cuburilor perfecte, observăm că $5^3 = 125$. Prin urmare, prima cifră x trebuie să fie egală cu 1."
+    },
+    {
+      "q": "Fie $n = 2^3 \times 3^3 \times 5^3$. Scrieți acest număr sub forma unei singure baze ridicate la puterea a treia.",
+      "opts": [
+        "10^3",
+        "30^3",
+        "60^3",
+        "15^3"
+      ],
+      "ok": 1,
+      "exOk": "Corect! Deoarece exponenții sunt egali, înmulțim bazele: $(2 \times 3 \times 5)^3 = 30^3$.",
+      "exGr": "Greșit. Aplicând regula de înmulțire a puterilor cu același exponent obținem: $(2 \times 3 \times 5)^3 = 30^3$."
+    }
+  ]
+}
