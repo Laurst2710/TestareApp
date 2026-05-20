@@ -1,0 +1,508 @@
+{
+  "meta": {
+    "nivel": "Manual",
+    "dificultate": 1,
+    "clasa": "a V-a",
+    "unitate": "U1",
+    "titlu_unitate": "Mulțimea numerelor naturale",
+    "tema": "Tema9",
+    "titlu_tema": "Adunarea numerelor naturale. Termeni, sumă; proprietăți",
+    "prag": 0.8,
+    "puncte_per_item": 10
+  },
+  "teorie": [
+    "Adunarea este operația prin care două sau mai multe numere naturale (termeni) se combină pentru a obține suma. Elementul neutru al adunării este 0: a + 0 = a.",
+    "Proprietatea comutativă: a + b = b + a (ordinea termenilor nu schimbă suma).",
+    "Proprietatea asociativă: (a + b) + c = a + (b + c) (modul de grupare a termenilor nu schimbă suma)."
+  ],
+  "teste": {
+    "T1": [
+      {
+        "q": "Care este suma numerelor 345 și 0?",
+        "opts": [
+          "0",
+          "345",
+          "3450",
+          "1"
+        ],
+        "ok": 1,
+        "exOk": "Elementul neutru al adunării este 0: 345 + 0 = 345.",
+        "exGr": "Orice număr adunat cu 0 rămâne neschimbat."
+      },
+      {
+        "q": "Care este termenul necunoscut: x + 25 = 25?",
+        "opts": [
+          "25",
+          "1",
+          "0",
+          "50"
+        ],
+        "ok": 2,
+        "exOk": "x + 25 = 25 → x = 0. Elementul neutru al adunării.",
+        "exGr": "Dacă suma este egală cu un termen, celălalt termen este 0."
+      },
+      {
+        "q": "Cum se numesc numerele care se adună?",
+        "opts": [
+          "Factori",
+          "Termeni",
+          "Sume",
+          "Diferențe"
+        ],
+        "ok": 1,
+        "exOk": "Numerele care se adună se numesc termeni.",
+        "exGr": "Termenii sunt numerele care se adună. Factorii se înmulțesc."
+      },
+      {
+        "q": "Proprietatea comutativă afirmă că:",
+        "opts": [
+          "a+b = a-b",
+          "a+b = b+a",
+          "a+b = a×b",
+          "a+b > b+a"
+        ],
+        "ok": 1,
+        "exOk": "Comutativitatea: a + b = b + a. Ordinea nu contează.",
+        "exGr": "Comutativitatea înseamnă că putem schimba ordinea termenilor."
+      },
+      {
+        "q": "Calculează: 236 + 184.",
+        "opts": [
+          "400",
+          "420",
+          "410",
+          "350"
+        ],
+        "ok": 1,
+        "exOk": "236 + 184 = 420.",
+        "exGr": "236 + 184: 6+4=10 (transport 1), 3+8+1=12 (transport 1), 2+1+1=4 → 420."
+      },
+      {
+        "q": "Care proprietate justifică: 17 + 83 = 83 + 17?",
+        "opts": [
+          "Asociativă",
+          "Comutativă",
+          "Elementul neutru",
+          "Distributivă"
+        ],
+        "ok": 1,
+        "exOk": "Ordinea termenilor s-a schimbat → proprietatea comutativă.",
+        "exGr": "Comutativitatea permite schimbarea ordinii termenilor fără a modifica suma."
+      },
+      {
+        "q": "Calculează: (23 + 47) + 53.",
+        "opts": [
+          "113",
+          "123",
+          "133",
+          "143"
+        ],
+        "ok": 1,
+        "exOk": "(23+47)+53 = 70+53 = 123.",
+        "exGr": "23+47=70, 70+53=123."
+      },
+      {
+        "q": "Prin proprietatea asociativă, (a+b)+c este egal cu:",
+        "opts": [
+          "a+(b-c)",
+          "a+(b+c)",
+          "(a-b)+c",
+          "a×(b+c)"
+        ],
+        "ok": 1,
+        "exOk": "Asociativitatea: (a+b)+c = a+(b+c). Gruparea nu schimbă suma.",
+        "exGr": "Asociativitatea permite regruparea termenilor fără a schimba suma."
+      },
+      {
+        "q": "Care este suma lui 999 cu 1?",
+        "opts": [
+          "999",
+          "1.000",
+          "1.001",
+          "998"
+        ],
+        "ok": 1,
+        "exOk": "999 + 1 = 1.000.",
+        "exGr": "999 + 1 = 1.000 (trecere la un ordin superior)."
+      },
+      {
+        "q": "Dacă a + b = 100 și a = 60, atunci b este:",
+        "opts": [
+          "160",
+          "60",
+          "40",
+          "50"
+        ],
+        "ok": 2,
+        "exOk": "b = 100 - 60 = 40.",
+        "exGr": "Din a + b = 100 → b = 100 - a = 100 - 60 = 40."
+      }
+    ],
+    "T2": [
+      {
+        "q": "Calculează folosind comutativitatea: 578 + 422.",
+        "opts": [
+          "900",
+          "1.000",
+          "800",
+          "1.100"
+        ],
+        "ok": 1,
+        "exOk": "578 + 422 = 1.000. (422 + 578 = 1.000 — mai ușor în ordine inversă)",
+        "exGr": "578+422: 8+2=10, 7+2+1=10, 5+4+1=10 → 1.000."
+      },
+      {
+        "q": "Calculează grupând convenabil: 125 + 348 + 75.",
+        "opts": [
+          "448",
+          "548",
+          "548",
+          "648"
+        ],
+        "ok": 1,
+        "exOk": "(125+75)+348 = 200+348 = 548.",
+        "exGr": "Grupăm 125+75=200 (mai simplu), apoi 200+348=548."
+      },
+      {
+        "q": "Care este valoarea lui x: x + 347 = 1.000?",
+        "opts": [
+          "647",
+          "653",
+          "663",
+          "1.347"
+        ],
+        "ok": 1,
+        "exOk": "x = 1.000 - 347 = 653.",
+        "exGr": "x = 1.000 - 347 = 653."
+      },
+      {
+        "q": "Suma a trei termeni consecutivi, primul fiind 10, este:",
+        "opts": [
+          "30",
+          "33",
+          "36",
+          "39"
+        ],
+        "ok": 1,
+        "exOk": "10 + 11 + 12 = 33.",
+        "exGr": "Termeni consecutivi: 10, 11, 12. Suma = 10+11+12 = 33."
+      },
+      {
+        "q": "Calculează: 2.345 + 1.655.",
+        "opts": [
+          "3.900",
+          "4.000",
+          "4.100",
+          "3.800"
+        ],
+        "ok": 1,
+        "exOk": "2.345 + 1.655 = 4.000.",
+        "exGr": "5+5=10, 4+5+1=10, 3+6+1=10, 2+1+1=4 → 4.000."
+      },
+      {
+        "q": "Proprietatea asociativă permite:",
+        "opts": [
+          "Schimbarea ordinii termenilor",
+          "Regruparea termenilor",
+          "Înmulțirea termenilor",
+          "Scăderea unui termen"
+        ],
+        "ok": 1,
+        "exOk": "Asociativitatea permite regruparea termenilor: (a+b)+c = a+(b+c).",
+        "exGr": "Asociativitatea = regrupare. Comutativitatea = schimbare ordine."
+      },
+      {
+        "q": "Calculează: 1.234 + 2.766.",
+        "opts": [
+          "3.900",
+          "4.000",
+          "4.100",
+          "3.000"
+        ],
+        "ok": 1,
+        "exOk": "1.234 + 2.766 = 4.000.",
+        "exGr": "4+6=10, 3+6+1=10, 2+7+1=10, 1+2+1=4 → 4.000."
+      },
+      {
+        "q": "Suma a două numere este 500. Dacă un termen crește cu 50, suma devine:",
+        "opts": [
+          "500",
+          "450",
+          "550",
+          "600"
+        ],
+        "ok": 2,
+        "exOk": "Dacă un termen crește cu 50, suma crește cu 50: 500+50=550.",
+        "exGr": "Suma se modifică direct cu modificarea oricărui termen."
+      },
+      {
+        "q": "Calculează grupând: 99 + 101 + 99 + 101.",
+        "opts": [
+          "380",
+          "390",
+          "400",
+          "410"
+        ],
+        "ok": 2,
+        "exOk": "(99+101)+(99+101) = 200+200 = 400.",
+        "exGr": "Grupăm: (99+101)=200, de două ori → 400."
+      },
+      {
+        "q": "Dacă a + b + c = 300, a = 100, b = 80, atunci c este:",
+        "opts": [
+          "100",
+          "110",
+          "120",
+          "130"
+        ],
+        "ok": 2,
+        "exOk": "c = 300 - 100 - 80 = 120.",
+        "exGr": "c = 300 - a - b = 300 - 100 - 80 = 120."
+      }
+    ],
+    "T3": [
+      {
+        "q": "Suma a patru numere consecutive, primul fiind 25, este:",
+        "opts": [
+          "100",
+          "106",
+          "110",
+          "114"
+        ],
+        "ok": 1,
+        "exOk": "25+26+27+28 = 106.",
+        "exGr": "25+26+27+28 = (25+28)+(26+27) = 53+53 = 106."
+      },
+      {
+        "q": "Calculează: 12.345 + 23.655.",
+        "opts": [
+          "35.000",
+          "36.000",
+          "37.000",
+          "34.000"
+        ],
+        "ok": 0,
+        "exOk": "12.345 + 23.655 = 36.000.",
+        "exGr": "5+5=10, 4+5+1=10, 3+6+1=10, 2+3+1=6, 1+2=3 → 36.000."
+      },
+      {
+        "q": "Care număr trebuie adăugat la 99.999 pentru a obține 100.000?",
+        "opts": [
+          "0",
+          "1",
+          "10",
+          "100"
+        ],
+        "ok": 1,
+        "exOk": "99.999 + 1 = 100.000.",
+        "exGr": "Termenul lipsă = 100.000 - 99.999 = 1."
+      },
+      {
+        "q": "Suma numerelor naturale de la 1 la 4 este:",
+        "opts": [
+          "8",
+          "9",
+          "10",
+          "12"
+        ],
+        "ok": 2,
+        "exOk": "1+2+3+4 = 10.",
+        "exGr": "1+2+3+4 = (1+4)+(2+3) = 5+5 = 10."
+      },
+      {
+        "q": "Calculează folosind asociativitatea: 358 + 42 + 158 + 42.",
+        "opts": [
+          "500",
+          "580",
+          "600",
+          "620"
+        ],
+        "ok": 2,
+        "exOk": "(358+42)+(158+42) = 400+200 = 600.",
+        "exGr": "Grupăm convenabil: 358+42=400, 158+42=200. Total=600."
+      },
+      {
+        "q": "Suma a două numere este 1.000. Dacă primul se micșorează cu 100, al doilea rămâne neschimbat. Care este noua sumă?",
+        "opts": [
+          "1.000",
+          "900",
+          "1.100",
+          "800"
+        ],
+        "ok": 1,
+        "exOk": "Dacă un termen scade cu 100, suma scade cu 100: 1.000-100=900.",
+        "exGr": "Suma depinde de ambii termeni. Dacă unul scade, suma scade la fel."
+      },
+      {
+        "q": "Care este suma cifrelor numărului 99.999?",
+        "opts": [
+          "36",
+          "40",
+          "45",
+          "50"
+        ],
+        "ok": 2,
+        "exOk": "9+9+9+9+9 = 45.",
+        "exGr": "5 cifre de 9: 5×9=45."
+      },
+      {
+        "q": "Calculează: 500.000 + 400.000 + 99.000 + 1.000.",
+        "opts": [
+          "999.000",
+          "1.000.000",
+          "1.001.000",
+          "990.000"
+        ],
+        "ok": 1,
+        "exOk": "500.000+400.000=900.000; 900.000+99.000=999.000; 999.000+1.000=1.000.000.",
+        "exGr": "Adunăm pas cu pas: 900.000+100.000=1.000.000."
+      },
+      {
+        "q": "Dacă a+b = 450 și b+c = 550 și a+c = 500, atunci a+b+c este:",
+        "opts": [
+          "700",
+          "750",
+          "800",
+          "850"
+        ],
+        "ok": 1,
+        "exOk": "2(a+b+c)=1.500 → a+b+c=750.",
+        "exGr": "Suma celor 3 relații: 2a+2b+2c=1.500 → a+b+c=750."
+      },
+      {
+        "q": "Suma celor mai mici și celor mai mari numere de 3 cifre este:",
+        "opts": [
+          "1.098",
+          "1.099",
+          "1.100",
+          "1.199"
+        ],
+        "ok": 1,
+        "exOk": "100 + 999 = 1.099.",
+        "exGr": "Min(3 cifre)=100, Max(3 cifre)=999. 100+999=1.099."
+      }
+    ],
+    "T4": [
+      {
+        "q": "Suma numerelor naturale de la 1 la 10 este:",
+        "opts": [
+          "50",
+          "55",
+          "60",
+          "65"
+        ],
+        "ok": 1,
+        "exOk": "(1+10)×10÷2 = 55.",
+        "exGr": "Grupăm: (1+10)+(2+9)+...+(5+6) = 5×11 = 55."
+      },
+      {
+        "q": "Dacă a+b = 100, b+c = 150, a+c = 130, atunci a este:",
+        "opts": [
+          "30",
+          "40",
+          "50",
+          "60"
+        ],
+        "ok": 2,
+        "exOk": "a+b+c = (100+150+130)/2 = 190. a = 190-150 = 40. Corect: a=40.",
+        "exGr": "Suma totală: (100+150+130)/2=190. a=190-(b+c)=190-150=40."
+      },
+      {
+        "q": "Câte perechi (a,b) de numere naturale cu a+b=10 există?",
+        "opts": [
+          "9",
+          "10",
+          "11",
+          "12"
+        ],
+        "ok": 2,
+        "exOk": "(0,10),(1,9),(2,8),...,(10,0) → 11 perechi.",
+        "exGr": "a poate lua valorile 0,1,2,...,10 → 11 valori → 11 perechi."
+      },
+      {
+        "q": "Suma: 1+2+3+...+100 este:",
+        "opts": [
+          "5.000",
+          "5.050",
+          "5.100",
+          "4.950"
+        ],
+        "ok": 1,
+        "exOk": "(1+100)×100÷2 = 5.050.",
+        "exGr": "Formula: n(n+1)/2 = 100×101/2 = 5.050."
+      },
+      {
+        "q": "Dacă suma a trei numere consecutive este 99, cel mai mare este:",
+        "opts": [
+          "32",
+          "33",
+          "34",
+          "35"
+        ],
+        "ok": 2,
+        "exOk": "Cele 3 numere: n-1, n, n+1. Suma=3n=99 → n=33. Cel mai mare=34.",
+        "exGr": "n-1+n+n+1=3n=99 → n=33. Cel mai mare = 33+1 = 34."
+      },
+      {
+        "q": "Un număr natural adunat cu dublul său dă 123. Numărul este:",
+        "opts": [
+          "40",
+          "41",
+          "42",
+          "43"
+        ],
+        "ok": 1,
+        "exOk": "n + 2n = 3n = 123 → n = 41.",
+        "exGr": "n + 2n = 3n = 123 → n = 41."
+      },
+      {
+        "q": "Suma primelor 5 numere naturale pare este:",
+        "opts": [
+          "20",
+          "30",
+          "40",
+          "50"
+        ],
+        "ok": 1,
+        "exOk": "0+2+4+6+8=20. Sau 2+4+6+8+10=30. Dacă 0 este exclus: 30.",
+        "exGr": "Primele 5 numere naturale pare (>0): 2+4+6+8+10=30."
+      },
+      {
+        "q": "Dacă a+b = 200 și a-b = 50 (a>b), atunci a+b+a = ?",
+        "opts": [
+          "325",
+          "350",
+          "375",
+          "400"
+        ],
+        "ok": 0,
+        "exOk": "a=(200+50)/2=125. a+b+a=125+200=325.",
+        "exGr": "Din sistemul dat: a=125, b=75. a+b+a=125+75+125=325."
+      },
+      {
+        "q": "Suma a n termeni egali cu 5, dacă suma totală este 100, n este:",
+        "opts": [
+          "15",
+          "20",
+          "25",
+          "30"
+        ],
+        "ok": 1,
+        "exOk": "n×5=100 → n=20.",
+        "exGr": "n = 100÷5 = 20."
+      },
+      {
+        "q": "Câte numere naturale au suma cifrelor egală cu 2?",
+        "opts": [
+          "2",
+          "3",
+          "4",
+          "5"
+        ],
+        "ok": 1,
+        "exOk": "2, 11, 20 → 3 numere de cel mult 2 cifre. Dar și 200, 101, 110... Dacă ne limităm la 1-2 cifre: 2,11,20 = 3.",
+        "exGr": "Suma cifrelor = 2: cifra 2(=2), 11(1+1=2), 20(2+0=2) → 3 numere până la 2 cifre."
+      }
+    ]
+  }
+}

@@ -1,0 +1,508 @@
+{
+  "meta": {
+    "nivel": "Manual",
+    "dificultate": 1,
+    "clasa": "a V-a",
+    "unitate": "U1",
+    "titlu_unitate": "Mulțimea numerelor naturale",
+    "tema": "Tema7",
+    "titlu_tema": "Rotunjirea la zeci, sute, mii",
+    "prag": 0.8,
+    "puncte_per_item": 10
+  },
+  "teorie": [
+    "Identifică cifra de ordin imediat inferior celui la care rotunjești: dacă este 0-4, rotunjire prin lipsă (cifra rămâne); dacă este 5-9, rotunjire prin adaos (cifra crește cu 1).",
+    "La rotunjirea prin lipsă, înlocuiești cu zero toate cifrele de la dreapta ordinului vizat.",
+    "La rotunjirea prin adaos, crești cu 1 cifra ordinului vizat și înlocuiești cu zero toate cifrele din dreapta."
+  ],
+  "teste": {
+    "T1": [
+      {
+        "q": "Rotunjește numărul 44 la ordinul zecilor.",
+        "opts": [
+          "40",
+          "50",
+          "44",
+          "45"
+        ],
+        "ok": 0,
+        "exOk": "Cifra unităților este 4 < 5, deci rotunjire prin lipsă la 40.",
+        "exGr": "Cifra unităților 4 impune rotunjirea prin lipsă, nu prin adaos."
+      },
+      {
+        "q": "Rotunjește numărul 65 la ordinul zecilor.",
+        "opts": [
+          "60",
+          "70",
+          "66",
+          "50"
+        ],
+        "ok": 1,
+        "exOk": "Cifra unităților este 5, deci rotunjire prin adaos la 70.",
+        "exGr": "Când cifra unităților este 5, rotunjirea se face prin adaos."
+      },
+      {
+        "q": "Aproximarea prin lipsă la zeci a numărului 123 este:",
+        "opts": [
+          "130",
+          "120",
+          "100",
+          "124"
+        ],
+        "ok": 1,
+        "exOk": "Cifra unităților 3 < 5, deci rotunjim prin lipsă la 120.",
+        "exGr": "130 ar fi rotunjirea prin adaos. Cifra unităților 3 impune lipsă."
+      },
+      {
+        "q": "Numărul 89 rotunjit la zeci devine:",
+        "opts": [
+          "80",
+          "90",
+          "100",
+          "85"
+        ],
+        "ok": 1,
+        "exOk": "9 > 5, deci mărim cifra zecilor cu 1: 80 → 90.",
+        "exGr": "80 este rotunjirea prin lipsă. Cifra unităților 9 impune adaosul."
+      },
+      {
+        "q": "Care este rotunjirea la zeci a numărului 257?",
+        "opts": [
+          "250",
+          "260",
+          "300",
+          "200"
+        ],
+        "ok": 1,
+        "exOk": "Cifra unităților 7 > 5, deci rotunjim prin adaos la 260.",
+        "exGr": "Cifra unităților 7 impune trecerea la zecea superioară."
+      },
+      {
+        "q": "Rotunjește 12 la zeci.",
+        "opts": [
+          "10",
+          "20",
+          "15",
+          "0"
+        ],
+        "ok": 0,
+        "exOk": "2 < 5, deci rotunjim prin lipsă la 10.",
+        "exGr": "20 este aproximarea prin adaos, nepotrivită pentru cifra unităților 2."
+      },
+      {
+        "q": "Rotunjește 98 la zeci.",
+        "opts": [
+          "90",
+          "100",
+          "110",
+          "95"
+        ],
+        "ok": 1,
+        "exOk": "9 > 5, prin adaos cele 9 zeci devin 10 zeci = 100.",
+        "exGr": "Rotunjirea lui 98 prin adaos forțează trecerea la ordinul sutelor."
+      },
+      {
+        "q": "Numărul 34 rotunjit la zeci este:",
+        "opts": [
+          "30",
+          "40",
+          "35",
+          "50"
+        ],
+        "ok": 0,
+        "exOk": "Cifra unităților 4 < 5, deci cifra zecilor rămâne 3 → 30.",
+        "exGr": "40 este rotunjirea prin adaos, dar unitățile sunt sub pragul de 5."
+      },
+      {
+        "q": "Aproximarea prin adaos la zeci a numărului 456 este:",
+        "opts": [
+          "450",
+          "460",
+          "400",
+          "500"
+        ],
+        "ok": 1,
+        "exOk": "6 > 5, deci cifra zecilor crește de la 5 la 6 → 460.",
+        "exGr": "450 este aproximarea prin lipsă, nu prin adaos."
+      },
+      {
+        "q": "Rotunjește 15 la zeci.",
+        "opts": [
+          "10",
+          "20",
+          "16",
+          "25"
+        ],
+        "ok": 1,
+        "exOk": "Cifra unităților 5 impune rotunjirea prin adaos la 20.",
+        "exGr": "De la cifra 5 în sus, rotunjim întotdeauna la zecea superioară."
+      }
+    ],
+    "T2": [
+      {
+        "q": "Rotunjește numărul 349 la ordinul sutelor.",
+        "opts": [
+          "300",
+          "400",
+          "350",
+          "340"
+        ],
+        "ok": 0,
+        "exOk": "Cifra zecilor 4 < 5, deci rotunjim prin lipsă la 300.",
+        "exGr": "Pentru rotunjirea la sute analizăm cifra zecilor; 4 indică lipsă."
+      },
+      {
+        "q": "Rotunjește numărul 750 la ordinul sutelor.",
+        "opts": [
+          "700",
+          "800",
+          "750",
+          "1.000"
+        ],
+        "ok": 1,
+        "exOk": "Cifra zecilor 5 impune adaosul: 700 → 800.",
+        "exGr": "Cifra zecilor 5 → suta crește cu o unitate."
+      },
+      {
+        "q": "Numărul 1.245 rotunjit la sute devine:",
+        "opts": [
+          "1.200",
+          "1.300",
+          "1.000",
+          "1.250"
+        ],
+        "ok": 0,
+        "exOk": "Cifra zecilor 4 < 5, deci ordinul sutelor rămâne → 1.200.",
+        "exGr": "Cifra zecilor 4 determină rotunjirea prin lipsă."
+      },
+      {
+        "q": "Rotunjește 4.872 la sute.",
+        "opts": [
+          "4.800",
+          "4.900",
+          "4.000",
+          "5.000"
+        ],
+        "ok": 1,
+        "exOk": "Cifra zecilor 7 > 5, deci rotunjim prin adaos la 4.900.",
+        "exGr": "Cifra 7 indică rotunjirea prin adaos la sute."
+      },
+      {
+        "q": "Aproximarea prin lipsă la sute a numărului 921 este:",
+        "opts": [
+          "900",
+          "1.000",
+          "920",
+          "800"
+        ],
+        "ok": 0,
+        "exOk": "Cifra zecilor 2 < 5, deci păstrăm cifra sutelor → 900.",
+        "exGr": "1.000 este rotunjirea prin adaos."
+      },
+      {
+        "q": "Rotunjește 661 la sute.",
+        "opts": [
+          "600",
+          "700",
+          "660",
+          "500"
+        ],
+        "ok": 1,
+        "exOk": "Cifra zecilor 6 > 5, deci rotunjim la suta superioară → 700.",
+        "exGr": "600 este aproximarea prin lipsă, dar cifra zecilor depășește pragul 5."
+      },
+      {
+        "q": "Numărul 1.555 rotunjit la sute este:",
+        "opts": [
+          "1.500",
+          "1.600",
+          "1.560",
+          "2.000"
+        ],
+        "ok": 1,
+        "exOk": "Cifra zecilor 5 impune adaosul → 1.600.",
+        "exGr": "Regula cifrei 5 → rotunjire prin adaos."
+      },
+      {
+        "q": "Rotunjește 219 la sute.",
+        "opts": [
+          "200",
+          "300",
+          "220",
+          "100"
+        ],
+        "ok": 0,
+        "exOk": "Cifra zecilor 1 < 5, deci rotunjim prin lipsă la 200.",
+        "exGr": "1 < 5, deci cifra sutelor nu crește."
+      },
+      {
+        "q": "Aproximarea prin adaos la sute pentru 4.380 este:",
+        "opts": [
+          "4.300",
+          "4.400",
+          "4.000",
+          "4.390"
+        ],
+        "ok": 1,
+        "exOk": "Cifra zecilor 8 > 5, deci prin adaos → 4.400.",
+        "exGr": "4.300 este aproximarea prin lipsă."
+      },
+      {
+        "q": "Rotunjește 950 la sute.",
+        "opts": [
+          "900",
+          "1.000",
+          "950",
+          "800"
+        ],
+        "ok": 1,
+        "exOk": "Cifra zecilor 5 transformă cele 9 sute în 10 sute = 1.000.",
+        "exGr": "Cifra 5 impune trecerea la suta următoare."
+      }
+    ],
+    "T3": [
+      {
+        "q": "Rotunjește numărul 9.600 la ordinul miilor.",
+        "opts": [
+          "9.000",
+          "10.000",
+          "9.600",
+          "11.000"
+        ],
+        "ok": 1,
+        "exOk": "Cifra sutelor 6 > 5, deci rotunjim prin adaos la 10.000.",
+        "exGr": "6 sute impun regula de adaos pentru ordinul miilor."
+      },
+      {
+        "q": "Aproximarea prin lipsă la mii a numărului 12.499 este:",
+        "opts": [
+          "12.000",
+          "13.000",
+          "12.500",
+          "10.000"
+        ],
+        "ok": 0,
+        "exOk": "Cifra sutelor 4 < 5, deci mia rămâne 12 → 12.000.",
+        "exGr": "13.000 este rotunjirea prin adaos; cifra sutelor 4 impune lipsă."
+      },
+      {
+        "q": "Rotunjește 45.500 la mii.",
+        "opts": [
+          "45.000",
+          "46.000",
+          "45.500",
+          "50.000"
+        ],
+        "ok": 1,
+        "exOk": "Cifra sutelor 5 impune adaosul → 46.000.",
+        "exGr": "Regula cifrei 5 → adaos și la mii."
+      },
+      {
+        "q": "Numărul 124.321 rotunjit la mii devine:",
+        "opts": [
+          "124.000",
+          "125.000",
+          "120.000",
+          "100.000"
+        ],
+        "ok": 0,
+        "exOk": "Cifra sutelor 3 < 5, deci rotunjire prin lipsă → 124.000.",
+        "exGr": "Cifra sutelor 3 este sub pragul de 5."
+      },
+      {
+        "q": "Rotunjește 7.892 la mii.",
+        "opts": [
+          "7.000",
+          "8.000",
+          "7.900",
+          "7.800"
+        ],
+        "ok": 1,
+        "exOk": "Cifra sutelor 8 > 5, deci rotunjim prin adaos la 8.000.",
+        "exGr": "7.000 este aproximarea prin lipsă, incorectă pentru cifra sutelor 8."
+      },
+      {
+        "q": "Care este rotunjirea la mii pentru 1.450?",
+        "opts": [
+          "1.000",
+          "2.000",
+          "1.500",
+          "1.400"
+        ],
+        "ok": 0,
+        "exOk": "Cifra sutelor 4 < 5, deci rotunjim prin lipsă la 1.000.",
+        "exGr": "Pentru mii, cifra de control este cea a sutelor: 4 < 5 → lipsă."
+      },
+      {
+        "q": "Rotunjește 256.700 la mii.",
+        "opts": [
+          "256.000",
+          "257.000",
+          "260.000",
+          "250.000"
+        ],
+        "ok": 1,
+        "exOk": "Cifra sutelor 7 > 5, deci rotunjim prin adaos la 257.000.",
+        "exGr": "Cifra sutelor 7 depășește pragul, deci adaos."
+      },
+      {
+        "q": "Numărul 5.001 rotunjit la mii este:",
+        "opts": [
+          "5.000",
+          "6.000",
+          "5.100",
+          "4.000"
+        ],
+        "ok": 0,
+        "exOk": "Cifra sutelor 0 < 5, deci rotunjire prin lipsă la 5.000.",
+        "exGr": "6.000 este prea mare; cifra sutelor 0 → rămânem la 5 mii."
+      },
+      {
+        "q": "Rotunjește 99.900 la mii.",
+        "opts": [
+          "99.000",
+          "100.000",
+          "99.900",
+          "90.000"
+        ],
+        "ok": 1,
+        "exOk": "Cifra sutelor 9 > 5, deci prin adaos → 100.000.",
+        "exGr": "9 sute forțează trecerea la 100.000 prin adaos."
+      },
+      {
+        "q": "Aproximarea prin lipsă la mii a lui 3.499 este:",
+        "opts": [
+          "3.000",
+          "4.000",
+          "3.500",
+          "3.400"
+        ],
+        "ok": 0,
+        "exOk": "Cifra sutelor 4 < 5, deci lipsă → 3.000.",
+        "exGr": "4.000 ar fi adaos. Cifra sutelor 4 impune lipsă."
+      }
+    ],
+    "T4": [
+      {
+        "q": "Cel mai mic număr care rotunjit la sute devine 500 este:",
+        "opts": [
+          "449",
+          "450",
+          "451",
+          "499"
+        ],
+        "ok": 1,
+        "exOk": "De la 450 (cifra zecilor = 5) începe pragul de adaos la 500.",
+        "exGr": "449 s-ar rotunji prin lipsă la 400."
+      },
+      {
+        "q": "Cel mai mare număr care rotunjit la zeci devine 80 este:",
+        "opts": [
+          "84",
+          "85",
+          "79",
+          "89"
+        ],
+        "ok": 0,
+        "exOk": "84 este cel mai mare; de la 85 rotunjirea ar da 90.",
+        "exGr": "85 s-ar rotunji prin adaos la 90."
+      },
+      {
+        "q": "Dacă un număr rotunjit la sute este 1.200, care variantă poate fi numărul?",
+        "opts": [
+          "1.145",
+          "1.251",
+          "1.155",
+          "1.260"
+        ],
+        "ok": 2,
+        "exOk": "1.155 are cifra zecilor 5 → adaos la 1.200.",
+        "exGr": "1.145 → 1.100; 1.251 → 1.300."
+      },
+      {
+        "q": "Alege numărul care rotunjit la mii devine 3.000:",
+        "opts": [
+          "2.499",
+          "3.501",
+          "2.500",
+          "3.600"
+        ],
+        "ok": 2,
+        "exOk": "2.500 are cifra sutelor 5 → adaos la 3.000.",
+        "exGr": "2.499 are cifra sutelor 4 → lipsă la 2.000."
+      },
+      {
+        "q": "Câte numere naturale dau rezultatul 20 când sunt rotunjite la zeci?",
+        "opts": [
+          "5",
+          "10",
+          "9",
+          "4"
+        ],
+        "ok": 1,
+        "exOk": "Numerele din intervalul [15, 24] → 10 numere.",
+        "exGr": "De la 15 la 24 sunt 10 numere: 15,16,...,24."
+      },
+      {
+        "q": "Cel mai mic număr de 3 cifre care rotunjit la sute devine 200 este:",
+        "opts": [
+          "145",
+          "150",
+          "200",
+          "100"
+        ],
+        "ok": 1,
+        "exOk": "150 este pragul minim pentru adaos la 200.",
+        "exGr": "145 are cifra zecilor 4 → lipsă la 100."
+      },
+      {
+        "q": "Ce cifră poate fi 'x' în 4x2 astfel încât rotunjit la sute să dea 400?",
+        "opts": [
+          "5",
+          "6",
+          "4",
+          "9"
+        ],
+        "ok": 2,
+        "exOk": "x trebuie să fie < 5 pentru rotunjire prin lipsă la 400. x = 4.",
+        "exGr": "x = 5 sau mai mare → adaos → 500."
+      },
+      {
+        "q": "Diferența dintre cel mai mare și cel mai mic număr care rotunjite la zeci dau 50 este:",
+        "opts": [
+          "10",
+          "9",
+          "5",
+          "1"
+        ],
+        "ok": 1,
+        "exOk": "Numerele sunt 45-54. 54 - 45 = 9.",
+        "exGr": "Calculează: cel mai mare = 54, cel mai mic = 45. 54-45=9."
+      },
+      {
+        "q": "Aproximarea prin adaos la sute a numărului 301 este:",
+        "opts": [
+          "300",
+          "400",
+          "310",
+          "301"
+        ],
+        "ok": 1,
+        "exOk": "Prin adaos forțat, trecem la suta următoare → 400.",
+        "exGr": "300 este aproximarea prin lipsă."
+      },
+      {
+        "q": "Dacă rotunjim 1.950 la mii, obținem:",
+        "opts": [
+          "1.000",
+          "2.000",
+          "1.900",
+          "2.100"
+        ],
+        "ok": 1,
+        "exOk": "Cifra sutelor 9 > 5 → adaos → 2.000.",
+        "exGr": "1.000 este prea mic; cifra 9 indică adaosul miilor."
+      }
+    ]
+  }
+}

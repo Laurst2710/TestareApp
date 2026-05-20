@@ -1,0 +1,508 @@
+{
+  "meta": {
+    "nivel": "Manual",
+    "dificultate": 1,
+    "clasa": "a V-a",
+    "unitate": "U1",
+    "titlu_unitate": "Mulțimea numerelor naturale",
+    "tema": "Tema15",
+    "titlu_tema": "Puterea cu exponent natural a unui număr natural",
+    "prag": 0.8,
+    "puncte_per_item": 10
+  },
+  "teorie": [
+    "Puterea a n-a a unui număr natural a este produsul a n factori egali cu a, unde n este un număr natural, n ≥ 2.",
+    "În scrierea a^n, numărul natural a se numește baza puterii, iar numărul natural n se numește exponentul puterii.",
+    "Cazurile particulare: a^1 = a pentru orice număr natural a, și a^0 = 1 pentru orice număr natural a ≠ 0."
+  ],
+  "teste": {
+    "T1": [
+      {
+        "q": "În expresia matematică 4^7, care este baza?",
+        "opts": [
+          "7",
+          "4",
+          "28",
+          "11"
+        ],
+        "ok": 1,
+        "exOk": "Baza este numărul care urmează să fie înmulțit repetat.",
+        "exGr": "În a^n, valoarea 'a' reprezintă baza. În 4^7, baza este 4."
+      },
+      {
+        "q": "Identifică exponentul în scrierea puterii 9^2.",
+        "opts": [
+          "9",
+          "18",
+          "81",
+          "2"
+        ],
+        "ok": 3,
+        "exOk": "Exponentul este numărul scris în partea superioară dreaptă.",
+        "exGr": "Exponentul indică numărul de factori egali. Aici exponentul este 2."
+      },
+      {
+        "q": "Cum se reprezintă produsul 5 · 5 · 5 sub formă de putere?",
+        "opts": [
+          "5 · 3",
+          "3^5",
+          "5^3",
+          "15"
+        ],
+        "ok": 2,
+        "exOk": "Cifra 5 apare de 3 ori ca factor → 5^3.",
+        "exGr": "Numărul care se repetă este baza, numărul de apariții este exponentul."
+      },
+      {
+        "q": "În puterea 10^4, componenta care indică de câte ori se înmulțește baza este:",
+        "opts": [
+          "10",
+          "4",
+          "40",
+          "10000"
+        ],
+        "ok": 1,
+        "exOk": "Exponentul indică numărul de repetări ale bazei.",
+        "exGr": "Exponentul (4) contorizează factorii egali."
+      },
+      {
+        "q": "Scrierea corectă sub formă de putere pentru 2·2·2·2·2·2 este:",
+        "opts": [
+          "2^6",
+          "6^2",
+          "12",
+          "2^5"
+        ],
+        "ok": 0,
+        "exOk": "Baza 2 se repetă de 6 ori → 2^6.",
+        "exGr": "Numărăm factorii: sunt 6 de 2, deci exponentul este 6."
+      },
+      {
+        "q": "Care este baza puterii în cazul numărului 13^1?",
+        "opts": [
+          "1",
+          "0",
+          "13",
+          "14"
+        ],
+        "ok": 2,
+        "exOk": "Baza este numărul situat pe nivelul inferior al scrierii.",
+        "exGr": "Indiferent de exponent, numărul de pe poziția principală (13) este baza."
+      },
+      {
+        "q": "În structura a^n, parametrul n reprezintă:",
+        "opts": [
+          "Baza",
+          "Produsul",
+          "Suma",
+          "Exponentul"
+        ],
+        "ok": 3,
+        "exOk": "n este exponentul puterii.",
+        "exGr": "Poziția superioară dreaptă este ocupată de exponent."
+      },
+      {
+        "q": "Produsul 8 · 8 se scrie simbolic ca:",
+        "opts": [
+          "8 · 2",
+          "2^8",
+          "8^2",
+          "64"
+        ],
+        "ok": 2,
+        "exOk": "8 se înmulțește de 2 ori → 8^2.",
+        "exGr": "Baza 8 apare de 2 ori ca factor → puterea a doua a lui 8."
+      },
+      {
+        "q": "Identifică reprezentarea pentru 'șase la puterea a cincea':",
+        "opts": [
+          "5^6",
+          "6 · 5",
+          "6^5",
+          "30"
+        ],
+        "ok": 2,
+        "exOk": "Baza este 6, exponentul este 5 → 6^5.",
+        "exGr": "Baza se scrie jos, exponentul sus."
+      },
+      {
+        "q": "Dacă exponentul este 3 și baza este 7, scrierea este:",
+        "opts": [
+          "3^7",
+          "7^3",
+          "21",
+          "10"
+        ],
+        "ok": 1,
+        "exOk": "Baza se scrie jos, exponentul sus → 7^3.",
+        "exGr": "Respectând modelul exponențial: baza jos, exponent sus."
+      }
+    ],
+    "T2": [
+      {
+        "q": "Calculați valoarea numerică a puterii 2^3.",
+        "opts": [
+          "6",
+          "8",
+          "5",
+          "9"
+        ],
+        "ok": 1,
+        "exOk": "2 · 2 · 2 = 8.",
+        "exGr": "2 la a treia: 2·2=4, 4·2=8."
+      },
+      {
+        "q": "Care este rezultatul calculului 3^2?",
+        "opts": [
+          "6",
+          "5",
+          "9",
+          "27"
+        ],
+        "ok": 2,
+        "exOk": "3 · 3 = 9.",
+        "exGr": "3^2 = 9 (nu 3·2=6)."
+      },
+      {
+        "q": "Valoarea puterii 5^2 este:",
+        "opts": [
+          "10",
+          "25",
+          "7",
+          "50"
+        ],
+        "ok": 1,
+        "exOk": "5 · 5 = 25.",
+        "exGr": "Ridicarea la pătrat = produsul bazei cu ea însăși."
+      },
+      {
+        "q": "Calculați 10^2.",
+        "opts": [
+          "20",
+          "100",
+          "10",
+          "1000"
+        ],
+        "ok": 1,
+        "exOk": "10 · 10 = 100.",
+        "exGr": "10^2 = 100 (un 1 urmat de 2 zerouri)."
+      },
+      {
+        "q": "Valoarea numerică pentru 10^3 este:",
+        "opts": [
+          "30",
+          "100",
+          "300",
+          "1000"
+        ],
+        "ok": 3,
+        "exOk": "10 · 10 · 10 = 1.000.",
+        "exGr": "10^3 = 1.000 (un 1 urmat de 3 zerouri)."
+      },
+      {
+        "q": "Comparați 2 · 4 cu 2^4. Care este diferența?",
+        "opts": [
+          "8 unități",
+          "Sunt egale",
+          "4 unități",
+          "10 unități"
+        ],
+        "ok": 0,
+        "exOk": "2·4=8, 2^4=16. Diferența = 16-8 = 8.",
+        "exGr": "Înmulțirea simplă și ridicarea la putere dau rezultate diferite."
+      },
+      {
+        "q": "Cât este 4^2?",
+        "opts": [
+          "8",
+          "16",
+          "6",
+          "42"
+        ],
+        "ok": 1,
+        "exOk": "4 · 4 = 16.",
+        "exGr": "Pătratul lui 4 = 4 · 4 = 16."
+      },
+      {
+        "q": "Calculați 2^5.",
+        "opts": [
+          "10",
+          "25",
+          "32",
+          "16"
+        ],
+        "ok": 2,
+        "exOk": "2·2·2·2·2 = 32.",
+        "exGr": "2·2=4, 4·2=8, 8·2=16, 16·2=32."
+      },
+      {
+        "q": "Rezultatul puterii 7^2 este:",
+        "opts": [
+          "14",
+          "49",
+          "9",
+          "21"
+        ],
+        "ok": 1,
+        "exOk": "7 · 7 = 49.",
+        "exGr": "7^2 = 49."
+      },
+      {
+        "q": "Valoarea lui 10^1 este:",
+        "opts": [
+          "1",
+          "0",
+          "10",
+          "100"
+        ],
+        "ok": 2,
+        "exOk": "Orice număr la puterea 1 este egal cu el însuși.",
+        "exGr": "a^1 = a. Deci 10^1 = 10."
+      }
+    ],
+    "T3": [
+      {
+        "q": "Comparați puterile 2^3 și 3^2.",
+        "opts": [
+          "2^3 > 3^2",
+          "2^3 = 3^2",
+          "2^3 < 3^2",
+          "Sunt egale"
+        ],
+        "ok": 2,
+        "exOk": "2^3=8, 3^2=9. 8 < 9.",
+        "exGr": "Ridicarea la putere nu este comutativă: 2^3 ≠ 3^2."
+      },
+      {
+        "q": "Calculați 2^3 + 5, respectând ierarhia operațiilor.",
+        "opts": [
+          "11",
+          "13",
+          "10",
+          "30"
+        ],
+        "ok": 1,
+        "exOk": "2^3=8, 8+5=13.",
+        "exGr": "Puterea se calculează înaintea adunării."
+      },
+      {
+        "q": "Calculați valoarea expresiei 10^2 - 4^2.",
+        "opts": [
+          "6",
+          "84",
+          "96",
+          "12"
+        ],
+        "ok": 1,
+        "exOk": "100 - 16 = 84.",
+        "exGr": "10^2=100, 4^2=16. 100-16=84."
+      },
+      {
+        "q": "Comparați 5^2 cu 2^5.",
+        "opts": [
+          "5^2 > 2^5",
+          "5^2 < 2^5",
+          "5^2 = 2^5",
+          "25 > 32"
+        ],
+        "ok": 1,
+        "exOk": "5^2=25, 2^5=32. 25 < 32.",
+        "exGr": "5^2=25, 2^5=32. Baze și exponenți diferiți dau rezultate diferite."
+      },
+      {
+        "q": "Ordinea descrescătoare a valorilor 2^2, 2^4, 2^3 este:",
+        "opts": [
+          "2^2, 2^3, 2^4",
+          "2^4, 2^3, 2^2",
+          "2^3, 2^4, 2^2",
+          "Sunt egale"
+        ],
+        "ok": 1,
+        "exOk": "16 > 8 > 4 → 2^4, 2^3, 2^2.",
+        "exGr": "Pentru aceeași bază >1, exponent mai mare → valoare mai mare."
+      },
+      {
+        "q": "Rezultatul operației 3^2 · 2 este:",
+        "opts": [
+          "36",
+          "12",
+          "18",
+          "11"
+        ],
+        "ok": 2,
+        "exOk": "3^2=9, 9·2=18.",
+        "exGr": "Puterea se calculează înaintea înmulțirii: 3^2=9, apoi 9·2=18."
+      },
+      {
+        "q": "Care relație este adevărată pentru 4^2 și 2^4?",
+        "opts": [
+          "4^2 > 2^4",
+          "4^2 < 2^4",
+          "4^2 = 2^4",
+          "16 < 16"
+        ],
+        "ok": 2,
+        "exOk": "4^2=16 și 2^4=16. Sunt egale.",
+        "exGr": "Caz particular: baza și exponentul inversate dau același rezultat."
+      },
+      {
+        "q": "Calculați valoarea expresiei 2 · 5^2.",
+        "opts": [
+          "100",
+          "50",
+          "20",
+          "250"
+        ],
+        "ok": 1,
+        "exOk": "5^2=25, 2·25=50.",
+        "exGr": "Puterea se calculează prima: 5^2=25, apoi 2·25=50."
+      },
+      {
+        "q": "Comparați 10^3 cu 3^4.",
+        "opts": [
+          "10^3 > 3^4",
+          "10^3 < 3^4",
+          "10^3 = 3^4",
+          "100 < 81"
+        ],
+        "ok": 0,
+        "exOk": "10^3=1.000, 3^4=81. 1.000 > 81.",
+        "exGr": "10^3=1.000, 3^4=81."
+      },
+      {
+        "q": "Rezultatul calculului 2^4 - 3^2 este:",
+        "opts": [
+          "7",
+          "1",
+          "25",
+          "5"
+        ],
+        "ok": 0,
+        "exOk": "2^4=16, 3^2=9. 16-9=7.",
+        "exGr": "2^4=16, 3^2=9. 16-9=7."
+      }
+    ],
+    "T4": [
+      {
+        "q": "Care este valoarea puterii 2022^0?",
+        "opts": [
+          "2022",
+          "0",
+          "1",
+          "2023"
+        ],
+        "ok": 2,
+        "exOk": "Orice număr natural nenul la puterea 0 este 1.",
+        "exGr": "a^0 = 1 pentru orice a ≠ 0."
+      },
+      {
+        "q": "Calculați valoarea lui 1^100.",
+        "opts": [
+          "100",
+          "1",
+          "0",
+          "1100"
+        ],
+        "ok": 1,
+        "exOk": "Baza 1 ridicată la orice putere rămâne 1.",
+        "exGr": "1·1·1·...=1 indiferent de exponent."
+      },
+      {
+        "q": "Valoarea puterii 0^5 este:",
+        "opts": [
+          "0",
+          "1",
+          "5",
+          "Nedeterminată"
+        ],
+        "ok": 0,
+        "exOk": "0 înmulțit cu el însuși este 0.",
+        "exGr": "0^n = 0 pentru orice n > 0."
+      },
+      {
+        "q": "Care dintre următoarele numere este un pătrat perfect?",
+        "opts": [
+          "8",
+          "12",
+          "16",
+          "20"
+        ],
+        "ok": 2,
+        "exOk": "16 = 4^2.",
+        "exGr": "Un pătrat perfect = puterea a doua a unui număr natural."
+      },
+      {
+        "q": "Cum se scrie 70.000 cu o putere a lui 10?",
+        "opts": [
+          "7 · 10^3",
+          "7 · 10^4",
+          "70 · 10^4",
+          "7 · 10^5"
+        ],
+        "ok": 1,
+        "exOk": "70.000 = 7 · 10.000 = 7 · 10^4.",
+        "exGr": "Numără zerourile: 4 zerouri → 10^4."
+      },
+      {
+        "q": "Dacă x^2 = 49, care este valoarea bazei x?",
+        "opts": [
+          "6",
+          "7",
+          "8",
+          "49"
+        ],
+        "ok": 1,
+        "exOk": "7^2 = 49.",
+        "exGr": "Căutăm numărul al cărui pătrat este 49: 7·7=49."
+      },
+      {
+        "q": "Valoarea expresiei 5^1 + 0^1 + 1^0 este:",
+        "opts": [
+          "6",
+          "7",
+          "5",
+          "1"
+        ],
+        "ok": 0,
+        "exOk": "5 + 0 + 1 = 6.",
+        "exGr": "a^1=a → 5^1=5, 0^1=0. a^0=1 → 1^0=1. Suma=6."
+      },
+      {
+        "q": "Pătratul numărului 9 este:",
+        "opts": [
+          "18",
+          "81",
+          "3",
+          "27"
+        ],
+        "ok": 1,
+        "exOk": "9^2 = 81.",
+        "exGr": "9·9=81."
+      },
+      {
+        "q": "Scrierea numărului 3.000.000 cu o putere a lui 10 este:",
+        "opts": [
+          "3 · 10^5",
+          "3 · 10^7",
+          "3 · 10^6",
+          "30 · 10^6"
+        ],
+        "ok": 2,
+        "exOk": "3.000.000 = 3 · 10^6 (6 zerouri).",
+        "exGr": "Numără zerourile: 6 → 10^6."
+      },
+      {
+        "q": "Numărul 10^5 are câte cifre?",
+        "opts": [
+          "5 cifre",
+          "6 cifre",
+          "4 cifre",
+          "10 cifre"
+        ],
+        "ok": 1,
+        "exOk": "10^5 = 100.000 → cifra 1 urmată de 5 zerouri = 6 cifre.",
+        "exGr": "10^n are n zerouri + cifra 1 = n+1 cifre."
+      }
+    ]
+  }
+}

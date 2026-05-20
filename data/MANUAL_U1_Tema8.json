@@ -1,0 +1,508 @@
+{
+  "meta": {
+    "nivel": "Manual",
+    "dificultate": 1,
+    "clasa": "a V-a",
+    "unitate": "U1",
+    "titlu_unitate": "Mulțimea numerelor naturale",
+    "tema": "Tema8",
+    "titlu_tema": "Aproximare prin lipsă și prin adaos",
+    "prag": 0.8,
+    "puncte_per_item": 10
+  },
+  "teorie": [
+    "Aproximarea prin lipsă a unui număr natural la un anumit ordin se realizează prin păstrarea neschimbată a cifrei ordinului vizat și înlocuirea tuturor cifrelor de pe pozițiile inferioare cu zero.",
+    "Aproximarea prin adaos a unui număr natural la un anumit ordin presupune mărirea cu o unitate a cifrei ordinului vizat și înlocuirea tuturor cifrelor de pe pozițiile inferioare cu zero.",
+    "Aproximările sunt utile pentru estimarea rapidă a rezultatelor și pentru verificarea validității calculelor."
+  ],
+  "teste": {
+    "T1": [
+      {
+        "q": "Aproximarea prin lipsă la zeci a numărului 132 este:",
+        "opts": [
+          "130",
+          "140",
+          "100",
+          "133"
+        ],
+        "ok": 0,
+        "exOk": "Am păstrat cifra zecilor (3) și am înlocuit unitățile cu 0.",
+        "exGr": "La aproximarea prin lipsă, cifra ordinului vizat nu se modifică."
+      },
+      {
+        "q": "Aproximarea prin adaos la zeci a numărului 25 este:",
+        "opts": [
+          "20",
+          "30",
+          "26",
+          "25"
+        ],
+        "ok": 1,
+        "exOk": "Cifra zecilor (2) a crescut cu o unitate, devenind 3 → 30.",
+        "exGr": "Adaosul presupune mărirea cu 1 a cifrei ordinului la care se face aproximarea."
+      },
+      {
+        "q": "Aproximarea prin lipsă la sute a numărului 268 este:",
+        "opts": [
+          "200",
+          "300",
+          "260",
+          "270"
+        ],
+        "ok": 0,
+        "exOk": "Cifra sutelor (2) rămâne neschimbată, restul devin zero → 200.",
+        "exGr": "Pentru aproximarea la sute, transformăm zecile și unitățile în zero."
+      },
+      {
+        "q": "Aproximarea prin adaos la zeci a numărului 36 este:",
+        "opts": [
+          "30",
+          "40",
+          "37",
+          "46"
+        ],
+        "ok": 1,
+        "exOk": "3 zeci devin 4 zeci prin adaos → 40.",
+        "exGr": "Ordinul zecilor trebuie mărit cu o unitate conform regulii adaosului."
+      },
+      {
+        "q": "Aproximarea prin lipsă la sute a numărului 132 este:",
+        "opts": [
+          "100",
+          "200",
+          "130",
+          "140"
+        ],
+        "ok": 0,
+        "exOk": "Menținem suta intactă și eliminăm ordinele inferioare → 100.",
+        "exGr": "Aproximarea la sute ignoră valorile zecilor și unităților."
+      },
+      {
+        "q": "Aproximarea prin adaos la zeci a numărului 7 este:",
+        "opts": [
+          "0",
+          "5",
+          "10",
+          "7"
+        ],
+        "ok": 2,
+        "exOk": "Cifra zecilor este 0, prin adaos devine 1 → 10.",
+        "exGr": "Adaosul la un număr de o cifră la ordinul zecilor ne conduce la 10."
+      },
+      {
+        "q": "Aproximarea prin lipsă la zeci a numărului 268 este:",
+        "opts": [
+          "200",
+          "260",
+          "270",
+          "300"
+        ],
+        "ok": 1,
+        "exOk": "Am păstrat cifra zecilor (6) și am înlocuit unitatea cu zero → 260.",
+        "exGr": "Identifică cifra zecilor și aplică regula păstrării acesteia."
+      },
+      {
+        "q": "Aproximarea prin adaos la sute a numărului 132 este:",
+        "opts": [
+          "100",
+          "200",
+          "140",
+          "132"
+        ],
+        "ok": 1,
+        "exOk": "Cifra sutelor (1) crește la 2 → 200.",
+        "exGr": "Următoarea sută completă după 132 este 200."
+      },
+      {
+        "q": "Aproximarea prin lipsă la zeci a numărului 36 este:",
+        "opts": [
+          "30",
+          "40",
+          "35",
+          "36"
+        ],
+        "ok": 0,
+        "exOk": "36 se aproximează prin lipsă la 30.",
+        "exGr": "La lipsă, unitățile devin zero fără a modifica zecile."
+      },
+      {
+        "q": "Aproximarea prin adaos la sute a numărului 268 este:",
+        "opts": [
+          "200",
+          "300",
+          "270",
+          "260"
+        ],
+        "ok": 1,
+        "exOk": "2 sute devin 3 sute prin adaos → 300.",
+        "exGr": "Adaosul la sute înseamnă trecerea la suta imediat superioară."
+      }
+    ],
+    "T2": [
+      {
+        "q": "Distanța București-Hamburg este 1.977 km. Aproximarea prin lipsă la mii este:",
+        "opts": [
+          "1.000",
+          "2.000",
+          "1.900",
+          "1.970"
+        ],
+        "ok": 0,
+        "exOk": "Cifra miilor (1) rămâne neschimbată → 1.000.",
+        "exGr": "Prin lipsă la mii, toate cifrele de după mii devin zero."
+      },
+      {
+        "q": "Distanța București-Moscova este 1.895 km. Aproximarea prin adaos la sute este:",
+        "opts": [
+          "1.800",
+          "1.900",
+          "2.000",
+          "1.890"
+        ],
+        "ok": 1,
+        "exOk": "Cifra sutelor (8) crește cu o unitate → 1.900.",
+        "exGr": "Adaosul la sute transformă 895 în 900."
+      },
+      {
+        "q": "Populația orașului Delhi este 18.916.890. Aproximarea prin lipsă la milioane este:",
+        "opts": [
+          "18.000.000",
+          "19.000.000",
+          "18.900.000",
+          "10.000.000"
+        ],
+        "ok": 0,
+        "exOk": "Păstrăm cifra 18 de la ordinul milioanelor → 18.000.000.",
+        "exGr": "Aproximarea prin lipsă menține neschimbat ordinul vizat."
+      },
+      {
+        "q": "Istanbul are 14.350.423 locuitori. Aproximarea prin adaos la milioane este:",
+        "opts": [
+          "14.000.000",
+          "15.000.000",
+          "14.400.000",
+          "20.000.000"
+        ],
+        "ok": 1,
+        "exOk": "14 milioane devin 15 milioane prin adaos.",
+        "exGr": "La adaos, cifra milioanelor crește cu o unitate."
+      },
+      {
+        "q": "Londra are 13.945.000 locuitori. Aproximarea prin lipsă la sute de mii este:",
+        "opts": [
+          "13.000.000",
+          "13.900.000",
+          "14.000.000",
+          "13.800.000"
+        ],
+        "ok": 1,
+        "exOk": "Cifra sutelor de mii (9) este păstrată → 13.900.000.",
+        "exGr": "Cifra sutelor de mii este 9; restul de după ea devin zero."
+      },
+      {
+        "q": "Los Angeles are 18.584.159 locuitori. Aproximarea prin adaos la zeci de mii este:",
+        "opts": [
+          "18.580.000",
+          "18.590.000",
+          "18.600.000",
+          "19.000.000"
+        ],
+        "ok": 1,
+        "exOk": "Cifra zecilor de mii (8) crește la 9 → 18.590.000.",
+        "exGr": "Identificăm cifra zecilor de mii (8) și o mărim cu 1."
+      },
+      {
+        "q": "Lagos are 15.500.000 locuitori. Aproximarea prin lipsă la milioane este:",
+        "opts": [
+          "15.000.000",
+          "16.000.000",
+          "15.000.001",
+          "20.000.000"
+        ],
+        "ok": 0,
+        "exOk": "Cele 15 milioane rămân neschimbate → 15.000.000.",
+        "exGr": "Lipsa la milioane păstrează neschimbată valoarea ordinului respectiv."
+      },
+      {
+        "q": "Rio de Janeiro are 14.387.000 locuitori. Aproximarea prin adaos la sute de mii este:",
+        "opts": [
+          "14.300.000",
+          "14.400.000",
+          "14.000.000",
+          "15.000.000"
+        ],
+        "ok": 1,
+        "exOk": "Cele 3 sute de mii devin 4 sute de mii prin adaos → 14.400.000.",
+        "exGr": "Cifra sutelor de mii este 3, prin adaos devine 4."
+      },
+      {
+        "q": "Numărul 25.781 aproximat prin lipsă la mii este:",
+        "opts": [
+          "25.000",
+          "26.000",
+          "25.700",
+          "20.000"
+        ],
+        "ok": 0,
+        "exOk": "Păstrăm cifra 5 de la mii → 25.000.",
+        "exGr": "Aproximarea la mii transformă sutele, zecile și unitățile în zero."
+      },
+      {
+        "q": "Distanța București-Moscova (1.895 km) aproximată prin lipsă la sute este:",
+        "opts": [
+          "1.000",
+          "1.800",
+          "1.900",
+          "2.000"
+        ],
+        "ok": 1,
+        "exOk": "Păstrăm 18 sute → 1.800.",
+        "exGr": "Lipsa la sute ignoră valorile mai mici de 100."
+      }
+    ],
+    "T3": [
+      {
+        "q": "Aproximarea prin adaos la mii a lui 1.895 față de aproximarea prin adaos la mii a lui 1.977:",
+        "opts": [
+          "mai mică",
+          "mai mare",
+          "egală",
+          "dublă"
+        ],
+        "ok": 2,
+        "exOk": "Ambele aproximări sunt egale cu 2.000.",
+        "exGr": "Ambele numere sunt în (1.000, 2.000], deci adaosul la mii = 2.000."
+      },
+      {
+        "q": "Între 100.000 și aproximarea prin adaos la mii a lui 99.999, semnul corect este:",
+        "opts": [
+          "<",
+          ">",
+          "=",
+          "≤"
+        ],
+        "ok": 2,
+        "exOk": "Aproximarea prin adaos la mii a lui 99.999 este 100.000.",
+        "exGr": "Mărirea cu 1 a miilor (9) duce la 100.000."
+      },
+      {
+        "q": "Aproximarea prin lipsă la sute a lui 985.697 față de cea a lui 985.787:",
+        "opts": [
+          "<",
+          ">",
+          "=",
+          "nu există"
+        ],
+        "ok": 0,
+        "exOk": "985.600 < 985.700.",
+        "exGr": "Rezultatele aproximării sunt 985.600 și 985.700."
+      },
+      {
+        "q": "Aproximarea prin lipsă la mii a lui 1.895 față de 1.800 este:",
+        "opts": [
+          "egală",
+          "mai mare",
+          "mai mică",
+          "identică"
+        ],
+        "ok": 2,
+        "exOk": "Aproximarea prin lipsă la mii a lui 1.895 este 1.000 < 1.800.",
+        "exGr": "Aproximarea prin lipsă la mii a lui 1.895 este 1.000."
+      },
+      {
+        "q": "Aproximarea prin adaos la zeci a numărului 1.001 este:",
+        "opts": [
+          "1.000",
+          "1.010",
+          "1.100",
+          "1.002"
+        ],
+        "ok": 1,
+        "exOk": "Cifra zecilor (0) crește la 1 → 1.010.",
+        "exGr": "Adaosul la zeci transformă unitățile în zero și mărește zecile."
+      },
+      {
+        "q": "Aproximarea prin lipsă la zeci a lui 25.781 față de 25.780:",
+        "opts": [
+          "mai mică",
+          "mai mare",
+          "egală",
+          "diferită"
+        ],
+        "ok": 2,
+        "exOk": "25.781 prin lipsă la zeci = 25.780.",
+        "exGr": "Păstrând cifra zecilor (8) și înlocuind unitatea cu zero → 25.780."
+      },
+      {
+        "q": "Aproximarea prin lipsă la sute a numărului 671.234 este:",
+        "opts": [
+          "671.200",
+          "671.300",
+          "672.000",
+          "671.000"
+        ],
+        "ok": 0,
+        "exOk": "Am păstrat 6.712 sute → 671.200.",
+        "exGr": "Lipsa la sute elimină zecile și unitățile fără a modifica sutele."
+      },
+      {
+        "q": "Aproximarea prin adaos la mii a numărului 129 este:",
+        "opts": [
+          "0",
+          "100",
+          "1.000",
+          "200"
+        ],
+        "ok": 2,
+        "exOk": "0 mii devin 1 mie prin adaos → 1.000.",
+        "exGr": "Numărul este între 0 și 1.000, adaosul la mii este 1.000."
+      },
+      {
+        "q": "Aproximarea prin lipsă la sute a lui 1.977 față de aproximarea prin adaos la sute a lui 1.895:",
+        "opts": [
+          "mai mare",
+          "mai mică",
+          "egală",
+          "dublă"
+        ],
+        "ok": 2,
+        "exOk": "1.977 prin lipsă la sute = 1.900; 1.895 prin adaos la sute = 1.900. Egale.",
+        "exGr": "Ambele rezultate sunt 1.900."
+      },
+      {
+        "q": "Aproximarea prin adaos la sute a lui 301 este:",
+        "opts": [
+          "300",
+          "400",
+          "310",
+          "301"
+        ],
+        "ok": 1,
+        "exOk": "Cifra sutelor (3) crește la 4 → 400.",
+        "exGr": "300 este aproximarea prin lipsă. Prin adaos trecem la suta următoare."
+      }
+    ],
+    "T4": [
+      {
+        "q": "Cel mai mic număr natural care aproximat prin adaos la sute dă 500 este:",
+        "opts": [
+          "401",
+          "450",
+          "499",
+          "500"
+        ],
+        "ok": 0,
+        "exOk": "Orice n cu 400 < n ≤ 500 se aproximează prin adaos la 500. Cel mai mic este 401.",
+        "exGr": "Orice valoare strict mai mare decât 400 intră în intervalul de adaos spre 500."
+      },
+      {
+        "q": "Cel mai mare număr natural care aproximat prin lipsă la zeci dă 70 este:",
+        "opts": [
+          "70",
+          "74",
+          "79",
+          "80"
+        ],
+        "ok": 2,
+        "exOk": "Orice n din [70, 79] se aproximează prin lipsă la 70. Cel mai mare este 79.",
+        "exGr": "Dacă numărul ar fi 80, aproximarea prin lipsă la zeci ar fi 80, nu 70."
+      },
+      {
+        "q": "Aproximarea prin lipsă la mii a succesorului celui mai mic număr de 4 cifre distincte este:",
+        "opts": [
+          "1.000",
+          "1.024",
+          "1.100",
+          "1.020"
+        ],
+        "ok": 0,
+        "exOk": "Cel mai mic număr de 4 cifre distincte = 1.023, succesorul = 1.024, lipsă la mii = 1.000.",
+        "exGr": "Orice număr din [1.000, 1.999] aproximat prin lipsă la mii dă 1.000."
+      },
+      {
+        "q": "Cel mai mic număr natural care aproximat prin adaos la zeci dă 30 este:",
+        "opts": [
+          "21",
+          "25",
+          "30",
+          "31"
+        ],
+        "ok": 0,
+        "exOk": "Orice n din (20, 30] se aproximează prin adaos la 30. Cel mai mic este 21.",
+        "exGr": "21 este prima valoare naturală mai mare decât 20 care forțează adaosul la 3 zeci."
+      },
+      {
+        "q": "Aproximarea prin adaos la sute a celui mai mare număr de două cifre distincte este:",
+        "opts": [
+          "90",
+          "98",
+          "100",
+          "200"
+        ],
+        "ok": 2,
+        "exOk": "Cel mai mare număr de 2 cifre distincte este 98. Prin adaos la sute → 100.",
+        "exGr": "Orice număr din (0, 100] se aproximează prin adaos la sute ca 100."
+      },
+      {
+        "q": "Un număr x aproximat prin lipsă la sute este 200. Care valoare este posibilă pentru x?",
+        "opts": [
+          "199",
+          "250",
+          "301",
+          "150"
+        ],
+        "ok": 1,
+        "exOk": "250 ∈ [200, 299], deci aproximarea sa prin lipsă la sute este 200.",
+        "exGr": "x trebuie să aibă cifra 2 la ordinul sutelor: x ∈ [200, 299]."
+      },
+      {
+        "q": "Aproximarea prin lipsă la mii a predecesorului lui 1.111 este:",
+        "opts": [
+          "1.000",
+          "1.100",
+          "1.110",
+          "2.000"
+        ],
+        "ok": 0,
+        "exOk": "Predecesorul lui 1.111 = 1.110. Lipsă la mii → 1.000.",
+        "exGr": "Lipsa la mii pentru 1.110 păstrează doar unitatea de mii."
+      },
+      {
+        "q": "Suma dintre aproximarea prin lipsă la zeci a lui 45 și aproximarea prin adaos la zeci a lui 45 este:",
+        "opts": [
+          "90",
+          "80",
+          "100",
+          "45"
+        ],
+        "ok": 0,
+        "exOk": "40 (lipsă) + 50 (adaos) = 90.",
+        "exGr": "Aproximările sunt 40 și 50. Suma = 90."
+      },
+      {
+        "q": "Câte numere naturale aproximate prin lipsă la zeci dau 50?",
+        "opts": [
+          "5",
+          "10",
+          "9",
+          "4"
+        ],
+        "ok": 1,
+        "exOk": "Numerele din [50, 59] → 10 numere.",
+        "exGr": "De la 50 la 59 sunt 10 numere cu lipsă la zeci = 50."
+      },
+      {
+        "q": "Dacă aproximarea prin adaos la sute a lui n este 300, n poate fi:",
+        "opts": [
+          "199",
+          "300",
+          "201",
+          "350"
+        ],
+        "ok": 2,
+        "exOk": "201 ∈ (200, 300], deci prin adaos la sute → 300.",
+        "exGr": "n trebuie să fie în intervalul (200, 300]. 201 îndeplinește condiția."
+      }
+    ]
+  }
+}

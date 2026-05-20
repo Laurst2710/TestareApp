@@ -1,0 +1,508 @@
+{
+  "meta": {
+    "nivel": "Manual",
+    "dificultate": 1,
+    "clasa": "a V-a",
+    "unitate": "U1",
+    "titlu_unitate": "Numere Naturale",
+    "tema": "Tema10",
+    "titlu_tema": "Descăzut, scăzător, diferență; proprietăți; proba scăderii",
+    "prag": 0.8,
+    "puncte_per_item": 10
+  },
+  "teorie": [
+    "Operația de scădere se aplică doar când descăzutul este mai mare sau egal cu scăzătorul în mulțimea numerelor naturale.",
+    "Rezultatul scăderii se numește diferență, iar componentele sale sunt descăzutul și scăzătorul.",
+    "Proba scăderii se efectuează adunând diferența cu scăzătorul pentru a obține descăzutul, sau scăzând diferența din descăzut pentru a obține scăzătorul."
+  ],
+  "teste": {
+    "T1": [
+      {
+        "q": "În operația 15 - 4 = 11, care este descăzutul?",
+        "opts": [
+          "15",
+          "4",
+          "11",
+          "19"
+        ],
+        "ok": 0,
+        "exOk": "Descăzutul este primul termen al scăderii, din care se scade.",
+        "exGr": "În a - b = c, termenul 'a' se numește descăzut. Aici este 15."
+      },
+      {
+        "q": "În operația 23 - 7 = 16, care este scăzătorul?",
+        "opts": [
+          "23",
+          "16",
+          "7",
+          "30"
+        ],
+        "ok": 2,
+        "exOk": "Scăzătorul este al doilea termen, cel care se scade.",
+        "exGr": "În a - b = c, termenul 'b' se numește scăzător. Aici este 7."
+      },
+      {
+        "q": "Cum se numește rezultatul operației de scădere?",
+        "opts": [
+          "Sumă",
+          "Diferență",
+          "Produs",
+          "Cât"
+        ],
+        "ok": 1,
+        "exOk": "Rezultatul operației de scădere se numește diferență.",
+        "exGr": "Suma aparține adunării, produsul înmulțirii. Rezultatul scăderii este diferența."
+      },
+      {
+        "q": "Care este rezultatul scăderii 45 - 12?",
+        "opts": [
+          "57",
+          "33",
+          "23",
+          "35"
+        ],
+        "ok": 1,
+        "exOk": "45 - 12 = 33.",
+        "exGr": "Scăzând unitățile și zecile obținem 33."
+      },
+      {
+        "q": "Care este diferența dintre numerele 100 și 25?",
+        "opts": [
+          "125",
+          "85",
+          "75",
+          "65"
+        ],
+        "ok": 2,
+        "exOk": "100 - 25 = 75.",
+        "exGr": "Calculul corect este 100 - 25 = 75."
+      },
+      {
+        "q": "Dacă micșorăm numărul 50 cu 0, care este diferența?",
+        "opts": [
+          "0",
+          "50",
+          "5",
+          "40"
+        ],
+        "ok": 1,
+        "exOk": "Scăderea lui 0 dintr-un număr lasă numărul neschimbat: 50 - 0 = 50.",
+        "exGr": "Orice număr din care se scade 0 rămâne neschimbat."
+      },
+      {
+        "q": "Efectuați scăderea: 87 - 87.",
+        "opts": [
+          "0",
+          "1",
+          "87",
+          "174"
+        ],
+        "ok": 0,
+        "exOk": "Scăderea unui număr din el însuși are ca rezultat 0.",
+        "exGr": "Când descăzutul este egal cu scăzătorul, diferența este 0."
+      },
+      {
+        "q": "Efectuați proba scăderii 20 - 6 = 14 prin adunare.",
+        "opts": [
+          "14 + 6 = 20",
+          "20 + 6 = 26",
+          "14 + 20 = 34",
+          "6 + 6 = 12"
+        ],
+        "ok": 0,
+        "exOk": "Proba prin adunare: diferența + scăzătorul = descăzutul → 14 + 6 = 20.",
+        "exGr": "Proba prin adunare: diferența + scăzătorul = descăzutul."
+      },
+      {
+        "q": "Efectuați proba scăderii 35 - 15 = 20 prin scădere.",
+        "opts": [
+          "20 - 15 = 5",
+          "35 - 20 = 15",
+          "35 - 15 = 20",
+          "20 - 5 = 15"
+        ],
+        "ok": 1,
+        "exOk": "Proba prin scădere: descăzut - diferență = scăzător → 35 - 20 = 15.",
+        "exGr": "Proba prin scădere: descăzut - diferență = scăzător."
+      },
+      {
+        "q": "Care este rezultatul calculului: 124 - 24?",
+        "opts": [
+          "148",
+          "100",
+          "104",
+          "120"
+        ],
+        "ok": 1,
+        "exOk": "124 - 24 = 100.",
+        "exGr": "Scăderea corectă este 124 - 24 = 100."
+      }
+    ],
+    "T2": [
+      {
+        "q": "Aflați x din relația: x - 15 = 40.",
+        "opts": [
+          "25",
+          "35",
+          "55",
+          "65"
+        ],
+        "ok": 2,
+        "exOk": "x = 40 + 15 = 55.",
+        "exGr": "x este descăzutul. Se află adunând diferența cu scăzătorul: 40 + 15 = 55."
+      },
+      {
+        "q": "Aflați y din relația: 70 - y = 32.",
+        "opts": [
+          "38",
+          "42",
+          "102",
+          "32"
+        ],
+        "ok": 0,
+        "exOk": "y = 70 - 32 = 38.",
+        "exGr": "y este scăzătorul. Se află scăzând diferența din descăzut: 70 - 32 = 38."
+      },
+      {
+        "q": "Cu cât este mai mare numărul 256 decât 142?",
+        "opts": [
+          "398",
+          "114",
+          "124",
+          "112"
+        ],
+        "ok": 1,
+        "exOk": "256 - 142 = 114.",
+        "exGr": "Diferența = 256 - 142 = 114."
+      },
+      {
+        "q": "Dacă micșorăm numărul 483 cu 251, ce număr obținem?",
+        "opts": [
+          "232",
+          "234",
+          "734",
+          "231"
+        ],
+        "ok": 0,
+        "exOk": "483 - 251 = 232.",
+        "exGr": "A micșora = a scădea: 483 - 251 = 232."
+      },
+      {
+        "q": "Diferența dintre cel mai mare număr de două cifre și cel mai mic număr de două cifre este:",
+        "opts": [
+          "89",
+          "99",
+          "90",
+          "88"
+        ],
+        "ok": 0,
+        "exOk": "99 - 10 = 89.",
+        "exGr": "Cel mai mare = 99, cel mai mic = 10. 99 - 10 = 89."
+      },
+      {
+        "q": "Descăzutul este 150, diferența este 60. Care este scăzătorul?",
+        "opts": [
+          "210",
+          "90",
+          "80",
+          "110"
+        ],
+        "ok": 1,
+        "exOk": "Scăzătorul = descăzut - diferență = 150 - 60 = 90.",
+        "exGr": "Scăzătorul = 150 - 60 = 90."
+      },
+      {
+        "q": "Diferența este 45, scăzătorul este 25. Care este descăzutul?",
+        "opts": [
+          "20",
+          "60",
+          "70",
+          "80"
+        ],
+        "ok": 2,
+        "exOk": "Descăzutul = diferență + scăzător = 45 + 25 = 70.",
+        "exGr": "Descăzutul = 45 + 25 = 70."
+      },
+      {
+        "q": "Calculați: 1250 - 150 - 100.",
+        "opts": [
+          "1200",
+          "1100",
+          "1000",
+          "950"
+        ],
+        "ok": 2,
+        "exOk": "1250 - 150 = 1100, 1100 - 100 = 1000.",
+        "exGr": "Succesiv: 1250-150=1100, 1100-100=1000."
+      },
+      {
+        "q": "Dacă a - b = 12, cât este (a + 5) - b?",
+        "opts": [
+          "12",
+          "7",
+          "17",
+          "22"
+        ],
+        "ok": 2,
+        "exOk": "Creșterea descăzutului cu 5 mărește diferența cu 5: 12 + 5 = 17.",
+        "exGr": "Descăzutul crește cu 5 → diferența crește cu 5."
+      },
+      {
+        "q": "Dacă a - b = 20, cât este a - (b + 4)?",
+        "opts": [
+          "24",
+          "16",
+          "20",
+          "4"
+        ],
+        "ok": 1,
+        "exOk": "Scăzătorul crește cu 4 → diferența scade cu 4: 20 - 4 = 16.",
+        "exGr": "Creșterea scăzătorului micșorează diferența cu aceeași valoare."
+      }
+    ],
+    "T3": [
+      {
+        "q": "Calculați: 4321 - 1234.",
+        "opts": [
+          "3087",
+          "3111",
+          "3097",
+          "2087"
+        ],
+        "ok": 0,
+        "exOk": "4321 - 1234 = 3087.",
+        "exGr": "Efectuați scăderea cu împrumut: 4321 - 1234 = 3087."
+      },
+      {
+        "q": "Se știe că a - b = 45 și c = 15. Calculați a - (b + c).",
+        "opts": [
+          "60",
+          "30",
+          "45",
+          "15"
+        ],
+        "ok": 1,
+        "exOk": "a - b - c = 45 - 15 = 30.",
+        "exGr": "a - (b+c) = a - b - c = 45 - 15 = 30."
+      },
+      {
+        "q": "Suma a două numere este 180, unul este 65. Care este diferența lor?",
+        "opts": [
+          "115",
+          "50",
+          "65",
+          "120"
+        ],
+        "ok": 1,
+        "exOk": "Al doilea = 180 - 65 = 115. Diferența = 115 - 65 = 50.",
+        "exGr": "Al doilea număr = 115. Diferența = 115 - 65 = 50."
+      },
+      {
+        "q": "Dacă adunăm descăzutul, scăzătorul și diferența și obținem 200, care este descăzutul?",
+        "opts": [
+          "50",
+          "100",
+          "150",
+          "200"
+        ],
+        "ok": 1,
+        "exOk": "D + S + Dif = D + D = 2D = 200 → D = 100.",
+        "exGr": "S + Dif = D, deci suma totală = 2D = 200 → D = 100."
+      },
+      {
+        "q": "Determinați numărul cu 345 mai mic decât diferența numerelor 1000 și 200.",
+        "opts": [
+          "800",
+          "455",
+          "555",
+          "465"
+        ],
+        "ok": 1,
+        "exOk": "1000 - 200 = 800. 800 - 345 = 455.",
+        "exGr": "Diferența = 800. 800 - 345 = 455."
+      },
+      {
+        "q": "La o scădere, dacă mărim descăzutul cu 30 și micșorăm scăzătorul cu 10, cum se modifică diferența?",
+        "opts": [
+          "Crește cu 20",
+          "Crește cu 40",
+          "Scade cu 20",
+          "Rămâne neschimbată"
+        ],
+        "ok": 1,
+        "exOk": "+30 - (-10) = +40. Diferența crește cu 40.",
+        "exGr": "Modificarea = +30 + 10 = +40."
+      },
+      {
+        "q": "Calculați x din ecuația: (x - 40) - 25 = 100.",
+        "opts": [
+          "115",
+          "165",
+          "135",
+          "85"
+        ],
+        "ok": 1,
+        "exOk": "x - 40 = 125 → x = 165.",
+        "exGr": "x - 40 = 100 + 25 = 125. x = 125 + 40 = 165."
+      },
+      {
+        "q": "Aflați a - b - c, știind că a = 500 și b + c = 200.",
+        "opts": [
+          "300",
+          "400",
+          "200",
+          "100"
+        ],
+        "ok": 0,
+        "exOk": "a - (b+c) = 500 - 200 = 300.",
+        "exGr": "a - b - c = a - (b+c) = 500 - 200 = 300."
+      },
+      {
+        "q": "Diferența a două numere este 48. Scăzătorul este a treia parte din 90. Care este descăzutul?",
+        "opts": [
+          "78",
+          "18",
+          "68",
+          "138"
+        ],
+        "ok": 0,
+        "exOk": "Scăzătorul = 90:3 = 30. Descăzutul = 48 + 30 = 78.",
+        "exGr": "Scăzătorul = 30. Descăzutul = diferență + scăzător = 78."
+      },
+      {
+        "q": "Efectuați calculul: 2000 - (500 - 150).",
+        "opts": [
+          "1350",
+          "1650",
+          "1750",
+          "1250"
+        ],
+        "ok": 1,
+        "exOk": "500 - 150 = 350. 2000 - 350 = 1650.",
+        "exGr": "Paranteza întâi: 500-150=350. Apoi 2000-350=1650."
+      }
+    ],
+    "T4": [
+      {
+        "q": "Diferența a două numere este 120. Dacă mărim descăzutul cu 50 și scăzătorul cu 80, noua diferență este:",
+        "opts": [
+          "150",
+          "90",
+          "170",
+          "70"
+        ],
+        "ok": 1,
+        "exOk": "120 + 50 - 80 = 90.",
+        "exGr": "+50 la descăzut, +80 la scăzător → diferența = 120 + 50 - 80 = 90."
+      },
+      {
+        "q": "Aflați x din ecuația: 500 - (200 - x) = 350.",
+        "opts": [
+          "50",
+          "150",
+          "100",
+          "25"
+        ],
+        "ok": 0,
+        "exOk": "200 - x = 150 → x = 50.",
+        "exGr": "500 - P = 350 → P = 150. 200 - x = 150 → x = 50."
+      },
+      {
+        "q": "Dacă a - b = 100 și b - c = 40, cât este a - c?",
+        "opts": [
+          "60",
+          "140",
+          "100",
+          "40"
+        ],
+        "ok": 1,
+        "exOk": "a - c = (a-b) + (b-c) = 100 + 40 = 140.",
+        "exGr": "Adunând relațiile: a - c = 140."
+      },
+      {
+        "q": "Suma a trei numere este 1000. Suma primelor două este 650, suma ultimelor două este 550. Al doilea număr este:",
+        "opts": [
+          "350",
+          "450",
+          "200",
+          "150"
+        ],
+        "ok": 2,
+        "exOk": "Primul = 1000 - 550 = 450. Al doilea = 650 - 450 = 200.",
+        "exGr": "Al doilea = 650 - (1000-550) = 200."
+      },
+      {
+        "q": "Dintr-o cutie s-au luat 45 bile și s-au pus 20. Au rămas 100. Câte bile erau la început?",
+        "opts": [
+          "125",
+          "165",
+          "75",
+          "145"
+        ],
+        "ok": 0,
+        "exOk": "Mersul invers: 100 - 20 + 45 = 125.",
+        "exGr": "x - 45 + 20 = 100 → x = 125."
+      },
+      {
+        "q": "Scăzătorul este cel mai mic număr par de trei cifre distincte, diferența este 88. Descăzutul este:",
+        "opts": [
+          "190",
+          "188",
+          "210",
+          "192"
+        ],
+        "ok": 0,
+        "exOk": "Cel mai mic număr par cu cifre distincte = 102. Descăzut = 102 + 88 = 190.",
+        "exGr": "102 + 88 = 190."
+      },
+      {
+        "q": "Suma scăzătorului și diferenței este 450. Diferența e cu 50 mai mare decât scăzătorul. Scăzătorul este:",
+        "opts": [
+          "250",
+          "200",
+          "150",
+          "300"
+        ],
+        "ok": 1,
+        "exOk": "2S + 50 = 450 → S = 200.",
+        "exGr": "S + (S+50) = 450 → 2S = 400 → S = 200."
+      },
+      {
+        "q": "Calculați n din: 1000 - [500 - (n - 50)] = 600.",
+        "opts": [
+          "150",
+          "50",
+          "100",
+          "200"
+        ],
+        "ok": 0,
+        "exOk": "500 - (n-50) = 400 → n - 50 = 100 → n = 150.",
+        "exGr": "Reducem succesiv: n - 50 = 100 → n = 150."
+      },
+      {
+        "q": "Dacă scăzătorul se micșorează cu 30 și diferența devine 140, diferența inițială era:",
+        "opts": [
+          "170",
+          "110",
+          "140",
+          "80"
+        ],
+        "ok": 1,
+        "exOk": "Micșorarea scăzătorului a mărit diferența cu 30. Inițial: 140 - 30 = 110.",
+        "exGr": "Diferența inițială = 140 - 30 = 110."
+      },
+      {
+        "q": "Calculați x - y - z știind că x=3400, y-z=200, z=400.",
+        "opts": [
+          "2800",
+          "2400",
+          "2600",
+          "3000"
+        ],
+        "ok": 1,
+        "exOk": "y = 600, z = 400. 3400 - 600 - 400 = 2400.",
+        "exGr": "y = 200 + 400 = 600. 3400 - 600 - 400 = 2400."
+      }
+    ]
+  }
+}
