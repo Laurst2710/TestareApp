@@ -1,307 +1,68 @@
 {
   "meta": {
-    "nivel": "MANUAL",
+    "nivel": "Manual",
     "dificultate": 1,
-    "clasa": 5,
+    "clasa": "a V-a",
     "unitate": "U1",
-    "titlu_unitate": "Numere Naturale",
-    "tema": "T1",
-    "titlu_tema": "Sistemul zecimal; cifre, clase, ordine poziționale",
-    "continut": "Scrierea și citirea numerelor naturale",
-    "competente": ["1.1", "4.1", "5.1"],
-    "sursa": "OMENCS 3393/2017",
+    "titlu_unitate": "Mulțimea numerelor naturale",
+    "tema": "Tema1",
+    "titlu_tema": "Sistemul zecimal de numerație",
     "prag": 0.8,
-    "puncte_per_item": 10,
-    "items_per_test": 10
+    "puncte_per_item": 10
   },
+  "teorie": [
+    "Sistemul zecimal folosește 10 cifre: 0, 1, 2, 3, 4, 5, 6, 7, 8, 9.",
+    "Valoarea unui număr depinde de cifra și de locul (ordinul) pe care îl ocupă aceasta.",
+    "Ordinele sunt: unități, zeci, sute, mii, zeci de mii, sute de mii, milioane."
+  ],
   "teste": {
     "T1": [
-      {
-        "q": "Cifra sutelor in numarul 47 382 este:",
-        "opts": ["a) 4", "b) 7", "c) 3", "d) 8"],
-        "ok": 2,
-        "exOk": "Corect! Numara de la dreapta: 2=unitati, 8=zeci, 3=sute, 7=mii, 4=zeci de mii.",
-        "exGr": "Numara de la dreapta: 2=unitati, 8=zeci, 3=sute, 7=mii, 4=zeci de mii. Cifra sutelor este 3."
-      },
-      {
-        "q": "Numarul trei sute douazeci si cinci de mii patruzeci scris cu cifre este:",
-        "opts": ["a) 325 400", "b) 32 540", "c) 325 040", "d) 305 040"],
-        "ok": 2,
-        "exOk": "Corect! 325 de mii = 325 000, plus patruzeci = 40. Total: 325 040.",
-        "exGr": "325 de mii = 325 000, plus patruzeci = 40. Raspuns: 325 040."
-      },
-      {
-        "q": "Numarul 406 053 se citeste:",
-        "opts": ["a) patruzeci de mii sase sute cincizeci si trei", "b) patru sute sase mii cincizeci si trei", "c) patru sute saizeci de mii cincizeci si trei", "d) patru sute sase mii cinci sute trei"],
-        "ok": 1,
-        "exOk": "Corect! 406 mii = patru sute sase mii; 053 = cincizeci si trei.",
-        "exGr": "Grupam: 406|053. Se citeste: patru sute sase mii cincizeci si trei."
-      },
-      {
-        "q": "Cifra 8 din numarul 384 210 face parte din clasa:",
-        "opts": ["a) unitatilor", "b) miilor", "c) milioanelor", "d) miliardelor"],
-        "ok": 1,
-        "exOk": "Corect! Cifra 8 este la zeci de mii. Zecile de mii fac parte din clasa miilor.",
-        "exGr": "Clasele: unitatilor, miilor, milioanelor, miliardelor. Cifra 8 la zeci de mii = clasa miilor."
-      },
-      {
-        "q": "Valoarea cifrei 0 din numarul 6 038 este:",
-        "opts": ["a) 0 unitati", "b) 0 zeci", "c) 0 sute", "d) 0 mii"],
-        "ok": 2,
-        "exOk": "Corect! 6=mii, 0=sute, 3=zeci, 8=unitati. Cifra 0 se afla la ordinul sutelor.",
-        "exGr": "6038: 6=mii, 0=sute, 3=zeci, 8=unitati. Valoarea cifrei 0 este 0 sute."
-      },
-      {
-        "q": "Numarul 508 064 are cifra zecilor de mii egala cu:",
-        "opts": ["a) 5", "b) 8", "c) 0", "d) 6"],
-        "ok": 2,
-        "exOk": "Corect! 5=sute de mii, 0=zeci de mii, 8=mii, 0=sute, 6=zeci, 4=unitati.",
-        "exGr": "Numara de la dreapta: 4=unitati, 6=zeci, 0=sute, 8=mii, 0=zeci de mii. Cifra zecilor de mii este 0."
-      },
-      {
-        "q": "Numarul 203 450 are cifra sutelor de mii egala cu:",
-        "opts": ["a) 2", "b) 0", "c) 3", "d) 4"],
-        "ok": 0,
-        "exOk": "Corect! 2=sute de mii, 0=zeci de mii, 3=mii, 4=sute, 5=zeci, 0=unitati.",
-        "exGr": "Numara pozitiile de la dreapta: 0=unitati, 5=zeci, 4=sute, 3=mii, 0=zeci de mii, 2=sute de mii."
-      },
-      {
-        "q": "Cel mai mic numar natural de 4 cifre cu cifra unitatilor egala cu 7 este:",
-        "opts": ["a) 9 997", "b) 1 070", "c) 1 700", "d) 1 007"],
-        "ok": 3,
-        "exOk": "Corect! Cel mai mic numar de 4 cifre este 1 000. Cu cifra unitatilor 7: 1 007.",
-        "exGr": "Cel mai mic numar de 4 cifre incepe cu 1. Cu cifra unitatilor 7 si restul 0: 1 007."
-      },
-      {
-        "q": "Care numar are cifra zecilor de mii egala cu 7 si cifra sutelor egala cu 3?",
-        "opts": ["a) 47 312", "b) 76 384", "c) 57 032", "d) 17 930"],
-        "ok": 1,
-        "exOk": "Corect! 76 384: 7=zeci de mii, 6=mii, 3=sute, 8=zeci, 4=unitati. Ambele conditii indeplinite.",
-        "exGr": "Cauta numarul cu zeci de mii=7 SI sute=3. In 76 384: zeci de mii=7 si sute=3."
-      },
-      {
-        "q": "Numarul format din 4 sute de mii, 0 zeci de mii, 3 mii, 0 sute, 7 zeci si 2 unitati este:",
-        "opts": ["a) 43 072", "b) 400 372", "c) 403 072", "d) 430 072"],
-        "ok": 2,
-        "exOk": "Corect! 4x100000+0x10000+3x1000+0x100+7x10+2 = 403 072.",
-        "exGr": "Asezam cifrele la ordinele lor: sute de mii=4, zeci de mii=0, mii=3, sute=0, zeci=7, unitati=2. Rezultat: 403 072."
-      }
+      {"q":"Care este cifra zecilor în numărul 3.748?","opts":["3","7","4","8"],"ok":1,"exOk":"Cifra zecilor este a doua cifră de la dreapta: 4. Corect!","exGr":"În 3.748: unitățile=8, zecile=4, sutele=7, miile=3."},
+      {"q":"Valoarea cifrei 6 în numărul 6.205 este:","opts":["6","60","600","6.000"],"ok":3,"exOk":"Cifra 6 se află pe ordinul miilor, deci valoarea ei este 6.000.","exGr":"6 se află pe locul miilor → valoarea = 6 × 1.000 = 6.000."},
+      {"q":"Numărul 45.302 are câte cifre?","opts":["4","5","6","3"],"ok":1,"exOk":"4-5-3-0-2 → 5 cifre.","exGr":"Numără cifrele: 4, 5, 3, 0, 2 → 5 cifre."},
+      {"q":"Cifra sutelor în 18.537 este:","opts":["1","8","5","3"],"ok":2,"exOk":"În 18.537: u=7, z=3, s=5, m=8, zm=1. Cifra sutelor este 5.","exGr":"Ordinea de la dreapta: u=7, z=3, s=5. Cifra sutelor = 5."},
+      {"q":"Care număr are cifra miilor egală cu 4?","opts":["14.200","40.100","4.380","41.000"],"ok":2,"exOk":"În 4.380: u=0, z=8, s=3, m=4. Cifra miilor este 4.","exGr":"Verifică ordinul miilor în fiecare număr. În 4.380, cifra miilor = 4."},
+      {"q":"Valoarea cifrei 3 în numărul 230.000 este:","opts":["3","300","3.000","30.000"],"ok":3,"exOk":"3 se află pe ordinul zecilor de mii → 3 × 10.000 = 30.000.","exGr":"230.000: zeci de mii = 3, deci valoarea = 30.000."},
+      {"q":"Ordinul pe care se află cifra 7 în numărul 7.200.000 este:","opts":["mii","zeci de mii","sute de mii","milioane"],"ok":3,"exOk":"7.200.000 = 7 milioane + 2 sute de mii. Cifra 7 este pe ordinul milioanelor.","exGr":"7.200.000: cifra 7 ocupă locul milioanelor."},
+      {"q":"Suma valorilor cifrelor 2 și 5 în numărul 25 este:","opts":["7","25","27","52"],"ok":1,"exOk":"Valoarea lui 2 = 20, valoarea lui 5 = 5. Suma = 20 + 5 = 25.","exGr":"20 (valoarea lui 2 pe locul zecilor) + 5 (valoarea lui 5 pe locul unităților) = 25."},
+      {"q":"Care este cel mai mare număr de 4 cifre?","opts":["1.000","9.000","9.999","9.998"],"ok":2,"exOk":"Cel mai mare număr de 4 cifre este 9.999.","exGr":"Maximizăm toate cifrele: 9.999 este cel mai mare număr cu exact 4 cifre."},
+      {"q":"Câte numere de 2 cifre există?","opts":["89","90","99","100"],"ok":1,"exOk":"De la 10 la 99 → 99 - 10 + 1 = 90 numere.","exGr":"Numerele cu 2 cifre: 10, 11, ..., 99. Total = 99 - 10 + 1 = 90."}
     ],
     "T2": [
-      {
-        "q": "Cifra miilor in numarul 582 306 este:",
-        "opts": ["a) 5", "b) 8", "c) 2", "d) 3"],
-        "ok": 2,
-        "exOk": "Corect! 5=sute de mii, 8=zeci de mii, 2=mii, 3=sute, 0=zeci, 6=unitati.",
-        "exGr": "Numara de la dreapta: 6=unitati, 0=zeci, 3=sute, 2=mii. Cifra miilor este 2."
-      },
-      {
-        "q": "Numarul doua milioane cincizeci de mii trei sute scris cu cifre este:",
-        "opts": ["a) 2 050 300", "b) 2 500 300", "c) 2 050 030", "d) 250 300"],
-        "ok": 0,
-        "exOk": "Corect! 2 milioane + 50 de mii + 300 = 2 050 300.",
-        "exGr": "2 milioane = 2 000 000; 50 de mii = 50 000; 300 = 300. Total: 2 050 300."
-      },
-      {
-        "q": "Numarul 7 040 005 se citeste:",
-        "opts": ["a) sapte milioane patruzeci de mii cinci", "b) sapte sute patruzeci de mii cinci", "c) sapte milioane patru mii cinci", "d) sapte milioane patruzeci de mii cincizeci"],
-        "ok": 0,
-        "exOk": "Corect! 7=milioane, 040=mii (patruzeci de mii), 005=unitati (cinci).",
-        "exGr": "Grupam: 7 | 040 | 005. Citim: sapte milioane patruzeci de mii cinci."
-      },
-      {
-        "q": "Cifra 9 din numarul 195 820 se afla la ordinul:",
-        "opts": ["a) unitatilor", "b) sutelor", "c) zecilor de mii", "d) sutelor de mii"],
-        "ok": 2,
-        "exOk": "Corect! 1=sute de mii, 9=zeci de mii, 5=mii, 8=sute, 2=zeci, 0=unitati.",
-        "exGr": "Numara de la dreapta: 0=unitati, 2=zeci, 8=sute, 5=mii, 9=zeci de mii. Cifra 9 este la zeci de mii."
-      },
-      {
-        "q": "Cifra 4 din numarul 3 400 712 face parte din clasa:",
-        "opts": ["a) unitatilor", "b) miliardelor", "c) milioanelor", "d) miilor"],
-        "ok": 3,
-        "exOk": "Corect! 3=milioane, 4=sute de mii, restul=mii/unitati. Sutele de mii fac parte din clasa miilor.",
-        "exGr": "4 se afla la sute de mii. Clasa miilor include: mii, zeci de mii, sute de mii."
-      },
-      {
-        "q": "Valoarea cifrei 5 din numarul 45 231 este:",
-        "opts": ["a) 5 unitati", "b) 5 zeci", "c) 5 mii", "d) 5 zeci de mii"],
-        "ok": 2,
-        "exOk": "Corect! 4=zeci de mii, 5=mii, 2=sute, 3=zeci, 1=unitati. Cifra 5 este la ordinul miilor.",
-        "exGr": "Numara de la dreapta: 1=unitati, 3=zeci, 2=sute, 5=mii. Valoarea cifrei 5 este 5 mii."
-      },
-      {
-        "q": "Cate cifre are numarul noua sute nouazeci si noua de mii noua sute nouazeci si noua?",
-        "opts": ["a) 5", "b) 6", "c) 7", "d) 4"],
-        "ok": 1,
-        "exOk": "Corect! 999 999 este un numar de 6 cifre.",
-        "exGr": "999 999: numara cifrele: 9-9-9-9-9-9 = 6 cifre."
-      },
-      {
-        "q": "Care este descompunerea zecimala completa a numarului 30 207?",
-        "opts": ["a) 3x10000+2x100+7", "b) 3x10000+0x1000+2x100+0x10+7", "c) 3x1000+2x100+7", "d) 3x10000+2x10+7"],
-        "ok": 1,
-        "exOk": "Corect! Descompunerea completa include toate ordinele, inclusiv cele cu cifra 0.",
-        "exGr": "30 207 are 5 cifre, deci 5 termeni: 3x10000+0x1000+2x100+0x10+7."
-      },
-      {
-        "q": "Cel mai mare numar natural de 5 cifre cu cifra sutelor egala cu 0 este:",
-        "opts": ["a) 99 099", "b) 99 900", "c) 90 099", "d) 99 009"],
-        "ok": 0,
-        "exOk": "Corect! Cu sute=0, maximizam celelalte pozitii: 99 099.",
-        "exGr": "Sute=0, deci pozitia sutelor este 0. Maximizam restul: zeci de mii=9, mii=9, zeci=9, unitati=9. Rezultat: 99 099."
-      },
-      {
-        "q": "Care numar are cifra sutelor egala cu 3 si cifra zecilor de mii egala cu 7?",
-        "opts": ["a) 47 312", "b) 76 384", "c) 57 032", "d) 17 930"],
-        "ok": 1,
-        "exOk": "Corect! 76 384: 7=zeci de mii, 6=mii, 3=sute, 8=zeci, 4=unitati.",
-        "exGr": "Cauta: zeci de mii=7 SI sute=3. In 76 384: zeci de mii=7 si sute=3. Indeplinite ambele."
-      }
+      {"q":"Cifra unităților în 7.894 este:","opts":["7","8","9","4"],"ok":3,"exOk":"Cifra unităților este ultima cifră din dreapta: 4.","exGr":"Ultima cifră din dreapta reprezintă unitățile. În 7.894, aceasta este 4."},
+      {"q":"Valoarea cifrei 5 în 15.200 este:","opts":["5","50","500","5.000"],"ok":3,"exOk":"5 se află pe ordinul miilor → 5 × 1.000 = 5.000.","exGr":"În 15.200: u=0, z=0, s=2, m=5, zm=1. Valoarea lui 5 = 5.000."},
+      {"q":"Cel mai mic număr de 3 cifre este:","opts":["100","101","999","110"],"ok":0,"exOk":"Cel mai mic număr de 3 cifre este 100.","exGr":"Prima cifră trebuie să fie nenulă → minim 1, celelalte 0 → 100."},
+      {"q":"Cifra zecilor de mii în 246.813 este:","opts":["2","4","6","8"],"ok":1,"exOk":"În 246.813: u=3, z=1, s=8, m=6, zm=4, sm=2. Zeci de mii = 4.","exGr":"Numără de la dreapta: u, z, s, m, zm. A 5-a cifră = 4."},
+      {"q":"Care număr NU are cifra sutelor egală cu 0?","opts":["1.045","2.034","3.506","4.021"],"ok":2,"exOk":"În 3.506: u=6, z=0, s=5. Cifra sutelor este 5, nu 0.","exGr":"Verifică sutele: 1.045→0, 2.034→0, 3.506→5, 4.021→0."},
+      {"q":"Valoarea cifrei 9 în 900.000 este:","opts":["9","900","9.000","900.000"],"ok":3,"exOk":"9 se află pe ordinul sutelor de mii → 9 × 100.000 = 900.000.","exGr":"900.000 = 9 × 100.000. Valoarea cifrei 9 este 900.000."},
+      {"q":"Câte cifre are numărul un milion?","opts":["6","7","8","9"],"ok":1,"exOk":"1.000.000 are 7 cifre: 1, 0, 0, 0, 0, 0, 0.","exGr":"Un milion = 1.000.000 → numără cifrele: 7."},
+      {"q":"Suma cifrelor lui 234 este:","opts":["6","7","8","9"],"ok":3,"exOk":"2 + 3 + 4 = 9.","exGr":"Adunăm toate cifrele: 2 + 3 + 4 = 9."},
+      {"q":"Cifra milioanelor în 5.300.000 este:","opts":["0","3","5","53"],"ok":2,"exOk":"5.300.000 = 5 milioane + 3 sute de mii. Cifra milioanelor = 5.","exGr":"5.300.000: primul grup reprezintă milioanele. Cifra milioanelor = 5."},
+      {"q":"Care este valoarea lui 0 în orice număr?","opts":["0","1","depinde de poziție","nu există"],"ok":0,"exOk":"Cifra 0 are întotdeauna valoarea 0, indiferent de poziție. 0 × orice = 0.","exGr":"Indiferent de ordinul pe care se află, 0 × acel ordin = 0."}
     ],
     "T3": [
-      {
-        "q": "Cifra zecilor din numarul 938 472 este:",
-        "opts": ["a) 9", "b) 4", "c) 7", "d) 2"],
-        "ok": 2,
-        "exOk": "Corect! 9=sute de mii, 3=zeci de mii, 8=mii, 4=sute, 7=zeci, 2=unitati.",
-        "exGr": "Numara de la dreapta: 2=unitati, 7=zeci. Cifra zecilor este 7."
-      },
-      {
-        "q": "Numarul saptezeci si doua de mii opt scris cu cifre este:",
-        "opts": ["a) 720 008", "b) 72 080", "c) 72 008", "d) 70 208"],
-        "ok": 2,
-        "exOk": "Corect! 72 de mii = 72 000, plus opt = 8. Total: 72 008.",
-        "exGr": "72 de mii = 72 000; opt = 8. Rezultat: 72 008."
-      },
-      {
-        "q": "Numarul 920 034 se citeste:",
-        "opts": ["a) nouazeci si doua de mii treizeci si patru", "b) noua sute douazeci de mii treizeci si patru", "c) noua milioane douazeci de mii treizeci si patru", "d) noua sute doua mii treizeci si patru"],
-        "ok": 1,
-        "exOk": "Corect! 920 = noua sute douazeci; 034 = treizeci si patru.",
-        "exGr": "Grupam: 920 | 034. Clasa miilor: noua sute douazeci de mii. Clasa unitatilor: treizeci si patru."
-      },
-      {
-        "q": "Cifra 1 din numarul 210 583 se afla la ordinul:",
-        "opts": ["a) unitatilor", "b) zecilor de mii", "c) sutelor de mii", "d) miilor"],
-        "ok": 1,
-        "exOk": "Corect! 2=sute de mii, 1=zeci de mii, 0=mii, 5=sute, 8=zeci, 3=unitati.",
-        "exGr": "Numara de la dreapta: 3=unitati, 8=zeci, 5=sute, 0=mii, 1=zeci de mii. Cifra 1 este la zeci de mii."
-      },
-      {
-        "q": "Cifra 7 din numarul 705 348 face parte din clasa:",
-        "opts": ["a) miliardelor", "b) milioanelor", "c) miilor", "d) unitatilor"],
-        "ok": 2,
-        "exOk": "Corect! 7 este la sute de mii. Sutele de mii fac parte din clasa miilor.",
-        "exGr": "7=sute de mii, 0=zeci de mii, 5=mii. Sute de mii = clasa miilor."
-      },
-      {
-        "q": "Valoarea cifrei 8 din numarul 183 450 este:",
-        "opts": ["a) 8 unitati", "b) 8 mii", "c) 8 zeci de mii", "d) 8 sute de mii"],
-        "ok": 2,
-        "exOk": "Corect! 1=sute de mii, 8=zeci de mii, 3=mii, 4=sute, 5=zeci, 0=unitati.",
-        "exGr": "Numara de la dreapta: 0=unitati, 5=zeci, 4=sute, 3=mii, 8=zeci de mii. Valoarea cifrei 8 este 8 zeci de mii."
-      },
-      {
-        "q": "Cate cifre are numarul o suta de mii?",
-        "opts": ["a) 5", "b) 6", "c) 7", "d) 4"],
-        "ok": 1,
-        "exOk": "Corect! 100 000 = 1-0-0-0-0-0 = 6 cifre.",
-        "exGr": "100 000: numara cifrele: 1, 0, 0, 0, 0, 0 = 6 cifre."
-      },
-      {
-        "q": "Care este descompunerea zecimala completa a numarului 50 306?",
-        "opts": ["a) 5x10000+3x100+6", "b) 5x10000+0x1000+3x100+0x10+6", "c) 5x1000+3x100+6", "d) 5x10000+3x10+6"],
-        "ok": 1,
-        "exOk": "Corect! Descompunerea completa: 5x10000+0x1000+3x100+0x10+6.",
-        "exGr": "50 306 are 5 cifre, deci 5 termeni. Toti trebuie inclusi, chiar daca sunt 0."
-      },
-      {
-        "q": "Cel mai mic numar natural de 6 cifre cu cifra unitatilor egala cu 9 este:",
-        "opts": ["a) 999 999", "b) 100 009", "c) 100 099", "d) 100 900"],
-        "ok": 1,
-        "exOk": "Corect! Cel mai mic numar de 6 cifre este 100 000. Cu unitati=9: 100 009.",
-        "exGr": "Cel mai mic 6 cifre = 100 000. Cu cifra unitatilor 9 si restul minimizat: 100 009."
-      },
-      {
-        "q": "Care numar are cifra miilor egala cu 8, cifra sutelor egala cu 0 si cifra zecilor de mii egala cu 3?",
-        "opts": ["a) 48 051", "b) 38 041", "c) 28 053", "d) 58 032"],
-        "ok": 1,
-        "exOk": "Corect! 38 041: 3=zeci de mii, 8=mii, 0=sute, 4=zeci, 1=unitati. Toate 3 conditii indeplinite.",
-        "exGr": "Cauta: zeci de mii=3, mii=8, sute=0. In 38 041: 3=zeci de mii, 8=mii, 0=sute. Corect!"
-      }
+      {"q":"Numărul 50.000 + 3.000 + 200 + 7 este:","opts":["53.207","53.270","53.027","50.327"],"ok":0,"exOk":"50.000 + 3.000 + 200 + 7 = 53.207.","exGr":"Adunăm: zm=5, m=3, s=2, z=0, u=7 → 53.207."},
+      {"q":"Valoarea cifrei 4 în 340.500 este:","opts":["4","400","4.000","40.000"],"ok":3,"exOk":"4 se află pe ordinul zecilor de mii → 4 × 10.000 = 40.000.","exGr":"340.500: zm=4 → valoarea = 4 × 10.000 = 40.000."},
+      {"q":"Câte numere naturale există între 99 și 101?","opts":["0","1","2","3"],"ok":1,"exOk":"Între 99 și 101 există un singur număr: 100.","exGr":"99 < 100 < 101. Doar 100 se află strict între ele."},
+      {"q":"Cifra sutelor de mii în 1.234.567 este:","opts":["1","2","3","4"],"ok":1,"exOk":"1.234.567: sm=1, zm=2, m=3, s=4, z=5, u=7 (de la stânga). Sute de mii = 2.","exGr":"De la stânga: milioane=1, sute de mii=2. Răspuns: 2."},
+      {"q":"Care este succesorul lui 9.999?","opts":["9.998","10.000","10.001","9.990"],"ok":1,"exOk":"Succesorul lui 9.999 este 9.999 + 1 = 10.000.","exGr":"Succesorul = numărul imediat următor = n + 1."},
+      {"q":"Valoarea cifrei 1 în 100 este:","opts":["1","10","100","1.000"],"ok":2,"exOk":"1 se află pe ordinul sutelor → 1 × 100 = 100.","exGr":"100: u=0, z=0, s=1. Valoarea lui 1 = 1 × 100 = 100."},
+      {"q":"Cel mai mare număr format din cifrele 3, 7, 1, 5 este:","opts":["7.531","7.513","7.315","5.731"],"ok":0,"exOk":"Aranjăm cifrele descrescător: 7, 5, 3, 1 → 7.531.","exGr":"Pentru numărul maxim, punem cifrele în ordine descrescătoare: 7.531."},
+      {"q":"Care număr este par și are cifra unităților 0?","opts":["101","305","1.230","4.003"],"ok":2,"exOk":"1.230 are cifra unităților 0, deci este par.","exGr":"Un număr este par dacă cifra unităților este 0, 2, 4, 6 sau 8. 1.230 → u=0 → par."},
+      {"q":"Suma valorilor cifrei 2 în 2.020 este:","opts":["4","22","2.020","2.020"],"ok":2,"exOk":"2.020: prima cifră 2 valorează 2.000, a doua cifră 2 valorează 20. Total = 2.020.","exGr":"2.000 (mii) + 20 (zeci) = 2.020."},
+      {"q":"Numărul 6.000.000 se citește:","opts":["șase mii","șasezeci de mii","șase sute de mii","șase milioane"],"ok":3,"exOk":"6.000.000 = șase milioane.","exGr":"Un milion = 1.000.000. 6 × 1.000.000 = șase milioane."}
     ],
     "T4": [
-      {
-        "q": "Cifra sutelor de mii din numarul 731 264 este:",
-        "opts": ["a) 7", "b) 3", "c) 1", "d) 2"],
-        "ok": 0,
-        "exOk": "Corect! 7=sute de mii, 3=zeci de mii, 1=mii, 2=sute, 6=zeci, 4=unitati.",
-        "exGr": "Numara de la dreapta: 4=unitati, 6=zeci, 2=sute, 1=mii, 3=zeci de mii, 7=sute de mii."
-      },
-      {
-        "q": "Numarul patru sute sase mii douazeci scris cu cifre este:",
-        "opts": ["a) 46 020", "b) 400 620", "c) 406 020", "d) 406 200"],
-        "ok": 2,
-        "exOk": "Corect! 406 de mii = 406 000; douazeci = 20. Total: 406 020.",
-        "exGr": "406 de mii = 406 000; plus douazeci = 20. Rezultat: 406 020."
-      },
-      {
-        "q": "Numarul 1 300 040 se citeste:",
-        "opts": ["a) un milion trei sute de mii patruzeci", "b) treisprezece milioane patruzeci", "c) un milion trei mii patruzeci", "d) un milion treizeci de mii patruzeci"],
-        "ok": 0,
-        "exOk": "Corect! 1=milion, 300=mii (trei sute de mii), 040=unitati (patruzeci).",
-        "exGr": "Grupam: 1 | 300 | 040. Un milion, trei sute de mii, patruzeci."
-      },
-      {
-        "q": "Cifra 5 din numarul 456 123 se afla la ordinul:",
-        "opts": ["a) miilor", "b) zecilor de mii", "c) sutelor de mii", "d) sutelor"],
-        "ok": 1,
-        "exOk": "Corect! 4=sute de mii, 5=zeci de mii, 6=mii, 1=sute, 2=zeci, 3=unitati.",
-        "exGr": "Numara de la dreapta: 3=unitati, 2=zeci, 1=sute, 6=mii, 5=zeci de mii. Cifra 5 este la zeci de mii."
-      },
-      {
-        "q": "Cifra 2 din numarul 4 200 831 face parte din clasa:",
-        "opts": ["a) unitatilor", "b) miilor", "c) milioanelor", "d) miliardelor"],
-        "ok": 1,
-        "exOk": "Corect! 4=milioane, 2=sute de mii. Sutele de mii fac parte din clasa miilor.",
-        "exGr": "2 se afla la sute de mii. Clasa miilor include sute de mii, zeci de mii, mii."
-      },
-      {
-        "q": "Valoarea cifrei 3 din numarul 63 512 este:",
-        "opts": ["a) 3 unitati", "b) 3 sute", "c) 3 mii", "d) 3 zeci de mii"],
-        "ok": 2,
-        "exOk": "Corect! 6=zeci de mii, 3=mii, 5=sute, 1=zeci, 2=unitati. Cifra 3 = 3 mii.",
-        "exGr": "Numara de la dreapta: 2=unitati, 1=zeci, 5=sute, 3=mii. Valoarea cifrei 3 este 3 mii."
-      },
-      {
-        "q": "Cate cifre are numarul noua milioane?",
-        "opts": ["a) 6", "b) 7", "c) 8", "d) 9"],
-        "ok": 1,
-        "exOk": "Corect! 9 000 000 = 9-0-0-0-0-0-0 = 7 cifre.",
-        "exGr": "9 000 000: numara cifrele: 9, 0, 0, 0, 0, 0, 0 = 7 cifre."
-      },
-      {
-        "q": "Care este descompunerea zecimala completa a numarului 8 050?",
-        "opts": ["a) 8x1000+5x10", "b) 8x1000+0x100+5x10+0", "c) 8x100+5x10", "d) 8x1000+5x100"],
-        "ok": 1,
-        "exOk": "Corect! Descompunerea completa: 8x1000+0x100+5x10+0.",
-        "exGr": "8 050 are 4 cifre, deci 4 termeni: 8x1000+0x100+5x10+0."
-      },
-      {
-        "q": "Cel mai mare numar natural de 4 cifre cu cifra miilor egala cu 3 este:",
-        "opts": ["a) 3 999", "b) 3 000", "c) 3 900", "d) 3 099"],
-        "ok": 0,
-        "exOk": "Corect! Mii=3, maximizam restul: 3 999.",
-        "exGr": "Cifra miilor = 3. Maximizam sute, zeci, unitati: 9, 9, 9. Rezultat: 3 999."
-      },
-      {
-        "q": "Care numar are cifra zecilor de mii egala cu 4, cifra sutelor egala cu 5 si cifra unitatilor egala cu 1?",
-        "opts": ["a) 34 581", "b) 24 531", "c) 14 521", "d) 44 551"],
-        "ok": 3,
-        "exOk": "Corect! 44 551: 4=zeci de mii, 4=mii, 5=sute, 5=zeci, 1=unitati. Toate 3 conditii: zeci de mii=4, sute=5, unitati=1.",
-        "exGr": "Cauta: zeci de mii=4, sute=5, unitati=1. In 44 551: zeci de mii=4, sute=5, unitati=1. Corect!"
-      }
+      {"q":"Valoarea cifrei 8 în 800 este:","opts":["8","80","800","8.000"],"ok":2,"exOk":"8 se află pe locul sutelor → 8 × 100 = 800.","exGr":"800: u=0, z=0, s=8. Valoarea = 8 × 100 = 800."},
+      {"q":"Numărul format din 4 mii, 3 sute și 2 unități este:","opts":["4.320","4.302","4.032","4.230"],"ok":1,"exOk":"4 mii + 3 sute + 0 zeci + 2 unități = 4.302.","exGr":"4.000 + 300 + 2 = 4.302. Nu există zeci, deci z=0."},
+      {"q":"Câte cifre are cel mai mare număr de 5 cifre?","opts":["4","5","6","9"],"ok":1,"exOk":"Cel mai mare număr de 5 cifre este 99.999 — are 5 cifre.","exGr":"Prin definiție, cel mai mare număr de 5 cifre are tot 5 cifre."},
+      {"q":"Cifra miilor în 45.678 este:","opts":["4","5","6","7"],"ok":1,"exOk":"45.678: u=8, z=7, s=6, m=5, zm=4. Cifra miilor = 5.","exGr":"Numără de la dreapta: u, z, s, m. A 4-a cifră = 5."},
+      {"q":"Valoarea cifrei 3 în 3.500 este:","opts":["3","30","300","3.000"],"ok":3,"exOk":"3 se află pe locul miilor → 3 × 1.000 = 3.000.","exGr":"3.500: u=0, z=0, s=5, m=3. Valoarea lui 3 = 3.000."},
+      {"q":"Cel mai mic număr de 4 cifre este:","opts":["1.000","1.001","9.999","1.111"],"ok":0,"exOk":"Cel mai mic număr de 4 cifre este 1.000 (prima cifră ≠ 0).","exGr":"Prima cifră trebuie să fie 1 (cel mai mic nenul), restul 0 → 1.000."},
+      {"q":"Care este predecesorul lui 10.000?","opts":["10.001","9.999","9.998","9.990"],"ok":1,"exOk":"Predecesorul lui 10.000 este 10.000 - 1 = 9.999.","exGr":"Predecesorul = numărul imediat anterior = n - 1."},
+      {"q":"Suma valorilor cifrelor în 111 este:","opts":["3","111","100","1"],"ok":1,"exOk":"100 + 10 + 1 = 111.","exGr":"Valoarea lui 1 pe sute=100, pe zeci=10, pe unități=1. Total = 111."},
+      {"q":"Cifra zecilor în 30.405 este:","opts":["3","4","0","5"],"ok":2,"exOk":"30.405: u=5, z=0, s=4, m=0, zm=3. Cifra zecilor = 0.","exGr":"A doua cifră de la dreapta reprezintă zecile. În 30.405 aceasta este 0."},
+      {"q":"Valoarea cifrei 9 în 90.000 este:","opts":["9","900","9.000","90.000"],"ok":3,"exOk":"9 se află pe ordinul zecilor de mii → 9 × 10.000 = 90.000.","exGr":"90.000 = 9 × 10.000. Valoarea cifrei 9 = 90.000."}
     ]
   }
 }
