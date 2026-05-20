@@ -346,6 +346,7 @@ body{display:flex;flex-direction:column;align-items:center;padding:20px 16px 40p
 
 <script>
 const BASE_URL = 'https://raw.githubusercontent.com/Laurst2710/TestareApp/main/data/';
+const SHEETS_URL = 'https://script.google.com/macros/s/AKfycby6q5lQXHnmOwKM-Mhs5XoO62d4KvKfbE5UqNxOqrGUkGheiP_kNXDFNGYQBUkm8q2_GA/exec';
 const PASS = 0.8, MASTERY_MIN = 3, Q_PER_TEST = 10, LS_KEY = 'speedymate_v4';
 
 const THEMES = [
@@ -534,10 +535,29 @@ function nextQ(){
   renderQ(); window.scrollTo(0,0);
 }
 
+function saveToSheets(th, pct){
+  const data = {
+    nume: state.name,
+    clasa: state.clasa,
+    tema: th.label,
+    scor: Math.round(pct*100),
+    corecte: state.correct,
+    total: state.questions.length,
+    data: new Date().toLocaleString('ro-RO')
+  };
+  fetch(SHEETS_URL, {
+    method:'POST',
+    mode:'no-cors',
+    headers:{'Content-Type':'application/json'},
+    body: JSON.stringify(data)
+  }).catch(()=>{});
+}
+
 function showResult(){
   const tot = state.questions.length, pct = state.correct/tot, pass = pct >= PASS;
   const th = THEMES[state.themeIdx];
   saveScore(th.key, pct);
+  saveToSheets(th, pct);
   document.getElementById('res-emoji').textContent = pct===1?'🏆':pct>=.8?'🎉':pct>=.5?'💪':'📖';
   document.getElementById('res-score').textContent = `${state.correct}/${tot}`;
   document.getElementById('res-label').textContent = `${Math.round(pct*100)}% — ${state.correct} din ${tot} corecte`;
