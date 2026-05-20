@@ -1,0 +1,616 @@
+<!DOCTYPE html>
+<html lang="ro">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>SpeedyMATE Clasa 5</title>
+<link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --bg:#0d0b1a;--surface:#16132a;--surf2:#1e1a38;--surf3:#252042;
+  --accent:#6c5ce7;--acl:#8b7ff0;--text:#ffffff;--dim:#9b9abf;
+  --ok:#00c853;--err:#dc143c;--grey:#2a2645;--grey-t:#5a567a;--max:900px;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html,body{min-height:100%;background:var(--bg);color:var(--text);font-family:'Outfit',sans-serif}
+body{display:flex;flex-direction:column;align-items:center;padding:20px 16px 40px}
+.screen{display:none;width:100%;max-width:var(--max);animation:fadeIn .3s ease}
+.screen.active{display:block}
+@keyframes fadeIn{from{opacity:0;transform:translateY(8px)}to{opacity:1;transform:none}}
+
+/* LOGO */
+.logo{font-family:'JetBrains Mono',monospace;font-size:1.5rem;font-weight:700;color:var(--accent);letter-spacing:-1px;margin-bottom:2px}
+.logo span{color:var(--text)}
+.logo-sub{font-size:.72rem;color:var(--dim);letter-spacing:.1em;text-transform:uppercase;margin-bottom:20px}
+
+/* MASCOT */
+.mascot{width:80px;height:80px;margin:0 auto 12px;display:block}
+
+/* MODAL OVERLAY */
+.modal-overlay{display:none;position:fixed;inset:0;background:rgba(0,0,0,.75);z-index:300;align-items:center;justify-content:center}
+.modal-overlay.open{display:flex}
+.modal{background:var(--surface);border:1.5px solid var(--surf3);border-radius:18px;padding:28px 24px;max-width:420px;width:92%;animation:fadeIn .25s ease}
+.modal h2{font-size:1.1rem;font-weight:700;margin-bottom:6px;text-align:center}
+.modal p{font-size:.82rem;color:var(--dim);margin-bottom:20px;text-align:center}
+.modal .field{margin-bottom:14px}
+.modal .field label{display:block;font-size:.7rem;font-weight:600;color:var(--dim);text-transform:uppercase;letter-spacing:.07em;margin-bottom:6px}
+.modal .field input{width:100%;background:var(--surf2);border:1.5px solid var(--surf3);border-radius:10px;padding:11px 13px;color:var(--text);font-family:'Outfit',sans-serif;font-size:.95rem;outline:none;transition:border-color .2s}
+.modal .field input:focus{border-color:var(--accent)}
+.modal .field input::placeholder{color:var(--grey-t)}
+
+/* ERROR POPUP */
+.err-popup{display:none;position:fixed;top:20px;left:50%;transform:translateX(-50%);background:var(--err);color:#fff;border-radius:10px;padding:12px 22px;font-size:.88rem;font-weight:600;z-index:500;box-shadow:0 4px 24px rgba(220,20,60,.4);animation:slideDown .25s ease}
+.err-popup.show{display:block}
+@keyframes slideDown{from{opacity:0;transform:translateX(-50%) translateY(-10px)}to{opacity:1;transform:translateX(-50%) translateY(0)}}
+
+/* GLOSSARY */
+.glossary-btn{position:fixed;bottom:20px;right:20px;background:var(--surf2);border:1.5px solid var(--surf3);color:var(--dim);border-radius:50px;padding:8px 16px;font-size:.75rem;font-weight:600;cursor:pointer;font-family:'Outfit',sans-serif;transition:all .2s;z-index:100}
+.glossary-btn:hover{border-color:var(--accent);color:var(--text)}
+.glos-modal{background:var(--surface);border:1px solid var(--surf3);border-radius:16px;padding:24px;max-width:560px;width:90%;max-height:80vh;overflow-y:auto}
+.glos-modal h2{font-size:1rem;font-weight:700;margin-bottom:16px;color:var(--accent)}
+.modal-close{float:right;background:none;border:none;color:var(--dim);font-size:1.3rem;cursor:pointer;line-height:1}
+.glos-table{width:100%;border-collapse:collapse}
+.glos-table th{font-size:.66rem;text-transform:uppercase;letter-spacing:.07em;color:var(--dim);text-align:left;padding:6px 8px;border-bottom:1px solid var(--surf3)}
+.glos-table td{font-size:.8rem;padding:7px 8px;border-bottom:1px solid rgba(37,32,66,.5);vertical-align:top}
+.glos-table td:first-child{font-weight:600;color:var(--accent);white-space:nowrap;width:155px}
+
+/* SETUP */
+#s-setup{padding-top:12px}
+.user-badge{display:inline-flex;align-items:center;gap:8px;background:var(--surf2);border:1px solid var(--surf3);border-radius:50px;padding:6px 14px;font-size:.8rem;margin-bottom:20px;cursor:pointer;transition:border-color .2s}
+.user-badge:hover{border-color:var(--accent)}
+.user-badge span{color:var(--dim);font-size:.7rem}
+
+/* CATALOG */
+.catalog-section{margin-bottom:16px}
+.unit-header{margin-bottom:10px}
+.unit-title{font-size:1rem;font-weight:700;color:var(--text);margin-bottom:2px}
+.unit-sub{font-size:.7rem;color:var(--dim);letter-spacing:.04em}
+
+/* UNIT TABS */
+.unit-tabs{display:flex;gap:8px;margin-bottom:14px;flex-wrap:wrap}
+.unit-tab{background:var(--surf2);border:1.5px solid var(--surf3);border-radius:8px;padding:6px 14px;font-size:.75rem;font-weight:600;cursor:pointer;transition:all .15s;color:var(--dim)}
+.unit-tab.active{background:rgba(108,92,231,.15);border-color:var(--accent);color:var(--accent)}
+.unit-tab:hover:not(.active){border-color:var(--acl);color:var(--text)}
+
+.unit-panel{display:none}
+.unit-panel.active{display:block}
+
+.themes-scroll{max-height:400px;overflow-y:auto;padding-right:4px}
+.themes-scroll::-webkit-scrollbar{width:4px}
+.themes-scroll::-webkit-scrollbar-track{background:var(--surf3);border-radius:2px}
+.themes-scroll::-webkit-scrollbar-thumb{background:var(--accent);border-radius:2px}
+.themes-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:9px}
+
+.theme-card{background:var(--surface);border:1.5px solid var(--surf3);border-radius:11px;padding:12px;cursor:pointer;position:relative;transition:border-color .2s,background .2s}
+.theme-card:hover:not(.locked){border-color:var(--accent)}
+.theme-card.selected{border-color:var(--accent);background:rgba(108,92,231,.08)}
+.theme-card.mastered{border-color:var(--ok)}
+.theme-card.locked{cursor:default;opacity:.45}
+.theme-mastered-badge{position:absolute;top:7px;right:7px;font-size:.58rem;background:rgba(0,200,83,.15);color:var(--ok);border:1px solid rgba(0,200,83,.3);padding:2px 7px;border-radius:20px;font-weight:600}
+.theme-locked-badge{position:absolute;top:7px;right:7px;font-size:.58rem;color:var(--grey-t);font-weight:600}
+.theme-nr{font-size:.6rem;color:var(--dim);font-weight:600;margin-bottom:2px;text-transform:uppercase;letter-spacing:.06em}
+.theme-name{font-size:.79rem;font-weight:600;margin-bottom:8px;padding-right:48px;line-height:1.3}
+.tests-row{display:flex;gap:5px;flex-wrap:wrap}
+.test-pip{width:30px;height:24px;border-radius:5px;border:1.5px solid var(--surf3);display:flex;align-items:center;justify-content:center;font-size:.62rem;font-weight:600;cursor:pointer;transition:all .15s;color:var(--dim);position:relative}
+.test-pip:hover{border-color:var(--accent);color:var(--text)}
+.test-pip.pip-selected{background:var(--accent);border-color:var(--accent);color:#fff}
+.test-pip.pip-ok{border-color:var(--ok);color:var(--ok)}
+.test-pip.pip-ok.pip-selected{background:var(--ok)}
+.test-pip.pip-rev{border-color:var(--err);color:var(--err)}
+.test-pip.pip-rev.pip-selected{background:var(--err)}
+.test-pip .tip{display:none;position:absolute;bottom:calc(100%+5px);left:50%;transform:translateX(-50%);background:#1a1730;border:1px solid var(--surf3);border-radius:5px;padding:3px 7px;font-size:.58rem;white-space:nowrap;z-index:10}
+.test-pip:hover .tip{display:block}
+
+/* diff2 */
+.diff2-row{display:grid;grid-template-columns:repeat(3,1fr);gap:9px;margin-top:12px}
+.diff2-card{background:var(--grey);border:1.5px solid rgba(90,86,122,.2);border-radius:10px;padding:11px;opacity:.5}
+.diff2-card::after{content:'Urmează';display:block;font-size:.58rem;color:var(--grey-t);font-weight:600;letter-spacing:.05em;text-transform:uppercase;margin-top:4px}
+.diff2-name{font-size:.8rem;font-weight:600;color:var(--grey-t)}
+.diff2-sub{font-size:.68rem;color:var(--grey-t);opacity:.7}
+
+.setup-action{margin-top:18px;text-align:center}
+
+/* BUTTONS */
+.btn-primary{background:var(--accent);color:#fff;border:none;border-radius:10px;padding:13px 30px;font-size:.95rem;font-weight:600;cursor:pointer;font-family:'Outfit',sans-serif;transition:all .2s}
+.btn-primary:hover{background:var(--acl);transform:translateY(-1px)}
+.btn-sec{background:var(--surface);border:1.5px solid var(--surf3);color:var(--text);border-radius:10px;padding:11px 20px;font-size:.88rem;font-weight:600;cursor:pointer;font-family:'Outfit',sans-serif;transition:all .2s}
+.btn-sec:hover{border-color:var(--accent)}
+
+/* READY */
+#s-ready{padding-top:24px;text-align:center}
+.ready-meta{font-size:.7rem;color:var(--dim);margin-bottom:6px;text-transform:uppercase;letter-spacing:.06em}
+.ready-title{font-size:1.45rem;font-weight:700;margin-bottom:5px}
+.ready-test{font-size:.92rem;color:var(--accent);font-weight:600;margin-bottom:26px}
+.ready-btns{display:flex;flex-direction:column;align-items:center;gap:10px}
+.btn-theory{background:transparent;border:1.5px solid var(--surf3);color:var(--dim);border-radius:10px;padding:11px 26px;font-size:.88rem;font-weight:500;cursor:pointer;font-family:'Outfit',sans-serif;transition:all .2s;width:240px}
+.btn-theory:hover{border-color:var(--accent);color:var(--text)}
+.btn-start{background:var(--accent);color:#fff;border:none;border-radius:10px;padding:13px 26px;font-size:.95rem;font-weight:700;cursor:pointer;font-family:'Outfit',sans-serif;transition:all .2s;width:240px}
+.btn-start:hover{background:var(--acl);transform:translateY(-1px)}
+.theory-panel{display:none;background:var(--surface);border:1px solid var(--surf3);border-radius:11px;padding:18px;margin:16px auto 0;max-width:520px;text-align:left}
+.theory-panel.open{display:block}
+.theory-panel h3{font-size:.68rem;text-transform:uppercase;letter-spacing:.08em;color:var(--accent);margin-bottom:11px}
+.theory-panel ol{padding-left:15px}
+.theory-panel li{font-size:.86rem;line-height:1.65;color:var(--dim);margin-bottom:6px}
+
+/* QUIZ */
+#s-quiz{padding-top:14px}
+.quiz-header{display:flex;align-items:center;justify-content:space-between;margin-bottom:16px}
+.quiz-meta{font-size:.72rem;color:var(--dim);max-width:180px;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.quiz-prog-wrap{flex:1;margin:0 14px;height:3px;background:var(--surf3);border-radius:2px}
+.quiz-prog-bar{height:100%;background:var(--accent);border-radius:2px;transition:width .3s}
+.quiz-counter{font-family:'JetBrains Mono',monospace;font-size:.8rem;color:var(--accent);font-weight:700}
+.q-card{background:var(--surface);border:1px solid var(--surf3);border-radius:13px;padding:22px;margin-bottom:12px}
+.q-text{font-size:.98rem;line-height:1.6;margin-bottom:18px;font-weight:500}
+.opts{display:flex;flex-direction:column;gap:8px}
+.opt{background:var(--surf2);border:1.5px solid var(--surf3);border-radius:9px;padding:11px 13px;cursor:pointer;transition:all .15s;font-size:.9rem;text-align:left;color:var(--text);font-family:'Outfit',sans-serif;display:flex;align-items:center;gap:9px}
+.opt:hover:not(:disabled){border-color:var(--accent);background:rgba(108,92,231,.08)}
+.opt.opt-ok{border-color:var(--ok);background:rgba(0,200,83,.08);color:var(--ok)}
+.opt.opt-err{border-color:var(--err);background:rgba(220,20,60,.08);color:var(--err)}
+.opt.opt-reveal{border-color:var(--ok);background:rgba(0,200,83,.05)}
+.opt:disabled{cursor:default}
+.opt-letter{width:23px;height:23px;border-radius:50%;background:var(--surf3);display:flex;align-items:center;justify-content:center;font-size:.68rem;font-weight:700;flex-shrink:0}
+.opt.opt-ok .opt-letter{background:var(--ok);color:#fff}
+.opt.opt-err .opt-letter{background:var(--err);color:#fff}
+.feedback-box{display:none;background:var(--surf2);border-radius:9px;padding:13px;margin-top:10px}
+.feedback-box.show{display:block}
+.fb-label{font-size:.68rem;font-weight:700;text-transform:uppercase;letter-spacing:.06em;margin-bottom:6px}
+.fb-ok .fb-label{color:var(--ok)}
+.fb-err .fb-label{color:var(--err)}
+.fb-text{font-size:.83rem;color:var(--dim);line-height:1.6}
+.btn-next{margin-top:11px;background:var(--surf3);border:none;color:var(--text);border-radius:7px;padding:8px 18px;font-size:.83rem;font-weight:600;cursor:pointer;font-family:'Outfit',sans-serif;transition:background .2s}
+.btn-next:hover{background:var(--accent)}
+
+/* RESULT */
+#s-result{padding-top:32px;text-align:center}
+.result-emoji{font-size:2.8rem;margin-bottom:12px}
+.result-score{font-family:'JetBrains Mono',monospace;font-size:2.6rem;font-weight:700;color:var(--accent);margin-bottom:5px}
+.result-label{font-size:.9rem;color:var(--dim);margin-bottom:18px}
+.result-status{display:inline-block;padding:6px 16px;border-radius:20px;font-size:.8rem;font-weight:700;margin-bottom:18px}
+.status-ok{background:rgba(0,200,83,.15);color:var(--ok);border:1px solid rgba(0,200,83,.3)}
+.status-rev{background:rgba(220,20,60,.12);color:var(--err);border:1px solid rgba(220,20,60,.25)}
+.mastery-banner{background:rgba(0,200,83,.1);border:1px solid rgba(0,200,83,.3);border-radius:10px;padding:13px 16px;margin:0 auto 18px;max-width:440px;display:none}
+.mastery-banner.show{display:block}
+.mastery-banner p{color:var(--ok);font-weight:600;font-size:.9rem}
+.mastery-banner small{color:var(--dim);font-size:.74rem}
+.result-breakdown{background:var(--surface);border:1px solid var(--surf3);border-radius:11px;padding:16px;margin:0 auto 22px;max-width:440px;text-align:left}
+.rb-row{display:flex;justify-content:space-between;align-items:center;padding:6px 0;border-bottom:1px solid var(--surf3);font-size:.8rem}
+.rb-row:last-child{border-bottom:none}
+.rb-ok{color:var(--ok)}
+.rb-err{color:var(--err)}
+.result-btns{display:flex;gap:10px;justify-content:center;flex-wrap:wrap}
+
+.meta-footer{font-size:.63rem;color:var(--grey-t);text-align:center;margin-top:24px;padding-top:12px;border-top:1px solid var(--surf3)}
+@media(max-width:540px){.themes-grid{grid-template-columns:1fr}.diff2-row{grid-template-columns:1fr}.result-btns{flex-direction:column;align-items:center}}
+</style>
+</head>
+<body>
+
+<!-- ERROR POPUP -->
+<div class="err-popup" id="err-popup"></div>
+
+<!-- GLOSSARY BUTTON -->
+<button class="glossary-btn" onclick="openGlossar()">📖 Glosar</button>
+
+<!-- GLOSSARY MODAL -->
+<div class="modal-overlay" id="modal-glosar" onclick="if(event.target===this)closeGlossar()">
+  <div class="glos-modal">
+    <h2>📖 Glosar <button class="modal-close" onclick="closeGlossar()">×</button></h2>
+    <table class="glos-table">
+      <thead><tr><th>Termen</th><th>Definiție</th></tr></thead>
+      <tbody>
+        <tr><td>Cifră</td><td>Simbol pentru scrierea numerelor (0–9 în sistemul zecimal).</td></tr>
+        <tr><td>Număr natural</td><td>Element din N = {0, 1, 2, 3, ...}.</td></tr>
+        <tr><td>Ordine</td><td>Poziția cifrelor: unități, zeci, sute, mii, zeci de mii, sute de mii, milioane.</td></tr>
+        <tr><td>Clasă</td><td>Grup de 3 ordine: clasa unităților, clasa miilor, clasa milioanelor.</td></tr>
+        <tr><td>Succesor</td><td>Numărul imediat următor: succ(n) = n + 1.</td></tr>
+        <tr><td>Predecesor</td><td>Numărul imediat anterior: pred(n) = n − 1.</td></tr>
+        <tr><td>Cifre romane</td><td>I=1, V=5, X=10, L=50, C=100, D=500, M=1000.</td></tr>
+        <tr><td>Comparare</td><td>Stabilirea relației dintre două numere: &lt;, &gt;, =.</td></tr>
+        <tr><td>Ordonare crescătoare</td><td>De la cel mai mic la cel mai mare.</td></tr>
+        <tr><td>Ordonare descrescătoare</td><td>De la cel mai mare la cel mai mic.</td></tr>
+        <tr><td>Rotunjire</td><td>Aproximarea unui număr la un anumit ordin.</td></tr>
+        <tr><td>Aproximare prin lipsă</td><td>Cifra rămâne; cifrele inferioare → 0.</td></tr>
+        <tr><td>Aproximare prin adaos</td><td>Cifra crește cu 1; cifrele inferioare → 0.</td></tr>
+        <tr><td>Termeni (adunare)</td><td>Numerele care se adună.</td></tr>
+        <tr><td>Sumă</td><td>Rezultatul adunării.</td></tr>
+        <tr><td>Element neutru (+)</td><td>a + 0 = a.</td></tr>
+        <tr><td>Comutativitate</td><td>a + b = b + a.</td></tr>
+        <tr><td>Asociativitate</td><td>(a+b)+c = a+(b+c).</td></tr>
+        <tr><td>Descăzut</td><td>Numărul din care se scade.</td></tr>
+        <tr><td>Scăzător</td><td>Numărul care se scade.</td></tr>
+        <tr><td>Diferență</td><td>Rezultatul scăderii.</td></tr>
+        <tr><td>Proba scăderii</td><td>diferență + scăzător = descăzut.</td></tr>
+        <tr><td>Putere</td><td>aⁿ = a × a × ... × a (n factori).</td></tr>
+        <tr><td>Bază</td><td>Numărul care se înmulțește repetat.</td></tr>
+        <tr><td>Exponent</td><td>De câte ori se înmulțește baza.</td></tr>
+        <tr><td>Pătrat perfect</td><td>n² pentru n natural: 1, 4, 9, 16, 25...</td></tr>
+      </tbody>
+    </table>
+  </div>
+</div>
+
+<!-- WELCOME MODAL (Nume + Clasa) -->
+<div class="modal-overlay open" id="modal-welcome">
+  <div class="modal">
+    <svg style="width:60px;height:60px;display:block;margin:0 auto 12px" viewBox="0 0 120 120" xmlns="http://www.w3.org/2000/svg">
+      <ellipse cx="60" cy="82" rx="28" ry="26" fill="#8b5cf6"/>
+      <ellipse cx="60" cy="88" rx="16" ry="16" fill="#a78bfa" opacity=".5"/>
+      <ellipse cx="60" cy="52" rx="26" ry="24" fill="#7c3aed"/>
+      <ellipse cx="38" cy="32" rx="9" ry="12" fill="#7c3aed"/>
+      <ellipse cx="38" cy="32" rx="5" ry="8" fill="#c4b5fd"/>
+      <ellipse cx="82" cy="32" rx="9" ry="12" fill="#7c3aed"/>
+      <ellipse cx="82" cy="32" rx="5" ry="8" fill="#c4b5fd"/>
+      <circle cx="50" cy="50" r="5" fill="#1a0a3c"/>
+      <circle cx="70" cy="50" r="5" fill="#1a0a3c"/>
+      <circle cx="51.5" cy="48.5" r="1.8" fill="#fff"/>
+      <circle cx="71.5" cy="48.5" r="1.8" fill="#fff"/>
+      <ellipse cx="60" cy="60" rx="4" ry="3" fill="#c4b5fd"/>
+      <path d="M55 64 Q60 68 65 64" stroke="#a78bfa" stroke-width="1.5" fill="none" stroke-linecap="round"/>
+      <line x1="30" y1="59" x2="52" y2="62" stroke="#c4b5fd" stroke-width="1" opacity=".7"/>
+      <line x1="30" y1="63" x2="52" y2="63" stroke="#c4b5fd" stroke-width="1" opacity=".7"/>
+      <line x1="68" y1="62" x2="90" y2="59" stroke="#c4b5fd" stroke-width="1" opacity=".7"/>
+      <line x1="68" y1="63" x2="90" y2="63" stroke="#c4b5fd" stroke-width="1" opacity=".7"/>
+      <path d="M86 90 Q110 70 105 45 Q100 25 88 35 Q95 50 88 65 Q80 80 86 90" fill="#6d28d9"/>
+      <ellipse cx="48" cy="98" rx="8" ry="6" fill="#92400e"/>
+      <ellipse cx="48" cy="93" rx="9" ry="5" fill="#78350f"/>
+      <ellipse cx="38" cy="96" rx="6" ry="4" fill="#7c3aed"/>
+      <ellipse cx="58" cy="96" rx="6" ry="4" fill="#7c3aed"/>
+    </svg>
+    <h2>Bun venit în SpeedyMATE Clasa 5!</h2>
+    <p>Completează datele tale pentru a începe antrenamentul.</p>
+    <div class="field">
+      <label>Numele tău</label>
+      <input id="inp-name" type="text" placeholder="ex. Maria Ionescu" autocomplete="off">
+    </div>
+    <div class="field">
+      <label>Clasa</label>
+      <input id="inp-clasa" type="text" placeholder="ex. 5A" autocomplete="off">
+    </div>
+    <button class="btn-primary" style="width:100%;margin-top:4px" onclick="saveUser()">Începe →</button>
+  </div>
+</div>
+
+<!-- SETUP SCREEN -->
+<div id="s-setup" class="screen active">
+  <div style="text-align:center;padding-top:8px;margin-bottom:16px">
+    <div class="logo">Speedy<span>MATE</span></div>
+    <div class="logo-sub">Clasa 5 · Matematică</div>
+    <div class="user-badge" id="user-badge" onclick="editUser()">
+      <span>👤</span>
+      <div id="user-name-display">—</div>
+      <span>· Clasa <span id="user-clasa-display">—</span> · ✏️</span>
+    </div>
+  </div>
+
+  <!-- UNIT TABS -->
+  <div class="unit-tabs">
+    <button class="unit-tab active" onclick="switchUnit(0)">U1 · Numere Naturale <span style="opacity:.6;font-size:.65rem">93 teme</span></button>
+    <button class="unit-tab" onclick="switchUnit(1)">U2 · Urmează</button>
+    <button class="unit-tab" onclick="switchUnit(2)">U3 · Urmează</button>
+    <button class="unit-tab" onclick="switchUnit(3)">U4 · Urmează</button>
+  </div>
+
+  <!-- U1 PANEL -->
+  <div class="unit-panel active" id="unit-0">
+    <div class="themes-scroll">
+      <div class="themes-grid" id="themes-grid-0"></div>
+    </div>
+  </div>
+
+  <!-- U2-U4 PANELS -->
+  <div class="unit-panel" id="unit-1">
+    <div style="text-align:center;padding:40px 0;color:var(--dim);font-size:.88rem">Urmează în curând</div>
+  </div>
+  <div class="unit-panel" id="unit-2">
+    <div style="text-align:center;padding:40px 0;color:var(--dim);font-size:.88rem">Urmează în curând</div>
+  </div>
+  <div class="unit-panel" id="unit-3">
+    <div style="text-align:center;padding:40px 0;color:var(--dim);font-size:.88rem">Urmează în curând</div>
+  </div>
+
+  <!-- DIFF 2 -->
+  <div style="margin-top:16px">
+    <div style="font-size:.78rem;color:var(--dim);font-weight:600;text-transform:uppercase;letter-spacing:.07em;margin-bottom:10px">Dificultate 2 — Urmează</div>
+    <div class="diff2-row">
+      <div class="diff2-card"><div class="diff2-name">Recapitulare</div><div class="diff2-sub">Mix teme · 20 Q</div></div>
+      <div class="diff2-card"><div class="diff2-name">Test Unitate</div><div class="diff2-sub">Unitate completă · 20 Q</div></div>
+      <div class="diff2-card"><div class="diff2-name">Test Clasă</div><div class="diff2-sub">Toate unitățile · 20 Q</div></div>
+    </div>
+  </div>
+
+  <div class="setup-action">
+    <button class="btn-primary" onclick="goReady()">Continuă →</button>
+  </div>
+  <div class="meta-footer">SpeedyMATE Clasa 5 · OMENCS 3393/2017</div>
+</div>
+
+<!-- READY SCREEN -->
+<div id="s-ready" class="screen">
+  <div style="text-align:center;margin-bottom:8px">
+    <div class="logo">Speedy<span>MATE</span></div>
+    <div class="logo-sub">Clasa 5 · Matematică</div>
+  </div>
+  <div class="ready-meta" id="ready-meta">Unitate de Învățare 1</div>
+  <div class="ready-title" id="ready-title">—</div>
+  <div class="ready-test" id="ready-test">Test 1 din 4</div>
+  <div class="ready-btns">
+    <button class="btn-theory" onclick="toggleTheory()">📚 Recapitulare teorie</button>
+    <button class="btn-start" onclick="startQuiz()">▶ Ia testul</button>
+  </div>
+  <div class="theory-panel" id="theory-panel">
+    <h3>Amintește-ți!</h3>
+    <ol id="theory-list"></ol>
+  </div>
+  <div class="meta-footer" id="ready-footer">SpeedyMATE Clasa 5</div>
+</div>
+
+<!-- QUIZ SCREEN -->
+<div id="s-quiz" class="screen">
+  <div class="quiz-header">
+    <div class="quiz-meta" id="quiz-meta-left">—</div>
+    <div class="quiz-prog-wrap"><div class="quiz-prog-bar" id="quiz-prog" style="width:0%"></div></div>
+    <div class="quiz-counter" id="quiz-counter">1/10</div>
+  </div>
+  <div class="q-card">
+    <div class="q-text" id="q-text">—</div>
+    <div class="opts" id="opts-wrap"></div>
+    <div class="feedback-box" id="feedback-box">
+      <div class="fb-label" id="fb-label"></div>
+      <div class="fb-text" id="fb-text"></div>
+      <button class="btn-next" id="btn-next" onclick="nextQ()">Următoarea →</button>
+    </div>
+  </div>
+  <div class="meta-footer" id="quiz-footer">SpeedyMATE Clasa 5</div>
+</div>
+
+<!-- RESULT SCREEN -->
+<div id="s-result" class="screen">
+  <div style="text-align:center;margin-bottom:8px">
+    <div class="logo">Speedy<span>MATE</span></div>
+    <div class="logo-sub">Clasa 5 · Matematică</div>
+  </div>
+  <div class="result-emoji" id="res-emoji">🎉</div>
+  <div class="result-score" id="res-score">—</div>
+  <div class="result-label" id="res-label">—</div>
+  <div class="result-status" id="res-status"></div>
+  <div class="mastery-banner" id="mastery-banner"><p>🏆 Temă antrenată!</p><small id="mastery-msg"></small></div>
+  <div class="result-breakdown" id="res-breakdown"></div>
+  <div class="result-btns">
+    <button class="btn-primary" onclick="goSetup()">Alt test</button>
+    <button class="btn-sec" onclick="retryTest()">Încearcă din nou</button>
+  </div>
+  <div class="meta-footer" id="res-footer">SpeedyMATE Clasa 5</div>
+</div>
+
+<script>
+const BASE_URL='https://raw.githubusercontent.com/Laurst2710/TestareApp/main/data/';
+const TESTS=['T1','T2','T3','T4'];
+const PASS=0.8, MASTERY_MIN=3, LS_KEY='speedymate_v3';
+
+// TOATE 93 TEME CLASA 5
+const ALL_THEMES=[
+  // U1 — 33 teme
+  {u:1,key:'Tema1', label:'Sistemul zecimal; cifre, clase, ordine',file:'MANUAL_U1_Tema1.json',active:true},
+  {u:1,key:'Tema2', label:'Scrierea/citirea până la miliarde',file:'MANUAL_U1_Tema2.json',active:true},
+  {u:1,key:'Tema3', label:'Cifre romane: I,V,X,L,C,D,M',file:'MANUAL_U1_Tema3.json',active:true},
+  {u:1,key:'Tema4', label:'Poziționarea pe axă; succesor, predecesor',file:'MANUAL_U1_Tema4.json',active:true},
+  {u:1,key:'Tema5', label:'Compararea a două numere; <, >, =',file:'MANUAL_U1_Tema5.json',active:true},
+  {u:1,key:'Tema6', label:'Ordonarea crescătoare și descrescătoare',file:'MANUAL_U1_Tema6.json',active:true},
+  {u:1,key:'Tema7', label:'Rotunjirea la zeci, sute, mii',file:'MANUAL_U1_Tema7.json',active:true},
+  {u:1,key:'Tema8', label:'Aproximare prin lipsă și prin adaos',file:'MANUAL_U1_Tema8.json',active:true},
+  {u:1,key:'Tema9', label:'Termeni, sumă; comutativitate, asociativitate',file:'MANUAL_U1_Tema9.json',active:true},
+  {u:1,key:'Tema10',label:'Descăzut, scăzător, diferență; proba scăderii',file:'MANUAL_U1_Tema10.json',active:true},
+  {u:1,key:'Tema11',label:'Factori, produs; proprietăți înmulțire',file:'MANUAL_U1_Tema11.json',active:false},
+  {u:1,key:'Tema12',label:'Factor comun; scoaterea factorului comun',file:'MANUAL_U1_Tema12.json',active:false},
+  {u:1,key:'Tema13',label:'Împărțire exactă; deîmpărțit, împărțitor, cât',file:'MANUAL_U1_Tema13.json',active:false},
+  {u:1,key:'Tema14',label:'Împărțire cu rest; D=I×C+R',file:'MANUAL_U1_Tema14.json',active:false},
+  {u:1,key:'Tema15',label:'Puterea. Bază, exponent; a⁰=1, a¹=a',file:'MANUAL_U1_Tema15.json',active:true},
+  {u:1,key:'Tema16',label:'Pătratul unui număr; pătrate perfecte',file:'MANUAL_U1_Tema16.json',active:false},
+  {u:1,key:'Tema17',label:'Cubul unui număr; cuburi perfecte',file:'MANUAL_U1_Tema17.json',active:false},
+  {u:1,key:'Tema18',label:'Produs de puteri: aᵐ×aⁿ=aᵐ⁺ⁿ',file:'MANUAL_U1_Tema18.json',active:false},
+  {u:1,key:'Tema19',label:'Cât de puteri: aᵐ÷aⁿ=aᵐ⁻ⁿ',file:'MANUAL_U1_Tema19.json',active:false},
+  {u:1,key:'Tema20',label:'Puterea unei puteri: (aᵐ)ⁿ=aᵐˣⁿ',file:'MANUAL_U1_Tema20.json',active:false},
+  {u:1,key:'Tema21',label:'Puterea unui produs: (a×b)ⁿ=aⁿ×bⁿ',file:'MANUAL_U1_Tema21.json',active:false},
+  {u:1,key:'Tema22',label:'Compararea puterilor — aceeași bază',file:'MANUAL_U1_Tema22.json',active:false},
+  {u:1,key:'Tema23',label:'Compararea puterilor — același exponent',file:'MANUAL_U1_Tema23.json',active:false},
+  {u:1,key:'Tema24',label:'Descompunere pozițională; baza 10 și baza 2',file:'MANUAL_U1_Tema24.json',active:false},
+  {u:1,key:'Tema25',label:'Scrierea în baza 2; conversie baza 10→2',file:'MANUAL_U1_Tema25.json',active:false},
+  {u:1,key:'Tema26',label:'Ordinea operațiilor: putere > ×÷ > +−',file:'MANUAL_U1_Tema26.json',active:false},
+  {u:1,key:'Tema27',label:'Paranteze: ( ), [ ] și { }',file:'MANUAL_U1_Tema27.json',active:false},
+  {u:1,key:'Tema28',label:'Metoda reducerii la unitate',file:'MANUAL_U1_Tema28.json',active:false},
+  {u:1,key:'Tema29',label:'Metoda comparației',file:'MANUAL_U1_Tema29.json',active:false},
+  {u:1,key:'Tema30',label:'Metoda figurativă (segmente)',file:'MANUAL_U1_Tema30.json',active:false},
+  {u:1,key:'Tema31',label:'Metoda mersului invers',file:'MANUAL_U1_Tema31.json',active:false},
+  {u:1,key:'Tema32',label:'Metoda falsei ipoteze',file:'MANUAL_U1_Tema32.json',active:false},
+  {u:1,key:'Tema33',label:'Istoria numerelor: sisteme antice',file:'MANUAL_U1_Tema33.json',active:false},
+];
+
+let state={name:'',clasa:'',themeIdx:null,testKey:null,data:null,questions:[],cur:0,correct:0,answers:[]};
+
+function getScores(){try{return JSON.parse(localStorage.getItem(LS_KEY)||'{}')}catch(e){return{}}}
+function saveScore(tk,tt,pct){const sc=getScores();if(!sc[tk])sc[tk]={};sc[tk][tt]=pct;localStorage.setItem(LS_KEY,JSON.stringify(sc))}
+function themeScores(tk){return getScores()[tk]||{}}
+function isMastered(tk){return TESTS.filter(t=>(themeScores(tk)[t]||0)>=PASS).length>=MASTERY_MIN}
+function pipCls(tk,tt){const s=themeScores(tk)[tt];return s===undefined?'':s>=PASS?'pip-ok':'pip-rev'}
+function pipTip(tk,tt){const s=themeScores(tk)[tt];return s===undefined?'':Math.round(s*100)+'%'}
+
+function show(id){document.querySelectorAll('.screen').forEach(s=>s.classList.remove('active'));document.getElementById(id).classList.add('active');window.scrollTo(0,0)}
+
+// ERROR POPUP
+function showErr(msg){
+  const p=document.getElementById('err-popup');
+  p.textContent=msg; p.classList.add('show');
+  setTimeout(()=>p.classList.remove('show'),3000);
+}
+
+// USER
+function saveUser(){
+  const n=document.getElementById('inp-name').value.trim();
+  const c=document.getElementById('inp-clasa').value.trim();
+  if(!n){showErr('Completează numele!');return;}
+  if(!c){showErr('Completează clasa!');return;}
+  state.name=n; state.clasa=c;
+  document.getElementById('user-name-display').textContent=n;
+  document.getElementById('user-clasa-display').textContent=c;
+  document.getElementById('modal-welcome').classList.remove('open');
+}
+function editUser(){
+  document.getElementById('modal-welcome').classList.add('open');
+}
+
+// UNIT TABS
+function switchUnit(idx){
+  document.querySelectorAll('.unit-tab').forEach((t,i)=>t.classList.toggle('active',i===idx));
+  document.querySelectorAll('.unit-panel').forEach((p,i)=>p.classList.toggle('active',i===idx));
+}
+
+// CATALOG
+function renderCatalog(){
+  const u1themes = ALL_THEMES.filter(t=>t.u===1);
+  const grid = document.getElementById('themes-grid-0');
+  grid.innerHTML='';
+  u1themes.forEach((th,idx)=>{
+    const mastered=th.active&&isMastered(th.key);
+    const card=document.createElement('div');
+    card.className='theme-card'+(th.active?'':' locked')+(mastered?' mastered':'');
+    card.innerHTML=`
+      ${mastered?'<div class="theme-mastered-badge">✓ Antrenată</div>':''}
+      ${!th.active?'<div class="theme-locked-badge">Urmează</div>':''}
+      <div class="theme-nr">Tema ${idx+1}</div>
+      <div class="theme-name">${th.label}</div>
+      ${th.active?`<div class="tests-row" id="tr-${idx}"></div>`:''}
+    `;
+    grid.appendChild(card);
+    if(th.active){
+      const row=document.getElementById('tr-'+idx);
+      TESTS.forEach(t=>{
+        const pc=pipCls(th.key,t), tip=pipTip(th.key,t);
+        const pip=document.createElement('div');
+        pip.className=`test-pip ${pc}`;
+        pip.innerHTML=`${t}${tip?`<span class="tip">${tip}</span>`:''}`;
+        pip.onclick=()=>selectTest(idx,t,pip);
+        row.appendChild(pip);
+      });
+    }
+  });
+}
+
+function selectTest(idx,testKey,pipEl){
+  document.querySelectorAll('.test-pip').forEach(p=>p.classList.remove('pip-selected'));
+  document.querySelectorAll('.theme-card').forEach(c=>c.classList.remove('selected'));
+  pipEl.classList.add('pip-selected');
+  pipEl.closest('.theme-card').classList.add('selected');
+  state.themeIdx=idx; state.testKey=testKey;
+}
+
+function goSetup(){renderCatalog();show('s-setup')}
+
+async function goReady(){
+  if(!state.name){showErr('Completează numele și clasa mai întâi!');return;}
+  if(state.themeIdx===null){showErr('Selectează un test din catalog!');return;}
+  const th=ALL_THEMES.filter(t=>t.u===1)[state.themeIdx];
+  try{
+    const res=await fetch(BASE_URL+th.file);
+    if(!res.ok)throw new Error('HTTP '+res.status);
+    state.data=await res.json();
+  }catch(e){showErr('Eroare la încărcare. Verifică conexiunea.');return;}
+  document.getElementById('ready-meta').textContent=`SpeedyMATE Clasa 5 · Unitate de Învățare 1`;
+  document.getElementById('ready-title').textContent=state.data.meta?.titlu_tema||th.label;
+  document.getElementById('ready-test').textContent=`Test ${TESTS.indexOf(state.testKey)+1} din 4`;
+  document.getElementById('ready-footer').textContent=`${state.name} · Clasa ${state.clasa} · OMENCS 3393/2017`;
+  const ol=document.getElementById('theory-list');
+  ol.innerHTML=(state.data.teorie||[]).map(t=>`<li>${t}</li>`).join('')||'<li>—</li>';
+  document.getElementById('theory-panel').classList.remove('open');
+  show('s-ready');
+}
+
+function toggleTheory(){
+  const p=document.getElementById('theory-panel');
+  p.classList.toggle('open');
+  document.querySelector('.btn-theory').textContent=p.classList.contains('open')?'▲ Ascunde teoria':'📚 Recapitulare teorie';
+}
+
+function startQuiz(){
+  const qs=state.data.teste?.[state.testKey];
+  if(!qs||!qs.length){showErr('Testul nu are întrebări.');return;}
+  state.questions=qs;state.cur=0;state.correct=0;state.answers=[];
+  renderQ();
+  const th=ALL_THEMES.filter(t=>t.u===1)[state.themeIdx];
+  document.getElementById('quiz-footer').textContent=`${state.name} · Clasa ${state.clasa} · ${th.label} · ${state.testKey}`;
+  show('s-quiz');
+}
+
+function renderQ(){
+  const q=state.questions[state.cur],tot=state.questions.length;
+  const th=ALL_THEMES.filter(t=>t.u===1)[state.themeIdx];
+  document.getElementById('quiz-meta-left').textContent=th.label;
+  document.getElementById('quiz-counter').textContent=`${state.cur+1}/${tot}`;
+  document.getElementById('quiz-prog').style.width=(state.cur/tot*100)+'%';
+  document.getElementById('q-text').textContent=q.q;
+  const wrap=document.getElementById('opts-wrap');
+  wrap.innerHTML='';
+  ['A','B','C','D'].forEach((l,i)=>{
+    const btn=document.createElement('button');
+    btn.className='opt';
+    btn.innerHTML=`<span class="opt-letter">${l}</span>${q.opts[i]}`;
+    btn.onclick=()=>answer(i,q);
+    wrap.appendChild(btn);
+  });
+  document.getElementById('feedback-box').className='feedback-box';
+  document.getElementById('btn-next').textContent=state.cur<tot-1?'Următoarea →':'Vezi rezultatul →';
+}
+
+function answer(idx,q){
+  document.querySelectorAll('.opt').forEach(o=>o.disabled=true);
+  const isOk=idx===q.ok;
+  if(isOk)state.correct++;
+  state.answers.push({q:q.q,chosen:idx,ok:q.ok,correct:isOk});
+  document.querySelectorAll('.opt')[idx].classList.add(isOk?'opt-ok':'opt-err');
+  if(!isOk)document.querySelectorAll('.opt')[q.ok].classList.add('opt-reveal');
+  const fb=document.getElementById('feedback-box');
+  fb.className='feedback-box show '+(isOk?'fb-ok':'fb-err');
+  document.getElementById('fb-label').textContent=isOk?'✓ Corect!':'✗ De revăzut';
+  document.getElementById('fb-text').textContent=isOk?(q.exOk||'Răspuns corect.'):(q.exGr||`Răspuns corect: ${q.opts[q.ok]}`);
+}
+
+function nextQ(){
+  state.cur++;
+  if(state.cur>=state.questions.length){showResult();return;}
+  renderQ();window.scrollTo(0,0);
+}
+
+function showResult(){
+  const tot=state.questions.length,pct=state.correct/tot,pass=pct>=PASS;
+  const th=ALL_THEMES.filter(t=>t.u===1)[state.themeIdx];
+  saveScore(th.key,state.testKey,pct);
+  document.getElementById('res-emoji').textContent=pct===1?'🏆':pct>=.8?'🎉':pct>=.5?'💪':'📖';
+  document.getElementById('res-score').textContent=`${state.correct}/${tot}`;
+  document.getElementById('res-label').textContent=`${Math.round(pct*100)}% — ${state.correct} din ${tot} corecte`;
+  const st=document.getElementById('res-status');
+  st.textContent=pass?'✓ Promovat':'✗ De revăzut';
+  st.className='result-status '+(pass?'status-ok':'status-rev');
+  const banner=document.getElementById('mastery-banner');
+  if(isMastered(th.key)){
+    banner.classList.add('show');
+    document.getElementById('mastery-msg').textContent=`Ai trecut ${TESTS.filter(t=>(themeScores(th.key)[t]||0)>=PASS).length} teste cu 80%+ la ${th.label}`;
+  }else{banner.classList.remove('show');}
+  document.getElementById('res-breakdown').innerHTML=state.answers.map((a,i)=>`
+    <div class="rb-row">
+      <span style="color:var(--dim);font-size:.74rem">Î${i+1}</span>
+      <span style="flex:1;margin:0 7px;font-size:.77rem;color:var(--dim)">${state.questions[i].q.substring(0,52)}…</span>
+      <span class="${a.correct?'rb-ok':'rb-err'}">${a.correct?'✓':'✗'}</span>
+    </div>`).join('');
+  document.getElementById('res-footer').textContent=`${state.name} · Clasa ${state.clasa} · ${th.label} · ${state.testKey} · OMENCS 3393/2017`;
+  show('s-result');
+}
+
+function retryTest(){startQuiz();}
+function openGlossar(){document.getElementById('modal-glosar').classList.add('open');}
+function closeGlossar(){document.getElementById('modal-glosar').classList.remove('open');}
+
+// INIT
+renderCatalog();
+show('s-setup');
+</script>
+</body>
+</html>
