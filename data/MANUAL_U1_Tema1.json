@@ -15,54 +15,486 @@
     "Valoarea unui număr depinde de cifra și de locul (ordinul) pe care îl ocupă aceasta.",
     "Ordinele sunt: unități, zeci, sute, mii, zeci de mii, sute de mii, milioane."
   ],
-  "teste": {
-    "T1": [
-      {"q":"Care este cifra zecilor în numărul 3.748?","opts":["3","7","4","8"],"ok":1,"exOk":"Cifra zecilor este a doua cifră de la dreapta: 4. Corect!","exGr":"În 3.748: unitățile=8, zecile=4, sutele=7, miile=3."},
-      {"q":"Valoarea cifrei 6 în numărul 6.205 este:","opts":["6","60","600","6.000"],"ok":3,"exOk":"Cifra 6 se află pe ordinul miilor, deci valoarea ei este 6.000.","exGr":"6 se află pe locul miilor → valoarea = 6 × 1.000 = 6.000."},
-      {"q":"Numărul 45.302 are câte cifre?","opts":["4","5","6","3"],"ok":1,"exOk":"4-5-3-0-2 → 5 cifre.","exGr":"Numără cifrele: 4, 5, 3, 0, 2 → 5 cifre."},
-      {"q":"Cifra sutelor în 18.537 este:","opts":["1","8","5","3"],"ok":2,"exOk":"În 18.537: u=7, z=3, s=5, m=8, zm=1. Cifra sutelor este 5.","exGr":"Ordinea de la dreapta: u=7, z=3, s=5. Cifra sutelor = 5."},
-      {"q":"Care număr are cifra miilor egală cu 4?","opts":["14.200","40.100","4.380","41.000"],"ok":2,"exOk":"În 4.380: u=0, z=8, s=3, m=4. Cifra miilor este 4.","exGr":"Verifică ordinul miilor în fiecare număr. În 4.380, cifra miilor = 4."},
-      {"q":"Valoarea cifrei 3 în numărul 230.000 este:","opts":["3","300","3.000","30.000"],"ok":3,"exOk":"3 se află pe ordinul zecilor de mii → 3 × 10.000 = 30.000.","exGr":"230.000: zeci de mii = 3, deci valoarea = 30.000."},
-      {"q":"Ordinul pe care se află cifra 7 în numărul 7.200.000 este:","opts":["mii","zeci de mii","sute de mii","milioane"],"ok":3,"exOk":"7.200.000 = 7 milioane + 2 sute de mii. Cifra 7 este pe ordinul milioanelor.","exGr":"7.200.000: cifra 7 ocupă locul milioanelor."},
-      {"q":"Suma valorilor cifrelor 2 și 5 în numărul 25 este:","opts":["7","25","27","52"],"ok":1,"exOk":"Valoarea lui 2 = 20, valoarea lui 5 = 5. Suma = 20 + 5 = 25.","exGr":"20 (valoarea lui 2 pe locul zecilor) + 5 (valoarea lui 5 pe locul unităților) = 25."},
-      {"q":"Care este cel mai mare număr de 4 cifre?","opts":["1.000","9.000","9.999","9.998"],"ok":2,"exOk":"Cel mai mare număr de 4 cifre este 9.999.","exGr":"Maximizăm toate cifrele: 9.999 este cel mai mare număr cu exact 4 cifre."},
-      {"q":"Câte numere de 2 cifre există?","opts":["89","90","99","100"],"ok":1,"exOk":"De la 10 la 99 → 99 - 10 + 1 = 90 numere.","exGr":"Numerele cu 2 cifre: 10, 11, ..., 99. Total = 99 - 10 + 1 = 90."}
-    ],
-    "T2": [
-      {"q":"Cifra unităților în 7.894 este:","opts":["7","8","9","4"],"ok":3,"exOk":"Cifra unităților este ultima cifră din dreapta: 4.","exGr":"Ultima cifră din dreapta reprezintă unitățile. În 7.894, aceasta este 4."},
-      {"q":"Valoarea cifrei 5 în 15.200 este:","opts":["5","50","500","5.000"],"ok":3,"exOk":"5 se află pe ordinul miilor → 5 × 1.000 = 5.000.","exGr":"În 15.200: u=0, z=0, s=2, m=5, zm=1. Valoarea lui 5 = 5.000."},
-      {"q":"Cel mai mic număr de 3 cifre este:","opts":["100","101","999","110"],"ok":0,"exOk":"Cel mai mic număr de 3 cifre este 100.","exGr":"Prima cifră trebuie să fie nenulă → minim 1, celelalte 0 → 100."},
-      {"q":"Cifra zecilor de mii în 246.813 este:","opts":["2","4","6","8"],"ok":1,"exOk":"În 246.813: u=3, z=1, s=8, m=6, zm=4, sm=2. Zeci de mii = 4.","exGr":"Numără de la dreapta: u, z, s, m, zm. A 5-a cifră = 4."},
-      {"q":"Care număr NU are cifra sutelor egală cu 0?","opts":["1.045","2.034","3.506","4.021"],"ok":2,"exOk":"În 3.506: u=6, z=0, s=5. Cifra sutelor este 5, nu 0.","exGr":"Verifică sutele: 1.045→0, 2.034→0, 3.506→5, 4.021→0."},
-      {"q":"Valoarea cifrei 9 în 900.000 este:","opts":["9","900","9.000","900.000"],"ok":3,"exOk":"9 se află pe ordinul sutelor de mii → 9 × 100.000 = 900.000.","exGr":"900.000 = 9 × 100.000. Valoarea cifrei 9 este 900.000."},
-      {"q":"Câte cifre are numărul un milion?","opts":["6","7","8","9"],"ok":1,"exOk":"1.000.000 are 7 cifre: 1, 0, 0, 0, 0, 0, 0.","exGr":"Un milion = 1.000.000 → numără cifrele: 7."},
-      {"q":"Suma cifrelor lui 234 este:","opts":["6","7","8","9"],"ok":3,"exOk":"2 + 3 + 4 = 9.","exGr":"Adunăm toate cifrele: 2 + 3 + 4 = 9."},
-      {"q":"Cifra milioanelor în 5.300.000 este:","opts":["0","3","5","53"],"ok":2,"exOk":"5.300.000 = 5 milioane + 3 sute de mii. Cifra milioanelor = 5.","exGr":"5.300.000: primul grup reprezintă milioanele. Cifra milioanelor = 5."},
-      {"q":"Care este valoarea lui 0 în orice număr?","opts":["0","1","depinde de poziție","nu există"],"ok":0,"exOk":"Cifra 0 are întotdeauna valoarea 0, indiferent de poziție. 0 × orice = 0.","exGr":"Indiferent de ordinul pe care se află, 0 × acel ordin = 0."}
-    ],
-    "T3": [
-      {"q":"Numărul 50.000 + 3.000 + 200 + 7 este:","opts":["53.207","53.270","53.027","50.327"],"ok":0,"exOk":"50.000 + 3.000 + 200 + 7 = 53.207.","exGr":"Adunăm: zm=5, m=3, s=2, z=0, u=7 → 53.207."},
-      {"q":"Valoarea cifrei 4 în 340.500 este:","opts":["4","400","4.000","40.000"],"ok":3,"exOk":"4 se află pe ordinul zecilor de mii → 4 × 10.000 = 40.000.","exGr":"340.500: zm=4 → valoarea = 4 × 10.000 = 40.000."},
-      {"q":"Câte numere naturale există între 99 și 101?","opts":["0","1","2","3"],"ok":1,"exOk":"Între 99 și 101 există un singur număr: 100.","exGr":"99 < 100 < 101. Doar 100 se află strict între ele."},
-      {"q":"Cifra sutelor de mii în 1.234.567 este:","opts":["1","2","3","4"],"ok":1,"exOk":"1.234.567: sm=1, zm=2, m=3, s=4, z=5, u=7 (de la stânga). Sute de mii = 2.","exGr":"De la stânga: milioane=1, sute de mii=2. Răspuns: 2."},
-      {"q":"Care este succesorul lui 9.999?","opts":["9.998","10.000","10.001","9.990"],"ok":1,"exOk":"Succesorul lui 9.999 este 9.999 + 1 = 10.000.","exGr":"Succesorul = numărul imediat următor = n + 1."},
-      {"q":"Valoarea cifrei 1 în 100 este:","opts":["1","10","100","1.000"],"ok":2,"exOk":"1 se află pe ordinul sutelor → 1 × 100 = 100.","exGr":"100: u=0, z=0, s=1. Valoarea lui 1 = 1 × 100 = 100."},
-      {"q":"Cel mai mare număr format din cifrele 3, 7, 1, 5 este:","opts":["7.531","7.513","7.315","5.731"],"ok":0,"exOk":"Aranjăm cifrele descrescător: 7, 5, 3, 1 → 7.531.","exGr":"Pentru numărul maxim, punem cifrele în ordine descrescătoare: 7.531."},
-      {"q":"Care număr este par și are cifra unităților 0?","opts":["101","305","1.230","4.003"],"ok":2,"exOk":"1.230 are cifra unităților 0, deci este par.","exGr":"Un număr este par dacă cifra unităților este 0, 2, 4, 6 sau 8. 1.230 → u=0 → par."},
-      {"q":"Suma valorilor cifrei 2 în 2.020 este:","opts":["4","22","2.020","2.020"],"ok":2,"exOk":"2.020: prima cifră 2 valorează 2.000, a doua cifră 2 valorează 20. Total = 2.020.","exGr":"2.000 (mii) + 20 (zeci) = 2.020."},
-      {"q":"Numărul 6.000.000 se citește:","opts":["șase mii","șasezeci de mii","șase sute de mii","șase milioane"],"ok":3,"exOk":"6.000.000 = șase milioane.","exGr":"Un milion = 1.000.000. 6 × 1.000.000 = șase milioane."}
-    ],
-    "T4": [
-      {"q":"Valoarea cifrei 8 în 800 este:","opts":["8","80","800","8.000"],"ok":2,"exOk":"8 se află pe locul sutelor → 8 × 100 = 800.","exGr":"800: u=0, z=0, s=8. Valoarea = 8 × 100 = 800."},
-      {"q":"Numărul format din 4 mii, 3 sute și 2 unități este:","opts":["4.320","4.302","4.032","4.230"],"ok":1,"exOk":"4 mii + 3 sute + 0 zeci + 2 unități = 4.302.","exGr":"4.000 + 300 + 2 = 4.302. Nu există zeci, deci z=0."},
-      {"q":"Câte cifre are cel mai mare număr de 5 cifre?","opts":["4","5","6","9"],"ok":1,"exOk":"Cel mai mare număr de 5 cifre este 99.999 — are 5 cifre.","exGr":"Prin definiție, cel mai mare număr de 5 cifre are tot 5 cifre."},
-      {"q":"Cifra miilor în 45.678 este:","opts":["4","5","6","7"],"ok":1,"exOk":"45.678: u=8, z=7, s=6, m=5, zm=4. Cifra miilor = 5.","exGr":"Numără de la dreapta: u, z, s, m. A 4-a cifră = 5."},
-      {"q":"Valoarea cifrei 3 în 3.500 este:","opts":["3","30","300","3.000"],"ok":3,"exOk":"3 se află pe locul miilor → 3 × 1.000 = 3.000.","exGr":"3.500: u=0, z=0, s=5, m=3. Valoarea lui 3 = 3.000."},
-      {"q":"Cel mai mic număr de 4 cifre este:","opts":["1.000","1.001","9.999","1.111"],"ok":0,"exOk":"Cel mai mic număr de 4 cifre este 1.000 (prima cifră ≠ 0).","exGr":"Prima cifră trebuie să fie 1 (cel mai mic nenul), restul 0 → 1.000."},
-      {"q":"Care este predecesorul lui 10.000?","opts":["10.001","9.999","9.998","9.990"],"ok":1,"exOk":"Predecesorul lui 10.000 este 10.000 - 1 = 9.999.","exGr":"Predecesorul = numărul imediat anterior = n - 1."},
-      {"q":"Suma valorilor cifrelor în 111 este:","opts":["3","111","100","1"],"ok":1,"exOk":"100 + 10 + 1 = 111.","exGr":"Valoarea lui 1 pe sute=100, pe zeci=10, pe unități=1. Total = 111."},
-      {"q":"Cifra zecilor în 30.405 este:","opts":["3","4","0","5"],"ok":2,"exOk":"30.405: u=5, z=0, s=4, m=0, zm=3. Cifra zecilor = 0.","exGr":"A doua cifră de la dreapta reprezintă zecile. În 30.405 aceasta este 0."},
-      {"q":"Valoarea cifrei 9 în 90.000 este:","opts":["9","900","9.000","90.000"],"ok":3,"exOk":"9 se află pe ordinul zecilor de mii → 9 × 10.000 = 90.000.","exGr":"90.000 = 9 × 10.000. Valoarea cifrei 9 = 90.000."}
-    ]
-  }
+  "items": [
+    {
+      "q": "Care este cifra zecilor în numărul 3.748?",
+      "opts": [
+        "3",
+        "7",
+        "4",
+        "8"
+      ],
+      "ok": 1,
+      "exOk": "Cifra zecilor este a doua cifră de la dreapta: 4. Corect!",
+      "exGr": "În 3.748: unitățile=8, zecile=4, sutele=7, miile=3."
+    },
+    {
+      "q": "Valoarea cifrei 6 în numărul 6.205 este:",
+      "opts": [
+        "6",
+        "60",
+        "600",
+        "6.000"
+      ],
+      "ok": 3,
+      "exOk": "Cifra 6 se află pe ordinul miilor, deci valoarea ei este 6.000.",
+      "exGr": "6 se află pe locul miilor → valoarea = 6 × 1.000 = 6.000."
+    },
+    {
+      "q": "Numărul 45.302 are câte cifre?",
+      "opts": [
+        "4",
+        "5",
+        "6",
+        "3"
+      ],
+      "ok": 1,
+      "exOk": "4-5-3-0-2 → 5 cifre.",
+      "exGr": "Numără cifrele: 4, 5, 3, 0, 2 → 5 cifre."
+    },
+    {
+      "q": "Cifra sutelor în 18.537 este:",
+      "opts": [
+        "1",
+        "8",
+        "5",
+        "3"
+      ],
+      "ok": 2,
+      "exOk": "În 18.537: u=7, z=3, s=5, m=8, zm=1. Cifra sutelor este 5.",
+      "exGr": "Ordinea de la dreapta: u=7, z=3, s=5. Cifra sutelor = 5."
+    },
+    {
+      "q": "Care număr are cifra miilor egală cu 4?",
+      "opts": [
+        "14.200",
+        "40.100",
+        "4.380",
+        "41.000"
+      ],
+      "ok": 2,
+      "exOk": "În 4.380: u=0, z=8, s=3, m=4. Cifra miilor este 4.",
+      "exGr": "Verifică ordinul miilor în fiecare număr. În 4.380, cifra miilor = 4."
+    },
+    {
+      "q": "Valoarea cifrei 3 în numărul 230.000 este:",
+      "opts": [
+        "3",
+        "300",
+        "3.000",
+        "30.000"
+      ],
+      "ok": 3,
+      "exOk": "3 se află pe ordinul zecilor de mii → 3 × 10.000 = 30.000.",
+      "exGr": "230.000: zeci de mii = 3, deci valoarea = 30.000."
+    },
+    {
+      "q": "Ordinul pe care se află cifra 7 în numărul 7.200.000 este:",
+      "opts": [
+        "mii",
+        "zeci de mii",
+        "sute de mii",
+        "milioane"
+      ],
+      "ok": 3,
+      "exOk": "7.200.000 = 7 milioane + 2 sute de mii. Cifra 7 este pe ordinul milioanelor.",
+      "exGr": "7.200.000: cifra 7 ocupă locul milioanelor."
+    },
+    {
+      "q": "Suma valorilor cifrelor 2 și 5 în numărul 25 este:",
+      "opts": [
+        "7",
+        "25",
+        "27",
+        "52"
+      ],
+      "ok": 1,
+      "exOk": "Valoarea lui 2 = 20, valoarea lui 5 = 5. Suma = 20 + 5 = 25.",
+      "exGr": "20 (valoarea lui 2 pe locul zecilor) + 5 (valoarea lui 5 pe locul unităților) = 25."
+    },
+    {
+      "q": "Care este cel mai mare număr de 4 cifre?",
+      "opts": [
+        "1.000",
+        "9.000",
+        "9.999",
+        "9.998"
+      ],
+      "ok": 2,
+      "exOk": "Cel mai mare număr de 4 cifre este 9.999.",
+      "exGr": "Maximizăm toate cifrele: 9.999 este cel mai mare număr cu exact 4 cifre."
+    },
+    {
+      "q": "Câte numere de 2 cifre există?",
+      "opts": [
+        "89",
+        "90",
+        "99",
+        "100"
+      ],
+      "ok": 1,
+      "exOk": "De la 10 la 99 → 99 - 10 + 1 = 90 numere.",
+      "exGr": "Numerele cu 2 cifre: 10, 11, ..., 99. Total = 99 - 10 + 1 = 90."
+    },
+    {
+      "q": "Cifra unităților în 7.894 este:",
+      "opts": [
+        "7",
+        "8",
+        "9",
+        "4"
+      ],
+      "ok": 3,
+      "exOk": "Cifra unităților este ultima cifră din dreapta: 4.",
+      "exGr": "Ultima cifră din dreapta reprezintă unitățile. În 7.894, aceasta este 4."
+    },
+    {
+      "q": "Valoarea cifrei 5 în 15.200 este:",
+      "opts": [
+        "5",
+        "50",
+        "500",
+        "5.000"
+      ],
+      "ok": 3,
+      "exOk": "5 se află pe ordinul miilor → 5 × 1.000 = 5.000.",
+      "exGr": "În 15.200: u=0, z=0, s=2, m=5, zm=1. Valoarea lui 5 = 5.000."
+    },
+    {
+      "q": "Cel mai mic număr de 3 cifre este:",
+      "opts": [
+        "100",
+        "101",
+        "999",
+        "110"
+      ],
+      "ok": 0,
+      "exOk": "Cel mai mic număr de 3 cifre este 100.",
+      "exGr": "Prima cifră trebuie să fie nenulă → minim 1, celelalte 0 → 100."
+    },
+    {
+      "q": "Cifra zecilor de mii în 246.813 este:",
+      "opts": [
+        "2",
+        "4",
+        "6",
+        "8"
+      ],
+      "ok": 1,
+      "exOk": "În 246.813: u=3, z=1, s=8, m=6, zm=4, sm=2. Zeci de mii = 4.",
+      "exGr": "Numără de la dreapta: u, z, s, m, zm. A 5-a cifră = 4."
+    },
+    {
+      "q": "Care număr NU are cifra sutelor egală cu 0?",
+      "opts": [
+        "1.045",
+        "2.034",
+        "3.506",
+        "4.021"
+      ],
+      "ok": 2,
+      "exOk": "În 3.506: u=6, z=0, s=5. Cifra sutelor este 5, nu 0.",
+      "exGr": "Verifică sutele: 1.045→0, 2.034→0, 3.506→5, 4.021→0."
+    },
+    {
+      "q": "Valoarea cifrei 9 în 900.000 este:",
+      "opts": [
+        "9",
+        "900",
+        "9.000",
+        "900.000"
+      ],
+      "ok": 3,
+      "exOk": "9 se află pe ordinul sutelor de mii → 9 × 100.000 = 900.000.",
+      "exGr": "900.000 = 9 × 100.000. Valoarea cifrei 9 este 900.000."
+    },
+    {
+      "q": "Câte cifre are numărul un milion?",
+      "opts": [
+        "6",
+        "7",
+        "8",
+        "9"
+      ],
+      "ok": 1,
+      "exOk": "1.000.000 are 7 cifre: 1, 0, 0, 0, 0, 0, 0.",
+      "exGr": "Un milion = 1.000.000 → numără cifrele: 7."
+    },
+    {
+      "q": "Suma cifrelor lui 234 este:",
+      "opts": [
+        "6",
+        "7",
+        "8",
+        "9"
+      ],
+      "ok": 3,
+      "exOk": "2 + 3 + 4 = 9.",
+      "exGr": "Adunăm toate cifrele: 2 + 3 + 4 = 9."
+    },
+    {
+      "q": "Cifra milioanelor în 5.300.000 este:",
+      "opts": [
+        "0",
+        "3",
+        "5",
+        "53"
+      ],
+      "ok": 2,
+      "exOk": "5.300.000 = 5 milioane + 3 sute de mii. Cifra milioanelor = 5.",
+      "exGr": "5.300.000: primul grup reprezintă milioanele. Cifra milioanelor = 5."
+    },
+    {
+      "q": "Care este valoarea lui 0 în orice număr?",
+      "opts": [
+        "0",
+        "1",
+        "depinde de poziție",
+        "nu există"
+      ],
+      "ok": 0,
+      "exOk": "Cifra 0 are întotdeauna valoarea 0, indiferent de poziție. 0 × orice = 0.",
+      "exGr": "Indiferent de ordinul pe care se află, 0 × acel ordin = 0."
+    },
+    {
+      "q": "Numărul 50.000 + 3.000 + 200 + 7 este:",
+      "opts": [
+        "53.207",
+        "53.270",
+        "53.027",
+        "50.327"
+      ],
+      "ok": 0,
+      "exOk": "50.000 + 3.000 + 200 + 7 = 53.207.",
+      "exGr": "Adunăm: zm=5, m=3, s=2, z=0, u=7 → 53.207."
+    },
+    {
+      "q": "Valoarea cifrei 4 în 340.500 este:",
+      "opts": [
+        "4",
+        "400",
+        "4.000",
+        "40.000"
+      ],
+      "ok": 3,
+      "exOk": "4 se află pe ordinul zecilor de mii → 4 × 10.000 = 40.000.",
+      "exGr": "340.500: zm=4 → valoarea = 4 × 10.000 = 40.000."
+    },
+    {
+      "q": "Câte numere naturale există între 99 și 101?",
+      "opts": [
+        "0",
+        "1",
+        "2",
+        "3"
+      ],
+      "ok": 1,
+      "exOk": "Între 99 și 101 există un singur număr: 100.",
+      "exGr": "99 < 100 < 101. Doar 100 se află strict între ele."
+    },
+    {
+      "q": "Cifra sutelor de mii în 1.234.567 este:",
+      "opts": [
+        "1",
+        "2",
+        "3",
+        "4"
+      ],
+      "ok": 1,
+      "exOk": "1.234.567: sm=1, zm=2, m=3, s=4, z=5, u=7 (de la stânga). Sute de mii = 2.",
+      "exGr": "De la stânga: milioane=1, sute de mii=2. Răspuns: 2."
+    },
+    {
+      "q": "Care este succesorul lui 9.999?",
+      "opts": [
+        "9.998",
+        "10.000",
+        "10.001",
+        "9.990"
+      ],
+      "ok": 1,
+      "exOk": "Succesorul lui 9.999 este 9.999 + 1 = 10.000.",
+      "exGr": "Succesorul = numărul imediat următor = n + 1."
+    },
+    {
+      "q": "Valoarea cifrei 1 în 100 este:",
+      "opts": [
+        "1",
+        "10",
+        "100",
+        "1.000"
+      ],
+      "ok": 2,
+      "exOk": "1 se află pe ordinul sutelor → 1 × 100 = 100.",
+      "exGr": "100: u=0, z=0, s=1. Valoarea lui 1 = 1 × 100 = 100."
+    },
+    {
+      "q": "Cel mai mare număr format din cifrele 3, 7, 1, 5 este:",
+      "opts": [
+        "7.531",
+        "7.513",
+        "7.315",
+        "5.731"
+      ],
+      "ok": 0,
+      "exOk": "Aranjăm cifrele descrescător: 7, 5, 3, 1 → 7.531.",
+      "exGr": "Pentru numărul maxim, punem cifrele în ordine descrescătoare: 7.531."
+    },
+    {
+      "q": "Care număr este par și are cifra unităților 0?",
+      "opts": [
+        "101",
+        "305",
+        "1.230",
+        "4.003"
+      ],
+      "ok": 2,
+      "exOk": "1.230 are cifra unităților 0, deci este par.",
+      "exGr": "Un număr este par dacă cifra unităților este 0, 2, 4, 6 sau 8. 1.230 → u=0 → par."
+    },
+    {
+      "q": "Suma valorilor cifrei 2 în 2.020 este:",
+      "opts": [
+        "4",
+        "22",
+        "2.020",
+        "2.020"
+      ],
+      "ok": 2,
+      "exOk": "2.020: prima cifră 2 valorează 2.000, a doua cifră 2 valorează 20. Total = 2.020.",
+      "exGr": "2.000 (mii) + 20 (zeci) = 2.020."
+    },
+    {
+      "q": "Numărul 6.000.000 se citește:",
+      "opts": [
+        "șase mii",
+        "șasezeci de mii",
+        "șase sute de mii",
+        "șase milioane"
+      ],
+      "ok": 3,
+      "exOk": "6.000.000 = șase milioane.",
+      "exGr": "Un milion = 1.000.000. 6 × 1.000.000 = șase milioane."
+    },
+    {
+      "q": "Valoarea cifrei 8 în 800 este:",
+      "opts": [
+        "8",
+        "80",
+        "800",
+        "8.000"
+      ],
+      "ok": 2,
+      "exOk": "8 se află pe locul sutelor → 8 × 100 = 800.",
+      "exGr": "800: u=0, z=0, s=8. Valoarea = 8 × 100 = 800."
+    },
+    {
+      "q": "Numărul format din 4 mii, 3 sute și 2 unități este:",
+      "opts": [
+        "4.320",
+        "4.302",
+        "4.032",
+        "4.230"
+      ],
+      "ok": 1,
+      "exOk": "4 mii + 3 sute + 0 zeci + 2 unități = 4.302.",
+      "exGr": "4.000 + 300 + 2 = 4.302. Nu există zeci, deci z=0."
+    },
+    {
+      "q": "Câte cifre are cel mai mare număr de 5 cifre?",
+      "opts": [
+        "4",
+        "5",
+        "6",
+        "9"
+      ],
+      "ok": 1,
+      "exOk": "Cel mai mare număr de 5 cifre este 99.999 — are 5 cifre.",
+      "exGr": "Prin definiție, cel mai mare număr de 5 cifre are tot 5 cifre."
+    },
+    {
+      "q": "Cifra miilor în 45.678 este:",
+      "opts": [
+        "4",
+        "5",
+        "6",
+        "7"
+      ],
+      "ok": 1,
+      "exOk": "45.678: u=8, z=7, s=6, m=5, zm=4. Cifra miilor = 5.",
+      "exGr": "Numără de la dreapta: u, z, s, m. A 4-a cifră = 5."
+    },
+    {
+      "q": "Valoarea cifrei 3 în 3.500 este:",
+      "opts": [
+        "3",
+        "30",
+        "300",
+        "3.000"
+      ],
+      "ok": 3,
+      "exOk": "3 se află pe locul miilor → 3 × 1.000 = 3.000.",
+      "exGr": "3.500: u=0, z=0, s=5, m=3. Valoarea lui 3 = 3.000."
+    },
+    {
+      "q": "Cel mai mic număr de 4 cifre este:",
+      "opts": [
+        "1.000",
+        "1.001",
+        "9.999",
+        "1.111"
+      ],
+      "ok": 0,
+      "exOk": "Cel mai mic număr de 4 cifre este 1.000 (prima cifră ≠ 0).",
+      "exGr": "Prima cifră trebuie să fie 1 (cel mai mic nenul), restul 0 → 1.000."
+    },
+    {
+      "q": "Care este predecesorul lui 10.000?",
+      "opts": [
+        "10.001",
+        "9.999",
+        "9.998",
+        "9.990"
+      ],
+      "ok": 1,
+      "exOk": "Predecesorul lui 10.000 este 10.000 - 1 = 9.999.",
+      "exGr": "Predecesorul = numărul imediat anterior = n - 1."
+    },
+    {
+      "q": "Suma valorilor cifrelor în 111 este:",
+      "opts": [
+        "3",
+        "111",
+        "100",
+        "1"
+      ],
+      "ok": 1,
+      "exOk": "100 + 10 + 1 = 111.",
+      "exGr": "Valoarea lui 1 pe sute=100, pe zeci=10, pe unități=1. Total = 111."
+    },
+    {
+      "q": "Cifra zecilor în 30.405 este:",
+      "opts": [
+        "3",
+        "4",
+        "0",
+        "5"
+      ],
+      "ok": 2,
+      "exOk": "30.405: u=5, z=0, s=4, m=0, zm=3. Cifra zecilor = 0.",
+      "exGr": "A doua cifră de la dreapta reprezintă zecile. În 30.405 aceasta este 0."
+    },
+    {
+      "q": "Valoarea cifrei 9 în 90.000 este:",
+      "opts": [
+        "9",
+        "900",
+        "9.000",
+        "90.000"
+      ],
+      "ok": 3,
+      "exOk": "9 se află pe ordinul zecilor de mii → 9 × 10.000 = 90.000.",
+      "exGr": "90.000 = 9 × 10.000. Valoarea cifrei 9 = 90.000."
+    }
+  ]
 }

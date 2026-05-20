@@ -15,54 +15,486 @@
     "Fiecare clasă conține ordinele: unități, zeci, sute (ale clasei respective).",
     "La citire, pronunțăm clasa miliardelor, apoi milioanelor, apoi miilor, apoi unităților."
   ],
-  "teste": {
-    "T1": [
-      {"q":"Numărul 1.234.567 aparține clasei:","opts":["unităților","miilor","milioanelor","miliardelor"],"ok":2,"exOk":"1.234.567 are 7 cifre → se încadrează în clasa milioanelor.","exGr":"Clasa milioanelor cuprinde numerele de la 1.000.000 la 999.999.999."},
-      {"q":"Clasa miilor în 45.678.123 conține cifrele:","opts":["678","123","045","456"],"ok":0,"exOk":"Grupăm câte 3 de la dreapta: 123 (unități), 678 (mii), 45 (milioane). Clasa miilor = 678.","exGr":"De la dreapta: primele 3 cifre = clasa unităților, următoarele 3 = clasa miilor."},
-      {"q":"Cum se scrie în cifre 'trei milioane două sute de mii'?","opts":["3.200.000","3.020.000","3.002.000","320.000"],"ok":0,"exOk":"Trei milioane = 3.000.000, două sute de mii = 200.000. Total = 3.200.000.","exGr":"3 milioane + 200 mii = 3.000.000 + 200.000 = 3.200.000."},
-      {"q":"Câte clase complete are numărul 5.678.234?","opts":["1","2","3","4"],"ok":1,"exOk":"5.678.234: clasa unităților (234) și clasa miilor (678) sunt complete. Clasa milioanelor are doar cifra 5. Deci 2 clase complete.","exGr":"O clasă completă are 3 cifre. 234→completa, 678→completa, 5→incompletă."},
-      {"q":"Numărul 12.000.000 se citește:","opts":["doisprezece mii","doisprezece sute de mii","doisprezece milioane","un milion două sute de mii"],"ok":2,"exOk":"12.000.000 = 12 × 1.000.000 = doisprezece milioane.","exGr":"12.000.000: clasa milioanelor = 12, clasele inferioare = 0."},
-      {"q":"Clasa unităților în 7.890.456 este:","opts":["789","890","456","007"],"ok":2,"exOk":"Primele 3 cifre de la dreapta formează clasa unităților: 456.","exGr":"De la dreapta: 6, 5, 4 → clasa unităților = 456."},
-      {"q":"Care număr are clasa miilor egală cu 050?","opts":["50.123","1.050.789","105.000","1.500.000"],"ok":1,"exOk":"1.050.789: clasa unităților=789, clasa miilor=050, clasa milioanelor=1.","exGr":"Grupăm: 789|050|1. Clasa miilor = 050."},
-      {"q":"Numărul 2.005.030 se citește:","opts":["două milioane cinci mii treizeci","două milioane cincizeci de mii trei","două milioane cinci sute treizeci","douăzeci de mii cinci sute treizeci"],"ok":0,"exOk":"2.005.030 = 2 milioane + 5 mii + 30 = două milioane cinci mii treizeci.","exGr":"2|005|030 → 2 milioane, 5 mii, 30 unități."},
-      {"q":"Câte zerouri are numărul o sută de milioane?","opts":["6","7","8","9"],"ok":2,"exOk":"100.000.000 = 1 urmat de 8 zerouri.","exGr":"O sută de milioane = 100 × 1.000.000 = 100.000.000 → 8 zerouri."},
-      {"q":"Valoarea cifrei 4 în 4.500.000 este:","opts":["4.000","40.000","400.000","4.000.000"],"ok":3,"exOk":"4 se află pe ordinul milioanelor → 4 × 1.000.000 = 4.000.000.","exGr":"4.500.000: cifra 4 este la milioane → 4.000.000."}
-    ],
-    "T2": [
-      {"q":"Care este clasa superioară clasei miilor?","opts":["unități","sute","milioane","miliarde"],"ok":2,"exOk":"Ordinea claselor: unități → mii → milioane → miliarde.","exGr":"Clasa imediat superioară miilor este clasa milioanelor."},
-      {"q":"Numărul 300.000.000 aparține clasei:","opts":["miilor","milioanelor","miliardelor","unităților"],"ok":1,"exOk":"300.000.000 = 300 milioane → clasa milioanelor.","exGr":"1.000.000 ≤ 300.000.000 ≤ 999.999.999 → clasa milioanelor."},
-      {"q":"Câte cifre are un miliard?","opts":["7","8","9","10"],"ok":2,"exOk":"1.000.000.000 are 10 cifre... dar un miliard = 1.000.000.000 = 10 cifre. Hmm, răspuns corect: 10.","exOk":"1.000.000.000: 1 urmată de 9 zerouri = 10 cifre.","exGr":"Un miliard = 1.000.000.000 → numără: 10 cifre."},
-      {"q":"Clasa milioanelor în 234.567.890 este:","opts":["890","567","234","023"],"ok":2,"exOk":"890|567|234 → clasa milioanelor = 234.","exGr":"Grupăm câte 3 de la dreapta: 890 (unități), 567 (mii), 234 (milioane)."},
-      {"q":"Numărul 'șapte sute de mii' în cifre este:","opts":["70.000","700.000","7.000.000","7.000"],"ok":1,"exOk":"Șapte sute de mii = 700 × 1.000 = 700.000.","exGr":"Șapte sute = 700. De mii = × 1.000. Total = 700.000."},
-      {"q":"Care număr are toate cifrele claselor egale?","opts":["111.111","123.456","100.100","111.000"],"ok":0,"exOk":"111.111: clasa unităților=111, clasa miilor=111. Toate cifrele sunt egale (1).","exGr":"111.111 → 111|111. Ambele clase au aceleași cifre."},
-      {"q":"Suma cifrelor din clasa miilor în 345.678 este:","opts":["6","12","15","9"],"ok":2,"exOk":"345.678: clasa miilor = 345. Suma = 3 + 4 + 5 = 12.","exGr":"Clasa miilor = 345. 3 + 4 + 5 = 12."},
-      {"q":"Numărul cu clasa milioanelor = 001 și clasa miilor = 000 și clasa unităților = 001 este:","opts":["1.000.001","1.001.000","1.000.001","1.001.001"],"ok":0,"exOk":"001|000|001 = 1.000.001.","exGr":"001 milioane + 000 mii + 001 unități = 1.000.001."},
-      {"q":"Ordinul sutelor de mii face parte din clasa:","opts":["unităților","miilor","milioanelor","miliardelor"],"ok":1,"exOk":"Clasa miilor conține: unități de mii, zeci de mii, sute de mii.","exGr":"Sute de mii = 100.000. Aceasta face parte din clasa miilor (1.000 - 999.999)."},
-      {"q":"Numărul 1.001.001 se citește:","opts":["un milion o mie unu","un milion o sută unu","o mie o sută unu","un miliard o mie unu"],"ok":0,"exOk":"1|001|001 = 1 milion + 1 mie + 1 = un milion o mie unu.","exGr":"1.001.001: 1 milion, 1 mie, 1 unitate = un milion o mie unu."}
-    ],
-    "T3": [
-      {"q":"Câte clase are numărul 999.999.999?","opts":["3","6","9","27"],"ok":0,"exOk":"999.999.999: clasa unităților, clasa miilor, clasa milioanelor → 3 clase.","exGr":"Grupăm câte 3: 999|999|999 → 3 grupe = 3 clase."},
-      {"q":"Care număr se citește 'cincizeci și cinci de milioane'?","opts":["55.000","5.500.000","55.000.000","550.000"],"ok":2,"exOk":"Cincizeci și cinci de milioane = 55 × 1.000.000 = 55.000.000.","exGr":"De milioane = × 1.000.000. 55 × 1.000.000 = 55.000.000."},
-      {"q":"Ordinul unităților de milioane este egal cu:","opts":["1.000","10.000","100.000","1.000.000"],"ok":3,"exOk":"Unități de milioane = 1.000.000.","exGr":"Ordinul unităților de milioane = 10^6 = 1.000.000."},
-      {"q":"Clasa milioanelor în 7.005.300 este:","opts":["300","005","007","700"],"ok":2,"exOk":"7|005|300 → clasa milioanelor = 007 (adică 7).","exGr":"Grupăm: 300 (unități) | 005 (mii) | 7 (milioane). Clasa milioanelor = 007."},
-      {"q":"Numărul 400.030.002 se citește:","opts":["patru sute de milioane treizeci de mii doi","patru miliarde treizeci doi","patruzeci de milioane trei mii doi","patru sute treizeci doi"],"ok":0,"exOk":"400|030|002 = 400 milioane + 30 mii + 2 = patru sute de milioane treizeci de mii doi.","exGr":"400.030.002: 400 milioane, 30 mii, 2 unități."},
-      {"q":"Care este cel mai mic număr cu 3 clase complete?","opts":["100.000.000","999.999","1.000.000","100.000.001"],"ok":0,"exOk":"3 clase complete → minim 9 cifre. Cel mai mic: 100.000.000.","exGr":"3 clase complete = 9 cifre. Cel mai mic număr de 9 cifre = 100.000.000."},
-      {"q":"Valoarea cifrei 6 în 600.000.000 este:","opts":["600.000","6.000.000","60.000.000","600.000.000"],"ok":3,"exOk":"6 se află pe ordinul sutelor de milioane → 6 × 100.000.000 = 600.000.000.","exGr":"600.000.000 = 6 × 100.000.000. Valoarea cifrei 6 = 600.000.000."},
-      {"q":"Câte zerouri are zece milioane?","opts":["5","6","7","8"],"ok":2,"exOk":"10.000.000 = 1 urmat de 7 zerouri.","exGr":"Zece milioane = 10 × 1.000.000 = 10.000.000 → 7 zerouri."},
-      {"q":"Numărul cu clasa milioanelor 012, clasa miilor 345, clasa unităților 678 este:","opts":["12.345.678","123.456.780","12.345.678","120.345.678"],"ok":0,"exOk":"012|345|678 = 12.345.678.","exGr":"012 milioane = 12.000.000; 345 mii = 345.000; 678 = 678. Total = 12.345.678."},
-      {"q":"Predecesorul lui 1.000.000 este:","opts":["999.999","1.000.001","999.000","1.001.000"],"ok":0,"exOk":"1.000.000 - 1 = 999.999.","exGr":"Predecesorul = n - 1. 1.000.000 - 1 = 999.999."}
-    ],
-    "T4": [
-      {"q":"Numărul 'două miliarde' în cifre este:","opts":["2.000.000","20.000.000","200.000.000","2.000.000.000"],"ok":3,"exOk":"Un miliard = 1.000.000.000. Două miliarde = 2.000.000.000.","exGr":"1 miliard = 10^9. 2 miliarde = 2 × 10^9 = 2.000.000.000."},
-      {"q":"Clasa miliardelor în 5.123.456.789 este:","opts":["789","456","123","5"],"ok":3,"exOk":"5|123|456|789 → clasa miliardelor = 5.","exGr":"Grupăm câte 3 de la dreapta: 789, 456, 123, 5. Clasa miliardelor = 5."},
-      {"q":"Câte clase are numărul 12.345.678.901?","opts":["3","4","5","6"],"ok":1,"exOk":"901|678|345|12 → 4 clase: unități, mii, milioane, miliarde.","exGr":"11 cifre → 4 clase (ultima incompletă dacă are mai puțin de 3 cifre)."},
-      {"q":"Valoarea cifrei 3 în 3.000.000.000 este:","opts":["3.000.000","30.000.000","300.000.000","3.000.000.000"],"ok":3,"exOk":"3 se află pe ordinul miliardelor → 3 × 1.000.000.000 = 3.000.000.000.","exGr":"3.000.000.000 = 3 miliarde = 3 × 10^9."},
-      {"q":"Numărul 1.000.000.000 se citește:","opts":["un milion","zece milioane","o sută de milioane","un miliard"],"ok":3,"exOk":"1.000.000.000 = un miliard (10^9).","exGr":"Un milion = 10^6. Un miliard = 10^9 = 1.000.000.000."},
-      {"q":"Care număr are 4 clase?","opts":["99.999.999","100.000.000","1.000.000.000","9.999.999"],"ok":2,"exOk":"1.000.000.000 are clasa unităților, miilor, milioanelor și miliardelor → 4 clase.","exGr":"4 clase = 10-12 cifre. 1.000.000.000 are 10 cifre."},
-      {"q":"Suma cifrelor din clasa unităților în 123.456 este:","opts":["6","12","15","9"],"ok":2,"exOk":"123.456: clasa unităților = 456. 4 + 5 + 6 = 15.","exGr":"Clasa unităților = ultimele 3 cifre = 456. 4 + 5 + 6 = 15."},
-      {"q":"Numărul 5.005.005 se citește:","opts":["cinci milioane cinci mii cinci","cinci mii cinci sute cinci","cincizeci de mii cinci sute","cinci milioane cinci sute cinci"],"ok":0,"exOk":"5|005|005 = 5 milioane + 5 mii + 5 = cinci milioane cinci mii cinci.","exGr":"5.005.005: 5 milioane, 005 mii, 005 unități."},
-      {"q":"Cel mai mare număr de 9 cifre este:","opts":["100.000.000","999.999.998","999.999.999","1.000.000.000"],"ok":2,"exOk":"Maximizăm toate cele 9 cifre: 999.999.999.","exGr":"9 cifre maxime → fiecare cifră = 9 → 999.999.999."},
-      {"q":"Ordinul sutelor de milioane face parte din clasa:","opts":["miilor","milioanelor","miliardelor","unităților"],"ok":1,"exOk":"Sutele de milioane (100.000.000) fac parte din clasa milioanelor.","exGr":"Clasa milioanelor cuprinde: unități, zeci și sute de milioane."}
-    ]
-  }
+  "items": [
+    {
+      "q": "Numărul 1.234.567 aparține clasei:",
+      "opts": [
+        "unităților",
+        "miilor",
+        "milioanelor",
+        "miliardelor"
+      ],
+      "ok": 2,
+      "exOk": "1.234.567 are 7 cifre → se încadrează în clasa milioanelor.",
+      "exGr": "Clasa milioanelor cuprinde numerele de la 1.000.000 la 999.999.999."
+    },
+    {
+      "q": "Clasa miilor în 45.678.123 conține cifrele:",
+      "opts": [
+        "678",
+        "123",
+        "045",
+        "456"
+      ],
+      "ok": 0,
+      "exOk": "Grupăm câte 3 de la dreapta: 123 (unități), 678 (mii), 45 (milioane). Clasa miilor = 678.",
+      "exGr": "De la dreapta: primele 3 cifre = clasa unităților, următoarele 3 = clasa miilor."
+    },
+    {
+      "q": "Cum se scrie în cifre 'trei milioane două sute de mii'?",
+      "opts": [
+        "3.200.000",
+        "3.020.000",
+        "3.002.000",
+        "320.000"
+      ],
+      "ok": 0,
+      "exOk": "Trei milioane = 3.000.000, două sute de mii = 200.000. Total = 3.200.000.",
+      "exGr": "3 milioane + 200 mii = 3.000.000 + 200.000 = 3.200.000."
+    },
+    {
+      "q": "Câte clase complete are numărul 5.678.234?",
+      "opts": [
+        "1",
+        "2",
+        "3",
+        "4"
+      ],
+      "ok": 1,
+      "exOk": "5.678.234: clasa unităților (234) și clasa miilor (678) sunt complete. Clasa milioanelor are doar cifra 5. Deci 2 clase complete.",
+      "exGr": "O clasă completă are 3 cifre. 234→completa, 678→completa, 5→incompletă."
+    },
+    {
+      "q": "Numărul 12.000.000 se citește:",
+      "opts": [
+        "doisprezece mii",
+        "doisprezece sute de mii",
+        "doisprezece milioane",
+        "un milion două sute de mii"
+      ],
+      "ok": 2,
+      "exOk": "12.000.000 = 12 × 1.000.000 = doisprezece milioane.",
+      "exGr": "12.000.000: clasa milioanelor = 12, clasele inferioare = 0."
+    },
+    {
+      "q": "Clasa unităților în 7.890.456 este:",
+      "opts": [
+        "789",
+        "890",
+        "456",
+        "007"
+      ],
+      "ok": 2,
+      "exOk": "Primele 3 cifre de la dreapta formează clasa unităților: 456.",
+      "exGr": "De la dreapta: 6, 5, 4 → clasa unităților = 456."
+    },
+    {
+      "q": "Care număr are clasa miilor egală cu 050?",
+      "opts": [
+        "50.123",
+        "1.050.789",
+        "105.000",
+        "1.500.000"
+      ],
+      "ok": 1,
+      "exOk": "1.050.789: clasa unităților=789, clasa miilor=050, clasa milioanelor=1.",
+      "exGr": "Grupăm: 789|050|1. Clasa miilor = 050."
+    },
+    {
+      "q": "Numărul 2.005.030 se citește:",
+      "opts": [
+        "două milioane cinci mii treizeci",
+        "două milioane cincizeci de mii trei",
+        "două milioane cinci sute treizeci",
+        "douăzeci de mii cinci sute treizeci"
+      ],
+      "ok": 0,
+      "exOk": "2.005.030 = 2 milioane + 5 mii + 30 = două milioane cinci mii treizeci.",
+      "exGr": "2|005|030 → 2 milioane, 5 mii, 30 unități."
+    },
+    {
+      "q": "Câte zerouri are numărul o sută de milioane?",
+      "opts": [
+        "6",
+        "7",
+        "8",
+        "9"
+      ],
+      "ok": 2,
+      "exOk": "100.000.000 = 1 urmat de 8 zerouri.",
+      "exGr": "O sută de milioane = 100 × 1.000.000 = 100.000.000 → 8 zerouri."
+    },
+    {
+      "q": "Valoarea cifrei 4 în 4.500.000 este:",
+      "opts": [
+        "4.000",
+        "40.000",
+        "400.000",
+        "4.000.000"
+      ],
+      "ok": 3,
+      "exOk": "4 se află pe ordinul milioanelor → 4 × 1.000.000 = 4.000.000.",
+      "exGr": "4.500.000: cifra 4 este la milioane → 4.000.000."
+    },
+    {
+      "q": "Care este clasa superioară clasei miilor?",
+      "opts": [
+        "unități",
+        "sute",
+        "milioane",
+        "miliarde"
+      ],
+      "ok": 2,
+      "exOk": "Ordinea claselor: unități → mii → milioane → miliarde.",
+      "exGr": "Clasa imediat superioară miilor este clasa milioanelor."
+    },
+    {
+      "q": "Numărul 300.000.000 aparține clasei:",
+      "opts": [
+        "miilor",
+        "milioanelor",
+        "miliardelor",
+        "unităților"
+      ],
+      "ok": 1,
+      "exOk": "300.000.000 = 300 milioane → clasa milioanelor.",
+      "exGr": "1.000.000 ≤ 300.000.000 ≤ 999.999.999 → clasa milioanelor."
+    },
+    {
+      "q": "Câte cifre are un miliard?",
+      "opts": [
+        "7",
+        "8",
+        "9",
+        "10"
+      ],
+      "ok": 2,
+      "exOk": "1.000.000.000: 1 urmată de 9 zerouri = 10 cifre.",
+      "exGr": "Un miliard = 1.000.000.000 → numără: 10 cifre."
+    },
+    {
+      "q": "Clasa milioanelor în 234.567.890 este:",
+      "opts": [
+        "890",
+        "567",
+        "234",
+        "023"
+      ],
+      "ok": 2,
+      "exOk": "890|567|234 → clasa milioanelor = 234.",
+      "exGr": "Grupăm câte 3 de la dreapta: 890 (unități), 567 (mii), 234 (milioane)."
+    },
+    {
+      "q": "Numărul 'șapte sute de mii' în cifre este:",
+      "opts": [
+        "70.000",
+        "700.000",
+        "7.000.000",
+        "7.000"
+      ],
+      "ok": 1,
+      "exOk": "Șapte sute de mii = 700 × 1.000 = 700.000.",
+      "exGr": "Șapte sute = 700. De mii = × 1.000. Total = 700.000."
+    },
+    {
+      "q": "Care număr are toate cifrele claselor egale?",
+      "opts": [
+        "111.111",
+        "123.456",
+        "100.100",
+        "111.000"
+      ],
+      "ok": 0,
+      "exOk": "111.111: clasa unităților=111, clasa miilor=111. Toate cifrele sunt egale (1).",
+      "exGr": "111.111 → 111|111. Ambele clase au aceleași cifre."
+    },
+    {
+      "q": "Suma cifrelor din clasa miilor în 345.678 este:",
+      "opts": [
+        "6",
+        "12",
+        "15",
+        "9"
+      ],
+      "ok": 2,
+      "exOk": "345.678: clasa miilor = 345. Suma = 3 + 4 + 5 = 12.",
+      "exGr": "Clasa miilor = 345. 3 + 4 + 5 = 12."
+    },
+    {
+      "q": "Numărul cu clasa milioanelor = 001 și clasa miilor = 000 și clasa unităților = 001 este:",
+      "opts": [
+        "1.000.001",
+        "1.001.000",
+        "1.000.001",
+        "1.001.001"
+      ],
+      "ok": 0,
+      "exOk": "001|000|001 = 1.000.001.",
+      "exGr": "001 milioane + 000 mii + 001 unități = 1.000.001."
+    },
+    {
+      "q": "Ordinul sutelor de mii face parte din clasa:",
+      "opts": [
+        "unităților",
+        "miilor",
+        "milioanelor",
+        "miliardelor"
+      ],
+      "ok": 1,
+      "exOk": "Clasa miilor conține: unități de mii, zeci de mii, sute de mii.",
+      "exGr": "Sute de mii = 100.000. Aceasta face parte din clasa miilor (1.000 - 999.999)."
+    },
+    {
+      "q": "Numărul 1.001.001 se citește:",
+      "opts": [
+        "un milion o mie unu",
+        "un milion o sută unu",
+        "o mie o sută unu",
+        "un miliard o mie unu"
+      ],
+      "ok": 0,
+      "exOk": "1|001|001 = 1 milion + 1 mie + 1 = un milion o mie unu.",
+      "exGr": "1.001.001: 1 milion, 1 mie, 1 unitate = un milion o mie unu."
+    },
+    {
+      "q": "Câte clase are numărul 999.999.999?",
+      "opts": [
+        "3",
+        "6",
+        "9",
+        "27"
+      ],
+      "ok": 0,
+      "exOk": "999.999.999: clasa unităților, clasa miilor, clasa milioanelor → 3 clase.",
+      "exGr": "Grupăm câte 3: 999|999|999 → 3 grupe = 3 clase."
+    },
+    {
+      "q": "Care număr se citește 'cincizeci și cinci de milioane'?",
+      "opts": [
+        "55.000",
+        "5.500.000",
+        "55.000.000",
+        "550.000"
+      ],
+      "ok": 2,
+      "exOk": "Cincizeci și cinci de milioane = 55 × 1.000.000 = 55.000.000.",
+      "exGr": "De milioane = × 1.000.000. 55 × 1.000.000 = 55.000.000."
+    },
+    {
+      "q": "Ordinul unităților de milioane este egal cu:",
+      "opts": [
+        "1.000",
+        "10.000",
+        "100.000",
+        "1.000.000"
+      ],
+      "ok": 3,
+      "exOk": "Unități de milioane = 1.000.000.",
+      "exGr": "Ordinul unităților de milioane = 10^6 = 1.000.000."
+    },
+    {
+      "q": "Clasa milioanelor în 7.005.300 este:",
+      "opts": [
+        "300",
+        "005",
+        "007",
+        "700"
+      ],
+      "ok": 2,
+      "exOk": "7|005|300 → clasa milioanelor = 007 (adică 7).",
+      "exGr": "Grupăm: 300 (unități) | 005 (mii) | 7 (milioane). Clasa milioanelor = 007."
+    },
+    {
+      "q": "Numărul 400.030.002 se citește:",
+      "opts": [
+        "patru sute de milioane treizeci de mii doi",
+        "patru miliarde treizeci doi",
+        "patruzeci de milioane trei mii doi",
+        "patru sute treizeci doi"
+      ],
+      "ok": 0,
+      "exOk": "400|030|002 = 400 milioane + 30 mii + 2 = patru sute de milioane treizeci de mii doi.",
+      "exGr": "400.030.002: 400 milioane, 30 mii, 2 unități."
+    },
+    {
+      "q": "Care este cel mai mic număr cu 3 clase complete?",
+      "opts": [
+        "100.000.000",
+        "999.999",
+        "1.000.000",
+        "100.000.001"
+      ],
+      "ok": 0,
+      "exOk": "3 clase complete → minim 9 cifre. Cel mai mic: 100.000.000.",
+      "exGr": "3 clase complete = 9 cifre. Cel mai mic număr de 9 cifre = 100.000.000."
+    },
+    {
+      "q": "Valoarea cifrei 6 în 600.000.000 este:",
+      "opts": [
+        "600.000",
+        "6.000.000",
+        "60.000.000",
+        "600.000.000"
+      ],
+      "ok": 3,
+      "exOk": "6 se află pe ordinul sutelor de milioane → 6 × 100.000.000 = 600.000.000.",
+      "exGr": "600.000.000 = 6 × 100.000.000. Valoarea cifrei 6 = 600.000.000."
+    },
+    {
+      "q": "Câte zerouri are zece milioane?",
+      "opts": [
+        "5",
+        "6",
+        "7",
+        "8"
+      ],
+      "ok": 2,
+      "exOk": "10.000.000 = 1 urmat de 7 zerouri.",
+      "exGr": "Zece milioane = 10 × 1.000.000 = 10.000.000 → 7 zerouri."
+    },
+    {
+      "q": "Numărul cu clasa milioanelor 012, clasa miilor 345, clasa unităților 678 este:",
+      "opts": [
+        "12.345.678",
+        "123.456.780",
+        "12.345.678",
+        "120.345.678"
+      ],
+      "ok": 0,
+      "exOk": "012|345|678 = 12.345.678.",
+      "exGr": "012 milioane = 12.000.000; 345 mii = 345.000; 678 = 678. Total = 12.345.678."
+    },
+    {
+      "q": "Predecesorul lui 1.000.000 este:",
+      "opts": [
+        "999.999",
+        "1.000.001",
+        "999.000",
+        "1.001.000"
+      ],
+      "ok": 0,
+      "exOk": "1.000.000 - 1 = 999.999.",
+      "exGr": "Predecesorul = n - 1. 1.000.000 - 1 = 999.999."
+    },
+    {
+      "q": "Numărul 'două miliarde' în cifre este:",
+      "opts": [
+        "2.000.000",
+        "20.000.000",
+        "200.000.000",
+        "2.000.000.000"
+      ],
+      "ok": 3,
+      "exOk": "Un miliard = 1.000.000.000. Două miliarde = 2.000.000.000.",
+      "exGr": "1 miliard = 10^9. 2 miliarde = 2 × 10^9 = 2.000.000.000."
+    },
+    {
+      "q": "Clasa miliardelor în 5.123.456.789 este:",
+      "opts": [
+        "789",
+        "456",
+        "123",
+        "5"
+      ],
+      "ok": 3,
+      "exOk": "5|123|456|789 → clasa miliardelor = 5.",
+      "exGr": "Grupăm câte 3 de la dreapta: 789, 456, 123, 5. Clasa miliardelor = 5."
+    },
+    {
+      "q": "Câte clase are numărul 12.345.678.901?",
+      "opts": [
+        "3",
+        "4",
+        "5",
+        "6"
+      ],
+      "ok": 1,
+      "exOk": "901|678|345|12 → 4 clase: unități, mii, milioane, miliarde.",
+      "exGr": "11 cifre → 4 clase (ultima incompletă dacă are mai puțin de 3 cifre)."
+    },
+    {
+      "q": "Valoarea cifrei 3 în 3.000.000.000 este:",
+      "opts": [
+        "3.000.000",
+        "30.000.000",
+        "300.000.000",
+        "3.000.000.000"
+      ],
+      "ok": 3,
+      "exOk": "3 se află pe ordinul miliardelor → 3 × 1.000.000.000 = 3.000.000.000.",
+      "exGr": "3.000.000.000 = 3 miliarde = 3 × 10^9."
+    },
+    {
+      "q": "Numărul 1.000.000.000 se citește:",
+      "opts": [
+        "un milion",
+        "zece milioane",
+        "o sută de milioane",
+        "un miliard"
+      ],
+      "ok": 3,
+      "exOk": "1.000.000.000 = un miliard (10^9).",
+      "exGr": "Un milion = 10^6. Un miliard = 10^9 = 1.000.000.000."
+    },
+    {
+      "q": "Care număr are 4 clase?",
+      "opts": [
+        "99.999.999",
+        "100.000.000",
+        "1.000.000.000",
+        "9.999.999"
+      ],
+      "ok": 2,
+      "exOk": "1.000.000.000 are clasa unităților, miilor, milioanelor și miliardelor → 4 clase.",
+      "exGr": "4 clase = 10-12 cifre. 1.000.000.000 are 10 cifre."
+    },
+    {
+      "q": "Suma cifrelor din clasa unităților în 123.456 este:",
+      "opts": [
+        "6",
+        "12",
+        "15",
+        "9"
+      ],
+      "ok": 2,
+      "exOk": "123.456: clasa unităților = 456. 4 + 5 + 6 = 15.",
+      "exGr": "Clasa unităților = ultimele 3 cifre = 456. 4 + 5 + 6 = 15."
+    },
+    {
+      "q": "Numărul 5.005.005 se citește:",
+      "opts": [
+        "cinci milioane cinci mii cinci",
+        "cinci mii cinci sute cinci",
+        "cincizeci de mii cinci sute",
+        "cinci milioane cinci sute cinci"
+      ],
+      "ok": 0,
+      "exOk": "5|005|005 = 5 milioane + 5 mii + 5 = cinci milioane cinci mii cinci.",
+      "exGr": "5.005.005: 5 milioane, 005 mii, 005 unități."
+    },
+    {
+      "q": "Cel mai mare număr de 9 cifre este:",
+      "opts": [
+        "100.000.000",
+        "999.999.998",
+        "999.999.999",
+        "1.000.000.000"
+      ],
+      "ok": 2,
+      "exOk": "Maximizăm toate cele 9 cifre: 999.999.999.",
+      "exGr": "9 cifre maxime → fiecare cifră = 9 → 999.999.999."
+    },
+    {
+      "q": "Ordinul sutelor de milioane face parte din clasa:",
+      "opts": [
+        "miilor",
+        "milioanelor",
+        "miliardelor",
+        "unităților"
+      ],
+      "ok": 1,
+      "exOk": "Sutele de milioane (100.000.000) fac parte din clasa milioanelor.",
+      "exGr": "Clasa milioanelor cuprinde: unități, zeci și sute de milioane."
+    }
+  ]
 }

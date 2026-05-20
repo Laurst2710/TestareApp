@@ -15,54 +15,486 @@
     "Regula adunării: o cifră mai mică după una mai mare se adună (VII = 5+1+1 = 7).",
     "Regula scăderii: o cifră mai mică înainte de una mai mare se scade (IX = 10-1 = 9)."
   ],
-  "teste": {
-    "T1": [
-      {"q":"Ce număr arab corespunde lui VII?","opts":["6","7","8","5"],"ok":1,"exOk":"V=5, I=1, I=1. VII = 5+1+1 = 7.","exGr":"V=5 și două I=1 fiecare. 5+1+1=7."},
-      {"q":"Ce număr arab corespunde lui IX?","opts":["11","8","9","10"],"ok":2,"exOk":"IX: I(1) înainte de X(10) → scădere → 10-1 = 9.","exGr":"Când o cifră mai mică precede una mai mare, se scade. IX = 10-1 = 9."},
-      {"q":"Cum se scrie 14 în cifre romane?","opts":["XIIII","XIV","IXV","VIX"],"ok":1,"exOk":"14 = 10 + 4 = X + IV = XIV.","exGr":"10=X, 4=IV (nu IIII). 14 = XIV."},
-      {"q":"Ce valoare are XL?","opts":["60","50","40","90"],"ok":2,"exOk":"XL: X(10) înainte de L(50) → 50-10 = 40.","exGr":"Scădem: 50 - 10 = 40. XL = 40."},
-      {"q":"Cum se scrie 9 în cifre romane?","opts":["VIIII","IIX","IX","XI"],"ok":2,"exOk":"9 = 10-1 = IX.","exGr":"Nu VIIII (incorect). Regula scăderii: IX = 10-1 = 9."},
-      {"q":"Ce număr arab corespunde lui XLIV?","opts":["44","46","54","36"],"ok":0,"exOk":"XL=40, IV=4. XLIV = 40+4 = 44.","exGr":"XL=40 (50-10), IV=4 (5-1). 40+4=44."},
-      {"q":"Cum se scrie 90 în cifre romane?","opts":["LXXXX","XC","CX","LC"],"ok":1,"exOk":"90 = 100-10 = XC.","exGr":"Scădem X din C: XC = 100-10 = 90."},
-      {"q":"Ce valoare are MCMXCIX?","opts":["1.989","1.999","1.998","1.909"],"ok":1,"exOk":"M=1000, CM=900, XC=90, IX=9. Total=1999.","exGr":"1000 + (1000-100) + (100-10) + (10-1) = 1000+900+90+9 = 1999."},
-      {"q":"Cum se scrie 4 în cifre romane?","opts":["IIII","IV","VI","IIV"],"ok":1,"exOk":"4 = 5-1 = IV.","exGr":"Corect este IV (scădere). IIII este greșit conform regulilor standard."},
-      {"q":"Ce valoare are LXX?","opts":["60","70","80","50"],"ok":1,"exOk":"L=50, X=10, X=10. LXX = 50+10+10 = 70.","exGr":"L=50 și două X=10. 50+10+10=70."}
-    ],
-    "T2": [
-      {"q":"Ce număr arab corespunde lui XIX?","opts":["16","17","18","19"],"ok":3,"exOk":"X=10, IX=9. XIX = 10+9 = 19.","exGr":"X=10, IX=10-1=9. XIX=19."},
-      {"q":"Cum se scrie 40 în cifre romane?","opts":["XXXX","XL","LX","XC"],"ok":1,"exOk":"40 = 50-10 = XL.","exGr":"X înainte de L = scădere: 50-10=40. XL."},
-      {"q":"Ce valoare are CD?","opts":["600","400","500","900"],"ok":1,"exOk":"CD: C(100) înainte de D(500) → 500-100 = 400.","exGr":"Scădem: D-C = 500-100 = 400."},
-      {"q":"Cum se scrie 1.000 în cifre romane?","opts":["C","D","M","CM"],"ok":2,"exOk":"M = 1.000.","exGr":"Cifrele romane de bază: I=1, V=5, X=10, L=50, C=100, D=500, M=1000."},
-      {"q":"Ce număr arab corespunde lui XLVIII?","opts":["43","47","48","53"],"ok":2,"exOk":"XL=40, V=5, III=3. XLVIII = 40+5+3 = 48.","exGr":"XL=40, V=5, I+I+I=3. 40+5+3=48."},
-      {"q":"Cum se scrie 500 în cifre romane?","opts":["D","C","M","V"],"ok":0,"exOk":"D = 500.","exGr":"Cifrele de bază: V=5, L=50, D=500. D=500."},
-      {"q":"Ce valoare are MMXX?","opts":["2.010","2.020","2.200","1.020"],"ok":1,"exOk":"MM=2000, XX=20. MMXX = 2000+20 = 2020.","exGr":"M+M=2000, X+X=20. 2000+20=2020."},
-      {"q":"Cum se scrie 99 în cifre romane?","opts":["XCIX","IC","LXXXXIX","XCXI"],"ok":0,"exOk":"99 = 90+9 = XC+IX = XCIX.","exGr":"90=XC, 9=IX. 99=XCIX."},
-      {"q":"Ce cifră romană corespunde lui 50?","opts":["V","X","L","C"],"ok":2,"exOk":"L = 50.","exGr":"I=1, V=5, X=10, L=50. Răspuns: L."},
-      {"q":"Ce valoare are CCCXL?","opts":["330","340","360","440"],"ok":1,"exOk":"CCC=300, XL=40. CCCXL = 300+40 = 340.","exGr":"C+C+C=300, XL=40. 300+40=340."}
-    ],
-    "T3": [
-      {"q":"Ce număr arab corespunde lui MMXIV?","opts":["2.004","2.014","2.040","2.140"],"ok":1,"exOk":"MM=2000, X=10, IV=4. MMXIV = 2000+10+4 = 2014.","exGr":"MM=2000, X=10, IV=4. 2000+10+4=2014."},
-      {"q":"Cum se scrie 2.024 în cifre romane?","opts":["MMXXIV","MMXXIIII","MMXIV","MMXXVI"],"ok":0,"exOk":"2024 = 2000+20+4 = MM+XX+IV = MMXXIV.","exGr":"MM=2000, XX=20, IV=4. MMXXIV."},
-      {"q":"Care afirmație este GREȘITĂ?","opts":["IV=4","IX=9","VX=5","XL=40"],"ok":2,"exOk":"VX nu este o scriere romană validă. V nu poate precede X în sistemul roman standard.","exGr":"VX este incorect. Singurele combinații de scădere permise: IV, IX, XL, XC, CD, CM."},
-      {"q":"Ce valoare are DCCCLXXXVIII?","opts":["788","888","988","878"],"ok":1,"exOk":"D=500, CCC=300, LXXX=80, VIII=8. 500+300+80+8=888.","exGr":"D(500)+C(100)+C(100)+C(100)+L(50)+X(10)+X(10)+X(10)+V(5)+I(1)+I(1)+I(1)=888."},
-      {"q":"Cum se scrie 1.900 în cifre romane?","opts":["MCM","MCD","MDCCCC","MCMM"],"ok":0,"exOk":"1900 = 1000+900 = M+CM = MCM.","exGr":"900=CM (1000-100). 1900=M+CM=MCM."},
-      {"q":"Care număr roman este cel mai mare?","opts":["LXXXIX","XCI","IC","LXXXX"],"ok":1,"exOk":"XCI=91, LXXXIX=89, IC=incorect. XCI este cel mai mare.","exGr":"XCI=91, LXXXIX=89. XCI > LXXXIX."},
-      {"q":"Ce valoare are MCMLXXXIV?","opts":["1.974","1.984","1.994","1.964"],"ok":1,"exOk":"M=1000, CM=900, LXXX=80, IV=4. 1000+900+80+4=1984.","exGr":"M(1000)+CM(900)+LXXX(80)+IV(4)=1984."},
-      {"q":"Cum se scrie 49 în cifre romane?","opts":["IL","XLIX","L-I","XLVIV"],"ok":1,"exOk":"49 = 40+9 = XL+IX = XLIX.","exGr":"40=XL, 9=IX. 49=XLIX. IL nu este permis în sistemul roman clasic."},
-      {"q":"Ce cifră romană reprezintă 100?","opts":["D","C","M","L"],"ok":1,"exOk":"C = 100 (de la latinescul 'centum').","exGr":"I=1, V=5, X=10, L=50, C=100, D=500, M=1000."},
-      {"q":"Care este suma XC + XL?","opts":["130","150","180","50"],"ok":0,"exOk":"XC=90, XL=40. 90+40=130.","exGr":"XC=100-10=90. XL=50-10=40. 90+40=130."}
-    ],
-    "T4": [
-      {"q":"Cum se scrie 3.999 în cifre romane?","opts":["MMMCMXCIX","MMMDCCCCXCIX","MMMIM","MMMCMXCXI"],"ok":0,"exOk":"3999 = 3000+900+90+9 = MMM+CM+XC+IX = MMMCMXCIX.","exGr":"MMM=3000, CM=900, XC=90, IX=9. MMMCMXCIX."},
-      {"q":"Ce valoare are MMDCCL?","opts":["2.650","2.750","2.550","2.850"],"ok":1,"exOk":"MM=2000, D=500, CC=200, L=50. 2000+500+200+50=2750.","exGr":"MM(2000)+D(500)+CC(200)+L(50)=2750."},
-      {"q":"Câte reguli de scădere sunt folosite în MCMXCIX?","opts":["1","2","3","4"],"ok":2,"exOk":"CM (scădere), XC (scădere), IX (scădere) → 3 reguli de scădere.","exGr":"CM=900 (scădere), XC=90 (scădere), IX=9 (scădere) → 3 reguli."},
-      {"q":"Care pereche este incorectă?","opts":["M=1000","D=500","L=50","C=500"],"ok":3,"exOk":"C=100, nu 500. D=500.","exGr":"C vine de la 'centum' (100). D=500, C=100."},
-      {"q":"Cum se scrie 2.023 în cifre romane?","opts":["MMXXIII","MMXXIIII","MMXXXIII","MMXXIV"],"ok":0,"exOk":"2023 = 2000+20+3 = MM+XX+III = MMXXIII.","exGr":"MM=2000, XX=20, III=3. MMXXIII."},
-      {"q":"Ce valoare are CDXLIV?","opts":["444","454","446","464"],"ok":0,"exOk":"CD=400, XL=40, IV=4. 400+40+4=444.","exGr":"CD=500-100=400, XL=50-10=40, IV=5-1=4. 400+40+4=444."},
-      {"q":"Care număr roman conține 3 reguli de adunare și nicio scădere?","opts":["XIV","VII","IX","XL"],"ok":1,"exOk":"VII: V(5)+I(1)+I(1)=7. Trei adunări, nicio scădere.","exGr":"XIV conține scădere (IV=4). IX=scădere. XL=scădere. VII=5+1+1=adunări."},
-      {"q":"Succesorul lui XCIX în cifre romane este:","opts":["XCXI","C","CI","XCIX+I"],"ok":1,"exOk":"XCIX=99. Succesorul = 100 = C.","exGr":"XCIX=99. 99+1=100=C."},
-      {"q":"Câți de M sunt necesari pentru a scrie 3.000?","opts":["1","2","3","4"],"ok":2,"exOk":"3.000 = M+M+M = MMM. Deci 3 litere M.","exGr":"M=1000. 3×M=3000. MMM."},
-      {"q":"Ce valoare are MMMDCCCLXXXVIII?","opts":["3.878","3.888","3.898","3.888"],"ok":1,"exOk":"MMM=3000, D=500, CCC=300, LXXX=80, VIII=8. 3000+500+300+80+8=3888.","exGr":"3000+500+300+80+8=3888."}
-    ]
-  }
+  "items": [
+    {
+      "q": "Ce număr arab corespunde lui VII?",
+      "opts": [
+        "6",
+        "7",
+        "8",
+        "5"
+      ],
+      "ok": 1,
+      "exOk": "V=5, I=1, I=1. VII = 5+1+1 = 7.",
+      "exGr": "V=5 și două I=1 fiecare. 5+1+1=7."
+    },
+    {
+      "q": "Ce număr arab corespunde lui IX?",
+      "opts": [
+        "11",
+        "8",
+        "9",
+        "10"
+      ],
+      "ok": 2,
+      "exOk": "IX: I(1) înainte de X(10) → scădere → 10-1 = 9.",
+      "exGr": "Când o cifră mai mică precede una mai mare, se scade. IX = 10-1 = 9."
+    },
+    {
+      "q": "Cum se scrie 14 în cifre romane?",
+      "opts": [
+        "XIIII",
+        "XIV",
+        "IXV",
+        "VIX"
+      ],
+      "ok": 1,
+      "exOk": "14 = 10 + 4 = X + IV = XIV.",
+      "exGr": "10=X, 4=IV (nu IIII). 14 = XIV."
+    },
+    {
+      "q": "Ce valoare are XL?",
+      "opts": [
+        "60",
+        "50",
+        "40",
+        "90"
+      ],
+      "ok": 2,
+      "exOk": "XL: X(10) înainte de L(50) → 50-10 = 40.",
+      "exGr": "Scădem: 50 - 10 = 40. XL = 40."
+    },
+    {
+      "q": "Cum se scrie 9 în cifre romane?",
+      "opts": [
+        "VIIII",
+        "IIX",
+        "IX",
+        "XI"
+      ],
+      "ok": 2,
+      "exOk": "9 = 10-1 = IX.",
+      "exGr": "Nu VIIII (incorect). Regula scăderii: IX = 10-1 = 9."
+    },
+    {
+      "q": "Ce număr arab corespunde lui XLIV?",
+      "opts": [
+        "44",
+        "46",
+        "54",
+        "36"
+      ],
+      "ok": 0,
+      "exOk": "XL=40, IV=4. XLIV = 40+4 = 44.",
+      "exGr": "XL=40 (50-10), IV=4 (5-1). 40+4=44."
+    },
+    {
+      "q": "Cum se scrie 90 în cifre romane?",
+      "opts": [
+        "LXXXX",
+        "XC",
+        "CX",
+        "LC"
+      ],
+      "ok": 1,
+      "exOk": "90 = 100-10 = XC.",
+      "exGr": "Scădem X din C: XC = 100-10 = 90."
+    },
+    {
+      "q": "Ce valoare are MCMXCIX?",
+      "opts": [
+        "1.989",
+        "1.999",
+        "1.998",
+        "1.909"
+      ],
+      "ok": 1,
+      "exOk": "M=1000, CM=900, XC=90, IX=9. Total=1999.",
+      "exGr": "1000 + (1000-100) + (100-10) + (10-1) = 1000+900+90+9 = 1999."
+    },
+    {
+      "q": "Cum se scrie 4 în cifre romane?",
+      "opts": [
+        "IIII",
+        "IV",
+        "VI",
+        "IIV"
+      ],
+      "ok": 1,
+      "exOk": "4 = 5-1 = IV.",
+      "exGr": "Corect este IV (scădere). IIII este greșit conform regulilor standard."
+    },
+    {
+      "q": "Ce valoare are LXX?",
+      "opts": [
+        "60",
+        "70",
+        "80",
+        "50"
+      ],
+      "ok": 1,
+      "exOk": "L=50, X=10, X=10. LXX = 50+10+10 = 70.",
+      "exGr": "L=50 și două X=10. 50+10+10=70."
+    },
+    {
+      "q": "Ce număr arab corespunde lui XIX?",
+      "opts": [
+        "16",
+        "17",
+        "18",
+        "19"
+      ],
+      "ok": 3,
+      "exOk": "X=10, IX=9. XIX = 10+9 = 19.",
+      "exGr": "X=10, IX=10-1=9. XIX=19."
+    },
+    {
+      "q": "Cum se scrie 40 în cifre romane?",
+      "opts": [
+        "XXXX",
+        "XL",
+        "LX",
+        "XC"
+      ],
+      "ok": 1,
+      "exOk": "40 = 50-10 = XL.",
+      "exGr": "X înainte de L = scădere: 50-10=40. XL."
+    },
+    {
+      "q": "Ce valoare are CD?",
+      "opts": [
+        "600",
+        "400",
+        "500",
+        "900"
+      ],
+      "ok": 1,
+      "exOk": "CD: C(100) înainte de D(500) → 500-100 = 400.",
+      "exGr": "Scădem: D-C = 500-100 = 400."
+    },
+    {
+      "q": "Cum se scrie 1.000 în cifre romane?",
+      "opts": [
+        "C",
+        "D",
+        "M",
+        "CM"
+      ],
+      "ok": 2,
+      "exOk": "M = 1.000.",
+      "exGr": "Cifrele romane de bază: I=1, V=5, X=10, L=50, C=100, D=500, M=1000."
+    },
+    {
+      "q": "Ce număr arab corespunde lui XLVIII?",
+      "opts": [
+        "43",
+        "47",
+        "48",
+        "53"
+      ],
+      "ok": 2,
+      "exOk": "XL=40, V=5, III=3. XLVIII = 40+5+3 = 48.",
+      "exGr": "XL=40, V=5, I+I+I=3. 40+5+3=48."
+    },
+    {
+      "q": "Cum se scrie 500 în cifre romane?",
+      "opts": [
+        "D",
+        "C",
+        "M",
+        "V"
+      ],
+      "ok": 0,
+      "exOk": "D = 500.",
+      "exGr": "Cifrele de bază: V=5, L=50, D=500. D=500."
+    },
+    {
+      "q": "Ce valoare are MMXX?",
+      "opts": [
+        "2.010",
+        "2.020",
+        "2.200",
+        "1.020"
+      ],
+      "ok": 1,
+      "exOk": "MM=2000, XX=20. MMXX = 2000+20 = 2020.",
+      "exGr": "M+M=2000, X+X=20. 2000+20=2020."
+    },
+    {
+      "q": "Cum se scrie 99 în cifre romane?",
+      "opts": [
+        "XCIX",
+        "IC",
+        "LXXXXIX",
+        "XCXI"
+      ],
+      "ok": 0,
+      "exOk": "99 = 90+9 = XC+IX = XCIX.",
+      "exGr": "90=XC, 9=IX. 99=XCIX."
+    },
+    {
+      "q": "Ce cifră romană corespunde lui 50?",
+      "opts": [
+        "V",
+        "X",
+        "L",
+        "C"
+      ],
+      "ok": 2,
+      "exOk": "L = 50.",
+      "exGr": "I=1, V=5, X=10, L=50. Răspuns: L."
+    },
+    {
+      "q": "Ce valoare are CCCXL?",
+      "opts": [
+        "330",
+        "340",
+        "360",
+        "440"
+      ],
+      "ok": 1,
+      "exOk": "CCC=300, XL=40. CCCXL = 300+40 = 340.",
+      "exGr": "C+C+C=300, XL=40. 300+40=340."
+    },
+    {
+      "q": "Ce număr arab corespunde lui MMXIV?",
+      "opts": [
+        "2.004",
+        "2.014",
+        "2.040",
+        "2.140"
+      ],
+      "ok": 1,
+      "exOk": "MM=2000, X=10, IV=4. MMXIV = 2000+10+4 = 2014.",
+      "exGr": "MM=2000, X=10, IV=4. 2000+10+4=2014."
+    },
+    {
+      "q": "Cum se scrie 2.024 în cifre romane?",
+      "opts": [
+        "MMXXIV",
+        "MMXXIIII",
+        "MMXIV",
+        "MMXXVI"
+      ],
+      "ok": 0,
+      "exOk": "2024 = 2000+20+4 = MM+XX+IV = MMXXIV.",
+      "exGr": "MM=2000, XX=20, IV=4. MMXXIV."
+    },
+    {
+      "q": "Care afirmație este GREȘITĂ?",
+      "opts": [
+        "IV=4",
+        "IX=9",
+        "VX=5",
+        "XL=40"
+      ],
+      "ok": 2,
+      "exOk": "VX nu este o scriere romană validă. V nu poate precede X în sistemul roman standard.",
+      "exGr": "VX este incorect. Singurele combinații de scădere permise: IV, IX, XL, XC, CD, CM."
+    },
+    {
+      "q": "Ce valoare are DCCCLXXXVIII?",
+      "opts": [
+        "788",
+        "888",
+        "988",
+        "878"
+      ],
+      "ok": 1,
+      "exOk": "D=500, CCC=300, LXXX=80, VIII=8. 500+300+80+8=888.",
+      "exGr": "D(500)+C(100)+C(100)+C(100)+L(50)+X(10)+X(10)+X(10)+V(5)+I(1)+I(1)+I(1)=888."
+    },
+    {
+      "q": "Cum se scrie 1.900 în cifre romane?",
+      "opts": [
+        "MCM",
+        "MCD",
+        "MDCCCC",
+        "MCMM"
+      ],
+      "ok": 0,
+      "exOk": "1900 = 1000+900 = M+CM = MCM.",
+      "exGr": "900=CM (1000-100). 1900=M+CM=MCM."
+    },
+    {
+      "q": "Care număr roman este cel mai mare?",
+      "opts": [
+        "LXXXIX",
+        "XCI",
+        "IC",
+        "LXXXX"
+      ],
+      "ok": 1,
+      "exOk": "XCI=91, LXXXIX=89, IC=incorect. XCI este cel mai mare.",
+      "exGr": "XCI=91, LXXXIX=89. XCI > LXXXIX."
+    },
+    {
+      "q": "Ce valoare are MCMLXXXIV?",
+      "opts": [
+        "1.974",
+        "1.984",
+        "1.994",
+        "1.964"
+      ],
+      "ok": 1,
+      "exOk": "M=1000, CM=900, LXXX=80, IV=4. 1000+900+80+4=1984.",
+      "exGr": "M(1000)+CM(900)+LXXX(80)+IV(4)=1984."
+    },
+    {
+      "q": "Cum se scrie 49 în cifre romane?",
+      "opts": [
+        "IL",
+        "XLIX",
+        "L-I",
+        "XLVIV"
+      ],
+      "ok": 1,
+      "exOk": "49 = 40+9 = XL+IX = XLIX.",
+      "exGr": "40=XL, 9=IX. 49=XLIX. IL nu este permis în sistemul roman clasic."
+    },
+    {
+      "q": "Ce cifră romană reprezintă 100?",
+      "opts": [
+        "D",
+        "C",
+        "M",
+        "L"
+      ],
+      "ok": 1,
+      "exOk": "C = 100 (de la latinescul 'centum').",
+      "exGr": "I=1, V=5, X=10, L=50, C=100, D=500, M=1000."
+    },
+    {
+      "q": "Care este suma XC + XL?",
+      "opts": [
+        "130",
+        "150",
+        "180",
+        "50"
+      ],
+      "ok": 0,
+      "exOk": "XC=90, XL=40. 90+40=130.",
+      "exGr": "XC=100-10=90. XL=50-10=40. 90+40=130."
+    },
+    {
+      "q": "Cum se scrie 3.999 în cifre romane?",
+      "opts": [
+        "MMMCMXCIX",
+        "MMMDCCCCXCIX",
+        "MMMIM",
+        "MMMCMXCXI"
+      ],
+      "ok": 0,
+      "exOk": "3999 = 3000+900+90+9 = MMM+CM+XC+IX = MMMCMXCIX.",
+      "exGr": "MMM=3000, CM=900, XC=90, IX=9. MMMCMXCIX."
+    },
+    {
+      "q": "Ce valoare are MMDCCL?",
+      "opts": [
+        "2.650",
+        "2.750",
+        "2.550",
+        "2.850"
+      ],
+      "ok": 1,
+      "exOk": "MM=2000, D=500, CC=200, L=50. 2000+500+200+50=2750.",
+      "exGr": "MM(2000)+D(500)+CC(200)+L(50)=2750."
+    },
+    {
+      "q": "Câte reguli de scădere sunt folosite în MCMXCIX?",
+      "opts": [
+        "1",
+        "2",
+        "3",
+        "4"
+      ],
+      "ok": 2,
+      "exOk": "CM (scădere), XC (scădere), IX (scădere) → 3 reguli de scădere.",
+      "exGr": "CM=900 (scădere), XC=90 (scădere), IX=9 (scădere) → 3 reguli."
+    },
+    {
+      "q": "Care pereche este incorectă?",
+      "opts": [
+        "M=1000",
+        "D=500",
+        "L=50",
+        "C=500"
+      ],
+      "ok": 3,
+      "exOk": "C=100, nu 500. D=500.",
+      "exGr": "C vine de la 'centum' (100). D=500, C=100."
+    },
+    {
+      "q": "Cum se scrie 2.023 în cifre romane?",
+      "opts": [
+        "MMXXIII",
+        "MMXXIIII",
+        "MMXXXIII",
+        "MMXXIV"
+      ],
+      "ok": 0,
+      "exOk": "2023 = 2000+20+3 = MM+XX+III = MMXXIII.",
+      "exGr": "MM=2000, XX=20, III=3. MMXXIII."
+    },
+    {
+      "q": "Ce valoare are CDXLIV?",
+      "opts": [
+        "444",
+        "454",
+        "446",
+        "464"
+      ],
+      "ok": 0,
+      "exOk": "CD=400, XL=40, IV=4. 400+40+4=444.",
+      "exGr": "CD=500-100=400, XL=50-10=40, IV=5-1=4. 400+40+4=444."
+    },
+    {
+      "q": "Care număr roman conține 3 reguli de adunare și nicio scădere?",
+      "opts": [
+        "XIV",
+        "VII",
+        "IX",
+        "XL"
+      ],
+      "ok": 1,
+      "exOk": "VII: V(5)+I(1)+I(1)=7. Trei adunări, nicio scădere.",
+      "exGr": "XIV conține scădere (IV=4). IX=scădere. XL=scădere. VII=5+1+1=adunări."
+    },
+    {
+      "q": "Succesorul lui XCIX în cifre romane este:",
+      "opts": [
+        "XCXI",
+        "C",
+        "CI",
+        "XCIX+I"
+      ],
+      "ok": 1,
+      "exOk": "XCIX=99. Succesorul = 100 = C.",
+      "exGr": "XCIX=99. 99+1=100=C."
+    },
+    {
+      "q": "Câți de M sunt necesari pentru a scrie 3.000?",
+      "opts": [
+        "1",
+        "2",
+        "3",
+        "4"
+      ],
+      "ok": 2,
+      "exOk": "3.000 = M+M+M = MMM. Deci 3 litere M.",
+      "exGr": "M=1000. 3×M=3000. MMM."
+    },
+    {
+      "q": "Ce valoare are MMMDCCCLXXXVIII?",
+      "opts": [
+        "3.878",
+        "3.888",
+        "3.898",
+        "3.888"
+      ],
+      "ok": 1,
+      "exOk": "MMM=3000, D=500, CCC=300, LXXX=80, VIII=8. 3000+500+300+80+8=3888.",
+      "exGr": "3000+500+300+80+8=3888."
+    }
+  ]
 }

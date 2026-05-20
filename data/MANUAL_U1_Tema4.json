@@ -15,54 +15,486 @@
     "Succesorul unui număr n este n+1 (numărul imediat următor pe axă).",
     "Predecesorul unui număr n este n-1 (numărul imediat anterior pe axă). Numărul 0 nu are predecesor în N."
   ],
-  "teste": {
-    "T1": [
-      {"q":"Care este succesorul lui 999?","opts":["998","1.000","1.001","99"],"ok":1,"exOk":"Succesorul = n+1 = 999+1 = 1.000.","exGr":"Succesorul lui n este n+1. 999+1=1000."},
-      {"q":"Care este predecesorul lui 100?","opts":["101","99","98","100"],"ok":1,"exOk":"Predecesorul = n-1 = 100-1 = 99.","exGr":"Predecesorul lui n este n-1. 100-1=99."},
-      {"q":"Pe axa numerelor, care număr se află la dreapta lui 57?","opts":["56","55","58","57"],"ok":2,"exOk":"Pe axă, numerele cresc de la stânga la dreapta. La dreapta lui 57 se află 58.","exGr":"Dreapta = mai mare. Numărul imediat mai mare după 57 este 58."},
-      {"q":"Câte numere naturale există între 5 și 9?","opts":["2","3","4","5"],"ok":1,"exOk":"Între 5 și 9 se află: 6, 7, 8 → 3 numere.","exGr":"5 < 6 < 7 < 8 < 9. Strict între ele: 6, 7, 8 = 3 numere."},
-      {"q":"Care număr nu are predecesor în mulțimea numerelor naturale?","opts":["1","0","2","10"],"ok":1,"exOk":"0 este cel mai mic număr natural. Nu are predecesor în N.","exGr":"Predecesorul lui 0 ar fi -1, care nu este număr natural."},
-      {"q":"Pe axa numerelor, 25 se află față de 30:","opts":["la dreapta","la stânga","pe același punct","deasupra"],"ok":1,"exOk":"25 < 30, deci 25 se află la stânga lui 30 pe axă.","exGr":"Numerele mai mici sunt la stânga. 25 < 30 → 25 este la stânga."},
-      {"q":"Succesorul lui 9.999 este:","opts":["9.998","9.990","10.000","10.001"],"ok":2,"exOk":"9.999 + 1 = 10.000.","exGr":"Succesorul = n+1. 9.999+1=10.000."},
-      {"q":"Câte numere naturale sunt mai mici decât 5?","opts":["4","5","6","3"],"ok":1,"exOk":"0, 1, 2, 3, 4 → 5 numere naturale mai mici decât 5.","exGr":"0 este inclus în numerele naturale. 0,1,2,3,4 = 5 numere."},
-      {"q":"Care este predecesorul lui 1.000?","opts":["1.001","999","998","100"],"ok":1,"exOk":"1.000 - 1 = 999.","exGr":"Predecesorul = n-1. 1000-1=999."},
-      {"q":"Pe axa numerelor, punctul corespunzător lui 0 se află:","opts":["la dreapta tuturor","la stânga tuturor","la mijloc","nu există"],"ok":1,"exOk":"0 este cel mai mic număr natural, deci se află la stânga tuturor celorlalte.","exGr":"Axa numerelor naturale începe cu 0, la stânga extremă."}
-    ],
-    "T2": [
-      {"q":"Succesorul lui 0 este:","opts":["0","1","2","-1"],"ok":1,"exOk":"0+1=1. Succesorul lui 0 este 1.","exGr":"Succesorul = n+1. 0+1=1."},
-      {"q":"Câte numere naturale sunt cuprinse între 10 și 15 (inclusiv capetele)?","opts":["4","5","6","7"],"ok":2,"exOk":"10, 11, 12, 13, 14, 15 → 6 numere.","exGr":"De la 10 la 15 inclusiv: 15-10+1=6."},
-      {"q":"Pe axă, care dintre numerele 34, 43, 30, 40 este cel mai la dreapta?","opts":["34","43","30","40"],"ok":1,"exOk":"43 este cel mai mare, deci cel mai la dreapta.","exGr":"Cel mai la dreapta = cel mai mare. 43>40>34>30."},
-      {"q":"Predecesorul lui 10.000 este:","opts":["10.001","9.999","9.998","1.000"],"ok":1,"exOk":"10.000-1=9.999.","exGr":"Predecesorul = n-1. 10.000-1=9.999."},
-      {"q":"Câte numere naturale sunt strict între 97 și 103?","opts":["4","5","6","7"],"ok":1,"exOk":"98, 99, 100, 101, 102 → 5 numere.","exGr":"Strict între 97 și 103: 98, 99, 100, 101, 102 = 5."},
-      {"q":"Care afirmație este adevărată?","opts":["Orice număr natural are predecesor","Orice număr natural are succesor","0 are predecesor în N","Succesorul lui n este n-1"],"ok":1,"exOk":"Orice număr natural n are succesor: n+1, care este tot număr natural.","exGr":"0 nu are predecesor în N. Succesorul=n+1 nu n-1. Orice natural are succesor."},
-      {"q":"Pe axă, la câte unități se află 7 față de 3?","opts":["3","4","7","10"],"ok":1,"exOk":"7-3=4. La 4 unități distanță.","exGr":"Distanța pe axă = diferența numerelor. 7-3=4."},
-      {"q":"Succesorul lui 999.999 este:","opts":["999.998","1.000.000","1.000.001","999.990"],"ok":1,"exOk":"999.999+1=1.000.000.","exGr":"Succesorul = n+1. 999.999+1=1.000.000."},
-      {"q":"Care număr se află la 3 unități la dreapta lui 17 pe axă?","opts":["14","20","17","15"],"ok":1,"exOk":"La dreapta = mai mare. 17+3=20.","exGr":"Dreapta înseamnă adăugăm. 17+3=20."},
-      {"q":"Câte numere naturale cu 2 cifre există?","opts":["89","90","91","99"],"ok":1,"exOk":"De la 10 la 99: 99-10+1=90 numere.","exGr":"Numerele cu 2 cifre: 10,11,...,99. Total=90."}
-    ],
-    "T3": [
-      {"q":"Numărul n are predecesorul 49. Care este n?","opts":["48","50","51","47"],"ok":1,"exOk":"Dacă predecesorul lui n este 49, atunci n-1=49, deci n=50.","exGr":"Predecesor(n)=n-1=49 → n=50."},
-      {"q":"Numărul n are succesorul 100. Care este n?","opts":["101","99","98","100"],"ok":1,"exOk":"Dacă succesorul lui n este 100, atunci n+1=100, deci n=99.","exGr":"Succesor(n)=n+1=100 → n=99."},
-      {"q":"Pe axă, câte numere se află între punctele 20 și 25 (exclusiv capetele)?","opts":["3","4","5","6"],"ok":1,"exOk":"21, 22, 23, 24 → 4 numere.","exGr":"Strict între 20 și 25: 21,22,23,24=4 numere."},
-      {"q":"Care număr se află la jumătatea distanței dintre 10 și 20 pe axă?","opts":["14","15","16","12"],"ok":1,"exOk":"Mijlocul dintre 10 și 20 = (10+20)/2 = 15.","exGr":"(10+20)÷2=30÷2=15."},
-      {"q":"Predecesorul succesorul lui 50 este:","opts":["48","49","50","51"],"ok":2,"exOk":"Succesorul lui 50 = 51. Predecesorul lui 51 = 50.","exGr":"Succesor(50)=51. Predecesor(51)=50. Deci rezultatul este 50."},
-      {"q":"Câte numere naturale sunt mai mari decât 95 și mai mici decât 100?","opts":["3","4","5","6"],"ok":1,"exOk":"96, 97, 98, 99 → 4 numere.","exGr":"Strict: 96,97,98,99=4 numere. (95 și 100 excluse)"},
-      {"q":"Succesorul predecesorului lui 1.000 este:","opts":["998","999","1.000","1.001"],"ok":2,"exOk":"Predecesorul lui 1.000 = 999. Succesorul lui 999 = 1.000.","exGr":"Predecesor(1000)=999. Succesor(999)=1000."},
-      {"q":"Pe axa numerelor, care număr este reprezentat la stânga lui 0?","opts":["1","-1","Nu există în N","0"],"ok":2,"exOk":"În mulțimea numerelor naturale, nu există număr la stânga lui 0.","exGr":"N = {0,1,2,3,...}. Nu există numere negative în N."},
-      {"q":"Câte numere naturale au exact 3 cifre?","opts":["100","899","900","1000"],"ok":2,"exOk":"De la 100 la 999: 999-100+1=900.","exGr":"Numerele cu 3 cifre: 100,...,999. Total=900."},
-      {"q":"Numărul aflat la 5 unități la stânga lui 23 pe axă este:","opts":["28","18","17","20"],"ok":1,"exOk":"Stânga = mai mic. 23-5=18.","exGr":"Stânga = scădem. 23-5=18."}
-    ],
-    "T4": [
-      {"q":"Care este predecesorul celui mai mic număr de 4 cifre?","opts":["1.001","999","1.000","9.999"],"ok":1,"exOk":"Cel mai mic număr de 4 cifre = 1.000. Predecesorul = 999.","exGr":"Min(4 cifre)=1000. Predecesor(1000)=999."},
-      {"q":"Care este succesorul celui mai mare număr de 3 cifre?","opts":["998","999","1.000","1.001"],"ok":2,"exOk":"Max(3 cifre)=999. Succesor=999+1=1.000.","exGr":"999 este cel mai mare cu 3 cifre. 999+1=1000."},
-      {"q":"Pe axă, la câte unități se află 100 față de 0?","opts":["10","100","1.000","99"],"ok":1,"exOk":"Distanța de la 0 la 100 = 100 unități.","exGr":"Distanța = 100-0=100."},
-      {"q":"Câte numere naturale sunt între 1.000 și 1.010 (inclusiv)?","opts":["9","10","11","12"],"ok":2,"exOk":"1.000, 1.001, ..., 1.010 → 1010-1000+1=11.","exGr":"Inclusiv capetele: 1010-1000+1=11."},
-      {"q":"Succesorul lui 2n pentru n=5 este:","opts":["10","11","12","9"],"ok":1,"exOk":"2n=2×5=10. Succesorul lui 10 = 11.","exGr":"n=5 → 2n=10. Succesor(10)=11."},
-      {"q":"Dacă n-1=99 și n+1=101, atunci n este:","opts":["98","99","100","101"],"ok":2,"exOk":"Dacă n-1=99 → n=100. Verificare: n+1=101 ✓.","exGr":"n-1=99 → n=100. Și 100+1=101 ✓."},
-      {"q":"Pe axă, care număr este la egală distanță de 14 și 20?","opts":["16","17","18","15"],"ok":1,"exOk":"(14+20)/2=34/2=17. La egală distanță = mijlocul = 17.","exGr":"Mijlocul=(14+20)÷2=17."},
-      {"q":"Câte numere naturale se află la distanță de cel mult 3 față de 10 pe axă?","opts":["5","6","7","8"],"ok":2,"exOk":"7,8,9,10,11,12,13 → 7 numere (10-3=7 până la 10+3=13).","exGr":"De la 10-3=7 la 10+3=13: 7,8,9,10,11,12,13=7 numere."},
-      {"q":"Care număr nu are nici succesor nici predecesor în N?","opts":["0","1","Nu există","Orice număr are ambele"],"ok":2,"exOk":"Orice număr natural are succesor. Doar 0 nu are predecesor. Nu există număr fără ambele.","exGr":"Orice n în N are n+1 (succesor). Doar 0 nu are predecesor."},
-      {"q":"Dacă predecesorul lui n este 2.499, succesorul lui n este:","opts":["2.499","2.500","2.501","2.502"],"ok":2,"exOk":"Predecesor(n)=2499 → n=2500. Succesor(2500)=2501.","exGr":"n-1=2499 → n=2500. n+1=2501."}
-    ]
-  }
+  "items": [
+    {
+      "q": "Care este succesorul lui 999?",
+      "opts": [
+        "998",
+        "1.000",
+        "1.001",
+        "99"
+      ],
+      "ok": 1,
+      "exOk": "Succesorul = n+1 = 999+1 = 1.000.",
+      "exGr": "Succesorul lui n este n+1. 999+1=1000."
+    },
+    {
+      "q": "Care este predecesorul lui 100?",
+      "opts": [
+        "101",
+        "99",
+        "98",
+        "100"
+      ],
+      "ok": 1,
+      "exOk": "Predecesorul = n-1 = 100-1 = 99.",
+      "exGr": "Predecesorul lui n este n-1. 100-1=99."
+    },
+    {
+      "q": "Pe axa numerelor, care număr se află la dreapta lui 57?",
+      "opts": [
+        "56",
+        "55",
+        "58",
+        "57"
+      ],
+      "ok": 2,
+      "exOk": "Pe axă, numerele cresc de la stânga la dreapta. La dreapta lui 57 se află 58.",
+      "exGr": "Dreapta = mai mare. Numărul imediat mai mare după 57 este 58."
+    },
+    {
+      "q": "Câte numere naturale există între 5 și 9?",
+      "opts": [
+        "2",
+        "3",
+        "4",
+        "5"
+      ],
+      "ok": 1,
+      "exOk": "Între 5 și 9 se află: 6, 7, 8 → 3 numere.",
+      "exGr": "5 < 6 < 7 < 8 < 9. Strict între ele: 6, 7, 8 = 3 numere."
+    },
+    {
+      "q": "Care număr nu are predecesor în mulțimea numerelor naturale?",
+      "opts": [
+        "1",
+        "0",
+        "2",
+        "10"
+      ],
+      "ok": 1,
+      "exOk": "0 este cel mai mic număr natural. Nu are predecesor în N.",
+      "exGr": "Predecesorul lui 0 ar fi -1, care nu este număr natural."
+    },
+    {
+      "q": "Pe axa numerelor, 25 se află față de 30:",
+      "opts": [
+        "la dreapta",
+        "la stânga",
+        "pe același punct",
+        "deasupra"
+      ],
+      "ok": 1,
+      "exOk": "25 < 30, deci 25 se află la stânga lui 30 pe axă.",
+      "exGr": "Numerele mai mici sunt la stânga. 25 < 30 → 25 este la stânga."
+    },
+    {
+      "q": "Succesorul lui 9.999 este:",
+      "opts": [
+        "9.998",
+        "9.990",
+        "10.000",
+        "10.001"
+      ],
+      "ok": 2,
+      "exOk": "9.999 + 1 = 10.000.",
+      "exGr": "Succesorul = n+1. 9.999+1=10.000."
+    },
+    {
+      "q": "Câte numere naturale sunt mai mici decât 5?",
+      "opts": [
+        "4",
+        "5",
+        "6",
+        "3"
+      ],
+      "ok": 1,
+      "exOk": "0, 1, 2, 3, 4 → 5 numere naturale mai mici decât 5.",
+      "exGr": "0 este inclus în numerele naturale. 0,1,2,3,4 = 5 numere."
+    },
+    {
+      "q": "Care este predecesorul lui 1.000?",
+      "opts": [
+        "1.001",
+        "999",
+        "998",
+        "100"
+      ],
+      "ok": 1,
+      "exOk": "1.000 - 1 = 999.",
+      "exGr": "Predecesorul = n-1. 1000-1=999."
+    },
+    {
+      "q": "Pe axa numerelor, punctul corespunzător lui 0 se află:",
+      "opts": [
+        "la dreapta tuturor",
+        "la stânga tuturor",
+        "la mijloc",
+        "nu există"
+      ],
+      "ok": 1,
+      "exOk": "0 este cel mai mic număr natural, deci se află la stânga tuturor celorlalte.",
+      "exGr": "Axa numerelor naturale începe cu 0, la stânga extremă."
+    },
+    {
+      "q": "Succesorul lui 0 este:",
+      "opts": [
+        "0",
+        "1",
+        "2",
+        "-1"
+      ],
+      "ok": 1,
+      "exOk": "0+1=1. Succesorul lui 0 este 1.",
+      "exGr": "Succesorul = n+1. 0+1=1."
+    },
+    {
+      "q": "Câte numere naturale sunt cuprinse între 10 și 15 (inclusiv capetele)?",
+      "opts": [
+        "4",
+        "5",
+        "6",
+        "7"
+      ],
+      "ok": 2,
+      "exOk": "10, 11, 12, 13, 14, 15 → 6 numere.",
+      "exGr": "De la 10 la 15 inclusiv: 15-10+1=6."
+    },
+    {
+      "q": "Pe axă, care dintre numerele 34, 43, 30, 40 este cel mai la dreapta?",
+      "opts": [
+        "34",
+        "43",
+        "30",
+        "40"
+      ],
+      "ok": 1,
+      "exOk": "43 este cel mai mare, deci cel mai la dreapta.",
+      "exGr": "Cel mai la dreapta = cel mai mare. 43>40>34>30."
+    },
+    {
+      "q": "Predecesorul lui 10.000 este:",
+      "opts": [
+        "10.001",
+        "9.999",
+        "9.998",
+        "1.000"
+      ],
+      "ok": 1,
+      "exOk": "10.000-1=9.999.",
+      "exGr": "Predecesorul = n-1. 10.000-1=9.999."
+    },
+    {
+      "q": "Câte numere naturale sunt strict între 97 și 103?",
+      "opts": [
+        "4",
+        "5",
+        "6",
+        "7"
+      ],
+      "ok": 1,
+      "exOk": "98, 99, 100, 101, 102 → 5 numere.",
+      "exGr": "Strict între 97 și 103: 98, 99, 100, 101, 102 = 5."
+    },
+    {
+      "q": "Care afirmație este adevărată?",
+      "opts": [
+        "Orice număr natural are predecesor",
+        "Orice număr natural are succesor",
+        "0 are predecesor în N",
+        "Succesorul lui n este n-1"
+      ],
+      "ok": 1,
+      "exOk": "Orice număr natural n are succesor: n+1, care este tot număr natural.",
+      "exGr": "0 nu are predecesor în N. Succesorul=n+1 nu n-1. Orice natural are succesor."
+    },
+    {
+      "q": "Pe axă, la câte unități se află 7 față de 3?",
+      "opts": [
+        "3",
+        "4",
+        "7",
+        "10"
+      ],
+      "ok": 1,
+      "exOk": "7-3=4. La 4 unități distanță.",
+      "exGr": "Distanța pe axă = diferența numerelor. 7-3=4."
+    },
+    {
+      "q": "Succesorul lui 999.999 este:",
+      "opts": [
+        "999.998",
+        "1.000.000",
+        "1.000.001",
+        "999.990"
+      ],
+      "ok": 1,
+      "exOk": "999.999+1=1.000.000.",
+      "exGr": "Succesorul = n+1. 999.999+1=1.000.000."
+    },
+    {
+      "q": "Care număr se află la 3 unități la dreapta lui 17 pe axă?",
+      "opts": [
+        "14",
+        "20",
+        "17",
+        "15"
+      ],
+      "ok": 1,
+      "exOk": "La dreapta = mai mare. 17+3=20.",
+      "exGr": "Dreapta înseamnă adăugăm. 17+3=20."
+    },
+    {
+      "q": "Câte numere naturale cu 2 cifre există?",
+      "opts": [
+        "89",
+        "90",
+        "91",
+        "99"
+      ],
+      "ok": 1,
+      "exOk": "De la 10 la 99: 99-10+1=90 numere.",
+      "exGr": "Numerele cu 2 cifre: 10,11,...,99. Total=90."
+    },
+    {
+      "q": "Numărul n are predecesorul 49. Care este n?",
+      "opts": [
+        "48",
+        "50",
+        "51",
+        "47"
+      ],
+      "ok": 1,
+      "exOk": "Dacă predecesorul lui n este 49, atunci n-1=49, deci n=50.",
+      "exGr": "Predecesor(n)=n-1=49 → n=50."
+    },
+    {
+      "q": "Numărul n are succesorul 100. Care este n?",
+      "opts": [
+        "101",
+        "99",
+        "98",
+        "100"
+      ],
+      "ok": 1,
+      "exOk": "Dacă succesorul lui n este 100, atunci n+1=100, deci n=99.",
+      "exGr": "Succesor(n)=n+1=100 → n=99."
+    },
+    {
+      "q": "Pe axă, câte numere se află între punctele 20 și 25 (exclusiv capetele)?",
+      "opts": [
+        "3",
+        "4",
+        "5",
+        "6"
+      ],
+      "ok": 1,
+      "exOk": "21, 22, 23, 24 → 4 numere.",
+      "exGr": "Strict între 20 și 25: 21,22,23,24=4 numere."
+    },
+    {
+      "q": "Care număr se află la jumătatea distanței dintre 10 și 20 pe axă?",
+      "opts": [
+        "14",
+        "15",
+        "16",
+        "12"
+      ],
+      "ok": 1,
+      "exOk": "Mijlocul dintre 10 și 20 = (10+20)/2 = 15.",
+      "exGr": "(10+20)÷2=30÷2=15."
+    },
+    {
+      "q": "Predecesorul succesorul lui 50 este:",
+      "opts": [
+        "48",
+        "49",
+        "50",
+        "51"
+      ],
+      "ok": 2,
+      "exOk": "Succesorul lui 50 = 51. Predecesorul lui 51 = 50.",
+      "exGr": "Succesor(50)=51. Predecesor(51)=50. Deci rezultatul este 50."
+    },
+    {
+      "q": "Câte numere naturale sunt mai mari decât 95 și mai mici decât 100?",
+      "opts": [
+        "3",
+        "4",
+        "5",
+        "6"
+      ],
+      "ok": 1,
+      "exOk": "96, 97, 98, 99 → 4 numere.",
+      "exGr": "Strict: 96,97,98,99=4 numere. (95 și 100 excluse)"
+    },
+    {
+      "q": "Succesorul predecesorului lui 1.000 este:",
+      "opts": [
+        "998",
+        "999",
+        "1.000",
+        "1.001"
+      ],
+      "ok": 2,
+      "exOk": "Predecesorul lui 1.000 = 999. Succesorul lui 999 = 1.000.",
+      "exGr": "Predecesor(1000)=999. Succesor(999)=1000."
+    },
+    {
+      "q": "Pe axa numerelor, care număr este reprezentat la stânga lui 0?",
+      "opts": [
+        "1",
+        "-1",
+        "Nu există în N",
+        "0"
+      ],
+      "ok": 2,
+      "exOk": "În mulțimea numerelor naturale, nu există număr la stânga lui 0.",
+      "exGr": "N = {0,1,2,3,...}. Nu există numere negative în N."
+    },
+    {
+      "q": "Câte numere naturale au exact 3 cifre?",
+      "opts": [
+        "100",
+        "899",
+        "900",
+        "1000"
+      ],
+      "ok": 2,
+      "exOk": "De la 100 la 999: 999-100+1=900.",
+      "exGr": "Numerele cu 3 cifre: 100,...,999. Total=900."
+    },
+    {
+      "q": "Numărul aflat la 5 unități la stânga lui 23 pe axă este:",
+      "opts": [
+        "28",
+        "18",
+        "17",
+        "20"
+      ],
+      "ok": 1,
+      "exOk": "Stânga = mai mic. 23-5=18.",
+      "exGr": "Stânga = scădem. 23-5=18."
+    },
+    {
+      "q": "Care este predecesorul celui mai mic număr de 4 cifre?",
+      "opts": [
+        "1.001",
+        "999",
+        "1.000",
+        "9.999"
+      ],
+      "ok": 1,
+      "exOk": "Cel mai mic număr de 4 cifre = 1.000. Predecesorul = 999.",
+      "exGr": "Min(4 cifre)=1000. Predecesor(1000)=999."
+    },
+    {
+      "q": "Care este succesorul celui mai mare număr de 3 cifre?",
+      "opts": [
+        "998",
+        "999",
+        "1.000",
+        "1.001"
+      ],
+      "ok": 2,
+      "exOk": "Max(3 cifre)=999. Succesor=999+1=1.000.",
+      "exGr": "999 este cel mai mare cu 3 cifre. 999+1=1000."
+    },
+    {
+      "q": "Pe axă, la câte unități se află 100 față de 0?",
+      "opts": [
+        "10",
+        "100",
+        "1.000",
+        "99"
+      ],
+      "ok": 1,
+      "exOk": "Distanța de la 0 la 100 = 100 unități.",
+      "exGr": "Distanța = 100-0=100."
+    },
+    {
+      "q": "Câte numere naturale sunt între 1.000 și 1.010 (inclusiv)?",
+      "opts": [
+        "9",
+        "10",
+        "11",
+        "12"
+      ],
+      "ok": 2,
+      "exOk": "1.000, 1.001, ..., 1.010 → 1010-1000+1=11.",
+      "exGr": "Inclusiv capetele: 1010-1000+1=11."
+    },
+    {
+      "q": "Succesorul lui 2n pentru n=5 este:",
+      "opts": [
+        "10",
+        "11",
+        "12",
+        "9"
+      ],
+      "ok": 1,
+      "exOk": "2n=2×5=10. Succesorul lui 10 = 11.",
+      "exGr": "n=5 → 2n=10. Succesor(10)=11."
+    },
+    {
+      "q": "Dacă n-1=99 și n+1=101, atunci n este:",
+      "opts": [
+        "98",
+        "99",
+        "100",
+        "101"
+      ],
+      "ok": 2,
+      "exOk": "Dacă n-1=99 → n=100. Verificare: n+1=101 ✓.",
+      "exGr": "n-1=99 → n=100. Și 100+1=101 ✓."
+    },
+    {
+      "q": "Pe axă, care număr este la egală distanță de 14 și 20?",
+      "opts": [
+        "16",
+        "17",
+        "18",
+        "15"
+      ],
+      "ok": 1,
+      "exOk": "(14+20)/2=34/2=17. La egală distanță = mijlocul = 17.",
+      "exGr": "Mijlocul=(14+20)÷2=17."
+    },
+    {
+      "q": "Câte numere naturale se află la distanță de cel mult 3 față de 10 pe axă?",
+      "opts": [
+        "5",
+        "6",
+        "7",
+        "8"
+      ],
+      "ok": 2,
+      "exOk": "7,8,9,10,11,12,13 → 7 numere (10-3=7 până la 10+3=13).",
+      "exGr": "De la 10-3=7 la 10+3=13: 7,8,9,10,11,12,13=7 numere."
+    },
+    {
+      "q": "Care număr nu are nici succesor nici predecesor în N?",
+      "opts": [
+        "0",
+        "1",
+        "Nu există",
+        "Orice număr are ambele"
+      ],
+      "ok": 2,
+      "exOk": "Orice număr natural are succesor. Doar 0 nu are predecesor. Nu există număr fără ambele.",
+      "exGr": "Orice n în N are n+1 (succesor). Doar 0 nu are predecesor."
+    },
+    {
+      "q": "Dacă predecesorul lui n este 2.499, succesorul lui n este:",
+      "opts": [
+        "2.499",
+        "2.500",
+        "2.501",
+        "2.502"
+      ],
+      "ok": 2,
+      "exOk": "Predecesor(n)=2499 → n=2500. Succesor(2500)=2501.",
+      "exGr": "n-1=2499 → n=2500. n+1=2501."
+    }
+  ]
 }

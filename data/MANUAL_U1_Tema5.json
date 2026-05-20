@@ -15,494 +15,486 @@
     "Dacă numerele au același număr de cifre, se compară cifrele de același ordin de la stânga la dreapta până când se găsesc două cifre diferite.",
     "Pentru a exprima relația de mărime între numere, se utilizează semnele: mai mic (<), mai mare (>) sau egal (=)."
   ],
-  "teste": {
-    "T1": [
-      {
-        "q": "Compară 99 cu 101. Care este semnul corect?",
-        "opts": [
-          "<",
-          ">",
-          "=",
-          "≤"
-        ],
-        "ok": 0,
-        "exOk": "101 are mai multe cifre decât 99, deci 99 < 101.",
-        "exGr": "Regula de bază: numărul care are mai multe cifre este întotdeauna mai mare."
-      },
-      {
-        "q": "Alege numărul mai mare dintre 85 și 9.",
-        "opts": [
-          "9",
-          "85",
-          "Sunt egale",
-          "Nu se pot compara"
-        ],
-        "ok": 1,
-        "exOk": "85 are două cifre, iar 9 are una singură.",
-        "exGr": "Orice număr format din două cifre este strict mai mare decât un număr de o singură cifră."
-      },
-      {
-        "q": "Compară 234 cu 234.",
-        "opts": [
-          ">",
-          "<",
-          "=",
-          "≥"
-        ],
-        "ok": 2,
-        "exOk": "Numerele au aceleași cifre pe aceleași poziții.",
-        "exGr": "Dacă toate cifrele corespondente sunt identice, numerele sunt egale."
-      },
-      {
-        "q": "Care număr este mai mic: 500 sau 499?",
-        "opts": [
-          "500",
-          "499",
-          "Ambele",
-          "Niciunul"
-        ],
-        "ok": 1,
-        "exOk": "La ordinul sutelor, cifra 4 este mai mică decât 5.",
-        "exGr": "Compararea se face de la stânga la dreapta; cifra sutelor decide aici mărimea."
-      },
-      {
-        "q": "Compară 100 cu 99.",
-        "opts": [
-          "<",
-          ">",
-          "=",
-          "≠"
-        ],
-        "ok": 1,
-        "exOk": "100 are trei cifre, iar 99 are doar două cifre.",
-        "exGr": "Nu uita să numeri cifrele; numărul de ordinul sutelor este mai mare decât cel de ordinul zecilor."
-      },
-      {
-        "q": "Care este relația corectă între 72 și 720?",
-        "opts": [
-          "72 > 720",
-          "72 = 720",
-          "72 < 720",
-          "72 ≥ 720"
-        ],
-        "ok": 2,
-        "exOk": "720 are trei cifre, deci este mai mare decât 72.",
-        "exGr": "Cifra zero de la finalul lui 720 îi adaugă un ordin de mărime (sutele)."
-      },
-      {
-        "q": "Compară 888 cu 88.",
-        "opts": [
-          ">",
-          "<",
-          "=",
-          "≤"
-        ],
-        "ok": 0,
-        "exOk": "888 are mai multe cifre decât 88.",
-        "exGr": "Numărul de cifre este criteriul prioritar în comparare."
-      },
-      {
-        "q": "Alege semnul: 123 ... 321.",
-        "opts": [
-          ">",
-          "<",
-          "=",
-          "≥"
-        ],
-        "ok": 1,
-        "exOk": "La ordinul sutelor, 1 este mai mic decât 3.",
-        "exGr": "Chiar dacă au aceleași cifre, poziția lor contează; comparăm prima cifră din stânga."
-      },
-      {
-        "q": "Compară 10 cu 01.",
-        "opts": [
-          ">",
-          "=",
-          "<",
-          "≤"
-        ],
-        "ok": 0,
-        "exOk": "10 este un număr de două cifre, iar 01 are valoarea 1.",
-        "exGr": "Zerourile nesemnificative din fața unui număr nu îi schimbă valoarea."
-      },
-      {
-        "q": "Care este mai mare: 99 sau 999?",
-        "opts": [
-          "99",
-          "999",
-          "Egale",
-          "Niciuna"
-        ],
-        "ok": 1,
-        "exOk": "999 are 3 cifre, spre deosebire de 99 care are 2.",
-        "exGr": "Numărul cu mai multe cifre (999) este superior."
-      }
-    ],
-    "T2": [
-      {
-        "q": "Compară 25.781 cu 25.780.",
-        "opts": [
-          ">",
-          "<",
-          "=",
-          "≤"
-        ],
-        "ok": 0,
-        "exOk": "Primele patru cifre sunt identice, iar la unități 1 > 0.",
-        "exGr": "Ambele au 5 cifre; diferența apare abia la ultima cifră din dreapta."
-      },
-      {
-        "q": "Compară succesorul lui 1.001 cu 1.002.",
-        "opts": [
-          "<",
-          ">",
-          "=",
-          "≠"
-        ],
-        "ok": 2,
-        "exOk": "Succesorul lui 1.001 este 1.001 + 1 = 1.002.",
-        "exGr": "Succesorul este numărul imediat următor; deci cele două valori sunt egale."
-      },
-      {
-        "q": "Compară 12.345 cu 12.354.",
-        "opts": [
-          ">",
-          "<",
-          "=",
-          "≤"
-        ],
-        "ok": 1,
-        "exOk": "Cifra zecilor: 4 < 5.",
-        "exGr": "Regula cere compararea de la stânga spre dreapta."
-      },
-      {
-        "q": "Compară 85.697 cu 85.787.",
-        "opts": [
-          ">",
-          "<",
-          "=",
-          "≥"
-        ],
-        "ok": 1,
-        "exOk": "Cifra sutelor: 6 < 7.",
-        "exGr": "Când zecile de mii și miile sunt identice, analizăm ordinul sutelor."
-      },
-      {
-        "q": "Compară 67.234 cu 67.234.",
-        "opts": [
-          ">",
-          "<",
-          "=",
-          "≠"
-        ],
-        "ok": 2,
-        "exOk": "Toate cifrele corespondente sunt identice.",
-        "exGr": "Dacă nu există nicio diferență, numerele sunt egale."
-      },
-      {
-        "q": "Alege semnul: 10.001 ... 9.999.",
-        "opts": [
-          ">",
-          "<",
-          "=",
-          "≤"
-        ],
-        "ok": 0,
-        "exOk": "10.001 are 5 cifre, în timp ce 9.999 are doar 4.",
-        "exGr": "Verifică întotdeauna dacă au același număr de cifre."
-      },
-      {
-        "q": "Compară predecesorul lui 1.111 cu 1.110.",
-        "opts": [
-          "<",
-          ">",
-          "=",
-          "≠"
-        ],
-        "ok": 2,
-        "exOk": "Predecesorul lui 1.111 este 1.111 - 1 = 1.110.",
-        "exGr": "Predecesorul este numărul aflat imediat înaintea celui dat."
-      },
-      {
-        "q": "Alege numărul mai mare: 44.444 sau 44.441.",
-        "opts": [
-          "44.444",
-          "44.441",
-          "Sunt egale",
-          "Niciunul"
-        ],
-        "ok": 0,
-        "exOk": "Diferența apare la cifra unităților: 4 > 1.",
-        "exGr": "Primele patru cifre sunt identice, deci decizia se ia la unități."
-      },
-      {
-        "q": "Compară 55.000 cu 54.999.",
-        "opts": [
-          ">",
-          "<",
-          "=",
-          "≤"
-        ],
-        "ok": 0,
-        "exOk": "La ordinul miilor, cifra 5 este mai mare decât 4.",
-        "exGr": "Prima cifră diferită (miile) decide relația."
-      },
-      {
-        "q": "Alege semnul: 12.300 ... 12.301.",
-        "opts": [
-          "<",
-          ">",
-          "=",
-          "≥"
-        ],
-        "ok": 0,
-        "exOk": "La unități: 0 < 1.",
-        "exGr": "Analizează cifrele de la stânga la dreapta până la prima diferență."
-      }
-    ],
-    "T3": [
-      {
-        "q": "Care oraș are mai mulți locuitori: Delhi (18.916.890) sau Los Angeles (18.584.159)?",
-        "opts": [
-          "Delhi",
-          "Los Angeles",
-          "Sunt egale",
-          "Nu se poate stabili"
-        ],
-        "ok": 0,
-        "exOk": "La sutele de mii: 9 > 5. Delhi este mai populat.",
-        "exGr": "Milioanele sunt egale, deci trebuie comparată cifra sutelor de mii."
-      },
-      {
-        "q": "Compară Istanbul (14.350.423) cu Rio de Janeiro (14.387.000).",
-        "opts": [
-          "Istanbul > Rio",
-          "Istanbul < Rio",
-          "Istanbul = Rio",
-          "Rio < Istanbul"
-        ],
-        "ok": 1,
-        "exOk": "La zecile de mii: 5 < 8. Istanbul are mai puțini locuitori.",
-        "exGr": "Prima diferență apare la zeci de mii."
-      },
-      {
-        "q": "Ce distanță este mai mare: București-Hamburg (1.977 km) sau București-Moscova (1.895 km)?",
-        "opts": [
-          "București-Hamburg",
-          "București-Moscova",
-          "Sunt egale",
-          "Sunt invers"
-        ],
-        "ok": 0,
-        "exOk": "1.977 > 1.895. La sute: 9 > 8.",
-        "exGr": "Hamburg este mai îndepărtat deoarece cifra sutelor este mai mare."
-      },
-      {
-        "q": "Compară Lagos (15.500.000) cu Londra (13.945.000).",
-        "opts": [
-          ">",
-          "<",
-          "=",
-          "≤"
-        ],
-        "ok": 0,
-        "exOk": "15.500.000 > 13.945.000. La zeci de milioane: 5 > 3.",
-        "exGr": "Lagos depășește Londra la ordinul zecilor de milioane."
-      },
-      {
-        "q": "Care oraș are populația mai mică: Londra (13.945.000) sau Istanbul (14.350.423)?",
-        "opts": [
-          "Londra",
-          "Istanbul",
-          "Sunt egale",
-          "Istanbul e mai mic"
-        ],
-        "ok": 0,
-        "exOk": "13.945.000 < 14.350.423. La milioane: 3 < 4.",
-        "exGr": "Cifra milioanelor la Londra (3) este mai mică decât la Istanbul (4)."
-      },
-      {
-        "q": "Compară Delhi (18.916.890) cu Lagos (15.500.000).",
-        "opts": [
-          ">",
-          "<",
-          "=",
-          "≤"
-        ],
-        "ok": 0,
-        "exOk": "18 milioane > 15 milioane.",
-        "exGr": "Delhi are o populație superioară celei din Lagos."
-      },
-      {
-        "q": "Compară distanța București-Moscova (1.895 km) cu București-Hamburg (1.977 km).",
-        "opts": [
-          "<",
-          ">",
-          "=",
-          "≥"
-        ],
-        "ok": 0,
-        "exOk": "1.895 < 1.977. Moscova este mai aproape.",
-        "exGr": "Distanța spre Moscova este inferioară celei spre Hamburg."
-      },
-      {
-        "q": "Compară Londra (13.945.000) cu Rio de Janeiro (14.387.000).",
-        "opts": [
-          "<",
-          ">",
-          "=",
-          "≤"
-        ],
-        "ok": 0,
-        "exOk": "13.945.000 < 14.387.000. Londra este mai mică.",
-        "exGr": "La milioane: 3 < 4."
-      },
-      {
-        "q": "Compară Istanbul (14.350.423) cu Lagos (15.500.000).",
-        "opts": [
-          "<",
-          ">",
-          "=",
-          "≥"
-        ],
-        "ok": 0,
-        "exOk": "14 milioane < 15 milioane. Istanbul este mai mic.",
-        "exGr": "Lagos este mai populat decât Istanbul."
-      },
-      {
-        "q": "Alege relația: Los Angeles (18.584.159) ... Rio de Janeiro (14.387.000).",
-        "opts": [
-          ">",
-          "<",
-          "=",
-          "≤"
-        ],
-        "ok": 0,
-        "exOk": "18.584.159 > 14.387.000. La zeci de milioane: 8 > 4.",
-        "exGr": "Los Angeles are mai mulți locuitori la ordinul zecilor de milioane."
-      }
-    ],
-    "T4": [
-      {
-        "q": "Compară predecesorul lui n cu n (n ≠ 0).",
-        "opts": [
-          "<",
-          ">",
-          "=",
-          "≥"
-        ],
-        "ok": 0,
-        "exOk": "Predecesorul este n-1, deci este întotdeauna mai mic.",
-        "exGr": "Orice predecesor este mai mic decât numărul respectiv."
-      },
-      {
-        "q": "Cel mai mare număr de două cifre distincte comparativ cu 98.",
-        "opts": [
-          "Mai mare",
-          "Mai mic",
-          "Egal cu 98",
-          "Nu există"
-        ],
-        "ok": 2,
-        "exOk": "Cel mai mare număr de 2 cifre distincte este 98 (99 are cifre identice).",
-        "exGr": "98 are cifrele 9 și 8, distincte. Este egal cu 98."
-      },
-      {
-        "q": "Compară succesorul celui mai mare număr de două cifre cu 100.",
-        "opts": [
-          "<",
-          ">",
-          "=",
-          "≠"
-        ],
-        "ok": 2,
-        "exOk": "Cel mai mare număr de 2 cifre este 99. Succesorul = 100.",
-        "exGr": "99 + 1 = 100."
-      },
-      {
-        "q": "Cel mai mic număr de 4 cifre distincte este 1.023. Succesorul lui comparativ cu 1.024?",
-        "opts": [
-          "<",
-          ">",
-          "=",
-          "≠"
-        ],
-        "ok": 2,
-        "exOk": "1.023 + 1 = 1.024. Sunt egale.",
-        "exGr": "Succesorul lui 1.023 este exact 1.024."
-      },
-      {
-        "q": "Care șir are mai mulți termeni: 1,2,...,129 sau 1,2,...,97?",
-        "opts": [
-          "Primul",
-          "Al doilea",
-          "Sunt egale",
-          "Nu se poate ști"
-        ],
-        "ok": 0,
-        "exOk": "129 > 97, deci primul șir are mai mulți termeni.",
-        "exGr": "Cel cu limita superioară mai mare are mai mulți termeni."
-      },
-      {
-        "q": "Compară succesorul lui 1.001 cu predecesorul lui 1.003.",
-        "opts": [
-          ">",
-          "<",
-          "=",
-          "≠"
-        ],
-        "ok": 2,
-        "exOk": "1.001+1=1.002 și 1.003-1=1.002. Sunt egale.",
-        "exGr": "Ambele operații rezultă în 1.002."
-      },
-      {
-        "q": "Cel mai mic număr de 4 cifre distincte (1.023) față de 1.000.",
-        "opts": [
-          ">",
-          "<",
-          "=",
-          "≤"
-        ],
-        "ok": 0,
-        "exOk": "1.023 > 1.000. La zeci: 2 > 0.",
-        "exGr": "Cifra zecilor la 1.023 este 2, iar la 1.000 este 0."
-      },
-      {
-        "q": "Dacă z > a, care este relația între xyz și xya (x, y identice)?",
-        "opts": [
-          ">",
-          "<",
-          "=",
-          "≤"
-        ],
-        "ok": 0,
-        "exOk": "Prima diferență apare la unități: z > a, deci xyz > xya.",
-        "exGr": "Compararea cifră cu cifră; prima diferență la unități decide."
-      },
-      {
-        "q": "Compară 123.456 cu 123.455.",
-        "opts": [
-          ">",
-          "<",
-          "=",
-          "≤"
-        ],
-        "ok": 0,
-        "exOk": "La unități: 6 > 5.",
-        "exGr": "Toate ordinele superioare sunt identice, diferența e la unități."
-      },
-      {
-        "q": "Cel mai mare număr de 3 cifre față de cel mai mic număr de 4 cifre.",
-        "opts": [
-          "<",
-          ">",
-          "=",
-          "≥"
-        ],
-        "ok": 0,
-        "exOk": "999 < 1.000. Un număr de 4 cifre bate orice număr de 3 cifre.",
-        "exGr": "Numărul de cifre este criteriul prioritar."
-      }
-    ]
-  }
+  "items": [
+    {
+      "q": "Compară 99 cu 101. Care este semnul corect?",
+      "opts": [
+        "<",
+        ">",
+        "=",
+        "≤"
+      ],
+      "ok": 0,
+      "exOk": "101 are mai multe cifre decât 99, deci 99 < 101.",
+      "exGr": "Regula de bază: numărul care are mai multe cifre este întotdeauna mai mare."
+    },
+    {
+      "q": "Alege numărul mai mare dintre 85 și 9.",
+      "opts": [
+        "9",
+        "85",
+        "Sunt egale",
+        "Nu se pot compara"
+      ],
+      "ok": 1,
+      "exOk": "85 are două cifre, iar 9 are una singură.",
+      "exGr": "Orice număr format din două cifre este strict mai mare decât un număr de o singură cifră."
+    },
+    {
+      "q": "Compară 234 cu 234.",
+      "opts": [
+        ">",
+        "<",
+        "=",
+        "≥"
+      ],
+      "ok": 2,
+      "exOk": "Numerele au aceleași cifre pe aceleași poziții.",
+      "exGr": "Dacă toate cifrele corespondente sunt identice, numerele sunt egale."
+    },
+    {
+      "q": "Care număr este mai mic: 500 sau 499?",
+      "opts": [
+        "500",
+        "499",
+        "Ambele",
+        "Niciunul"
+      ],
+      "ok": 1,
+      "exOk": "La ordinul sutelor, cifra 4 este mai mică decât 5.",
+      "exGr": "Compararea se face de la stânga la dreapta; cifra sutelor decide aici mărimea."
+    },
+    {
+      "q": "Compară 100 cu 99.",
+      "opts": [
+        "<",
+        ">",
+        "=",
+        "≠"
+      ],
+      "ok": 1,
+      "exOk": "100 are trei cifre, iar 99 are doar două cifre.",
+      "exGr": "Nu uita să numeri cifrele; numărul de ordinul sutelor este mai mare decât cel de ordinul zecilor."
+    },
+    {
+      "q": "Care este relația corectă între 72 și 720?",
+      "opts": [
+        "72 > 720",
+        "72 = 720",
+        "72 < 720",
+        "72 ≥ 720"
+      ],
+      "ok": 2,
+      "exOk": "720 are trei cifre, deci este mai mare decât 72.",
+      "exGr": "Cifra zero de la finalul lui 720 îi adaugă un ordin de mărime (sutele)."
+    },
+    {
+      "q": "Compară 888 cu 88.",
+      "opts": [
+        ">",
+        "<",
+        "=",
+        "≤"
+      ],
+      "ok": 0,
+      "exOk": "888 are mai multe cifre decât 88.",
+      "exGr": "Numărul de cifre este criteriul prioritar în comparare."
+    },
+    {
+      "q": "Alege semnul: 123 ... 321.",
+      "opts": [
+        ">",
+        "<",
+        "=",
+        "≥"
+      ],
+      "ok": 1,
+      "exOk": "La ordinul sutelor, 1 este mai mic decât 3.",
+      "exGr": "Chiar dacă au aceleași cifre, poziția lor contează; comparăm prima cifră din stânga."
+    },
+    {
+      "q": "Compară 10 cu 01.",
+      "opts": [
+        ">",
+        "=",
+        "<",
+        "≤"
+      ],
+      "ok": 0,
+      "exOk": "10 este un număr de două cifre, iar 01 are valoarea 1.",
+      "exGr": "Zerourile nesemnificative din fața unui număr nu îi schimbă valoarea."
+    },
+    {
+      "q": "Care este mai mare: 99 sau 999?",
+      "opts": [
+        "99",
+        "999",
+        "Egale",
+        "Niciuna"
+      ],
+      "ok": 1,
+      "exOk": "999 are 3 cifre, spre deosebire de 99 care are 2.",
+      "exGr": "Numărul cu mai multe cifre (999) este superior."
+    },
+    {
+      "q": "Compară 25.781 cu 25.780.",
+      "opts": [
+        ">",
+        "<",
+        "=",
+        "≤"
+      ],
+      "ok": 0,
+      "exOk": "Primele patru cifre sunt identice, iar la unități 1 > 0.",
+      "exGr": "Ambele au 5 cifre; diferența apare abia la ultima cifră din dreapta."
+    },
+    {
+      "q": "Compară succesorul lui 1.001 cu 1.002.",
+      "opts": [
+        "<",
+        ">",
+        "=",
+        "≠"
+      ],
+      "ok": 2,
+      "exOk": "Succesorul lui 1.001 este 1.001 + 1 = 1.002.",
+      "exGr": "Succesorul este numărul imediat următor; deci cele două valori sunt egale."
+    },
+    {
+      "q": "Compară 12.345 cu 12.354.",
+      "opts": [
+        ">",
+        "<",
+        "=",
+        "≤"
+      ],
+      "ok": 1,
+      "exOk": "Cifra zecilor: 4 < 5.",
+      "exGr": "Regula cere compararea de la stânga spre dreapta."
+    },
+    {
+      "q": "Compară 85.697 cu 85.787.",
+      "opts": [
+        ">",
+        "<",
+        "=",
+        "≥"
+      ],
+      "ok": 1,
+      "exOk": "Cifra sutelor: 6 < 7.",
+      "exGr": "Când zecile de mii și miile sunt identice, analizăm ordinul sutelor."
+    },
+    {
+      "q": "Compară 67.234 cu 67.234.",
+      "opts": [
+        ">",
+        "<",
+        "=",
+        "≠"
+      ],
+      "ok": 2,
+      "exOk": "Toate cifrele corespondente sunt identice.",
+      "exGr": "Dacă nu există nicio diferență, numerele sunt egale."
+    },
+    {
+      "q": "Alege semnul: 10.001 ... 9.999.",
+      "opts": [
+        ">",
+        "<",
+        "=",
+        "≤"
+      ],
+      "ok": 0,
+      "exOk": "10.001 are 5 cifre, în timp ce 9.999 are doar 4.",
+      "exGr": "Verifică întotdeauna dacă au același număr de cifre."
+    },
+    {
+      "q": "Compară predecesorul lui 1.111 cu 1.110.",
+      "opts": [
+        "<",
+        ">",
+        "=",
+        "≠"
+      ],
+      "ok": 2,
+      "exOk": "Predecesorul lui 1.111 este 1.111 - 1 = 1.110.",
+      "exGr": "Predecesorul este numărul aflat imediat înaintea celui dat."
+    },
+    {
+      "q": "Alege numărul mai mare: 44.444 sau 44.441.",
+      "opts": [
+        "44.444",
+        "44.441",
+        "Sunt egale",
+        "Niciunul"
+      ],
+      "ok": 0,
+      "exOk": "Diferența apare la cifra unităților: 4 > 1.",
+      "exGr": "Primele patru cifre sunt identice, deci decizia se ia la unități."
+    },
+    {
+      "q": "Compară 55.000 cu 54.999.",
+      "opts": [
+        ">",
+        "<",
+        "=",
+        "≤"
+      ],
+      "ok": 0,
+      "exOk": "La ordinul miilor, cifra 5 este mai mare decât 4.",
+      "exGr": "Prima cifră diferită (miile) decide relația."
+    },
+    {
+      "q": "Alege semnul: 12.300 ... 12.301.",
+      "opts": [
+        "<",
+        ">",
+        "=",
+        "≥"
+      ],
+      "ok": 0,
+      "exOk": "La unități: 0 < 1.",
+      "exGr": "Analizează cifrele de la stânga la dreapta până la prima diferență."
+    },
+    {
+      "q": "Care oraș are mai mulți locuitori: Delhi (18.916.890) sau Los Angeles (18.584.159)?",
+      "opts": [
+        "Delhi",
+        "Los Angeles",
+        "Sunt egale",
+        "Nu se poate stabili"
+      ],
+      "ok": 0,
+      "exOk": "La sutele de mii: 9 > 5. Delhi este mai populat.",
+      "exGr": "Milioanele sunt egale, deci trebuie comparată cifra sutelor de mii."
+    },
+    {
+      "q": "Compară Istanbul (14.350.423) cu Rio de Janeiro (14.387.000).",
+      "opts": [
+        "Istanbul > Rio",
+        "Istanbul < Rio",
+        "Istanbul = Rio",
+        "Rio < Istanbul"
+      ],
+      "ok": 1,
+      "exOk": "La zecile de mii: 5 < 8. Istanbul are mai puțini locuitori.",
+      "exGr": "Prima diferență apare la zeci de mii."
+    },
+    {
+      "q": "Ce distanță este mai mare: București-Hamburg (1.977 km) sau București-Moscova (1.895 km)?",
+      "opts": [
+        "București-Hamburg",
+        "București-Moscova",
+        "Sunt egale",
+        "Sunt invers"
+      ],
+      "ok": 0,
+      "exOk": "1.977 > 1.895. La sute: 9 > 8.",
+      "exGr": "Hamburg este mai îndepărtat deoarece cifra sutelor este mai mare."
+    },
+    {
+      "q": "Compară Lagos (15.500.000) cu Londra (13.945.000).",
+      "opts": [
+        ">",
+        "<",
+        "=",
+        "≤"
+      ],
+      "ok": 0,
+      "exOk": "15.500.000 > 13.945.000. La zeci de milioane: 5 > 3.",
+      "exGr": "Lagos depășește Londra la ordinul zecilor de milioane."
+    },
+    {
+      "q": "Care oraș are populația mai mică: Londra (13.945.000) sau Istanbul (14.350.423)?",
+      "opts": [
+        "Londra",
+        "Istanbul",
+        "Sunt egale",
+        "Istanbul e mai mic"
+      ],
+      "ok": 0,
+      "exOk": "13.945.000 < 14.350.423. La milioane: 3 < 4.",
+      "exGr": "Cifra milioanelor la Londra (3) este mai mică decât la Istanbul (4)."
+    },
+    {
+      "q": "Compară Delhi (18.916.890) cu Lagos (15.500.000).",
+      "opts": [
+        ">",
+        "<",
+        "=",
+        "≤"
+      ],
+      "ok": 0,
+      "exOk": "18 milioane > 15 milioane.",
+      "exGr": "Delhi are o populație superioară celei din Lagos."
+    },
+    {
+      "q": "Compară distanța București-Moscova (1.895 km) cu București-Hamburg (1.977 km).",
+      "opts": [
+        "<",
+        ">",
+        "=",
+        "≥"
+      ],
+      "ok": 0,
+      "exOk": "1.895 < 1.977. Moscova este mai aproape.",
+      "exGr": "Distanța spre Moscova este inferioară celei spre Hamburg."
+    },
+    {
+      "q": "Compară Londra (13.945.000) cu Rio de Janeiro (14.387.000).",
+      "opts": [
+        "<",
+        ">",
+        "=",
+        "≤"
+      ],
+      "ok": 0,
+      "exOk": "13.945.000 < 14.387.000. Londra este mai mică.",
+      "exGr": "La milioane: 3 < 4."
+    },
+    {
+      "q": "Compară Istanbul (14.350.423) cu Lagos (15.500.000).",
+      "opts": [
+        "<",
+        ">",
+        "=",
+        "≥"
+      ],
+      "ok": 0,
+      "exOk": "14 milioane < 15 milioane. Istanbul este mai mic.",
+      "exGr": "Lagos este mai populat decât Istanbul."
+    },
+    {
+      "q": "Alege relația: Los Angeles (18.584.159) ... Rio de Janeiro (14.387.000).",
+      "opts": [
+        ">",
+        "<",
+        "=",
+        "≤"
+      ],
+      "ok": 0,
+      "exOk": "18.584.159 > 14.387.000. La zeci de milioane: 8 > 4.",
+      "exGr": "Los Angeles are mai mulți locuitori la ordinul zecilor de milioane."
+    },
+    {
+      "q": "Compară predecesorul lui n cu n (n ≠ 0).",
+      "opts": [
+        "<",
+        ">",
+        "=",
+        "≥"
+      ],
+      "ok": 0,
+      "exOk": "Predecesorul este n-1, deci este întotdeauna mai mic.",
+      "exGr": "Orice predecesor este mai mic decât numărul respectiv."
+    },
+    {
+      "q": "Cel mai mare număr de două cifre distincte comparativ cu 98.",
+      "opts": [
+        "Mai mare",
+        "Mai mic",
+        "Egal cu 98",
+        "Nu există"
+      ],
+      "ok": 2,
+      "exOk": "Cel mai mare număr de 2 cifre distincte este 98 (99 are cifre identice).",
+      "exGr": "98 are cifrele 9 și 8, distincte. Este egal cu 98."
+    },
+    {
+      "q": "Compară succesorul celui mai mare număr de două cifre cu 100.",
+      "opts": [
+        "<",
+        ">",
+        "=",
+        "≠"
+      ],
+      "ok": 2,
+      "exOk": "Cel mai mare număr de 2 cifre este 99. Succesorul = 100.",
+      "exGr": "99 + 1 = 100."
+    },
+    {
+      "q": "Cel mai mic număr de 4 cifre distincte este 1.023. Succesorul lui comparativ cu 1.024?",
+      "opts": [
+        "<",
+        ">",
+        "=",
+        "≠"
+      ],
+      "ok": 2,
+      "exOk": "1.023 + 1 = 1.024. Sunt egale.",
+      "exGr": "Succesorul lui 1.023 este exact 1.024."
+    },
+    {
+      "q": "Care șir are mai mulți termeni: 1,2,...,129 sau 1,2,...,97?",
+      "opts": [
+        "Primul",
+        "Al doilea",
+        "Sunt egale",
+        "Nu se poate ști"
+      ],
+      "ok": 0,
+      "exOk": "129 > 97, deci primul șir are mai mulți termeni.",
+      "exGr": "Cel cu limita superioară mai mare are mai mulți termeni."
+    },
+    {
+      "q": "Compară succesorul lui 1.001 cu predecesorul lui 1.003.",
+      "opts": [
+        ">",
+        "<",
+        "=",
+        "≠"
+      ],
+      "ok": 2,
+      "exOk": "1.001+1=1.002 și 1.003-1=1.002. Sunt egale.",
+      "exGr": "Ambele operații rezultă în 1.002."
+    },
+    {
+      "q": "Cel mai mic număr de 4 cifre distincte (1.023) față de 1.000.",
+      "opts": [
+        ">",
+        "<",
+        "=",
+        "≤"
+      ],
+      "ok": 0,
+      "exOk": "1.023 > 1.000. La zeci: 2 > 0.",
+      "exGr": "Cifra zecilor la 1.023 este 2, iar la 1.000 este 0."
+    },
+    {
+      "q": "Dacă z > a, care este relația între xyz și xya (x, y identice)?",
+      "opts": [
+        ">",
+        "<",
+        "=",
+        "≤"
+      ],
+      "ok": 0,
+      "exOk": "Prima diferență apare la unități: z > a, deci xyz > xya.",
+      "exGr": "Compararea cifră cu cifră; prima diferență la unități decide."
+    },
+    {
+      "q": "Compară 123.456 cu 123.455.",
+      "opts": [
+        ">",
+        "<",
+        "=",
+        "≤"
+      ],
+      "ok": 0,
+      "exOk": "La unități: 6 > 5.",
+      "exGr": "Toate ordinele superioare sunt identice, diferența e la unități."
+    },
+    {
+      "q": "Cel mai mare număr de 3 cifre față de cel mai mic număr de 4 cifre.",
+      "opts": [
+        "<",
+        ">",
+        "=",
+        "≥"
+      ],
+      "ok": 0,
+      "exOk": "999 < 1.000. Un număr de 4 cifre bate orice număr de 3 cifre.",
+      "exGr": "Numărul de cifre este criteriul prioritar."
+    }
+  ]
 }

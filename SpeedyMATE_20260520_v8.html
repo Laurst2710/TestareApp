@@ -18,15 +18,11 @@ body{display:flex;flex-direction:column;align-items:center;padding:20px 16px 40p
 .screen.active{display:block}
 @keyframes fadeIn{from{opacity:0;transform:translateY(8px)}to{opacity:1;transform:none}}
 
-/* LOGO */
 .logo{font-family:'JetBrains Mono',monospace;font-size:1.5rem;font-weight:700;color:var(--accent);letter-spacing:-1px;margin-bottom:2px}
 .logo span{color:var(--text)}
 .logo-sub{font-size:.72rem;color:var(--dim);letter-spacing:.1em;text-transform:uppercase;margin-bottom:20px}
 
-/* MASCOT */
-.mascot{width:80px;height:80px;margin:0 auto 12px;display:block}
-
-/* MODAL OVERLAY */
+/* MODAL */
 .modal-overlay{display:none;position:fixed;inset:0;background:rgba(0,0,0,.75);z-index:300;align-items:center;justify-content:center}
 .modal-overlay.open{display:flex}
 .modal{background:var(--surface);border:1.5px solid var(--surf3);border-radius:18px;padding:28px 24px;max-width:420px;width:92%;animation:fadeIn .25s ease}
@@ -39,7 +35,7 @@ body{display:flex;flex-direction:column;align-items:center;padding:20px 16px 40p
 .modal .field input::placeholder{color:var(--grey-t)}
 
 /* ERROR POPUP */
-.err-popup{display:none;position:fixed;top:20px;left:50%;transform:translateX(-50%);background:var(--err);color:#fff;border-radius:10px;padding:12px 22px;font-size:.88rem;font-weight:600;z-index:500;box-shadow:0 4px 24px rgba(220,20,60,.4);animation:slideDown .25s ease}
+.err-popup{display:none;position:fixed;top:20px;left:50%;transform:translateX(-50%);background:var(--err);color:#fff;border-radius:10px;padding:12px 22px;font-size:.88rem;font-weight:600;z-index:500;box-shadow:0 4px 24px rgba(220,20,60,.4);animation:slideDown .25s ease;white-space:nowrap}
 .err-popup.show{display:block}
 @keyframes slideDown{from{opacity:0;transform:translateX(-50%) translateY(-10px)}to{opacity:1;transform:translateX(-50%) translateY(0)}}
 
@@ -58,26 +54,16 @@ body{display:flex;flex-direction:column;align-items:center;padding:20px 16px 40p
 #s-setup{padding-top:12px}
 .user-badge{display:inline-flex;align-items:center;gap:8px;background:var(--surf2);border:1px solid var(--surf3);border-radius:50px;padding:6px 14px;font-size:.8rem;margin-bottom:20px;cursor:pointer;transition:border-color .2s}
 .user-badge:hover{border-color:var(--accent)}
-.user-badge span{color:var(--dim);font-size:.7rem}
-
-/* CATALOG */
-.catalog-section{margin-bottom:16px}
-.unit-header{margin-bottom:10px}
-.unit-title{font-size:1rem;font-weight:700;color:var(--text);margin-bottom:2px}
-.unit-sub{font-size:.7rem;color:var(--dim);letter-spacing:.04em}
-
-/* UNIT TABS */
 .unit-tabs{display:flex;gap:8px;margin-bottom:14px;flex-wrap:wrap}
 .unit-tab{background:var(--surf2);border:1.5px solid var(--surf3);border-radius:8px;padding:6px 14px;font-size:.75rem;font-weight:600;cursor:pointer;transition:all .15s;color:var(--dim)}
 .unit-tab.active{background:rgba(108,92,231,.15);border-color:var(--accent);color:var(--accent)}
-.unit-tab:hover:not(.active){border-color:var(--acl);color:var(--text)}
-
 .unit-panel{display:none}
 .unit-panel.active{display:block}
+.unit-title{font-size:1rem;font-weight:700;margin-bottom:2px}
+.unit-sub{font-size:.7rem;color:var(--dim);letter-spacing:.04em;margin-bottom:12px}
 
-.themes-scroll{max-height:400px;overflow-y:auto;padding-right:4px}
+.themes-scroll{max-height:420px;overflow-y:auto;padding-right:4px}
 .themes-scroll::-webkit-scrollbar{width:4px}
-.themes-scroll::-webkit-scrollbar-track{background:var(--surf3);border-radius:2px}
 .themes-scroll::-webkit-scrollbar-thumb{background:var(--accent);border-radius:2px}
 .themes-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:9px}
 
@@ -85,28 +71,23 @@ body{display:flex;flex-direction:column;align-items:center;padding:20px 16px 40p
 .theme-card:hover:not(.locked){border-color:var(--accent)}
 .theme-card.selected{border-color:var(--accent);background:rgba(108,92,231,.08)}
 .theme-card.mastered{border-color:var(--ok)}
-.theme-card.locked{cursor:default;opacity:.45}
+.theme-card.locked{cursor:default;opacity:.4}
 .theme-mastered-badge{position:absolute;top:7px;right:7px;font-size:.58rem;background:rgba(0,200,83,.15);color:var(--ok);border:1px solid rgba(0,200,83,.3);padding:2px 7px;border-radius:20px;font-weight:600}
 .theme-locked-badge{position:absolute;top:7px;right:7px;font-size:.58rem;color:var(--grey-t);font-weight:600}
 .theme-nr{font-size:.6rem;color:var(--dim);font-weight:600;margin-bottom:2px;text-transform:uppercase;letter-spacing:.06em}
-.theme-name{font-size:.79rem;font-weight:600;margin-bottom:8px;padding-right:48px;line-height:1.3}
-.tests-row{display:flex;gap:5px;flex-wrap:wrap}
-.test-pip{width:30px;height:24px;border-radius:5px;border:1.5px solid var(--surf3);display:flex;align-items:center;justify-content:center;font-size:.62rem;font-weight:600;cursor:pointer;transition:all .15s;color:var(--dim);position:relative}
-.test-pip:hover{border-color:var(--accent);color:var(--text)}
-.test-pip.pip-selected{background:var(--accent);border-color:var(--accent);color:#fff}
-.test-pip.pip-ok{border-color:var(--ok);color:var(--ok)}
-.test-pip.pip-ok.pip-selected{background:var(--ok)}
-.test-pip.pip-rev{border-color:var(--err);color:var(--err)}
-.test-pip.pip-rev.pip-selected{background:var(--err)}
-.test-pip .tip{display:none;position:absolute;bottom:calc(100%+5px);left:50%;transform:translateX(-50%);background:#1a1730;border:1px solid var(--surf3);border-radius:5px;padding:3px 7px;font-size:.58rem;white-space:nowrap;z-index:10}
-.test-pip:hover .tip{display:block}
+.theme-name{font-size:.8rem;font-weight:600;line-height:1.3;padding-right:48px}
 
-/* diff2 */
-.diff2-row{display:grid;grid-template-columns:repeat(3,1fr);gap:9px;margin-top:12px}
+/* Score ring on card */
+.theme-score{margin-top:8px;height:3px;background:var(--surf3);border-radius:2px;overflow:hidden}
+.theme-score-bar{height:100%;background:var(--accent);border-radius:2px;transition:width .4s}
+.theme-score-bar.good{background:var(--ok)}
+
+/* DIFF2 */
+.diff2-row{display:grid;grid-template-columns:repeat(3,1fr);gap:9px;margin-top:16px}
 .diff2-card{background:var(--grey);border:1.5px solid rgba(90,86,122,.2);border-radius:10px;padding:11px;opacity:.5}
-.diff2-card::after{content:'Urmează';display:block;font-size:.58rem;color:var(--grey-t);font-weight:600;letter-spacing:.05em;text-transform:uppercase;margin-top:4px}
 .diff2-name{font-size:.8rem;font-weight:600;color:var(--grey-t)}
-.diff2-sub{font-size:.68rem;color:var(--grey-t);opacity:.7}
+.diff2-sub{font-size:.68rem;color:var(--grey-t);opacity:.7;margin-top:3px}
+.diff2-tag{font-size:.58rem;color:var(--grey-t);font-weight:600;letter-spacing:.05em;text-transform:uppercase;margin-top:6px}
 
 .setup-action{margin-top:18px;text-align:center}
 
@@ -120,7 +101,7 @@ body{display:flex;flex-direction:column;align-items:center;padding:20px 16px 40p
 #s-ready{padding-top:24px;text-align:center}
 .ready-meta{font-size:.7rem;color:var(--dim);margin-bottom:6px;text-transform:uppercase;letter-spacing:.06em}
 .ready-title{font-size:1.45rem;font-weight:700;margin-bottom:5px}
-.ready-test{font-size:.92rem;color:var(--accent);font-weight:600;margin-bottom:26px}
+.ready-info{font-size:.88rem;color:var(--accent);font-weight:600;margin-bottom:28px}
 .ready-btns{display:flex;flex-direction:column;align-items:center;gap:10px}
 .btn-theory{background:transparent;border:1.5px solid var(--surf3);color:var(--dim);border-radius:10px;padding:11px 26px;font-size:.88rem;font-weight:500;cursor:pointer;font-family:'Outfit',sans-serif;transition:all .2s;width:240px}
 .btn-theory:hover{border-color:var(--accent);color:var(--text)}
@@ -188,7 +169,7 @@ body{display:flex;flex-direction:column;align-items:center;padding:20px 16px 40p
 <!-- ERROR POPUP -->
 <div class="err-popup" id="err-popup"></div>
 
-<!-- GLOSSARY BUTTON -->
+<!-- GLOSSARY BTN -->
 <button class="glossary-btn" onclick="openGlossar()">📖 Glosar</button>
 
 <!-- GLOSSARY MODAL -->
@@ -205,10 +186,10 @@ body{display:flex;flex-direction:column;align-items:center;padding:20px 16px 40p
         <tr><td>Succesor</td><td>Numărul imediat următor: succ(n) = n + 1.</td></tr>
         <tr><td>Predecesor</td><td>Numărul imediat anterior: pred(n) = n − 1.</td></tr>
         <tr><td>Cifre romane</td><td>I=1, V=5, X=10, L=50, C=100, D=500, M=1000.</td></tr>
-        <tr><td>Comparare</td><td>Stabilirea relației dintre două numere: &lt;, &gt;, =.</td></tr>
+        <tr><td>Comparare</td><td>Stabilirea relației: &lt;, &gt;, =.</td></tr>
         <tr><td>Ordonare crescătoare</td><td>De la cel mai mic la cel mai mare.</td></tr>
         <tr><td>Ordonare descrescătoare</td><td>De la cel mai mare la cel mai mic.</td></tr>
-        <tr><td>Rotunjire</td><td>Aproximarea unui număr la un anumit ordin.</td></tr>
+        <tr><td>Rotunjire</td><td>Aproximarea la un anumit ordin.</td></tr>
         <tr><td>Aproximare prin lipsă</td><td>Cifra rămâne; cifrele inferioare → 0.</td></tr>
         <tr><td>Aproximare prin adaos</td><td>Cifra crește cu 1; cifrele inferioare → 0.</td></tr>
         <tr><td>Termeni (adunare)</td><td>Numerele care se adună.</td></tr>
@@ -229,7 +210,7 @@ body{display:flex;flex-direction:column;align-items:center;padding:20px 16px 40p
   </div>
 </div>
 
-<!-- WELCOME MODAL (Nume + Clasa) -->
+<!-- WELCOME MODAL -->
 <div class="modal-overlay open" id="modal-welcome">
   <div class="modal">
     <svg style="width:60px;height:60px;display:block;margin:0 auto 12px" viewBox="0 0 120 120" xmlns="http://www.w3.org/2000/svg">
@@ -256,75 +237,56 @@ body{display:flex;flex-direction:column;align-items:center;padding:20px 16px 40p
       <ellipse cx="38" cy="96" rx="6" ry="4" fill="#7c3aed"/>
       <ellipse cx="58" cy="96" rx="6" ry="4" fill="#7c3aed"/>
     </svg>
-    <h2>Bun venit în SpeedyMATE Clasa 5!</h2>
+    <h2>Bun venit în SpeedyMATE!</h2>
     <p>Completează datele tale pentru a începe antrenamentul.</p>
-    <div class="field">
-      <label>Numele tău</label>
-      <input id="inp-name" type="text" placeholder="ex. Maria Ionescu" autocomplete="off">
-    </div>
-    <div class="field">
-      <label>Clasa</label>
-      <input id="inp-clasa" type="text" placeholder="ex. 5A" autocomplete="off">
-    </div>
+    <div class="field"><label>Numele tău</label><input id="inp-name" type="text" placeholder="ex. Maria Ionescu" autocomplete="off"></div>
+    <div class="field"><label>Clasa</label><input id="inp-clasa" type="text" placeholder="ex. 5A" autocomplete="off"></div>
     <button class="btn-primary" style="width:100%;margin-top:4px" onclick="saveUser()">Începe →</button>
   </div>
 </div>
 
-<!-- SETUP SCREEN -->
+<!-- SETUP -->
 <div id="s-setup" class="screen active">
   <div style="text-align:center;padding-top:8px;margin-bottom:16px">
     <div class="logo">Speedy<span>MATE</span></div>
     <div class="logo-sub">Clasa 5 · Matematică</div>
-    <div class="user-badge" id="user-badge" onclick="editUser()">
-      <span>👤</span>
-      <div id="user-name-display">—</div>
-      <span>· Clasa <span id="user-clasa-display">—</span> · ✏️</span>
+    <div class="user-badge" onclick="editUser()">
+      👤 <span id="user-name-display">—</span> · Clasa <span id="user-clasa-display">—</span> · ✏️
     </div>
   </div>
 
-  <!-- UNIT TABS -->
   <div class="unit-tabs">
-    <button class="unit-tab active" onclick="switchUnit(0)">U1 · Numere Naturale <span style="opacity:.6;font-size:.65rem">93 teme</span></button>
-    <button class="unit-tab" onclick="switchUnit(1)">U2 · Urmează</button>
-    <button class="unit-tab" onclick="switchUnit(2)">U3 · Urmează</button>
-    <button class="unit-tab" onclick="switchUnit(3)">U4 · Urmează</button>
+    <button class="unit-tab active" onclick="switchUnit(0)">U1 · Numere Naturale</button>
+    <button class="unit-tab" onclick="switchUnit(1)">U2 · Divizibilitate</button>
+    <button class="unit-tab" onclick="switchUnit(2)">U3 · Fracții</button>
+    <button class="unit-tab" onclick="switchUnit(3)">U4 · Geometrie</button>
   </div>
 
-  <!-- U1 PANEL -->
   <div class="unit-panel active" id="unit-0">
-    <div class="themes-scroll">
-      <div class="themes-grid" id="themes-grid-0"></div>
-    </div>
+    <div class="unit-title">Unitate de Învățare 1 — Numere Naturale</div>
+    <div class="unit-sub">33 teme · 40 exerciții per temă · shuffle la fiecare rulare</div>
+    <div class="themes-scroll"><div class="themes-grid" id="themes-grid-0"></div></div>
   </div>
+  <div class="unit-panel" id="unit-1"><div style="text-align:center;padding:40px 0;color:var(--dim);font-size:.88rem">Urmează în curând</div></div>
+  <div class="unit-panel" id="unit-2"><div style="text-align:center;padding:40px 0;color:var(--dim);font-size:.88rem">Urmează în curând</div></div>
+  <div class="unit-panel" id="unit-3"><div style="text-align:center;padding:40px 0;color:var(--dim);font-size:.88rem">Urmează în curând</div></div>
 
-  <!-- U2-U4 PANELS -->
-  <div class="unit-panel" id="unit-1">
-    <div style="text-align:center;padding:40px 0;color:var(--dim);font-size:.88rem">Urmează în curând</div>
-  </div>
-  <div class="unit-panel" id="unit-2">
-    <div style="text-align:center;padding:40px 0;color:var(--dim);font-size:.88rem">Urmează în curând</div>
-  </div>
-  <div class="unit-panel" id="unit-3">
-    <div style="text-align:center;padding:40px 0;color:var(--dim);font-size:.88rem">Urmează în curând</div>
-  </div>
-
-  <!-- DIFF 2 -->
   <div style="margin-top:16px">
-    <div style="font-size:.78rem;color:var(--dim);font-weight:600;text-transform:uppercase;letter-spacing:.07em;margin-bottom:10px">Dificultate 2 — Urmează</div>
+    <div style="font-size:.75rem;color:var(--dim);font-weight:600;text-transform:uppercase;letter-spacing:.07em;margin-bottom:10px">Dificultate 2 — Urmează</div>
     <div class="diff2-row">
-      <div class="diff2-card"><div class="diff2-name">Recapitulare</div><div class="diff2-sub">Mix teme · 20 Q</div></div>
-      <div class="diff2-card"><div class="diff2-name">Test Unitate</div><div class="diff2-sub">Unitate completă · 20 Q</div></div>
-      <div class="diff2-card"><div class="diff2-name">Test Clasă</div><div class="diff2-sub">Toate unitățile · 20 Q</div></div>
+      <div class="diff2-card"><div class="diff2-name">Recapitulare U1</div><div class="diff2-sub">Mix 33 teme · 20 Q</div><div class="diff2-tag">Urmează</div></div>
+      <div class="diff2-card"><div class="diff2-name">Test Unitate</div><div class="diff2-sub">Unitate completă · 20 Q</div><div class="diff2-tag">Urmează</div></div>
+      <div class="diff2-card"><div class="diff2-name">Test Clasă 5</div><div class="diff2-sub">Toate unitățile · 20 Q</div><div class="diff2-tag">Urmează</div></div>
     </div>
   </div>
 
   <div class="setup-action">
     <button class="btn-primary" onclick="goReady()">Continuă →</button>
   </div>
-  <div class="meta-footer">SpeedyMATE Clasa 5 · OMENCS 3393/2017</div>
+  <div class="meta-footer">SpeedyMATE Clasa 5 · OMENCS 3393/2017 · 1.320 exerciții · Shuffle anti-cheat</div>
 </div>
 
-<!-- READY SCREEN -->
+<!-- READY -->
 <div id="s-ready" class="screen">
   <div style="text-align:center;margin-bottom:8px">
     <div class="logo">Speedy<span>MATE</span></div>
@@ -332,7 +294,7 @@ body{display:flex;flex-direction:column;align-items:center;padding:20px 16px 40p
   </div>
   <div class="ready-meta" id="ready-meta">Unitate de Învățare 1</div>
   <div class="ready-title" id="ready-title">—</div>
-  <div class="ready-test" id="ready-test">Test 1 din 4</div>
+  <div class="ready-info" id="ready-info">10 întrebări · ordine aleatorie</div>
   <div class="ready-btns">
     <button class="btn-theory" onclick="toggleTheory()">📚 Recapitulare teorie</button>
     <button class="btn-start" onclick="startQuiz()">▶ Ia testul</button>
@@ -344,7 +306,7 @@ body{display:flex;flex-direction:column;align-items:center;padding:20px 16px 40p
   <div class="meta-footer" id="ready-footer">SpeedyMATE Clasa 5</div>
 </div>
 
-<!-- QUIZ SCREEN -->
+<!-- QUIZ -->
 <div id="s-quiz" class="screen">
   <div class="quiz-header">
     <div class="quiz-meta" id="quiz-meta-left">—</div>
@@ -363,7 +325,7 @@ body{display:flex;flex-direction:column;align-items:center;padding:20px 16px 40p
   <div class="meta-footer" id="quiz-footer">SpeedyMATE Clasa 5</div>
 </div>
 
-<!-- RESULT SCREEN -->
+<!-- RESULT -->
 <div id="s-result" class="screen">
   <div style="text-align:center;margin-bottom:8px">
     <div class="logo">Speedy<span>MATE</span></div>
@@ -383,67 +345,75 @@ body{display:flex;flex-direction:column;align-items:center;padding:20px 16px 40p
 </div>
 
 <script>
-const BASE_URL='https://raw.githubusercontent.com/Laurst2710/TestareApp/main/data/';
-const TESTS=['T1','T2','T3','T4'];
-const PASS=0.8, MASTERY_MIN=3, LS_KEY='speedymate_v3';
+const BASE_URL = 'https://raw.githubusercontent.com/Laurst2710/TestareApp/main/data/';
+const PASS = 0.8, MASTERY_MIN = 3, Q_PER_TEST = 10, LS_KEY = 'speedymate_v4';
 
-// TOATE 93 TEME CLASA 5
-const ALL_THEMES=[
-  // U1 — 33 teme
-  {u:1,key:'Tema1', label:'Sistemul zecimal; cifre, clase, ordine',file:'MANUAL_U1_Tema1.json',active:true},
-  {u:1,key:'Tema2', label:'Scrierea/citirea până la miliarde',file:'MANUAL_U1_Tema2.json',active:true},
-  {u:1,key:'Tema3', label:'Cifre romane: I,V,X,L,C,D,M',file:'MANUAL_U1_Tema3.json',active:true},
-  {u:1,key:'Tema4', label:'Poziționarea pe axă; succesor, predecesor',file:'MANUAL_U1_Tema4.json',active:true},
-  {u:1,key:'Tema5', label:'Compararea a două numere; <, >, =',file:'MANUAL_U1_Tema5.json',active:true},
-  {u:1,key:'Tema6', label:'Ordonarea crescătoare și descrescătoare',file:'MANUAL_U1_Tema6.json',active:true},
-  {u:1,key:'Tema7', label:'Rotunjirea la zeci, sute, mii',file:'MANUAL_U1_Tema7.json',active:true},
-  {u:1,key:'Tema8', label:'Aproximare prin lipsă și prin adaos',file:'MANUAL_U1_Tema8.json',active:true},
-  {u:1,key:'Tema9', label:'Termeni, sumă; comutativitate, asociativitate',file:'MANUAL_U1_Tema9.json',active:true},
-  {u:1,key:'Tema10',label:'Descăzut, scăzător, diferență; proba scăderii',file:'MANUAL_U1_Tema10.json',active:true},
-  {u:1,key:'Tema11',label:'Factori, produs; proprietăți înmulțire',file:'MANUAL_U1_Tema11.json',active:false},
-  {u:1,key:'Tema12',label:'Factor comun; scoaterea factorului comun',file:'MANUAL_U1_Tema12.json',active:false},
-  {u:1,key:'Tema13',label:'Împărțire exactă; deîmpărțit, împărțitor, cât',file:'MANUAL_U1_Tema13.json',active:false},
-  {u:1,key:'Tema14',label:'Împărțire cu rest; D=I×C+R',file:'MANUAL_U1_Tema14.json',active:false},
-  {u:1,key:'Tema15',label:'Puterea. Bază, exponent; a⁰=1, a¹=a',file:'MANUAL_U1_Tema15.json',active:true},
-  {u:1,key:'Tema16',label:'Pătratul unui număr; pătrate perfecte',file:'MANUAL_U1_Tema16.json',active:false},
-  {u:1,key:'Tema17',label:'Cubul unui număr; cuburi perfecte',file:'MANUAL_U1_Tema17.json',active:false},
-  {u:1,key:'Tema18',label:'Produs de puteri: aᵐ×aⁿ=aᵐ⁺ⁿ',file:'MANUAL_U1_Tema18.json',active:false},
-  {u:1,key:'Tema19',label:'Cât de puteri: aᵐ÷aⁿ=aᵐ⁻ⁿ',file:'MANUAL_U1_Tema19.json',active:false},
-  {u:1,key:'Tema20',label:'Puterea unei puteri: (aᵐ)ⁿ=aᵐˣⁿ',file:'MANUAL_U1_Tema20.json',active:false},
-  {u:1,key:'Tema21',label:'Puterea unui produs: (a×b)ⁿ=aⁿ×bⁿ',file:'MANUAL_U1_Tema21.json',active:false},
-  {u:1,key:'Tema22',label:'Compararea puterilor — aceeași bază',file:'MANUAL_U1_Tema22.json',active:false},
-  {u:1,key:'Tema23',label:'Compararea puterilor — același exponent',file:'MANUAL_U1_Tema23.json',active:false},
-  {u:1,key:'Tema24',label:'Descompunere pozițională; baza 10 și baza 2',file:'MANUAL_U1_Tema24.json',active:false},
-  {u:1,key:'Tema25',label:'Scrierea în baza 2; conversie baza 10→2',file:'MANUAL_U1_Tema25.json',active:false},
-  {u:1,key:'Tema26',label:'Ordinea operațiilor: putere > ×÷ > +−',file:'MANUAL_U1_Tema26.json',active:false},
-  {u:1,key:'Tema27',label:'Paranteze: ( ), [ ] și { }',file:'MANUAL_U1_Tema27.json',active:false},
-  {u:1,key:'Tema28',label:'Metoda reducerii la unitate',file:'MANUAL_U1_Tema28.json',active:false},
-  {u:1,key:'Tema29',label:'Metoda comparației',file:'MANUAL_U1_Tema29.json',active:false},
-  {u:1,key:'Tema30',label:'Metoda figurativă (segmente)',file:'MANUAL_U1_Tema30.json',active:false},
-  {u:1,key:'Tema31',label:'Metoda mersului invers',file:'MANUAL_U1_Tema31.json',active:false},
-  {u:1,key:'Tema32',label:'Metoda falsei ipoteze',file:'MANUAL_U1_Tema32.json',active:false},
-  {u:1,key:'Tema33',label:'Istoria numerelor: sisteme antice',file:'MANUAL_U1_Tema33.json',active:false},
+const THEMES = [
+  {key:'Tema1', label:'Sistemul zecimal; cifre, clase, ordine', file:'MANUAL_U1_Tema1.json', active:true},
+  {key:'Tema2', label:'Scrierea și citirea până la miliarde', file:'MANUAL_U1_Tema2.json', active:true},
+  {key:'Tema3', label:'Cifre romane: I,V,X,L,C,D,M', file:'MANUAL_U1_Tema3.json', active:true},
+  {key:'Tema4', label:'Axa numerelor; succesor, predecesor', file:'MANUAL_U1_Tema4.json', active:true},
+  {key:'Tema5', label:'Compararea numerelor; <, >, =', file:'MANUAL_U1_Tema5.json', active:true},
+  {key:'Tema6', label:'Ordonarea crescătoare și descrescătoare', file:'MANUAL_U1_Tema6.json', active:true},
+  {key:'Tema7', label:'Rotunjirea la zeci, sute, mii', file:'MANUAL_U1_Tema7.json', active:true},
+  {key:'Tema8', label:'Aproximare prin lipsă și prin adaos', file:'MANUAL_U1_Tema8.json', active:true},
+  {key:'Tema9', label:'Adunarea; termeni, sumă, proprietăți', file:'MANUAL_U1_Tema9.json', active:true},
+  {key:'Tema10', label:'Scăderea; descăzut, scăzător, diferență', file:'MANUAL_U1_Tema10.json', active:true},
+  {key:'Tema11', label:'Înmulțirea; factori, produs, proprietăți', file:'', active:false},
+  {key:'Tema12', label:'Factor comun; scoaterea factorului comun', file:'', active:false},
+  {key:'Tema13', label:'Împărțirea exactă', file:'', active:false},
+  {key:'Tema14', label:'Împărțirea cu rest; D=I×C+R', file:'', active:false},
+  {key:'Tema15', label:'Puterea; bază, exponent; a⁰=1, a¹=a', file:'MANUAL_U1_Tema15.json', active:true},
+  {key:'Tema16', label:'Pătratul unui număr; pătrate perfecte', file:'', active:false},
+  {key:'Tema17', label:'Cubul unui număr; cuburi perfecte', file:'', active:false},
+  {key:'Tema18', label:'Produs de puteri: aᵐ×aⁿ=aᵐ⁺ⁿ', file:'', active:false},
+  {key:'Tema19', label:'Cât de puteri: aᵐ÷aⁿ=aᵐ⁻ⁿ', file:'', active:false},
+  {key:'Tema20', label:'Puterea unei puteri: (aᵐ)ⁿ=aᵐˣⁿ', file:'', active:false},
+  {key:'Tema21', label:'Puterea unui produs: (a×b)ⁿ', file:'', active:false},
+  {key:'Tema22', label:'Compararea puterilor — aceeași bază', file:'', active:false},
+  {key:'Tema23', label:'Compararea puterilor — același exponent', file:'', active:false},
+  {key:'Tema24', label:'Descompunere pozițională; baza 2', file:'', active:false},
+  {key:'Tema25', label:'Scrierea în baza 2; conversie', file:'', active:false},
+  {key:'Tema26', label:'Ordinea operațiilor: putere > ×÷ > +−', file:'', active:false},
+  {key:'Tema27', label:'Paranteze: ( ), [ ] și { }', file:'', active:false},
+  {key:'Tema28', label:'Metoda reducerii la unitate', file:'', active:false},
+  {key:'Tema29', label:'Metoda comparației', file:'', active:false},
+  {key:'Tema30', label:'Metoda figurativă (segmente)', file:'', active:false},
+  {key:'Tema31', label:'Metoda mersului invers', file:'', active:false},
+  {key:'Tema32', label:'Metoda falsei ipoteze', file:'', active:false},
+  {key:'Tema33', label:'Istoria numerelor: sisteme antice', file:'', active:false},
 ];
 
-let state={name:'',clasa:'',themeIdx:null,testKey:null,data:null,questions:[],cur:0,correct:0,answers:[]};
+let state = {name:'', clasa:'', themeIdx:null, data:null, questions:[], cur:0, correct:0, answers:[]};
 
-function getScores(){try{return JSON.parse(localStorage.getItem(LS_KEY)||'{}')}catch(e){return{}}}
-function saveScore(tk,tt,pct){const sc=getScores();if(!sc[tk])sc[tk]={};sc[tk][tt]=pct;localStorage.setItem(LS_KEY,JSON.stringify(sc))}
-function themeScores(tk){return getScores()[tk]||{}}
-function isMastered(tk){return TESTS.filter(t=>(themeScores(tk)[t]||0)>=PASS).length>=MASTERY_MIN}
-function pipCls(tk,tt){const s=themeScores(tk)[tt];return s===undefined?'':s>=PASS?'pip-ok':'pip-rev'}
-function pipTip(tk,tt){const s=themeScores(tk)[tt];return s===undefined?'':Math.round(s*100)+'%'}
-
-function show(id){document.querySelectorAll('.screen').forEach(s=>s.classList.remove('active'));document.getElementById(id).classList.add('active');window.scrollTo(0,0)}
-
-// ERROR POPUP
-function showErr(msg){
-  const p=document.getElementById('err-popup');
-  p.textContent=msg; p.classList.add('show');
-  setTimeout(()=>p.classList.remove('show'),3000);
+// ── STORAGE ──
+function getScores(){ try{return JSON.parse(localStorage.getItem(LS_KEY)||'{}')}catch(e){return{}} }
+function saveScore(key, pct){
+  const sc = getScores();
+  if(!sc[key]) sc[key] = [];
+  sc[key].push(pct);
+  if(sc[key].length > 20) sc[key] = sc[key].slice(-20); // keep last 20
+  localStorage.setItem(LS_KEY, JSON.stringify(sc));
 }
+function getAvg(key){
+  const sc = getScores()[key];
+  if(!sc || !sc.length) return null;
+  return sc.reduce((a,b)=>a+b,0)/sc.length;
+}
+function getPassCount(key){
+  const sc = getScores()[key];
+  if(!sc) return 0;
+  return sc.filter(p=>p>=PASS).length;
+}
+function isMastered(key){ return getPassCount(key) >= MASTERY_MIN; }
 
-// USER
+// ── SHUFFLE ──
+function shuffle(arr){ return [...arr].sort(()=>Math.random()-.5); }
+
+// ── UI ──
+function show(id){ document.querySelectorAll('.screen').forEach(s=>s.classList.remove('active')); document.getElementById(id).classList.add('active'); window.scrollTo(0,0); }
+function showErr(msg){ const p=document.getElementById('err-popup'); p.textContent=msg; p.classList.add('show'); setTimeout(()=>p.classList.remove('show'),3000); }
+
 function saveUser(){
   const n=document.getElementById('inp-name').value.trim();
   const c=document.getElementById('inp-clasa').value.trim();
@@ -454,159 +424,144 @@ function saveUser(){
   document.getElementById('user-clasa-display').textContent=c;
   document.getElementById('modal-welcome').classList.remove('open');
 }
-function editUser(){
-  document.getElementById('modal-welcome').classList.add('open');
-}
+function editUser(){ document.getElementById('modal-welcome').classList.add('open'); }
 
-// UNIT TABS
 function switchUnit(idx){
   document.querySelectorAll('.unit-tab').forEach((t,i)=>t.classList.toggle('active',i===idx));
   document.querySelectorAll('.unit-panel').forEach((p,i)=>p.classList.toggle('active',i===idx));
 }
 
-// CATALOG
 function renderCatalog(){
-  const u1themes = ALL_THEMES.filter(t=>t.u===1);
   const grid = document.getElementById('themes-grid-0');
-  grid.innerHTML='';
-  u1themes.forEach((th,idx)=>{
-    const mastered=th.active&&isMastered(th.key);
-    const card=document.createElement('div');
-    card.className='theme-card'+(th.active?'':' locked')+(mastered?' mastered':'');
-    card.innerHTML=`
+  grid.innerHTML = '';
+  THEMES.forEach((th, idx) => {
+    const mastered = th.active && isMastered(th.key);
+    const avg = th.active ? getAvg(th.key) : null;
+    const card = document.createElement('div');
+    card.className = 'theme-card' + (!th.active?' locked':'') + (mastered?' mastered':'') + (state.themeIdx===idx?' selected':'');
+    card.innerHTML = `
       ${mastered?'<div class="theme-mastered-badge">✓ Antrenată</div>':''}
       ${!th.active?'<div class="theme-locked-badge">Urmează</div>':''}
       <div class="theme-nr">Tema ${idx+1}</div>
       <div class="theme-name">${th.label}</div>
-      ${th.active?`<div class="tests-row" id="tr-${idx}"></div>`:''}
+      ${th.active?`<div class="theme-score"><div class="theme-score-bar${avg!==null&&avg>=PASS?' good':''}" style="width:${avg!==null?Math.round(avg*100):0}%"></div></div>`:''}
     `;
+    if(th.active) card.onclick = () => { state.themeIdx = idx; renderCatalog(); };
     grid.appendChild(card);
-    if(th.active){
-      const row=document.getElementById('tr-'+idx);
-      TESTS.forEach(t=>{
-        const pc=pipCls(th.key,t), tip=pipTip(th.key,t);
-        const pip=document.createElement('div');
-        pip.className=`test-pip ${pc}`;
-        pip.innerHTML=`${t}${tip?`<span class="tip">${tip}</span>`:''}`;
-        pip.onclick=()=>selectTest(idx,t,pip);
-        row.appendChild(pip);
-      });
-    }
   });
 }
 
-function selectTest(idx,testKey,pipEl){
-  document.querySelectorAll('.test-pip').forEach(p=>p.classList.remove('pip-selected'));
-  document.querySelectorAll('.theme-card').forEach(c=>c.classList.remove('selected'));
-  pipEl.classList.add('pip-selected');
-  pipEl.closest('.theme-card').classList.add('selected');
-  state.themeIdx=idx; state.testKey=testKey;
-}
-
-function goSetup(){renderCatalog();show('s-setup')}
+function goSetup(){ renderCatalog(); show('s-setup'); }
 
 async function goReady(){
-  if(!state.name){showErr('Completează numele și clasa mai întâi!');return;}
-  if(state.themeIdx===null){showErr('Selectează un test din catalog!');return;}
-  const th=ALL_THEMES.filter(t=>t.u===1)[state.themeIdx];
+  if(!state.name){ showErr('Completează datele tale mai întâi!'); return; }
+  if(state.themeIdx === null){ showErr('Selectează o temă din catalog!'); return; }
+  const th = THEMES[state.themeIdx];
   try{
-    const res=await fetch(BASE_URL+th.file);
-    if(!res.ok)throw new Error('HTTP '+res.status);
-    state.data=await res.json();
-  }catch(e){showErr('Eroare la încărcare. Verifică conexiunea.');return;}
-  document.getElementById('ready-meta').textContent=`SpeedyMATE Clasa 5 · Unitate de Învățare 1`;
-  document.getElementById('ready-title').textContent=state.data.meta?.titlu_tema||th.label;
-  document.getElementById('ready-test').textContent=`Test ${TESTS.indexOf(state.testKey)+1} din 4`;
-  document.getElementById('ready-footer').textContent=`${state.name} · Clasa ${state.clasa} · OMENCS 3393/2017`;
-  const ol=document.getElementById('theory-list');
-  ol.innerHTML=(state.data.teorie||[]).map(t=>`<li>${t}</li>`).join('')||'<li>—</li>';
+    const res = await fetch(BASE_URL + th.file);
+    if(!res.ok) throw new Error('HTTP '+res.status);
+    state.data = await res.json();
+  } catch(e){ showErr('Eroare la încărcare. Verifică conexiunea.'); return; }
+  document.getElementById('ready-meta').textContent = 'SpeedyMATE Clasa 5 · Unitate de Învățare 1';
+  document.getElementById('ready-title').textContent = state.data.meta?.titlu_tema || th.label;
+  document.getElementById('ready-info').textContent = `${state.data.items.length} exerciții disponibile · 10 extrase aleatoriu`;
+  document.getElementById('ready-footer').textContent = `${state.name} · Clasa ${state.clasa} · OMENCS 3393/2017`;
+  const ol = document.getElementById('theory-list');
+  ol.innerHTML = (state.data.teorie||[]).map(t=>`<li>${t}</li>`).join('') || '<li>—</li>';
   document.getElementById('theory-panel').classList.remove('open');
+  document.querySelector('.btn-theory').textContent = '📚 Recapitulare teorie';
   show('s-ready');
 }
 
 function toggleTheory(){
-  const p=document.getElementById('theory-panel');
+  const p = document.getElementById('theory-panel');
   p.classList.toggle('open');
-  document.querySelector('.btn-theory').textContent=p.classList.contains('open')?'▲ Ascunde teoria':'📚 Recapitulare teorie';
+  document.querySelector('.btn-theory').textContent = p.classList.contains('open') ? '▲ Ascunde teoria' : '📚 Recapitulare teorie';
 }
 
 function startQuiz(){
-  const qs=state.data.teste?.[state.testKey];
-  if(!qs||!qs.length){showErr('Testul nu are întrebări.');return;}
-  state.questions=qs;state.cur=0;state.correct=0;state.answers=[];
+  const all = state.data.items;
+  if(!all || !all.length){ showErr('Testul nu are exerciții.'); return; }
+  // SHUFFLE → take first Q_PER_TEST
+  state.questions = shuffle(all).slice(0, Q_PER_TEST);
+  state.cur = 0; state.correct = 0; state.answers = [];
   renderQ();
-  const th=ALL_THEMES.filter(t=>t.u===1)[state.themeIdx];
-  document.getElementById('quiz-footer').textContent=`${state.name} · Clasa ${state.clasa} · ${th.label} · ${state.testKey}`;
+  const th = THEMES[state.themeIdx];
+  document.getElementById('quiz-footer').textContent = `${state.name} · Clasa ${state.clasa} · ${th.label}`;
   show('s-quiz');
 }
 
 function renderQ(){
-  const q=state.questions[state.cur],tot=state.questions.length;
-  const th=ALL_THEMES.filter(t=>t.u===1)[state.themeIdx];
-  document.getElementById('quiz-meta-left').textContent=th.label;
-  document.getElementById('quiz-counter').textContent=`${state.cur+1}/${tot}`;
-  document.getElementById('quiz-prog').style.width=(state.cur/tot*100)+'%';
-  document.getElementById('q-text').textContent=q.q;
-  const wrap=document.getElementById('opts-wrap');
-  wrap.innerHTML='';
-  ['A','B','C','D'].forEach((l,i)=>{
-    const btn=document.createElement('button');
-    btn.className='opt';
-    btn.innerHTML=`<span class="opt-letter">${l}</span>${q.opts[i]}`;
-    btn.onclick=()=>answer(i,q);
+  const q = state.questions[state.cur], tot = state.questions.length;
+  document.getElementById('quiz-meta-left').textContent = THEMES[state.themeIdx].label;
+  document.getElementById('quiz-counter').textContent = `${state.cur+1}/${tot}`;
+  document.getElementById('quiz-prog').style.width = (state.cur/tot*100)+'%';
+  document.getElementById('q-text').textContent = q.q;
+  const wrap = document.getElementById('opts-wrap');
+  wrap.innerHTML = '';
+  // Shuffle answers too, keeping track of correct
+  const indices = shuffle([0,1,2,3]);
+  const correctOpt = q.opts[q.ok];
+  const shuffledOpts = indices.map(i => q.opts[i]);
+  const newOk = shuffledOpts.indexOf(correctOpt);
+  ['A','B','C','D'].forEach((l, i) => {
+    const btn = document.createElement('button');
+    btn.className = 'opt';
+    btn.innerHTML = `<span class="opt-letter">${l}</span>${shuffledOpts[i]}`;
+    btn.onclick = () => answer(i, newOk, q);
     wrap.appendChild(btn);
   });
-  document.getElementById('feedback-box').className='feedback-box';
-  document.getElementById('btn-next').textContent=state.cur<tot-1?'Următoarea →':'Vezi rezultatul →';
+  document.getElementById('feedback-box').className = 'feedback-box';
+  document.getElementById('btn-next').textContent = state.cur < tot-1 ? 'Următoarea →' : 'Vezi rezultatul →';
 }
 
-function answer(idx,q){
+function answer(idx, newOk, q){
   document.querySelectorAll('.opt').forEach(o=>o.disabled=true);
-  const isOk=idx===q.ok;
-  if(isOk)state.correct++;
-  state.answers.push({q:q.q,chosen:idx,ok:q.ok,correct:isOk});
+  const isOk = idx === newOk;
+  if(isOk) state.correct++;
+  state.answers.push({q:q.q, correct:isOk});
   document.querySelectorAll('.opt')[idx].classList.add(isOk?'opt-ok':'opt-err');
-  if(!isOk)document.querySelectorAll('.opt')[q.ok].classList.add('opt-reveal');
-  const fb=document.getElementById('feedback-box');
-  fb.className='feedback-box show '+(isOk?'fb-ok':'fb-err');
-  document.getElementById('fb-label').textContent=isOk?'✓ Corect!':'✗ De revăzut';
-  document.getElementById('fb-text').textContent=isOk?(q.exOk||'Răspuns corect.'):(q.exGr||`Răspuns corect: ${q.opts[q.ok]}`);
+  if(!isOk) document.querySelectorAll('.opt')[newOk].classList.add('opt-reveal');
+  const fb = document.getElementById('feedback-box');
+  fb.className = 'feedback-box show ' + (isOk?'fb-ok':'fb-err');
+  document.getElementById('fb-label').textContent = isOk ? '✓ Corect!' : '✗ De revăzut';
+  document.getElementById('fb-text').textContent = isOk ? (q.exOk||'Răspuns corect.') : (q.exGr||'Răspuns greșit.');
 }
 
 function nextQ(){
   state.cur++;
-  if(state.cur>=state.questions.length){showResult();return;}
-  renderQ();window.scrollTo(0,0);
+  if(state.cur >= state.questions.length){ showResult(); return; }
+  renderQ(); window.scrollTo(0,0);
 }
 
 function showResult(){
-  const tot=state.questions.length,pct=state.correct/tot,pass=pct>=PASS;
-  const th=ALL_THEMES.filter(t=>t.u===1)[state.themeIdx];
-  saveScore(th.key,state.testKey,pct);
-  document.getElementById('res-emoji').textContent=pct===1?'🏆':pct>=.8?'🎉':pct>=.5?'💪':'📖';
-  document.getElementById('res-score').textContent=`${state.correct}/${tot}`;
-  document.getElementById('res-label').textContent=`${Math.round(pct*100)}% — ${state.correct} din ${tot} corecte`;
-  const st=document.getElementById('res-status');
-  st.textContent=pass?'✓ Promovat':'✗ De revăzut';
-  st.className='result-status '+(pass?'status-ok':'status-rev');
-  const banner=document.getElementById('mastery-banner');
+  const tot = state.questions.length, pct = state.correct/tot, pass = pct >= PASS;
+  const th = THEMES[state.themeIdx];
+  saveScore(th.key, pct);
+  document.getElementById('res-emoji').textContent = pct===1?'🏆':pct>=.8?'🎉':pct>=.5?'💪':'📖';
+  document.getElementById('res-score').textContent = `${state.correct}/${tot}`;
+  document.getElementById('res-label').textContent = `${Math.round(pct*100)}% — ${state.correct} din ${tot} corecte`;
+  const st = document.getElementById('res-status');
+  st.textContent = pass ? '✓ Promovat' : '✗ De revăzut';
+  st.className = 'result-status ' + (pass?'status-ok':'status-rev');
+  const banner = document.getElementById('mastery-banner');
   if(isMastered(th.key)){
     banner.classList.add('show');
-    document.getElementById('mastery-msg').textContent=`Ai trecut ${TESTS.filter(t=>(themeScores(th.key)[t]||0)>=PASS).length} teste cu 80%+ la ${th.label}`;
-  }else{banner.classList.remove('show');}
-  document.getElementById('res-breakdown').innerHTML=state.answers.map((a,i)=>`
+    document.getElementById('mastery-msg').textContent = `Ai trecut ${getPassCount(th.key)} teste cu 80%+ la ${th.label}`;
+  } else { banner.classList.remove('show'); }
+  document.getElementById('res-breakdown').innerHTML = state.answers.map((a,i)=>`
     <div class="rb-row">
       <span style="color:var(--dim);font-size:.74rem">Î${i+1}</span>
       <span style="flex:1;margin:0 7px;font-size:.77rem;color:var(--dim)">${state.questions[i].q.substring(0,52)}…</span>
       <span class="${a.correct?'rb-ok':'rb-err'}">${a.correct?'✓':'✗'}</span>
     </div>`).join('');
-  document.getElementById('res-footer').textContent=`${state.name} · Clasa ${state.clasa} · ${th.label} · ${state.testKey} · OMENCS 3393/2017`;
+  document.getElementById('res-footer').textContent = `${state.name} · Clasa ${state.clasa} · ${th.label} · OMENCS 3393/2017`;
   show('s-result');
 }
 
-function retryTest(){startQuiz();}
-function openGlossar(){document.getElementById('modal-glosar').classList.add('open');}
-function closeGlossar(){document.getElementById('modal-glosar').classList.remove('open');}
+function retryTest(){ startQuiz(); }
+function openGlossar(){ document.getElementById('modal-glosar').classList.add('open'); }
+function closeGlossar(){ document.getElementById('modal-glosar').classList.remove('open'); }
 
 // INIT
 renderCatalog();

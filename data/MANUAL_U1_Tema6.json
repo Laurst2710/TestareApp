@@ -15,54 +15,486 @@
     "Ordonarea descrescătoare înseamnă aranjarea numerelor de la cel mai mare la cel mai mic (fiecare număr este mai mare decât următorul).",
     "Pentru a ordona, comparăm numerele două câte două: mai întâi după numărul de cifre, apoi cifră cu cifră de la stânga la dreapta."
   ],
-  "teste": {
-    "T1": [
-      {"q":"Ordonează crescător: 35, 7, 120, 48.","opts":["7, 35, 48, 120","35, 7, 120, 48","120, 48, 35, 7","7, 48, 35, 120"],"ok":0,"exOk":"7 (1 cifră) < 35 < 48 < 120 (3 cifre). Corect!","exGr":"Începe cu numărul cel mai mic (cel cu mai puține cifre): 7, apoi compară restul."},
-      {"q":"Ordonează descrescător: 5, 100, 23, 67.","opts":["100, 67, 23, 5","5, 23, 67, 100","100, 23, 67, 5","67, 100, 23, 5"],"ok":0,"exOk":"100 > 67 > 23 > 5. De la cel mai mare la cel mai mic.","exGr":"Descrescător = de la mare la mic. Cel mai mare este 100 (3 cifre)."},
-      {"q":"Care șir este ordonat crescător?","opts":["12, 9, 34, 100","9, 12, 34, 100","100, 34, 12, 9","9, 34, 12, 100"],"ok":1,"exOk":"9 < 12 < 34 < 100. Fiecare număr este mai mic decât următorul.","exGr":"Crescător = fiecare termen mai mic decât cel următor. Verifică 9, 12, 34, 100."},
-      {"q":"Care șir este ordonat descrescător?","opts":["3, 15, 8, 22","22, 15, 8, 3","15, 22, 8, 3","8, 3, 22, 15"],"ok":1,"exOk":"22 > 15 > 8 > 3. Fiecare număr mai mare decât cel următor.","exGr":"Descrescător = fiecare termen mai mare decât cel următor."},
-      {"q":"Cel mai mic număr din șirul 45, 9, 230, 18 este:","opts":["45","18","9","230"],"ok":2,"exOk":"9 are o singură cifră, deci este cel mai mic.","exGr":"Cel mai mic număr are cel mai puțin cifre. 9 are 1 cifră."},
-      {"q":"Cel mai mare număr din șirul 67, 8, 345, 99 este:","opts":["99","67","8","345"],"ok":3,"exOk":"345 are 3 cifre, deci este cel mai mare.","exGr":"Cel mai mare are cele mai multe cifre. 345 are 3 cifre."},
-      {"q":"Ordonează crescător: 200, 20, 2, 2.000.","opts":["2, 20, 200, 2.000","2.000, 200, 20, 2","20, 2, 200, 2.000","2, 200, 20, 2.000"],"ok":0,"exOk":"1 cifră < 2 cifre < 3 cifre < 4 cifre → 2 < 20 < 200 < 2.000.","exGr":"Compară numărul de cifre: 2(1), 20(2), 200(3), 2.000(4)."},
-      {"q":"Al doilea număr în ordine crescătoare din 55, 11, 99, 33 este:","opts":["11","33","55","99"],"ok":1,"exOk":"Crescător: 11, 33, 55, 99. Al doilea este 33.","exGr":"Ordonează mai întâi: 11 < 33 < 55 < 99. Al doilea = 33."},
-      {"q":"Ordonează descrescător: 101, 99, 110, 109.","opts":["110, 109, 101, 99","99, 101, 109, 110","110, 101, 109, 99","109, 110, 101, 99"],"ok":0,"exOk":"110 > 109 > 101 > 99.","exGr":"Toate au 3 cifre. Compară cifra sutelor: 1=1, apoi zecile: 1>0. 110>109>101>99."},
-      {"q":"Care afirmație este adevărată?","opts":["Cel mai mare număr dintr-un șir este primul la ordonarea crescătoare","Cel mai mic număr este primul la ordonarea crescătoare","Ordonarea crescătoare și descrescătoare dau același rezultat","La ordonare nu contează numărul de cifre"],"ok":1,"exOk":"La ordonarea crescătoare, cel mai mic număr este primul.","exGr":"Crescător = de la mic la mare. Primul termen = cel mai mic."}
-    ],
-    "T2": [
-      {"q":"Ordonează crescător: 4.500, 3.999, 5.001, 4.499.","opts":["3.999, 4.499, 4.500, 5.001","5.001, 4.500, 4.499, 3.999","4.499, 3.999, 4.500, 5.001","3.999, 4.500, 4.499, 5.001"],"ok":0,"exOk":"3.999 < 4.499 < 4.500 < 5.001.","exGr":"Toate au 4 cifre. Compară miile: 3<4<4<5, apoi sutele pentru cele cu 4."},
-      {"q":"Ordonează descrescător: 12.345, 12.354, 12.435, 12.543.","opts":["12.543, 12.435, 12.354, 12.345","12.345, 12.354, 12.435, 12.543","12.435, 12.543, 12.354, 12.345","12.543, 12.354, 12.435, 12.345"],"ok":0,"exOk":"La sute: 5>4>3>3. La zeci (pentru 12.354 vs 12.345): 5>4.","exGr":"Toate au aceleași prime 2 cifre (12). Compară sutele: 5,4,3,3 → descrescător."},
-      {"q":"Al treilea în ordine descrescătoare din 1.000, 999, 1.001, 998 este:","opts":["999","1.000","998","1.001"],"ok":0,"exOk":"Descrescător: 1.001, 1.000, 999, 998. Al treilea = 999.","exGr":"Ordonează: 1.001>1.000>999>998. Al treilea = 999."},
-      {"q":"Care număr lipsește din șirul crescător: 23.100, ___, 23.300, 23.400?","opts":["23.000","23.200","23.150","23.050"],"ok":1,"exOk":"Șirul crește cu 100: 23.100, 23.200, 23.300, 23.400.","exGr":"Diferența dintre termeni consecutivi este 100. Deci lipsește 23.200."},
-      {"q":"Ordonează crescător: 50.050, 50.500, 50.005, 50.505.","opts":["50.005, 50.050, 50.500, 50.505","50.505, 50.500, 50.050, 50.005","50.050, 50.005, 50.500, 50.505","50.005, 50.500, 50.050, 50.505"],"ok":0,"exOk":"La sute: 0<0<5<5. La zeci: 0<5 pentru primele două; 0<0 (egal) deci la unități: 0<5.","exGr":"Compară cifră cu cifră de la stânga: 50.005<50.050<50.500<50.505."},
-      {"q":"Care șir este incorect ordonat crescător?","opts":["1, 10, 100, 1.000","5, 50, 500, 5.000","100, 10, 1.000, 1","10, 1, 100, 1.000"],"ok":2,"exOk":"100, 10, 1.000, 1 nu este crescător (100 > 10).","exGr":"Verifică fiecare șir: în varianta C, 100 > 10, deci nu este crescător."},
-      {"q":"Ordonează descrescător: 77.777, 7.777, 777, 77.","opts":["77.777, 7.777, 777, 77","77, 777, 7.777, 77.777","7.777, 77.777, 77, 777","77.777, 777, 7.777, 77"],"ok":0,"exOk":"5 cifre > 4 cifre > 3 cifre > 2 cifre → descrescător.","exGr":"Numărul de cifre decide: 77.777(5)>7.777(4)>777(3)>77(2)."},
-      {"q":"Cel mai mare dintre 34.567, 34.576, 34.657, 34.675 este:","opts":["34.567","34.576","34.657","34.675"],"ok":3,"exOk":"La sute: 5=5>6... La zeci: 7>5. 34.675 > 34.657.","exGr":"Compară cifră cu cifră. La sute: 6>5, deci 34.6xx > 34.5xx. Dintre 34.657 și 34.675: la zeci 7>5."},
-      {"q":"Cel mai mic din 100.001, 100.010, 100.100, 100.000 este:","opts":["100.001","100.010","100.100","100.000"],"ok":3,"exOk":"100.000 are toate cifrele 0 după 1, deci este cel mai mic.","exGr":"Compară cifrele: 100.000 < 100.001 < 100.010 < 100.100."},
-      {"q":"Câte numere sunt între 999 și 1.001 (exclusiv capetele)?","opts":["0","1","2","3"],"ok":1,"exOk":"Singurul număr strict între 999 și 1.001 este 1.000.","exGr":"999 < 1.000 < 1.001. Doar 1.000 se află între ele."}
-    ],
-    "T3": [
-      {"q":"Ordonează crescător 5 numere: 3.456, 3.465, 3.546, 3.564, 3.645.","opts":["3.456, 3.465, 3.546, 3.564, 3.645","3.645, 3.564, 3.546, 3.465, 3.456","3.456, 3.546, 3.465, 3.564, 3.645","3.465, 3.456, 3.546, 3.645, 3.564"],"ok":0,"exOk":"La sute: 4<4<5<5<6. La zeci (4x vs 4y): 5<6. Corect.","exGr":"Toate încep cu 3. Compară sutele: 4,4,5,5,6. Ordonează."},
-      {"q":"Care este penultimul în ordine descrescătoare: 1.234, 2.341, 3.412, 4.123?","opts":["1.234","2.341","3.412","4.123"],"ok":1,"exOk":"Descrescător: 4.123, 3.412, 2.341, 1.234. Penultimul = 2.341.","exGr":"Ordonează descrescător mai întâi: 4.123>3.412>2.341>1.234. Penultimul=2.341."},
-      {"q":"Completează șirul descrescător: 50.000, 49.000, ___, 47.000.","opts":["48.500","48.000","49.500","46.000"],"ok":1,"exOk":"Scade cu 1.000 la fiecare pas: 50.000, 49.000, 48.000, 47.000.","exGr":"Diferența este 1.000. 49.000 - 1.000 = 48.000."},
-      {"q":"Câte numere de 3 cifre sunt mai mari decât 990?","opts":["8","9","10","11"],"ok":1,"exOk":"991, 992, 993, 994, 995, 996, 997, 998, 999 → 9 numere.","exGr":"De la 991 la 999: 999-991+1=9 numere."},
-      {"q":"Ordonează crescător: 505.050, 550.500, 500.505, 505.500.","opts":["500.505, 505.050, 505.500, 550.500","550.500, 505.500, 505.050, 500.505","505.050, 500.505, 550.500, 505.500","500.505, 505.500, 505.050, 550.500"],"ok":0,"exOk":"La zeci de mii: 0<0<0<5. La mii: 0<5<5. La sute: 5<0... reordonăm: 500.505<505.050<505.500<550.500.","exGr":"Compară cifră cu cifră: 500.505<505.050<505.500<550.500."},
-      {"q":"Al doilea cel mai mare număr din 234.567, 234.576, 234.657, 234.765 este:","opts":["234.567","234.576","234.657","234.765"],"ok":2,"exOk":"Descrescător: 234.765, 234.657, 234.576, 234.567. Al doilea = 234.657.","exGr":"Ordonează descrescător. La sute: 7>6>5>5. La zeci (5xx): 7>6. Deci 234.657 e al doilea."},
-      {"q":"Care șir conține toate cele 4 numere ordonate descrescător?","opts":["999, 1.000, 9.999, 10.000","10.000, 9.999, 1.000, 999","9.999, 10.000, 999, 1.000","1.000, 999, 10.000, 9.999"],"ok":1,"exOk":"10.000 > 9.999 > 1.000 > 999. Descrescător corect.","exGr":"Verifică: 10.000(5 cifre) > 9.999(4 cifre) > 1.000(4 cifre cu mii mai mari) > 999(3 cifre)."},
-      {"q":"Câte numere naturale de 4 cifre există?","opts":["8.999","9.000","9.001","10.000"],"ok":1,"exOk":"De la 1.000 la 9.999: 9.999 - 1.000 + 1 = 9.000 numere.","exGr":"Min=1.000, Max=9.999. Total=9.999-1.000+1=9.000."},
-      {"q":"Ordonează crescător: 1.010.101, 1.001.101, 1.100.101, 1.010.011.","opts":["1.001.101, 1.010.011, 1.010.101, 1.100.101","1.100.101, 1.010.101, 1.010.011, 1.001.101","1.010.101, 1.001.101, 1.100.101, 1.010.011","1.001.101, 1.010.101, 1.010.011, 1.100.101"],"ok":0,"exOk":"La sute de mii: 0<0<0<1. Dintre cele cu 0: la zeci de mii: 0<1<1. Dintre 1.010.xxx: la sute: 0<1.","exGr":"Compară cifră cu cifră: 1.001.101<1.010.011<1.010.101<1.100.101."},
-      {"q":"Cel mai mic număr format din cifrele 5, 2, 8, 0 (fără zero în față) este:","opts":["2.058","2.085","2.508","2.850"],"ok":0,"exOk":"Prima cifră = cea mai mică nenulă = 2. Restul în ordine crescătoare: 0, 5, 8 → 2.058.","exGr":"Minimul: prima cifră cea mai mică nenulă (2), apoi restul crescător: 0, 5, 8 → 2.058."}
-    ],
-    "T4": [
-      {"q":"Cel mai mare număr format din cifrele 3, 7, 1, 9, 5 este:","opts":["97.531","97.513","95.731","75.931"],"ok":0,"exOk":"Maximul: cifrele în ordine descrescătoare → 9, 7, 5, 3, 1 → 97.531.","exGr":"Pentru numărul maxim, aranjăm cifrele descrescător: 9>7>5>3>1 → 97.531."},
-      {"q":"Câte numere de 3 cifre se pot forma cu cifrele 1, 2, 3 (fără repetare)?","opts":["3","6","9","12"],"ok":1,"exOk":"3! = 3×2×1 = 6 permutări: 123, 132, 213, 231, 312, 321.","exGr":"Numărul de aranjamente fără repetare din 3 cifre = 3! = 6."},
-      {"q":"Al treilea cel mai mic număr format din cifrele 4, 0, 7, 2 (fără zero în față) este:","opts":["2.047","2.074","2.407","2.470"],"ok":1,"exOk":"Ordonate crescător: 2.047, 2.074, 2.407, 2.470... Al treilea = 2.407.","exGr":"Minimele: 2.047, 2.074, 2.407... Al treilea = 2.407."},
-      {"q":"Dacă a < b < c, câte dintre afirmațiile a<c, b>a, c>b sunt adevărate?","opts":["1","2","3","0"],"ok":2,"exOk":"a<c (tranzitivitate ✓), b>a (echivalent a<b ✓), c>b (echivalent b<c ✓). Toate 3.","exGr":"Prin tranzitivitate și simetria relației, toate 3 afirmații sunt adevărate."},
-      {"q":"Câte numere naturale sunt cuprinse între 999 și 10.000 (exclusiv)?","opts":["8.999","9.000","9.001","10.001"],"ok":1,"exOk":"De la 1.000 la 9.999: 9.999 - 1.000 + 1 = 9.000 numere.","exGr":"Strict între 999 și 10.000 = numerele de 4 cifre: 1.000,...,9.999 = 9.000 numere."},
-      {"q":"Cel mai mare număr de 5 cifre distincte format din 1,2,3,4,5 este:","opts":["54.321","53.421","54.312","45.321"],"ok":0,"exOk":"Cifrele descrescător: 5,4,3,2,1 → 54.321.","exGr":"Maximum = cifrele în ordine descrescătoare: 54.321."},
-      {"q":"Cel mai mic număr de 5 cifre distincte format din 1,2,3,4,5 este:","opts":["12.345","12.354","21.345","13.245"],"ok":0,"exOk":"Cifrele crescător: 1,2,3,4,5 → 12.345.","exGr":"Minimum = cifrele în ordine crescătoare (prima nenulă): 12.345."},
-      {"q":"Câte numere naturale de 2 cifre au suma cifrelor egală cu 9?","opts":["7","8","9","10"],"ok":2,"exOk":"18, 27, 36, 45, 54, 63, 72, 81, 90 → 9 numere.","exGr":"Perechile (a,b) cu a+b=9, a≠0: (1,8),(2,7),(3,6),(4,5),(5,4),(6,3),(7,2),(8,1),(9,0) = 9."},
-      {"q":"Dintre toate numerele de 3 cifre formate cu 1,2,3 (fără repetare), câte sunt mai mari decât 213?","opts":["2","3","4","5"],"ok":1,"exOk":"Toate: 123,132,213,231,312,321. Mai mari decât 213: 231,312,321 → 3.","exGr":"Lista: 123<132<213<231<312<321. Cele mai mari decât 213: 231,312,321 = 3."},
-      {"q":"Suma celui mai mic și celui mai mare număr de 3 cifre este:","opts":["1.098","1.099","1.100","1.101"],"ok":1,"exOk":"100 + 999 = 1.099.","exGr":"Min(3 cifre)=100, Max(3 cifre)=999. Suma=100+999=1.099."}
-    ]
-  }
+  "items": [
+    {
+      "q": "Ordonează crescător: 35, 7, 120, 48.",
+      "opts": [
+        "7, 35, 48, 120",
+        "35, 7, 120, 48",
+        "120, 48, 35, 7",
+        "7, 48, 35, 120"
+      ],
+      "ok": 0,
+      "exOk": "7 (1 cifră) < 35 < 48 < 120 (3 cifre). Corect!",
+      "exGr": "Începe cu numărul cel mai mic (cel cu mai puține cifre): 7, apoi compară restul."
+    },
+    {
+      "q": "Ordonează descrescător: 5, 100, 23, 67.",
+      "opts": [
+        "100, 67, 23, 5",
+        "5, 23, 67, 100",
+        "100, 23, 67, 5",
+        "67, 100, 23, 5"
+      ],
+      "ok": 0,
+      "exOk": "100 > 67 > 23 > 5. De la cel mai mare la cel mai mic.",
+      "exGr": "Descrescător = de la mare la mic. Cel mai mare este 100 (3 cifre)."
+    },
+    {
+      "q": "Care șir este ordonat crescător?",
+      "opts": [
+        "12, 9, 34, 100",
+        "9, 12, 34, 100",
+        "100, 34, 12, 9",
+        "9, 34, 12, 100"
+      ],
+      "ok": 1,
+      "exOk": "9 < 12 < 34 < 100. Fiecare număr este mai mic decât următorul.",
+      "exGr": "Crescător = fiecare termen mai mic decât cel următor. Verifică 9, 12, 34, 100."
+    },
+    {
+      "q": "Care șir este ordonat descrescător?",
+      "opts": [
+        "3, 15, 8, 22",
+        "22, 15, 8, 3",
+        "15, 22, 8, 3",
+        "8, 3, 22, 15"
+      ],
+      "ok": 1,
+      "exOk": "22 > 15 > 8 > 3. Fiecare număr mai mare decât cel următor.",
+      "exGr": "Descrescător = fiecare termen mai mare decât cel următor."
+    },
+    {
+      "q": "Cel mai mic număr din șirul 45, 9, 230, 18 este:",
+      "opts": [
+        "45",
+        "18",
+        "9",
+        "230"
+      ],
+      "ok": 2,
+      "exOk": "9 are o singură cifră, deci este cel mai mic.",
+      "exGr": "Cel mai mic număr are cel mai puțin cifre. 9 are 1 cifră."
+    },
+    {
+      "q": "Cel mai mare număr din șirul 67, 8, 345, 99 este:",
+      "opts": [
+        "99",
+        "67",
+        "8",
+        "345"
+      ],
+      "ok": 3,
+      "exOk": "345 are 3 cifre, deci este cel mai mare.",
+      "exGr": "Cel mai mare are cele mai multe cifre. 345 are 3 cifre."
+    },
+    {
+      "q": "Ordonează crescător: 200, 20, 2, 2.000.",
+      "opts": [
+        "2, 20, 200, 2.000",
+        "2.000, 200, 20, 2",
+        "20, 2, 200, 2.000",
+        "2, 200, 20, 2.000"
+      ],
+      "ok": 0,
+      "exOk": "1 cifră < 2 cifre < 3 cifre < 4 cifre → 2 < 20 < 200 < 2.000.",
+      "exGr": "Compară numărul de cifre: 2(1), 20(2), 200(3), 2.000(4)."
+    },
+    {
+      "q": "Al doilea număr în ordine crescătoare din 55, 11, 99, 33 este:",
+      "opts": [
+        "11",
+        "33",
+        "55",
+        "99"
+      ],
+      "ok": 1,
+      "exOk": "Crescător: 11, 33, 55, 99. Al doilea este 33.",
+      "exGr": "Ordonează mai întâi: 11 < 33 < 55 < 99. Al doilea = 33."
+    },
+    {
+      "q": "Ordonează descrescător: 101, 99, 110, 109.",
+      "opts": [
+        "110, 109, 101, 99",
+        "99, 101, 109, 110",
+        "110, 101, 109, 99",
+        "109, 110, 101, 99"
+      ],
+      "ok": 0,
+      "exOk": "110 > 109 > 101 > 99.",
+      "exGr": "Toate au 3 cifre. Compară cifra sutelor: 1=1, apoi zecile: 1>0. 110>109>101>99."
+    },
+    {
+      "q": "Care afirmație este adevărată?",
+      "opts": [
+        "Cel mai mare număr dintr-un șir este primul la ordonarea crescătoare",
+        "Cel mai mic număr este primul la ordonarea crescătoare",
+        "Ordonarea crescătoare și descrescătoare dau același rezultat",
+        "La ordonare nu contează numărul de cifre"
+      ],
+      "ok": 1,
+      "exOk": "La ordonarea crescătoare, cel mai mic număr este primul.",
+      "exGr": "Crescător = de la mic la mare. Primul termen = cel mai mic."
+    },
+    {
+      "q": "Ordonează crescător: 4.500, 3.999, 5.001, 4.499.",
+      "opts": [
+        "3.999, 4.499, 4.500, 5.001",
+        "5.001, 4.500, 4.499, 3.999",
+        "4.499, 3.999, 4.500, 5.001",
+        "3.999, 4.500, 4.499, 5.001"
+      ],
+      "ok": 0,
+      "exOk": "3.999 < 4.499 < 4.500 < 5.001.",
+      "exGr": "Toate au 4 cifre. Compară miile: 3<4<4<5, apoi sutele pentru cele cu 4."
+    },
+    {
+      "q": "Ordonează descrescător: 12.345, 12.354, 12.435, 12.543.",
+      "opts": [
+        "12.543, 12.435, 12.354, 12.345",
+        "12.345, 12.354, 12.435, 12.543",
+        "12.435, 12.543, 12.354, 12.345",
+        "12.543, 12.354, 12.435, 12.345"
+      ],
+      "ok": 0,
+      "exOk": "La sute: 5>4>3>3. La zeci (pentru 12.354 vs 12.345): 5>4.",
+      "exGr": "Toate au aceleași prime 2 cifre (12). Compară sutele: 5,4,3,3 → descrescător."
+    },
+    {
+      "q": "Al treilea în ordine descrescătoare din 1.000, 999, 1.001, 998 este:",
+      "opts": [
+        "999",
+        "1.000",
+        "998",
+        "1.001"
+      ],
+      "ok": 0,
+      "exOk": "Descrescător: 1.001, 1.000, 999, 998. Al treilea = 999.",
+      "exGr": "Ordonează: 1.001>1.000>999>998. Al treilea = 999."
+    },
+    {
+      "q": "Care număr lipsește din șirul crescător: 23.100, ___, 23.300, 23.400?",
+      "opts": [
+        "23.000",
+        "23.200",
+        "23.150",
+        "23.050"
+      ],
+      "ok": 1,
+      "exOk": "Șirul crește cu 100: 23.100, 23.200, 23.300, 23.400.",
+      "exGr": "Diferența dintre termeni consecutivi este 100. Deci lipsește 23.200."
+    },
+    {
+      "q": "Ordonează crescător: 50.050, 50.500, 50.005, 50.505.",
+      "opts": [
+        "50.005, 50.050, 50.500, 50.505",
+        "50.505, 50.500, 50.050, 50.005",
+        "50.050, 50.005, 50.500, 50.505",
+        "50.005, 50.500, 50.050, 50.505"
+      ],
+      "ok": 0,
+      "exOk": "La sute: 0<0<5<5. La zeci: 0<5 pentru primele două; 0<0 (egal) deci la unități: 0<5.",
+      "exGr": "Compară cifră cu cifră de la stânga: 50.005<50.050<50.500<50.505."
+    },
+    {
+      "q": "Care șir este incorect ordonat crescător?",
+      "opts": [
+        "1, 10, 100, 1.000",
+        "5, 50, 500, 5.000",
+        "100, 10, 1.000, 1",
+        "10, 1, 100, 1.000"
+      ],
+      "ok": 2,
+      "exOk": "100, 10, 1.000, 1 nu este crescător (100 > 10).",
+      "exGr": "Verifică fiecare șir: în varianta C, 100 > 10, deci nu este crescător."
+    },
+    {
+      "q": "Ordonează descrescător: 77.777, 7.777, 777, 77.",
+      "opts": [
+        "77.777, 7.777, 777, 77",
+        "77, 777, 7.777, 77.777",
+        "7.777, 77.777, 77, 777",
+        "77.777, 777, 7.777, 77"
+      ],
+      "ok": 0,
+      "exOk": "5 cifre > 4 cifre > 3 cifre > 2 cifre → descrescător.",
+      "exGr": "Numărul de cifre decide: 77.777(5)>7.777(4)>777(3)>77(2)."
+    },
+    {
+      "q": "Cel mai mare dintre 34.567, 34.576, 34.657, 34.675 este:",
+      "opts": [
+        "34.567",
+        "34.576",
+        "34.657",
+        "34.675"
+      ],
+      "ok": 3,
+      "exOk": "La sute: 5=5>6... La zeci: 7>5. 34.675 > 34.657.",
+      "exGr": "Compară cifră cu cifră. La sute: 6>5, deci 34.6xx > 34.5xx. Dintre 34.657 și 34.675: la zeci 7>5."
+    },
+    {
+      "q": "Cel mai mic din 100.001, 100.010, 100.100, 100.000 este:",
+      "opts": [
+        "100.001",
+        "100.010",
+        "100.100",
+        "100.000"
+      ],
+      "ok": 3,
+      "exOk": "100.000 are toate cifrele 0 după 1, deci este cel mai mic.",
+      "exGr": "Compară cifrele: 100.000 < 100.001 < 100.010 < 100.100."
+    },
+    {
+      "q": "Câte numere sunt între 999 și 1.001 (exclusiv capetele)?",
+      "opts": [
+        "0",
+        "1",
+        "2",
+        "3"
+      ],
+      "ok": 1,
+      "exOk": "Singurul număr strict între 999 și 1.001 este 1.000.",
+      "exGr": "999 < 1.000 < 1.001. Doar 1.000 se află între ele."
+    },
+    {
+      "q": "Ordonează crescător 5 numere: 3.456, 3.465, 3.546, 3.564, 3.645.",
+      "opts": [
+        "3.456, 3.465, 3.546, 3.564, 3.645",
+        "3.645, 3.564, 3.546, 3.465, 3.456",
+        "3.456, 3.546, 3.465, 3.564, 3.645",
+        "3.465, 3.456, 3.546, 3.645, 3.564"
+      ],
+      "ok": 0,
+      "exOk": "La sute: 4<4<5<5<6. La zeci (4x vs 4y): 5<6. Corect.",
+      "exGr": "Toate încep cu 3. Compară sutele: 4,4,5,5,6. Ordonează."
+    },
+    {
+      "q": "Care este penultimul în ordine descrescătoare: 1.234, 2.341, 3.412, 4.123?",
+      "opts": [
+        "1.234",
+        "2.341",
+        "3.412",
+        "4.123"
+      ],
+      "ok": 1,
+      "exOk": "Descrescător: 4.123, 3.412, 2.341, 1.234. Penultimul = 2.341.",
+      "exGr": "Ordonează descrescător mai întâi: 4.123>3.412>2.341>1.234. Penultimul=2.341."
+    },
+    {
+      "q": "Completează șirul descrescător: 50.000, 49.000, ___, 47.000.",
+      "opts": [
+        "48.500",
+        "48.000",
+        "49.500",
+        "46.000"
+      ],
+      "ok": 1,
+      "exOk": "Scade cu 1.000 la fiecare pas: 50.000, 49.000, 48.000, 47.000.",
+      "exGr": "Diferența este 1.000. 49.000 - 1.000 = 48.000."
+    },
+    {
+      "q": "Câte numere de 3 cifre sunt mai mari decât 990?",
+      "opts": [
+        "8",
+        "9",
+        "10",
+        "11"
+      ],
+      "ok": 1,
+      "exOk": "991, 992, 993, 994, 995, 996, 997, 998, 999 → 9 numere.",
+      "exGr": "De la 991 la 999: 999-991+1=9 numere."
+    },
+    {
+      "q": "Ordonează crescător: 505.050, 550.500, 500.505, 505.500.",
+      "opts": [
+        "500.505, 505.050, 505.500, 550.500",
+        "550.500, 505.500, 505.050, 500.505",
+        "505.050, 500.505, 550.500, 505.500",
+        "500.505, 505.500, 505.050, 550.500"
+      ],
+      "ok": 0,
+      "exOk": "La zeci de mii: 0<0<0<5. La mii: 0<5<5. La sute: 5<0... reordonăm: 500.505<505.050<505.500<550.500.",
+      "exGr": "Compară cifră cu cifră: 500.505<505.050<505.500<550.500."
+    },
+    {
+      "q": "Al doilea cel mai mare număr din 234.567, 234.576, 234.657, 234.765 este:",
+      "opts": [
+        "234.567",
+        "234.576",
+        "234.657",
+        "234.765"
+      ],
+      "ok": 2,
+      "exOk": "Descrescător: 234.765, 234.657, 234.576, 234.567. Al doilea = 234.657.",
+      "exGr": "Ordonează descrescător. La sute: 7>6>5>5. La zeci (5xx): 7>6. Deci 234.657 e al doilea."
+    },
+    {
+      "q": "Care șir conține toate cele 4 numere ordonate descrescător?",
+      "opts": [
+        "999, 1.000, 9.999, 10.000",
+        "10.000, 9.999, 1.000, 999",
+        "9.999, 10.000, 999, 1.000",
+        "1.000, 999, 10.000, 9.999"
+      ],
+      "ok": 1,
+      "exOk": "10.000 > 9.999 > 1.000 > 999. Descrescător corect.",
+      "exGr": "Verifică: 10.000(5 cifre) > 9.999(4 cifre) > 1.000(4 cifre cu mii mai mari) > 999(3 cifre)."
+    },
+    {
+      "q": "Câte numere naturale de 4 cifre există?",
+      "opts": [
+        "8.999",
+        "9.000",
+        "9.001",
+        "10.000"
+      ],
+      "ok": 1,
+      "exOk": "De la 1.000 la 9.999: 9.999 - 1.000 + 1 = 9.000 numere.",
+      "exGr": "Min=1.000, Max=9.999. Total=9.999-1.000+1=9.000."
+    },
+    {
+      "q": "Ordonează crescător: 1.010.101, 1.001.101, 1.100.101, 1.010.011.",
+      "opts": [
+        "1.001.101, 1.010.011, 1.010.101, 1.100.101",
+        "1.100.101, 1.010.101, 1.010.011, 1.001.101",
+        "1.010.101, 1.001.101, 1.100.101, 1.010.011",
+        "1.001.101, 1.010.101, 1.010.011, 1.100.101"
+      ],
+      "ok": 0,
+      "exOk": "La sute de mii: 0<0<0<1. Dintre cele cu 0: la zeci de mii: 0<1<1. Dintre 1.010.xxx: la sute: 0<1.",
+      "exGr": "Compară cifră cu cifră: 1.001.101<1.010.011<1.010.101<1.100.101."
+    },
+    {
+      "q": "Cel mai mic număr format din cifrele 5, 2, 8, 0 (fără zero în față) este:",
+      "opts": [
+        "2.058",
+        "2.085",
+        "2.508",
+        "2.850"
+      ],
+      "ok": 0,
+      "exOk": "Prima cifră = cea mai mică nenulă = 2. Restul în ordine crescătoare: 0, 5, 8 → 2.058.",
+      "exGr": "Minimul: prima cifră cea mai mică nenulă (2), apoi restul crescător: 0, 5, 8 → 2.058."
+    },
+    {
+      "q": "Cel mai mare număr format din cifrele 3, 7, 1, 9, 5 este:",
+      "opts": [
+        "97.531",
+        "97.513",
+        "95.731",
+        "75.931"
+      ],
+      "ok": 0,
+      "exOk": "Maximul: cifrele în ordine descrescătoare → 9, 7, 5, 3, 1 → 97.531.",
+      "exGr": "Pentru numărul maxim, aranjăm cifrele descrescător: 9>7>5>3>1 → 97.531."
+    },
+    {
+      "q": "Câte numere de 3 cifre se pot forma cu cifrele 1, 2, 3 (fără repetare)?",
+      "opts": [
+        "3",
+        "6",
+        "9",
+        "12"
+      ],
+      "ok": 1,
+      "exOk": "3! = 3×2×1 = 6 permutări: 123, 132, 213, 231, 312, 321.",
+      "exGr": "Numărul de aranjamente fără repetare din 3 cifre = 3! = 6."
+    },
+    {
+      "q": "Al treilea cel mai mic număr format din cifrele 4, 0, 7, 2 (fără zero în față) este:",
+      "opts": [
+        "2.047",
+        "2.074",
+        "2.407",
+        "2.470"
+      ],
+      "ok": 1,
+      "exOk": "Ordonate crescător: 2.047, 2.074, 2.407, 2.470... Al treilea = 2.407.",
+      "exGr": "Minimele: 2.047, 2.074, 2.407... Al treilea = 2.407."
+    },
+    {
+      "q": "Dacă a < b < c, câte dintre afirmațiile a<c, b>a, c>b sunt adevărate?",
+      "opts": [
+        "1",
+        "2",
+        "3",
+        "0"
+      ],
+      "ok": 2,
+      "exOk": "a<c (tranzitivitate ✓), b>a (echivalent a<b ✓), c>b (echivalent b<c ✓). Toate 3.",
+      "exGr": "Prin tranzitivitate și simetria relației, toate 3 afirmații sunt adevărate."
+    },
+    {
+      "q": "Câte numere naturale sunt cuprinse între 999 și 10.000 (exclusiv)?",
+      "opts": [
+        "8.999",
+        "9.000",
+        "9.001",
+        "10.001"
+      ],
+      "ok": 1,
+      "exOk": "De la 1.000 la 9.999: 9.999 - 1.000 + 1 = 9.000 numere.",
+      "exGr": "Strict între 999 și 10.000 = numerele de 4 cifre: 1.000,...,9.999 = 9.000 numere."
+    },
+    {
+      "q": "Cel mai mare număr de 5 cifre distincte format din 1,2,3,4,5 este:",
+      "opts": [
+        "54.321",
+        "53.421",
+        "54.312",
+        "45.321"
+      ],
+      "ok": 0,
+      "exOk": "Cifrele descrescător: 5,4,3,2,1 → 54.321.",
+      "exGr": "Maximum = cifrele în ordine descrescătoare: 54.321."
+    },
+    {
+      "q": "Cel mai mic număr de 5 cifre distincte format din 1,2,3,4,5 este:",
+      "opts": [
+        "12.345",
+        "12.354",
+        "21.345",
+        "13.245"
+      ],
+      "ok": 0,
+      "exOk": "Cifrele crescător: 1,2,3,4,5 → 12.345.",
+      "exGr": "Minimum = cifrele în ordine crescătoare (prima nenulă): 12.345."
+    },
+    {
+      "q": "Câte numere naturale de 2 cifre au suma cifrelor egală cu 9?",
+      "opts": [
+        "7",
+        "8",
+        "9",
+        "10"
+      ],
+      "ok": 2,
+      "exOk": "18, 27, 36, 45, 54, 63, 72, 81, 90 → 9 numere.",
+      "exGr": "Perechile (a,b) cu a+b=9, a≠0: (1,8),(2,7),(3,6),(4,5),(5,4),(6,3),(7,2),(8,1),(9,0) = 9."
+    },
+    {
+      "q": "Dintre toate numerele de 3 cifre formate cu 1,2,3 (fără repetare), câte sunt mai mari decât 213?",
+      "opts": [
+        "2",
+        "3",
+        "4",
+        "5"
+      ],
+      "ok": 1,
+      "exOk": "Toate: 123,132,213,231,312,321. Mai mari decât 213: 231,312,321 → 3.",
+      "exGr": "Lista: 123<132<213<231<312<321. Cele mai mari decât 213: 231,312,321 = 3."
+    },
+    {
+      "q": "Suma celui mai mic și celui mai mare număr de 3 cifre este:",
+      "opts": [
+        "1.098",
+        "1.099",
+        "1.100",
+        "1.101"
+      ],
+      "ok": 1,
+      "exOk": "100 + 999 = 1.099.",
+      "exGr": "Min(3 cifre)=100, Max(3 cifre)=999. Suma=100+999=1.099."
+    }
+  ]
 }
