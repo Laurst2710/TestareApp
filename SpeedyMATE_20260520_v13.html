@@ -90,7 +90,7 @@ body{display:flex;flex-direction:column;align-items:center;padding:20px 16px 40p
 .diff2-tag{font-size:.58rem;color:var(--grey-t);font-weight:600;letter-spacing:.05em;text-transform:uppercase;margin-top:6px}
 
 .setup-action{position:fixed;bottom:0;left:0;right:0;background:var(--bg);border-top:1px solid var(--surf3);padding:14px 20px;text-align:center;z-index:50}
-body{padding-bottom:80px}
+#s-setup{padding-bottom:80px}
 
 /* BUTTONS */
 .btn-primary{background:var(--accent);color:#fff;border:none;border-radius:10px;padding:13px 30px;font-size:.95rem;font-weight:600;cursor:pointer;font-family:'Outfit',sans-serif;transition:all .2s}
@@ -135,10 +135,12 @@ body{padding-bottom:80px}
 .opt.opt-err .opt-letter{background:var(--err);color:#fff}
 .feedback-box{display:none;border-radius:9px;padding:14px;margin-top:10px}
 .feedback-box.show{display:block}
-.fb-ok{background:var(--ok)}
-.fb-err{background:var(--err)}
-.fb-label{font-size:.68rem;font-weight:700;text-transform:uppercase;letter-spacing:.06em;margin-bottom:6px;color:#fff}
-.fb-text{font-size:.83rem;color:#fff;line-height:1.6;opacity:.92}
+.fb-ok{background:rgba(0,200,83,.15);border:1.5px solid var(--ok)}
+.fb-err{background:rgba(220,20,60,.12);border:1.5px solid var(--err)}
+.fb-label{font-size:.68rem;font-weight:700;text-transform:uppercase;letter-spacing:.06em;margin-bottom:6px}
+.fb-ok .fb-label{color:var(--ok)}
+.fb-err .fb-label{color:var(--err)}
+.fb-text{font-size:.83rem;color:var(--dim);line-height:1.6}
 .btn-next{margin-top:11px;background:var(--surf3);border:none;color:var(--text);border-radius:7px;padding:8px 18px;font-size:.83rem;font-weight:600;cursor:pointer;font-family:'Outfit',sans-serif;transition:background .2s}
 .btn-next:hover{background:var(--accent)}
 
@@ -311,19 +313,19 @@ body{padding-bottom:80px}
 <div id="s-quiz" class="screen">
   <div style="margin-bottom:14px">
     <div style="display:flex;justify-content:space-between;font-size:.7rem;color:var(--dim);margin-bottom:4px">
-      <span>Progres</span><span id="lbl-progres">0/10 — 0%</span>
+      <span id="quiz-meta-left" style="overflow:hidden;text-overflow:ellipsis;white-space:nowrap;max-width:60%">—</span>
+      <span id="lbl-progres" style="font-family:'JetBrains Mono',monospace;color:var(--accent);font-weight:700">0/10</span>
     </div>
-    <div style="height:8px;background:var(--surf3);border-radius:4px;overflow:hidden;margin-bottom:10px">
-      <div id="bar-progres" style="height:100%;width:0%;background:var(--accent);border-radius:4px;transition:width .4s ease"></div>
+    <div style="height:7px;background:var(--surf3);border-radius:4px;overflow:hidden;margin-bottom:10px">
+      <div id="bar-progres" style="height:100%;width:0%;background:var(--accent);border-radius:4px;transition:width .4s"></div>
     </div>
     <div style="display:flex;justify-content:space-between;font-size:.7rem;color:var(--dim);margin-bottom:4px">
       <span>Acuratețe</span><span id="lbl-acuratete">—</span>
     </div>
-    <div style="height:8px;background:var(--surf3);border-radius:4px;overflow:hidden">
-      <div id="bar-acuratete" style="height:100%;width:0%;background:var(--ok);border-radius:4px;transition:width .4s ease,background .3s"></div>
+    <div style="height:7px;background:var(--surf3);border-radius:4px;overflow:hidden">
+      <div id="bar-acuratete" style="height:100%;width:0%;background:var(--ok);border-radius:4px;transition:width .4s,background .3s"></div>
     </div>
   </div>
-  <div style="font-size:.72rem;color:var(--dim);margin-bottom:12px" id="quiz-meta-left">—</div>
   <div class="q-card">
     <div class="q-text" id="q-text">—</div>
     <div class="opts" id="opts-wrap"></div>
@@ -371,17 +373,17 @@ const THEMES = [
   {key:'Tema8', label:'Aproximare prin lipsă și prin adaos', file:'MANUAL_U1_Tema8.json', active:true},
   {key:'Tema9', label:'Adunarea; termeni, sumă, proprietăți', file:'MANUAL_U1_Tema9.json', active:true},
   {key:'Tema10', label:'Scăderea; descăzut, scăzător, diferență', file:'MANUAL_U1_Tema10.json', active:true},
-  {key:'Tema11', label:'Înmulțirea; factori, produs, proprietăți', file:'', active:false},
-  {key:'Tema12', label:'Factor comun; scoaterea factorului comun', file:'', active:false},
-  {key:'Tema13', label:'Împărțirea exactă', file:'', active:false},
-  {key:'Tema14', label:'Împărțirea cu rest; D=I×C+R', file:'', active:false},
+  {key:'Tema11', label:'Înmulțirea; factori, produs, proprietăți', file:'MANUAL_U1_Tema11.json', active:true},
+  {key:'Tema12', label:'Factor comun; scoaterea factorului comun', file:'MANUAL_U1_Tema12.json', active:true},
+  {key:'Tema13', label:'Împărțirea exactă', file:'MANUAL_U1_Tema13.json', active:true},
+  {key:'Tema14', label:'Împărțirea cu rest; D=I×C+R', file:'MANUAL_U1_Tema14.json', active:true},
   {key:'Tema15', label:'Puterea; bază, exponent; a⁰=1, a¹=a', file:'MANUAL_U1_Tema15.json', active:true},
-  {key:'Tema16', label:'Pătratul unui număr; pătrate perfecte', file:'', active:false},
-  {key:'Tema17', label:'Cubul unui număr; cuburi perfecte', file:'', active:false},
-  {key:'Tema18', label:'Produs de puteri: aᵐ×aⁿ=aᵐ⁺ⁿ', file:'', active:false},
-  {key:'Tema19', label:'Cât de puteri: aᵐ÷aⁿ=aᵐ⁻ⁿ', file:'', active:false},
-  {key:'Tema20', label:'Puterea unei puteri: (aᵐ)ⁿ=aᵐˣⁿ', file:'', active:false},
-  {key:'Tema21', label:'Puterea unui produs: (a×b)ⁿ', file:'', active:false},
+  {key:'Tema16', label:'Pătratul unui număr; pătrate perfecte', file:'MANUAL_U1_Tema16.json', active:true},
+  {key:'Tema17', label:'Cubul unui număr; cuburi perfecte', file:'MANUAL_U1_Tema17.json', active:true},
+  {key:'Tema18', label:'Produs de puteri: aᵐ×aⁿ=aᵐ⁺ⁿ', file:'MANUAL_U1_Tema18.json', active:true},
+  {key:'Tema19', label:'Cât de puteri: aᵐ÷aⁿ=aᵐ⁻ⁿ', file:'MANUAL_U1_Tema19.json', active:true},
+  {key:'Tema20', label:'Puterea unei puteri: (aᵐ)ⁿ=aᵐˣⁿ', file:'MANUAL_U1_Tema20.json', active:true},
+  {key:'Tema21', label:'Puterea unui produs: (a×b)ⁿ', file:'MANUAL_U1_Tema21.json', active:true},
   {key:'Tema22', label:'Compararea puterilor — aceeași bază', file:'', active:false},
   {key:'Tema23', label:'Compararea puterilor — același exponent', file:'', active:false},
   {key:'Tema24', label:'Descompunere pozițională; baza 2', file:'', active:false},
@@ -506,7 +508,7 @@ function startQuiz(){
 function renderQ(){
   const q = state.questions[state.cur], tot = state.questions.length;
   document.getElementById('quiz-meta-left').textContent = THEMES[state.themeIdx].label;
-  document.getElementById('quiz-counter').textContent = `${state.cur+1}/${tot}`;
+
   document.getElementById('quiz-prog').style.width = (state.cur/tot*100)+'%';
   document.getElementById('q-text').textContent = q.q;
   const wrap = document.getElementById('opts-wrap');
@@ -525,18 +527,15 @@ function renderQ(){
   });
   document.getElementById('feedback-box').className = 'feedback-box';
   document.getElementById('btn-next').textContent = state.cur < tot-1 ? 'Următoarea →' : 'Vezi rezultatul →';
-  // Update progress bar
-  const prgPct = Math.round(state.cur/tot*100);
-  document.getElementById('bar-progres').style.width = prgPct+'%';
-  document.getElementById('lbl-progres').textContent = state.cur+'/'+tot+' — '+prgPct+'%';
-  // Acuratete bar
-  if(state.cur > 0){
-    const accPct = Math.round(state.correct/state.cur*100);
-    document.getElementById('bar-acuratete').style.width = accPct+'%';
-    document.getElementById('bar-acuratete').style.background = accPct>=80?'var(--ok)':'var(--err)';
-    document.getElementById('lbl-acuratete').textContent = state.correct+'/'+state.cur+' — '+accPct+'%';
-  } else {
-    document.getElementById('lbl-acuratete').textContent = '—';
+  // Bars
+  const pct = Math.round(state.cur/tot*100);
+  document.getElementById('bar-progres').style.width = pct+'%';
+  document.getElementById('lbl-progres').textContent = (state.cur)+'/'+tot;
+  if(state.cur>0){
+    const acc = Math.round(state.correct/state.cur*100);
+    document.getElementById('bar-acuratete').style.width = acc+'%';
+    document.getElementById('bar-acuratete').style.background = acc>=80?'var(--ok)':'var(--err)';
+    document.getElementById('lbl-acuratete').textContent = state.correct+'/'+state.cur+' — '+acc+'%';
   }
 }
 
