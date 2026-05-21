@@ -149,7 +149,7 @@ body{display:flex;flex-direction:column;align-items:center;padding:20px 16px 40p
 .fb-err .fb-label{color:var(--err)}
 .fb-text{font-size:.83rem;color:var(--dim);line-height:1.6}
 .btn-next{position:fixed;bottom:18px;left:50%;transform:translateX(-50%);background:var(--accent);border:none;color:#fff;border-radius:10px;padding:13px 36px;font-size:.95rem;font-weight:700;cursor:pointer;font-family:'Outfit',sans-serif;transition:background .2s;z-index:200;display:none;box-shadow:0 4px 20px rgba(108,92,231,.4)}
-.btn-next:hover{background:var(--acl)}
+.btn-next:hover{background:var(--acl);transform:translateY(-1px)}
 
 /* RESULT */
 #s-result{padding-top:32px;text-align:center}
@@ -175,7 +175,7 @@ body{display:flex;flex-direction:column;align-items:center;padding:20px 16px 40p
 
 .rb-clickable{cursor:pointer;transition:background .15s}
 .rb-clickable:hover{background:rgba(220,20,60,.08);border-radius:7px}
-#sol-overlay{display:none;position:fixed;inset:0;background:rgba(0,0,0,.78);z-index:400;align-items:center;justify-content:center}
+
 #sol-overlay.open{display:flex}
 .sol-box{background:var(--surface);border:1.5px solid var(--err);border-radius:16px;padding:24px 22px;max-width:460px;width:92%;position:relative}
 .sol-nr{font-size:.72rem;color:var(--dim);font-family:'JetBrains Mono',monospace;margin-bottom:6px}
@@ -183,6 +183,10 @@ body{display:flex;flex-direction:column;align-items:center;padding:20px 16px 40p
 .sol-ans{background:rgba(0,200,83,.1);border:1px solid var(--ok);border-radius:8px;padding:10px 13px;font-size:.88rem;color:var(--ok);font-weight:600;margin-bottom:12px}
 .sol-ex{font-size:.82rem;color:var(--dim);line-height:1.5}
 .sol-close{position:absolute;top:12px;right:14px;background:none;border:none;color:var(--dim);font-size:1.2rem;cursor:pointer}
+
+.btn-abandon{position:fixed;top:14px;right:16px;background:#b8560a;border:none;color:#fff;border-radius:8px;padding:7px 14px;font-size:.78rem;font-weight:700;cursor:pointer;font-family:'Outfit',sans-serif;z-index:300;transition:background .2s}
+.btn-abandon:hover{background:#d4680c}
+#sol-overlay{display:none;position:fixed;inset:0;background:rgba(0,0,0,.78);z-index:400;align-items:center;justify-content:center}
 </style>
 </head>
 <body>
@@ -320,6 +324,7 @@ body{display:flex;flex-direction:column;align-items:center;padding:20px 16px 40p
 </div>
 
 <!-- QUIZ -->
+<button class="btn-abandon" id="btn-abandon" onclick="abandonTest()" style="display:none">⚠ Renunță</button>
 <div id="s-quiz" class="screen">
   <div class="quiz-bars">
     <div class="bar-row"><span style="color:var(--dim);font-size:.8rem">Progres</span><span id="quiz-tema" style="display:none"></span><span id="lbl-progres" style="color:var(--accent)">0/10</span></div>
@@ -500,6 +505,7 @@ function updateBars(){
 }
 
 function renderQ(){
+  document.getElementById('btn-abandon').style.display='block';
   document.getElementById('btn-next').style.display='none';
   const q=state.questions[state.cur];
   document.getElementById('q-text').textContent=q.q;
@@ -545,6 +551,7 @@ function nextQ(){
 }
 
 function showResult(){
+  document.getElementById('btn-abandon').style.display='none';
   const tot=state.questions.length, pct=state.correct/tot, pass=pct>=PASS;
   const th=THEMES[state.themeIdx];
   saveScore(th.key,pct);
@@ -586,8 +593,36 @@ function showSol(i){
 }
 function closeSol(){document.getElementById('sol-overlay').classList.remove('open');}
 
+
 function exportPDF(){
-  window.print();
+  const th=THEMES[state.themeIdx];
+  const rows=state.answers.map((a,i)=>`<tr>
+    <td style="padding:6px 10px;color:#888;font-size:12px">Î${i+1}</td>
+    <td style="padding:6px 10px;font-size:12px">${state.questions[i].q.substring(0,80)}</td>
+    <td style="padding:6px 10px;font-size:14px;text-align:center">${a.correct?'✓':'✗'}</td>
+  </tr>`).join('');
+  const html=`<!DOCTYPE html><html><head><meta charset="utf-8"><title>SpeedyMATE - ${th.label}</title>
+  <style>body{font-family:Arial,sans-serif;padding:30px;color:#222}h1{color:#6c5ce7}table{width:100%;border-collapse:collapse}tr{border-bottom:1px solid #eee}</style>
+  </head><body>
+  <h1>SpeedyMATE — Rezultate Test</h1>
+  <p><strong>${state.name}</strong> · Clasa ${state.clasa} · ${th.label}</p>
+  <p>Scor: <strong>${state.correct}/${state.questions.length}</strong> (${Math.round(state.correct/state.questions.length*100)}%)</p>
+  <table>${rows}</table>
+  <p style="margin-top:20px;font-size:11px;color:#aaa">SpeedyMATE · OMENCS 3393/2017</p>
+  </body></html>`;
+  const w=window.open('','_blank');
+  w.document.write(html);
+  w.document.close();
+  w.print();
+}
+
+
+function abandonTest(){
+  if(confirm('Renunți la test? Progresul nu se salvează.')){
+    document.getElementById('btn-abandon').style.display='none';
+    state={name:state.name,clasa:state.clasa,themeIdx:null,data:null,questions:[],cur:0,correct:0,answers:[]};
+    show('s-setup');
+  }
 }
 </script>
 
