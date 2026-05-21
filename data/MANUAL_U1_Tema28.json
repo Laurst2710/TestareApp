@@ -1,0 +1,508 @@
+{
+  "meta": {
+    "nivel": "Manual",
+    "dificultate": 1,
+    "clasa": "a V-a",
+    "unitate": "U1",
+    "titlu_unitate": "Numere Naturale",
+    "tema": "Tema28",
+    "titlu_tema": "Metoda reducerii la unitate",
+    "prag": 0.8,
+    "puncte_per_item": 10
+  },
+  "teorie": [
+    "Metoda reducerii la unitate constă în aflarea mărimii unei singure unități pentru a putea determina ulterior valoarea unui număr cerut de astfel de unități.",
+    "Această metodă aritmetică se aplică în problemele în care două mărimi depind direct una de cealaltă, crescând sau scăzând în același raport.",
+    "Etapele principale de rezolvare sunt determinarea valorii corespunzătoare unei unități prin împărțire, urmată de multiplicarea acesteia prin înmulțire."
+  ],
+  "teste": {
+    "T1": [
+      {
+        "q": "Dacă 3 caiete costă 12 lei, cât costă un singur caiet?",
+        "opts": [
+          "2 lei",
+          "4 lei",
+          "6 lei",
+          "9 lei"
+        ],
+        "ok": 1,
+        "exOk": "Corect! Pentru a afla prețul unui singur caiet, împărțim costul total la numărul de caiete: 12 : 3 = 4 lei.",
+        "exGr": "Greșit. Reducem la unitate prin împărțirea sumei totale la numărul de obiecte: 12 : 3 = 4 lei."
+      },
+      {
+        "q": "Dacă un caiet costă 4 lei, cât vor costa 5 caiete de același fel?",
+        "opts": [
+          "9 lei",
+          "15 lei",
+          "20 de lei",
+          "25 de lei"
+        ],
+        "ok": 2,
+        "exOk": "Corect! Înmulțim prețul unei unități cu numărul total de unități cerute: 4 * 5 = 20 de lei.",
+        "exGr": "Greșit. Pentru a afla costul mai multor obiecte, înmulțim prețul unui obiect cu numărul lor: 4 * 5 = 20 de lei."
+      },
+      {
+        "q": "Dacă 2 kg de mere costă 10 lei, cât costă 3 kg de mere de același fel?",
+        "opts": [
+          "12 lei",
+          "15 lei",
+          "20 de lei",
+          "13 lei"
+        ],
+        "ok": 1,
+        "exOk": "Corect! Un kg de mere costă 10 : 2 = 5 lei. Atunci, 3 kg de mere costă 5 * 3 = 15 lei.",
+        "exGr": "Greșit. Aflăm întâi costul unui kg: 10 : 2 = 5 lei. Multiplicăm pentru cantitatea cerută: 5 * 3 = 15 lei."
+      },
+      {
+        "q": "O mașină parcurge 160 km în 2 ore. Câți kilometri parcurge într-o singură oră, mergând cu aceeași viteză?",
+        "opts": [
+          "60 km",
+          "70 km",
+          "80 km",
+          "90 km"
+        ],
+        "ok": 2,
+        "exOk": "Corect! Reducem la unitate (o oră) împărțind distanța la timp: 160 : 2 = 80 km.",
+        "exGr": "Greșit. Împărțim distanța totală la numărul de ore pentru a afla parcursul dintr-o oră: 160 : 2 = 80 km."
+      },
+      {
+        "q": "Dacă 4 pixuri identice costă 24 de lei, care este prețul pentru 2 pixuri?",
+        "opts": [
+          "6 lei",
+          "12 lei",
+          "10 lei",
+          "8 lei"
+        ],
+        "ok": 1,
+        "exOk": "Corect! Un pix costă 24 : 4 = 6 lei. Două pixuri vor costa 6 * 2 = 12 lei.",
+        "exGr": "Greșit. Întâi reducem la unitate: 24 : 4 = 6 lei per pix. Pentru două pixuri avem 6 * 2 = 12 lei."
+      },
+      {
+        "q": "Cinci pâini costă 15 lei. Cât costă 6 pâini de același fel?",
+        "opts": [
+          "16 lei",
+          "18 lei",
+          "20 de lei",
+          "21 de lei"
+        ],
+        "ok": 1,
+        "exOk": "Corect! O pâine costă 15 : 5 = 3 lei. Pentru 6 pâini calculăm 3 * 6 = 18 lei.",
+        "exGr": "Greșit. Aflăm prețul unei pâini: 15 : 5 = 3 lei. Apoi determinăm costul pentru 6 pâini: 3 * 6 = 18 lei."
+      },
+      {
+        "q": "În 3 cutii identice sunt ambalate 18 bomboane. Câte bomboane se află într-o singură cutie?",
+        "opts": [
+          "5 bomboane",
+          "6 bomboane",
+          "7 bomboane",
+          "8 bomboane"
+        ],
+        "ok": 1,
+        "exOk": "Corect! Împărțim numărul total de bomboane la numărul de cutii: 18 : 3 = 6 bomboane.",
+        "exGr": "Greșit. Numărul de bomboane dintr-o cutie se obține prin reducere la unitate: 18 : 3 = 6 bomboane."
+      },
+      {
+        "q": "Dacă în 3 cutii sunt 18 bomboane, câte bomboane vor fi în 4 cutii de același fel?",
+        "opts": [
+          "20 de bomboane",
+          "22 de bomboane",
+          "24 de bomboane",
+          "26 de bomboane"
+        ],
+        "ok": 2,
+        "exOk": "Corect! O cutie conține 18 : 3 = 6 bomboane. În 4 cutii vor fi 6 * 4 = 24 de bomboane.",
+        "exGr": "Greșit. O cutie are 18 : 3 = 6 bomboane. În 4 cutii vom avea 6 * 4 = 24 de bomboane."
+      },
+      {
+        "q": "Pentru a cumpăra 7 metri de panglică s-au plătit 14 lei. Cât costă un metru de panglică?",
+        "opts": [
+          "1 leu",
+          "2 lei",
+          "3 lei",
+          "4 lei"
+        ],
+        "ok": 1,
+        "exOk": "Corect! Împărțim suma totală la numărul de metri: 14 : 7 = 2 lei.",
+        "exGr": "Greșit. Prețul unui singur metru se află împărțind costul la lungime: 14 : 7 = 2 lei."
+      },
+      {
+        "q": "Dacă un metru de panglică costă 2 lei, câți lei vor costa 10 metri de panglică?",
+        "opts": [
+          "12 lei",
+          "15 lei",
+          "20 de lei",
+          "30 de lei"
+        ],
+        "ok": 2,
+        "exOk": "Corect! Multiplicăm prețul unitar cu lungimea solicitată: 2 * 10 = 20 de lei.",
+        "exGr": "Greșit. Costul total este produsul dintre prețul unui metru și numărul de metri: 2 * 10 = 20 de lei."
+      }
+    ],
+    "T2": [
+      {
+        "q": "Dacă 4 kg de roșii costă 16 lei, cât vor costa 7 kg de roșii de aceeași calitate?",
+        "opts": [
+          "24 de lei",
+          "28 de lei",
+          "32 de lei",
+          "35 de lei"
+        ],
+        "ok": 1,
+        "exOk": "Corect! 1 kg de roșii costă 16 : 4 = 4 lei. Pentru 7 kg avem 4 * 7 = 28 de lei.",
+        "exGr": "Greșit. Aflăm mai întâi prețul unui kilogram: 16 : 4 = 4 lei. Pentru 7 kg calculăm 4 * 7 = 28 de lei."
+      },
+      {
+        "q": "O croitoreasă folosește 15 metri de pânză pentru a coase 5 rochii identice. Câți metri de pânză sunt necesari pentru 8 rochii?",
+        "opts": [
+          "20 de metri",
+          "24 de metri",
+          "28 de metri",
+          "30 de metri"
+        ],
+        "ok": 1,
+        "exOk": "Corect! Pentru o rochie se folosesc 15 : 5 = 3 metri. Pentru 8 rochii avem 3 * 8 = 24 de metri.",
+        "exGr": "Greșit. Reducem la unitate: o rochie necesită 15 : 5 = 3 metri. Pentru 8 rochii sunt necesari 3 * 8 = 24 de metri."
+      },
+      {
+        "q": "Din 20 kg de lapte se obțin 4 kg de smântână. Câte kilograme de smântână se obțin din 35 kg de lapte?",
+        "opts": [
+          "5 kg",
+          "7 kg",
+          "8 kg",
+          "10 kg"
+        ],
+        "ok": 1,
+        "exOk": "Corect! Pentru 1 kg de smântână sunt necesare 20 : 4 = 5 kg de lapte. Din 35 kg de lapte obținem 35 : 5 = 7 kg de smântână.",
+        "exGr": "Greșit. Determinăm cantitatea de lapte pentru un kg de smântână: 20 : 4 = 5 kg. Din 35 kg de lapte rezultă 35 : 5 = 7 kg smântână."
+      },
+      {
+        "q": "Dacă 6 robinete identice umplu un bazin în 4 ore, în cât timp vor umple același bazin 3 robinete?",
+        "opts": [
+          "2 ore",
+          "6 ore",
+          "8 ore",
+          "12 ore"
+        ],
+        "ok": 2,
+        "exOk": "Corect! Atenție, este dependență inversă: un singur robinet are nevoie de 6 * 4 = 24 de ore. Atunci 3 robinete vor avea nevoie de 24 : 3 = 8 ore.",
+        "exGr": "Greșit. Mai puține robinete au nevoie de mai mult timp. Un robinet face treaba în 6 * 4 = 24 de ore, iar 3 robinete în 24 : 3 = 8 ore."
+      },
+      {
+        "q": "Un depozit ambalează 45 kg de zahăr în 9 pungi egale. Câte kilograme de zahăr vor fi în 12 pungi de același fel?",
+        "opts": [
+          "50 kg",
+          "54 kg",
+          "60 kg",
+          "65 kg"
+        ],
+        "ok": 2,
+        "exOk": "Corect! O pungă conține 45 : 9 = 5 kg de zahăr. În 12 pungi vor fi 5 * 12 = 60 kg.",
+        "exGr": "Greșit. Aflăm capacitatea unei pungi: 45 : 9 = 5 kg. Pentru 12 pungi calculăm 5 * 12 = 60 kg."
+      },
+      {
+        "q": "Zece metri de cablu electric costă 80 de lei. Cât costă 15 metri din același cablu?",
+        "opts": [
+          "100 de lei",
+          "120 de lei",
+          "140 de lei",
+          "150 de lei"
+        ],
+        "ok": 1,
+        "exOk": "Corect! Un metru de cablu costă 80 : 10 = 8 lei. Pentru 15 metri avem 8 * 15 = 120 de lei.",
+        "exGr": "Greșit. Prețul pe metru este 80 : 10 = 8 lei. Valoarea pentru 15 metri este 8 * 15 = 120 de lei."
+      },
+      {
+        "q": "Trei muncitori termină o lucrare în 12 zile. În câte zile ar termina aceeași lucrare un singur muncitor?",
+        "opts": [
+          "4 zile",
+          "24 de zile",
+          "36 de zile",
+          "15 zile"
+        ],
+        "ok": 2,
+        "exOk": "Corect! Dependență inversă: un singur om lucrează mai mult timp, adică 12 * 3 = 36 de zile.",
+        "exGr": "Greșit. Volumul total de muncă este de 3 * 12 = 36 de zile-om. Un singur muncitor va finaliza lucrarea în 36 de zile."
+      },
+      {
+        "q": "Dacă un singur muncitor termină o lucrare în 36 de zile, în câte zile o termină 4 muncitori?",
+        "opts": [
+          "9 zile",
+          "12 zile",
+          "18 zile",
+          "40 de zile"
+        ],
+        "ok": 0,
+        "exOk": "Corect! Împărțim timpul total de lucru al unui om la numărul de oameni disponibil: 36 : 4 = 9 zile.",
+        "exGr": "Greșit. Fiind 4 oameni, timpul se micșorează de 4 ori în raport cu lucrul unui singur om: 36 : 4 = 9 zile."
+      },
+      {
+        "q": "Pentru 8 kg de cartofi s-au plătit 24 de lei. Cât se va plăti pentru 11 kg de cartofi?",
+        "opts": [
+          "30 de lei",
+          "33 de lei",
+          "36 de lei",
+          "44 de lei"
+        ],
+        "ok": 1,
+        "exOk": "Corect! Un kg de cartofi costă 24 : 8 = 3 lei. Pentru 11 kg prețul este 3 * 11 = 33 de lei.",
+        "exGr": "Greșit. Reducerea la unitate arată că 1 kg costă 3 lei. Pentru 11 kg suma este 3 * 11 = 33 de lei."
+      },
+      {
+        "q": "Un stupar colectează 60 kg de miere de la 3 stupi. Câtă miere va colecta, în medie, de la 5 stupi similari?",
+        "opts": [
+          "80 kg",
+          "90 kg",
+          "100 kg",
+          "120 kg"
+        ],
+        "ok": 2,
+        "exOk": "Corect! Producția unui singur stup este 60 : 3 = 20 kg. De la 5 stupi avem 20 * 5 = 100 kg.",
+        "exGr": "Greșit. Producția pe stup este de 20 kg. Multiplicând pentru 5 stupi obținem 20 * 5 = 100 kg."
+      }
+    ],
+    "T3": [
+      {
+        "q": "O tipniță tipărește 300 de pagini în 15 minute. Câte pagini va tipări în 25 de minute?",
+        "opts": [
+          "400 de pagini",
+          "500 de pagini",
+          "600 de pagini",
+          "750 de pagini"
+        ],
+        "ok": 1,
+        "exOk": "Corect! În fiecare minut tipărește 300 : 15 = 20 de pagini. În 25 de minute va tipări 20 * 25 = 500 de pagini.",
+        "exGr": "Greșit. Ritmul pe minut este 300 : 15 = 20 de pagini. Pentru 25 de minute calculăm 20 * 25 = 500 de pagini."
+      },
+      {
+        "q": "Dacă 12 metri de stofă costă 240 de lei, câți metri din aceeași stofă se pot cumpăra cu 180 de lei?",
+        "opts": [
+          "8 metri",
+          "9 metri",
+          "10 metri",
+          "11 metri"
+        ],
+        "ok": 1,
+        "exOk": "Corect! Un metru de stofă costă 240 : 12 = 20 de lei. Cu 180 de lei se pot cumpăra 180 : 20 = 9 metri.",
+        "exGr": "Greșit. Prețul unui metru este 20 de lei. Împărțim bugetul de 180 de lei la 20 de lei pentru a obține 9 metri."
+      },
+      {
+        "q": "Cinci robinete pot umple un rezervor în 6 ore. Câte robinete identice sunt necesare pentru a umple rezervorul în doar 3 ore?",
+        "opts": [
+          "8 robinete",
+          "9 robinete",
+          "10 robinete",
+          "12 robinete"
+        ],
+        "ok": 2,
+        "exOk": "Corect! Un singur robinet umple bazinul în 5 * 6 = 30 de ore. Pentru a reduce timpul la 3 ore avem nevoie de 30 : 3 = 10 robinete.",
+        "exGr": "Greșit. Timpul scade la jumătate, deci numărul de robinete trebuie să se dubleze: 5 * 2 = 10 robinete."
+      },
+      {
+        "q": "Dacă 9 kg de bomboane costă 108 lei, care este costul pentru 15 kg de bomboane de același fel?",
+        "opts": [
+          "150 de lei",
+          "165 de lei",
+          "180 de lei",
+          "200 de lei"
+        ],
+        "ok": 2,
+        "exOk": "Corect! Un kg de bomboane costă 108 : 9 = 12 lei. Pentru 15 kg calculăm 12 * 15 = 180 de lei.",
+        "exGr": "Greșit. Prețul unitar este 12 lei. Pentru 15 kg obținem prin înmulțire 12 * 15 = 180 de lei."
+      },
+      {
+        "q": "O pompă scoate dintr-un puț 120 de litri de apă în 4 minute. În cât timp va scoate pompa 300 de litri de apă?",
+        "opts": [
+          "8 minute",
+          "10 minute",
+          "12 minute",
+          "15 minute"
+        ],
+        "ok": 1,
+        "exOk": "Corect! Debitul pe minut este 120 : 4 = 30 de litri. Timpul necesar pentru 300 de litri este 300 : 30 = 10 minute.",
+        "exGr": "Greșit. Pompa scoate 30 de litri pe minut. Împărțim volumul total la debit: 300 : 30 = 10 minute."
+      },
+      {
+        "q": "Șase cărți de același tip cântăresc împreună 3 kg. Cât vor cântări 14 cărți de același fel?",
+        "opts": [
+          "6 kg",
+          "7 kg",
+          "8 kg",
+          "9 kg"
+        ],
+        "ok": 1,
+        "exOk": "Corect! Putem stabili că 2 cărți cântăresc 1 kg (6 : 3 = 2). Pentru 14 cărți avem 14 : 2 = 7 kg.",
+        "exGr": "Greșit. Raportul indică faptul că 1 kg corespunde la 2 cărți. Greutatea pentru 14 cărți este 14 : 2 = 7 kg."
+      },
+      {
+        "q": "Patru muncitori pot termina un șanț în 10 ore. În câte ore vor termina lucrarea 5 muncitori cu aceeași productivitate?",
+        "opts": [
+          "6 ore",
+          "8 ore",
+          "12 ore",
+          "7 ore"
+        ],
+        "ok": 1,
+        "exOk": "Corect! Un singur om termină în 4 * 10 = 40 de ore. Cei 5 oameni vor termina în 40 : 5 = 8 hours.",
+        "exGr": "Greșit. Dependența este inversă: volumul total este de 40 de ore-om. Împărțind la 5 muncitori rezultă 8 ore."
+      },
+      {
+        "q": "Dacă 8 litri de combustibil costă 48 de lei, câți litri se pot cumpăra cu 90 de lei?",
+        "opts": [
+          "12 litri",
+          "15 litri",
+          "16 litri",
+          "18 litri"
+        ],
+        "ok": 1,
+        "exOk": "Corect! Prețul unui litru este 48 : 8 = 6 lei. Din 90 de lei cumpărăm 90 : 6 = 15 litri.",
+        "exGr": "Greșit. Prețul pe unitate este 6 lei. Împărțind suma disponibilă la prețul unitar rezultă 90 : 6 = 15 litri."
+      },
+      {
+        "q": "O uzină produce 42 de piese în 6 ore. Câte piese va produce în 10 ore, păstrând ritmul?",
+        "opts": [
+          "60 de piese",
+          "65 de piese",
+          "70 de piese",
+          "80 de piese"
+        ],
+        "ok": 2,
+        "exOk": "Corect! Ritmul este de 42 : 6 = 7 piese pe oră. În 10 ore se produc 7 * 10 = 70 de piese.",
+        "exGr": "Greșit. Uzina produce 7 piese într-o oră. În intervalul de 10 ore va genera 7 * 10 = 70 de piese."
+      },
+      {
+        "q": "Dacă pentru 3 pachete de biscuiți s-au plătit 9 lei, câte pachete se pot cumpăra cu 27 de lei?",
+        "opts": [
+          "6 pachete",
+          "8 pachete",
+          "9 pachete",
+          "12 pachete"
+        ],
+        "ok": 2,
+        "exOk": "Corect! Un pachet costă 9 : 3 = 3 lei. Cu 27 de lei putem cumpăra 27 : 3 = 9 pachete.",
+        "exGr": "Greșit. Prețul per pachet este de 3 lei. Bugetul total împărțit la prețul pachetului dă 27 : 3 = 9 pachete."
+      }
+    ],
+    "T4": [
+      {
+        "q": "Zece camioane pot transporta o cantitate de nisip în 12 zile. De câte camioane este nevoie pentru a transporta cantitatea în 8 zile?",
+        "opts": [
+          "13 camioane",
+          "15 camioane",
+          "16 camioane",
+          "18 camioane"
+        ],
+        "ok": 1,
+        "exOk": "Corect! Volumul total este de 10 * 12 = 120 de zile-camion. Pentru 8 zile avem nevoie de 120 : 8 = 15 camioane.",
+        "exGr": "Greșit. Este o problemă de dependență inversă. Un singur camion ar face transportul în 120 de zile, deci în 8 zile sunt necesare 120 : 8 = 15 camioane."
+      },
+      {
+        "q": "O cantitate de hrană ajunge pentru 12 animale timp de 15 zile. Pentru câte zile va ajunge aceeași cantitate dacă sunt doar 9 animale?",
+        "opts": [
+          "18 zile",
+          "20 de zile",
+          "22 de zile",
+          "25 de zile"
+        ],
+        "ok": 1,
+        "exOk": "Corect! Hrana reprezintă 12 * 15 = 180 de rații zilnice. Pentru 9 animale, hrana va ajunge 180 : 9 = 20 de zile.",
+        "exGr": "Greșit. Scăzând numărul de animale, hrana durează mai mult: totalul de 180 de rații împărțit la 9 animale oferă 20 de zile."
+      },
+      {
+        "q": "Dacă 15 saci cu ciment cântăresc 750 kg, cât vor cântări 24 de saci de același fel?",
+        "opts": [
+          "1100 kg",
+          "1200 kg",
+          "1300 kg",
+          "1400 kg"
+        ],
+        "ok": 1,
+        "exOk": "Corect! Un singur sac are greutatea de 750 : 15 = 50 kg. Pentru 24 de saci calculăm 50 * 24 = 1200 kg.",
+        "exGr": "Greșit. Masa unui sac este de 50 kg. Masa cumulată pentru 24 de saci este dată de produsul 50 * 24 = 1200 kg."
+      },
+      {
+        "q": "Un robot de ambalat sigilează 180 de flacoane în 12 minute. În câte minute va sigila 450 de flacoane?",
+        "opts": [
+          "25 de minute",
+          "28 de minute",
+          "30 de minute",
+          "32 de minute"
+        ],
+        "ok": 0,
+        "exOk": "Corect! Robotul sigilează 180 : 12 = 15 flacoane pe minut. Timpul necesar este 450 : 15 = 25 de minute.",
+        "exGr": "Greșit. Viteza aparatului este de 15 piese pe minut. Împărțind volumul de 450 la 15 obținem exact 25 de minute."
+      },
+      {
+        "q": "Dacă 18 metri de țesătură costă 324 de lei, care este costul pentru 25 de metri din aceeași țesătură?",
+        "opts": [
+          "400 de lei",
+          "425 de lei",
+          "450 de lei",
+          "475 de lei"
+        ],
+        "ok": 2,
+        "exOk": "Corect! Un metru costă 324 : 18 = 18 lei. Pentru 25 de metri valoarea va fi 18 * 25 = 450 de lei.",
+        "exGr": "Greșit. Prețul calculat per metru este de 18 lei. Suma totală pentru 25 de metri este 18 * 25 = 450 de lei."
+      },
+      {
+        "q": "Doi iepuri consumă 6 kg de hrană într-un interval dat. Câtă hrană consumă 7 iepuri în același interval?",
+        "opts": [
+          "18 kg",
+          "21 kg",
+          "24 kg",
+          "28 kg"
+        ],
+        "ok": 1,
+        "exOk": "Corect! Un iepure consumă 6 : 2 = 3 kg. Prin urmare, 7 iepuri vor mânca 3 * 7 = 21 kg.",
+        "exGr": "Greșit. Rația per animal este de 3 kg. Pentru un grup de 7 animale consumul este 3 * 7 = 21 kg."
+      },
+      {
+        "q": "Pentru a împrejmui un teren sunt necesari 36 de stâlpi plasați la distanța de 4 metri unul de altul. De câți stâlpi este nevoie dacă distanța dintre ei se mărește la 6 metri?",
+        "opts": [
+          "20 de stâlpi",
+          "24 de stâlpi",
+          "28 de stâlpi",
+          "30 de stâlpi"
+        ],
+        "ok": 1,
+        "exOk": "Corect! Perimetrul total calculat prin intervale este format din 36 * 4 = 144 de metri. La distanța de 6 metri distanțare avem nevoie de 144 : 6 = 24 de stâlpi.",
+        "exGr": "Greșit. Lungimea totală este neschimbată: 36 * 4 = 144 metri. Împărțind noul interval de 6 metri obținem 144 : 6 = 24 de stâlpi."
+      },
+      {
+        "q": "Dacă un grup de 8 turiști consumă 24 de litri de apă pe zi, câți litri de apă sunt necesari pe zi pentru 13 turiști?",
+        "opts": [
+          "36 de litri",
+          "39 de litri",
+          "42 de litri",
+          "45 de litri"
+        ],
+        "ok": 1,
+        "exOk": "Corect! Un turist consumă 24 : 8 = 3 litri pe zi. Pentru 13 persoane volumul este 3 * 13 = 39 de litri.",
+        "exGr": "Greșit. Consumul individual zilnic este de 3 litri. Pentru 13 turiști necesarul devine 3 * 13 = 39 de litri."
+      },
+      {
+        "q": "O autoutilitară transportă 48 de lăzi în 4 transporturi egale. De câte transporturi are nevoie pentru a muta 120 de lăzi?",
+        "opts": [
+          "8 transporturi",
+          "10 transporturi",
+          "12 transporturi",
+          "15 transporturi"
+        ],
+        "ok": 1,
+        "exOk": "Corect! Într-un singur transport încap 48 : 4 = 12 lăzi. Numărul de drumuri necesar este 120 : 12 = 10 transporturi.",
+        "exGr": "Greșit. Capacitatea unui drum este de 12 lăzi. Împărțind volumul total la capacitatea unitară rezultă 120 : 12 = 10 drumuri."
+      },
+      {
+        "q": "Trei robinete identice umplu un bazin în 16 ore. În cât timp umplu același bazin 4 robinete asemănătoare?",
+        "opts": [
+          "10 ore",
+          "12 ore",
+          "14 ore",
+          "8 ore"
+        ],
+        "ok": 1,
+        "exOk": "Corect! Timpul total de operare pentru un singur robinet este 3 * 16 = 48 de ore. Cele 4 aparate termină treaba în 48 : 4 = 12 ore.",
+        "exGr": "Greșit. Dependența fiind inversă, lucrul total însumează 48 de ore. Distribuind sarcina la 4 robinete obținem 48 : 4 = 12 ore."
+      }
+    ]
+  }
+}

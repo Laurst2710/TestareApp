@@ -1,0 +1,508 @@
+{
+  "meta": {
+    "nivel": "Manual",
+    "dificultate": 1,
+    "clasa": "a V-a",
+    "unitate": "U1",
+    "titlu_unitate": "Numere Naturale",
+    "tema": "Tema29",
+    "titlu_tema": "Metoda comparatiei",
+    "prag": 0.8,
+    "puncte_per_item": 10
+  },
+  "teorie": [
+    "Metoda comparației constă în analizarea a două relații matematice în care apar aceleași două mărimi necunoscute, comparându-se direct cantitățile și valorile totale.",
+    "Pentru a elimina una dintre necunoscute, se egalează coeficienții acesteia în ambele relații prin înmulțirea uneia sau a ambelor relații cu numere adecvate.",
+    "Prin scăderea celor două relații astfel obținute, se elimină necunoscuta cu coeficienți egali, permițând determinarea valorii celeilalte necunoscute."
+  ],
+  "teste": {
+    "T1": [
+      {
+        "q": "Dacă 2 caiete și 3 pixuri costă 12 lei, iar 2 caiete și 5 pixuri costă 16 lei, cu cât a crescut prețul total din cauza pixurilor în plus?",
+        "opts": [
+          "2 lei",
+          "4 lei",
+          "6 lei",
+          "8 lei"
+        ],
+        "ok": 1,
+        "exOk": "Corect! Diferența de preț este de 16 - 12 = 4 lei, cauzată direct de cele 2 pixuri cumpărate în plus.",
+        "exGr": "Greșit. Comparând cele două situații, numărul de caiete este același, iar prețul crește cu 16 - 12 = 4 lei."
+      },
+      {
+        "q": "Știind că 2 pixuri în plus costă 4 lei, care este prețul unui singur pix?",
+        "opts": [
+          "1 leu",
+          "2 lei",
+          "3 lei",
+          "4 lei"
+        ],
+        "ok": 1,
+        "exOk": "Corect! Împărțim diferența de preț la diferența de cantitate: 4 : 2 = 2 lei pentru un pix.",
+        "exGr": "Greșit. Dacă 2 pixuri costă 4 lei, prețul unui singur pix se află prin împărțire: 4 : 2 = 2 lei."
+      },
+      {
+        "q": "Dacă 3 kilograme de mere și 2 kilograme de pere costă 19 lei, iar 3 kilograme de mere și 4 kilograme de pere costă 29 de lei, cât costă 2 kg de pere?",
+        "opts": [
+          "5 lei",
+          "10 lei",
+          "15 lei",
+          "9 lei"
+        ],
+        "ok": 1,
+        "exOk": "Corect! Cantitatea de mere fiind egală, cele 2 kg de pere în plus determină diferența de 29 - 19 = 10 lei.",
+        "exGr": "Greșit. Scăzând primele cantități din cele secunde, eliminăm merele și obținem că 2 kg de pere costă 29 - 19 = 10 lei."
+      },
+      {
+        "q": "Dacă 2 kg de pere costă 10 lei, care este prețul unui singur kilogram de pere?",
+        "opts": [
+          "2 lei",
+          "4 lei",
+          "5 lei",
+          "3 lei"
+        ],
+        "ok": 2,
+        "exOk": "Corect! Un kilogram de pere costă valoarea totală împărțită la cantitate: 10 : 2 = 5 lei.",
+        "exGr": "Greșit. Împărțim costul celor două kilograme la numărul lor pentru a afla prețul unitar: 10 : 2 = 5 lei."
+      },
+      {
+        "q": "Patru pâini și două lactate costă 20 de lei, iar patru pâini și cinci lactate costă 29 de lei. Cât costă un singur lăptat?",
+        "opts": [
+          "3 lei",
+          "4 lei",
+          "5 lei",
+          "2 lei"
+        ],
+        "ok": 0,
+        "exOk": "Corect! 3 lactate în plus costă 29 - 20 = 9 lei, deci un lăptat costă 9 : 3 = 3 lei.",
+        "exGr": "Greșit. Diferența de preț este 9 lei pentru 3 lactate. Un singur lăptat costă 9 : 3 = 3 lei."
+      },
+      {
+        "q": "Dacă un lăptat costă 3 lei, cât costă cele două lactate din prima relație (4 pâini + 2 lactate = 20 lei)?",
+        "opts": [
+          "3 lei",
+          "5 lei",
+          "6 lei",
+          "9 lei"
+        ],
+        "ok": 2,
+        "exOk": "Corect! Două lactate costă de două ori prețul unui lăptat: 2 * 3 = 6 lei.",
+        "exGr": "Greșit. Multiplicăm prețul aflat cu numărul de bucăți din prima ecuație: 3 * 2 = 6 lei."
+      },
+      {
+        "q": "Știind că 4 pâini și 2 lactate costă 20 de lei, iar cele 2 lactate costă 6 lei, cât costă cele 4 pâini?",
+        "opts": [
+          "14 lei",
+          "12 lei",
+          "10 lei",
+          "16 lei"
+        ],
+        "ok": 0,
+        "exOk": "Corect! Scădem costul lactatelor din suma totală: 20 - 6 = 14 lei pentru cele 4 pâini.",
+        "exGr": "Greșit. Eliminăm valoarea lactatelor din total pentru a izola pâinile: 20 - 6 = 14 lei."
+      },
+      {
+        "q": "Trei bile mari și două bile mici cântăresc 16 grame, iar trei bile mari și cinci bile mici cântăresc 22 de grame. Cât cântărește o bilă mică?",
+        "opts": [
+          "1 gram",
+          "2 grame",
+          "3 grame",
+          "4 grame"
+        ],
+        "ok": 1,
+        "exOk": "Corect! Cele 3 bile mici suplimentare cântăresc 22 - 16 = 6 grame, deci una are 6 : 3 = 2 grame.",
+        "exGr": "Greșit. Diferența este de 6 grame pentru 3 bile mici. O bilă mică are greutatea de 6 : 3 = 2 grame."
+      },
+      {
+        "q": "Cinci rigle și două compasuri costă 30 de lei, iar cinci rigle și patru compasuri costă 46 de lei. Cât costă două compasuri?",
+        "opts": [
+          "10 lei",
+          "16 lei",
+          "8 lei",
+          "12 lei"
+        ],
+        "ok": 1,
+        "exOk": "Corect! Diferența dintre cele două pachete constă în 2 compasuri și costă 46 - 30 = 16 lei.",
+        "exGr": "Greșit. Riglele fiind egale ca număr, scădem totalul mic din totalul mare: 46 - 30 = 16 lei pentru 2 compasuri."
+      },
+      {
+        "q": "Dacă 2 compasuri costă 16 lei, care este prețul unui singur compas?",
+        "opts": [
+          "6 lei",
+          "7 lei",
+          "8 lei",
+          "9 lei"
+        ],
+        "ok": 2,
+        "exOk": "Corect! Prețul unui compas se obține prin împărțirea costului la numărul lor: 16 : 2 = 8 lei.",
+        "exGr": "Greșit. Aflăm valoarea unei singure unități împărțind suma la numărul de obiecte: 16 : 2 = 8 lei."
+      }
+    ],
+    "T2": [
+      {
+        "q": "Dacă 3 kilograme de roșii și 2 kilograme de ardei costă 16 lei, iar 5 kilograme de roșii și 2 kilograme de ardei costă 22 de lei, cât costă 2 kg de roșii?",
+        "opts": [
+          "4 lei",
+          "6 lei",
+          "8 lei",
+          "3 lei"
+        ],
+        "ok": 1,
+        "exOk": "Corect! Cantitatea de ardei este identică, deci cele 2 kg de roșii în plus costă 22 - 16 = 6 lei.",
+        "exGr": "Greșit. Scăzând cantitățile egale de ardei, obținem că diferența de preț corespunde la 2 kg de roșii: 22 - 16 = 6 lei."
+      },
+      {
+        "q": "Știind că 2 kg de roșii costă 6 lei, cât costă un singur kilogram de roșii?",
+        "opts": [
+          "2 lei",
+          "3 lei",
+          "4 lei",
+          "5 lei"
+        ],
+        "ok": 1,
+        "exOk": "Corect! Împărțim prețul la numărul de kilograme pentru a găsi costul unitar: 6 : 2 = 3 lei.",
+        "exGr": "Greșit. Un kilogram costă valoarea totală împărțită la numărul de kilograme: 6 : 2 = 3 lei."
+      },
+      {
+        "q": "Dacă un kg de roșii costă 3 lei, cât costă cele 3 kg de roșii din prima cumpărătură (3 kg roșii + 2 kg ardei = 16 lei)?",
+        "opts": [
+          "6 lei",
+          "8 lei",
+          "9 lei",
+          "12 lei"
+        ],
+        "ok": 2,
+        "exOk": "Corect! Multiplicăm costul unui kilogram cu 3: 3 * 3 = 9 lei.",
+        "exGr": "Greșit. Pentru 3 kilograme calculăm prin înmulțire prețul unitar: 3 * 3 = 9 lei."
+      },
+      {
+        "q": "Știind că 3 kg de roșii costă 9 lei, iar împreună cu 2 kg de ardei costă 16 lei, cât costă cele 2 kg de ardei?",
+        "opts": [
+          "5 lei",
+          "7 lei",
+          "9 lei",
+          "6 lei"
+        ],
+        "ok": 1,
+        "exOk": "Corect! Din prețul total de 16 lei eliminăm costul roșiilor: 16 - 9 = 7 lei.",
+        "exGr": "Greșit. Pentru a izola ardeii, scădem prețul roșiilor din totalul primei relații: 16 - 9 = 7 lei."
+      },
+      {
+        "q": "Cinci cărți și trei penare costă 85 de lei, iar două cărți și trei penare costă 46 de lei. Cât costă trei cărți?",
+        "opts": [
+          "39 de lei",
+          "30 de lei",
+          "35 de lei",
+          "42 de lei"
+        ],
+        "ok": 0,
+        "exOk": "Corect! Numărul de penare este identic, deci diferența de 3 cărți costă 85 - 46 = 39 de lei.",
+        "exGr": "Greșit. Comparând cele două grupuri, eliminăm penarele și deducem că 3 cărți costă 85 - 46 = 39 de lei."
+      },
+      {
+        "q": "Dacă 3 cărți costă 39 de lei, care este prețul unei singure cărți?",
+        "opts": [
+          "11 lei",
+          "12 lei",
+          "13 lei",
+          "14 lei"
+        ],
+        "ok": 2,
+        "exOk": "Corect! Reducem la unitate împărțind suma la numărul de cărți: 39 : 3 = 13 lei.",
+        "exGr": "Greșit. Prețul unei singure cărți se determină prin împărțire: 39 : 3 = 13 lei."
+      },
+      {
+        "q": "Patru saci de cartofi și trei saci de ceapă cântăresc 110 kg, iar un sac de cartofi și trei saci de ceapă cântăresc 50 kg. Cât cântărește un sac de cartofi?",
+        "opts": [
+          "15 kg",
+          "20 kg",
+          "25 kg",
+          "30 kg"
+        ],
+        "ok": 1,
+        "exOk": "Corect! Diferența de 3 saci de cartofi cântărește 110 - 50 = 60 kg, deci un sac are 60 : 3 = 20 kg.",
+        "exGr": "Greșit. Eliminând ceapa, 3 saci de cartofi au 60 kg. Un singur sac de cartofi cântărește 60 : 3 = 20 kg."
+      },
+      {
+        "q": "Știind că un sac de cartofi are 20 kg, iar un sac de cartofi și trei saci de ceapă au 50 kg, cât au cei trei saci de ceapă?",
+        "opts": [
+          "20 kg",
+          "30 kg",
+          "40 kg",
+          "25 kg"
+        ],
+        "ok": 1,
+        "exOk": "Corect! Scădem greutatea sacului de cartofi din totalul de 50 kg: 50 - 20 = 30 kg.",
+        "exGr": "Greșit. Separăm ceapa eliminând sacul de cartofi din a doua relație: 50 - 20 = 30 kg."
+      },
+      {
+        "q": "Dacă 3 saci de ceapă cântăresc împreună 30 kg, cât cântărește un singur sac de ceapă?",
+        "opts": [
+          "5 kg",
+          "10 kg",
+          "15 kg",
+          "8 kg"
+        ],
+        "ok": 1,
+        "exOk": "Corect! Împărțim masa totală a cepei la numărul de saci: 30 : 3 = 10 kg.",
+        "exGr": "Greșit. Masa unui singur sac de ceapă se obține prin împărțire simplă: 30 : 3 = 10 kg."
+      },
+      {
+        "q": "Trei albume și două timbre costă 34 de lei, iar trei albume și șapte timbre costă 49 de lei. Cât costă un timbru?",
+        "opts": [
+          "2 lei",
+          "3 lei",
+          "4 lei",
+          "5 lei"
+        ],
+        "ok": 1,
+        "exOk": "Corect! Cinci timbre în plus costă 49 - 34 = 15 lei, deci un singur timbru costă 15 : 5 = 3 lei.",
+        "exGr": "Greșit. Diferența constă în 5 timbre și costă 15 lei. Prețul unui timbru este 15 : 5 = 3 lei."
+      }
+    ],
+    "T3": [
+      {
+        "q": "Dacă 2 metri de stofă și 3 metri de pânză costă 70 de lei, iar 4 metri de stofă și 3 metri de pânză costă 110 lei, cât costă un metru de stofă?",
+        "opts": [
+          "15 lei",
+          "20 de lei",
+          "25 de lei",
+          "30 de lei"
+        ],
+        "ok": 1,
+        "exOk": "Corect! Diferența de 2 metri de stofă costă 110 - 70 = 40 lei, deci un metru de stofă costă 40 : 2 = 20 lei.",
+        "exGr": "Greșit. Pânza fiind în cantitate egală, 2 metri de stofă costă 40 lei. Un metru costă 40 : 2 = 20 lei."
+      },
+      {
+        "q": "Folosind datele anterioare (metrul de stofă este 20 lei), aflați cât costă un metru de pânză dacă 2 metri de stofă și 3 de pânză fac 70 lei.",
+        "opts": [
+          "10 lei",
+          "12 lei",
+          "15 lei",
+          "8 lei"
+        ],
+        "ok": 0,
+        "exOk": "Corect! 2 metri de stofă costă 40 lei. Cei 3 metri de pânză costă 70 - 40 = 30 lei, deci unul costă 30 : 3 = 10 lei.",
+        "exGr": "Greșit. Stofa costă 40 lei. Pânza costă 70 - 40 = 30 lei. Un metru de pânză este 30 : 3 = 10 lei."
+      },
+      {
+        "q": "Pentru 5 scaune și 2 mese s-au plătit 280 de lei, iar pentru 5 scaune și 4 mese s-au plătit 440 de lei. Cât costă o masă?",
+        "opts": [
+          "60 de lei",
+          "70 de lei",
+          "80 de lei",
+          "90 de lei"
+        ],
+        "ok": 2,
+        "exOk": "Corect! Două mese în plus costă 440 - 280 = 160 de lei, prin urmare o masă costă 160 : 2 = 80 de lei.",
+        "exGr": "Greșit. Eliminăm scaunele: 2 mese costă 160 de lei. Prețul unei mese este 160 : 2 = 80 de lei."
+      },
+      {
+        "q": "Știind că o masă costă 80 de lei, calculați prețul unui scaun din relația: 5 scaune și 2 mese costă 280 de lei.",
+        "opts": [
+          "20 de lei",
+          "24 de lei",
+          "25 de lei",
+          "30 de lei"
+        ],
+        "ok": 0,
+        "exOk": "Corect! Două mese costă 160 lei. Cele 5 scaune costă 280 - 160 = 120 lei, deci un scaun costă 120 : 5 = 24 de lei.",
+        "exGr": "Greșit. Mesele costă 160 lei, deci cele 5 scaune costă 120 lei. Un scaun costă 120 : 5 = 24 de lei."
+      },
+      {
+        "q": "Dacă 3 bile mari și 4 bile mici cântăresc 26 de grame, iar 6 bile mari și 4 bile mici cântăresc 44 de grame, cât are o bilă mare?",
+        "opts": [
+          "4 grame",
+          "5 grame",
+          "6 grame",
+          "7 grame"
+        ],
+        "ok": 2,
+        "exOk": "Corect! Diferența de 3 bile mari cântărește 44 - 26 = 18 grame, deci una singură are 18 : 3 = 6 grame.",
+        "exGr": "Greșit. Bilele mici fiind egale, 3 bile mari au 18 grame. O bilă mare cântărește 18 : 3 = 6 grame."
+      },
+      {
+        "q": "Trei robinete mari și două mici umplu 34 de litri pe minut, iar cinci robinete mari și două mici umplu 50 de litri. Cât debit are un robinet mare?",
+        "opts": [
+          "6 litri",
+          "8 litri",
+          "10 litri",
+          "7 litri"
+        ],
+        "ok": 1,
+        "exOk": "Corect! Două robinete mari în plus aduc 50 - 34 = 16 litri. Un robinet mare are 16 : 2 = 8 litri.",
+        "exGr": "Greșit. Eliminând robinetele mici, obținem că 2 robinete mari au un debit de 16 litri, deci unul are 8 litri."
+      },
+      {
+        "q": "Dacă un robinet mare are debitul de 8 litri, aflați debitul unui robinet mic știind că 3 mari și 2 mici au 34 de litri.",
+        "opts": [
+          "4 litri",
+          "5 litri",
+          "6 litri",
+          "3 litri"
+        ],
+        "ok": 1,
+        "exOk": "Corect! Cele 3 robinete mari au 24 de litri. Cele 2 mici au 34 - 24 = 10 litri, deci unul mic are 10 : 2 = 5 litri.",
+        "exGr": "Greșit. Robinetele mari au 24 litri. Pentru cele mici rămân 10 litri, deci un robinet mic are 10 : 2 = 5 litri."
+      },
+      {
+        "q": "Șapte sucuri și trei prăjituri costă 43 de lei, iar trei sucuri și trei prăjituri costă 23 de lei. Cât costă un singur suc?",
+        "opts": [
+          "4 lei",
+          "5 lei",
+          "6 lei",
+          "3 lei"
+        ],
+        "ok": 1,
+        "exOk": "Corect! Diferența de 4 sucuri costă 23 de lei mai puțin, adică 43 - 23 = 20 lei. Un suc este 20 : 4 = 5 lei.",
+        "exGr": "Greșit. Prăjiturile fiind egale, 4 sucuri costă 20 de lei. Prețul unui suc este 20 : 4 = 5 lei."
+      },
+      {
+        "q": "Cinci becuri mari și șase becuri mici consumă 220 W, iar cinci becuri mari și două becuri mici consumă 140 W. Cât consumă un bec mic?",
+        "opts": [
+          "15 W",
+          "20 W",
+          "25 W",
+          "30 W"
+        ],
+        "ok": 1,
+        "exOk": "Corect! Patru becuri mici consumă diferența de 220 - 140 = 80 W, deci un bec mic consumă 80 : 4 = 20 W.",
+        "exGr": "Greșit. Scăzând relațiile, 4 becuri mici consumă 80 W. Un bec mic consumă 80 : 4 = 20 W."
+      },
+      {
+        "q": "Dacă un bec mic consumă 20 W, determinați consumul unui bec mare folosind a doua relație (5 mari + 2 mici = 140 W).",
+        "opts": [
+          "15 W",
+          "20 W",
+          "25 W",
+          "10 W"
+        ],
+        "ok": 1,
+        "exOk": "Corect! Cele 2 becuri mici consumă 40 W. Cele 5 mari consumă 140 - 40 = 100 W, deci unul mare are 100 : 5 = 20 W.",
+        "exGr": "Greșit. Două becuri mici au 40 W, deci cele 5 mari au 100 W. Un bec mare consumă 100 : 5 = 20 W."
+      }
+    ],
+    "T4": [
+      {
+        "q": "Dacă un metru de stofă și doi metri de pânză costă 32 de lei, iar trei metri de stofă și patru metri de pânză costă 84 de lei, cum comparăm relațiile aducând pânza la aceeași cantitate?",
+        "opts": [
+          "Înmulțim prima relație cu 2",
+          "Înmulțim a doua relație cu 2",
+          "Adunăm cele două relații",
+          "Împărțim a doua relație la 3"
+        ],
+        "ok": 0,
+        "exOk": "Corect! Pentru a avea 4 metri de pânză în ambele situații, dublăm toate cantitățile din prima relație.",
+        "exGr": "Greșit. Coeficientul pânzei devine egal dacă înmulțim prima relație cu 2, obținând 2 m stofă + 4 m pânză = 64 lei."
+      },
+      {
+        "q": "După dublarea primei relații avem: 2 m stofă + 4 m pânză = 64 lei. Comparând cu 3 m stofă + 4 m pânză = 84 lei, cât costă un metru de stofă?",
+        "opts": [
+          "10 lei",
+          "15 lei",
+          "20 de lei",
+          "25 de lei"
+        ],
+        "ok": 2,
+        "exOk": "Corect! Diferența constă exact într-un singur metru de stofă și costă 84 - 64 = 20 de lei.",
+        "exGr": "Greșit. Scăzând relația dublată din a doua relație, eliminăm pânza și rămâne direct 1 metru de stofă care costă 84 - 64 = 20 de lei."
+      },
+      {
+        "q": "Dacă un metru de stofă costă 20 de lei, aflați prețul unui metru de pânză din relația inițială: 1 m stofă + 2 m pânză = 32 lei.",
+        "opts": [
+          "4 lei",
+          "6 lei",
+          "8 lei",
+          "10 lei"
+        ],
+        "ok": 1,
+        "exOk": "Corect! Cei doi metri de pânză costă 32 - 20 = 12 lei, deci un singur metru costă 12 : 2 = 6 lei.",
+        "exGr": "Greșit. Scădem stofa: 2 m pânză = 12 lei. Prețul unui metru de pânză este 12 : 2 = 6 lei."
+      },
+      {
+        "q": "Trei caiete și două pixuri costă 16 lei, iar două caiete și trei pixuri costă 14 lei. Cât costă împreună 5 caiete și 5 pixuri?",
+        "opts": [
+          "20 de lei",
+          "25 de lei",
+          "30 de lei",
+          "35 de lei"
+        ],
+        "ok": 2,
+        "exOk": "Corect! Adunând direct cele două relații obținem direct suma pentru 5 caiete și 5 pixuri: 16 + 14 = 30 de lei.",
+        "exGr": "Greșit. Prin adunarea membrilor celor două ecuații obținem direct 5 caiete + 5 pixuri = 16 + 14 = 30 de lei."
+      },
+      {
+        "q": "Dacă 5 caiete și 5 pixuri costă împreună 30 de lei, cât costă un pachet format dintr-un singur caiet și un singur pix?",
+        "opts": [
+          "5 lei",
+          "6 lei",
+          "7 lei",
+          "4 lei"
+        ],
+        "ok": 1,
+        "exOk": "Corect! Împărțim întreaga relație la 5 și găsim că un caiet și un pix costă 30 : 5 = 6 lei.",
+        "exGr": "Greșit. Împărțind costul total al celor 5 pachete identice la 5, obținem 30 : 5 = 6 lei."
+      },
+      {
+        "q": "Două kg de mere și trei kg de banane costă 21 de lei, iar patru kg de mere și două kg de banane costă 26 de lei. Cum egalăm cantitatea de mere?",
+        "opts": [
+          "Înmulțim prima relație cu 2",
+          "Înmulțim a doua relație cu 2",
+          "Împărțim prima relație la 2",
+          "Nu se poate egala"
+        ],
+        "ok": 0,
+        "exOk": "Corect! Înmulțind prima relație cu 2, obținem 4 kg de mere și 6 kg de banane pentru un preț de 42 de lei.",
+        "exGr": "Greșit. Pentru a avea 4 kg de mere în prima relație, multiplicăm toți termenii cu 2."
+      },
+      {
+        "q": "Din relația nouă (4 kg mere + 6 kg banane = 42 lei) scădem a doua relație (4 kg mere + 2 kg banane = 26 lei). Cât costă un kg de banane?",
+        "opts": [
+          "3 lei",
+          "4 lei",
+          "5 lei",
+          "6 lei"
+        ],
+        "ok": 1,
+        "exOk": "Corect! Diferența de 4 kg de banane costă 42 - 26 = 16 lei. Un kg de banane este 16 : 4 = 4 lei.",
+        "exGr": "Greșit. Eliminând merele, 4 kg de banane costă 16 lei. Costul pe kilogram este 16 : 4 = 4 lei."
+      },
+      {
+        "q": "Dacă un kg de banane costă 4 lei, aflați prețul unui kg de mere utilizând ecuația: 2 kg mere + 3 kg banane = 21 lei.",
+        "opts": [
+          "3 lei",
+          "4 lei",
+          "4.5 lei",
+          "5 lei"
+        ],
+        "ok": 2,
+        "exOk": "Corect! Bananele costă 3 * 4 = 12 lei. Cele 2 kg de mere costă 21 - 12 = 9 lei, deci un kg de mere este 9 : 2 = 4.5 lei.",
+        "exGr": "Greșit. Bananele valorează 12 lei. Rămân 9 lei pentru 2 kg de mere, deci un kilogram costă 9 : 2 = 4.5 lei."
+      },
+      {
+        "q": "Cinci robinete mari și patru mici umplu un bazin în 6 ore, iar trei robinete mari și patru mici umplu același bazin în 8 ore. De câte ore-robinet este nevoie pentru a egala capacitățile exprimate prin volum total?",
+        "opts": [
+          "Trebuie transformat în volum umplut pe oră (debit)",
+          "Se scad direct orele",
+          "Se înmulțesc cantitățile direct",
+          "Nu se aplică metoda"
+        ],
+        "ok": 0,
+        "exOk": "Corect! În problemele cu timp și muncă, aducem relațiile la unitatea de timp (debitul pe o singură oră).",
+        "exGr": "Greșit. Pentru a compara eficient, determinăm cât umplu grupurile într-o singură oră."
+      },
+      {
+        "q": "Trei cămăși și patru tricouri costă 170 de lei. Șase cămăși și trei tricouri costă 240 de lei. Cât costă un tricou?",
+        "opts": [
+          "15 lei",
+          "20 de lei",
+          "25 de lei",
+          "30 de lei"
+        ],
+        "ok": 1,
+        "exOk": "Corect! Înmulțim prima relație cu 2: 6 cămăși + 8 tricouri = 340 lei. Scăzând relația a doua, 5 tricouri costă 100 lei, deci unul e 20 lei.",
+        "exGr": "Greșit. Egalăm cămășile prin dublarea primei relații (340 lei). Diferența reprezintă 5 tricouri și costă 100 lei. Un tricou este 100 : 5 = 20 lei."
+      }
+    ]
+  }
+}

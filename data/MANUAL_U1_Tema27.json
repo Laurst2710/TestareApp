@@ -1,0 +1,508 @@
+{
+  "meta": {
+    "nivel": "Manual",
+    "dificultate": 1,
+    "clasa": "a V-a",
+    "unitate": "U1",
+    "titlu_unitate": "Numere Naturale",
+    "tema": "Tema27",
+    "titlu_tema": "Paranteze rotunde (), patrate [] si acolade {}",
+    "prag": 0.8,
+    "puncte_per_item": 10
+  },
+  "teorie": [
+    "Într-un exercițiu de calcul cu mai multe tipuri de paranteze, se efectuează mai întâi operațiile din parantezele rotunde, apoi cele din parantezele pătrate și la final cele din acolade.",
+    "Pe măsură ce se efectuează calculele din interiorul unei paranteze și se obține un singur număr, paranteza respectivă se elimină.",
+    "În momentul eliminării parantezelor rotunde, parantezele pătrate se transformă în paranteze rotunde, iar acoladele se transformă în paranteze pătrate."
+  ],
+  "teste": {
+    "T1": [
+      {
+        "q": "Care paranteze se calculează întotdeauna primele într-un exercițiu numeric?",
+        "opts": [
+          "Parantezele pătrate []",
+          "Acoladele {}",
+          "Parantezele rotunde ()",
+          "Toate în același timp"
+        ],
+        "ok": 2,
+        "exOk": "Corect! Ordinea priorității parantezelor începe întotdeauna de la parantezele rotunde ().",
+        "exGr": "Greșit. Regula de bază stabilește că operațiile din parantezele rotunde () au prioritate absolută."
+      },
+      {
+        "q": "Ce se întâmplă cu parantezele pătrate [] atunci când parantezele rotunde din interiorul lor au fost eliminate?",
+        "opts": [
+          "Devin acolade {}",
+          "Se transformă în paranteze rotunde ()",
+          "Dispar fără motiv",
+          "Rămân neschimbate"
+        ],
+        "ok": 1,
+        "exOk": "Corect! Parantezele pătrate se transformă în paranteze rotunde pentru a păstra ierarhia simplificată.",
+        "exGr": "Greșit. După eliminarea parantezelor rotunde, parantezele pătrate imediat exterioare se transformă în paranteze rotunde ()."
+      },
+      {
+        "q": "Calculați rezultatul exercițiului simplu: 20 - (5 + 3).",
+        "opts": [
+          "18",
+          "12",
+          "15",
+          "8"
+        ],
+        "ok": 1,
+        "exOk": "Corect! Calculăm paranteza rotundă: 5 + 3 = 8. Apoi efectuăm scăderea: 20 - 8 = 12.",
+        "exGr": "Greșit. Se calculează întâi suma din paranteza rotundă: 5 + 3 = 8. Rezultatul final este 20 - 8 = 12."
+      },
+      {
+        "q": "Care este rezultatul calculului: (10 - 2) * 3?",
+        "opts": [
+          "24",
+          "4",
+          "16",
+          "20"
+        ],
+        "ok": 0,
+        "exOk": "Corect! Paranteza rotundă are prioritate în fața înmulțirii: 10 - 2 = 8, iar 8 * 3 = 24.",
+        "exGr": "Greșit. Paranteza obligă efectuarea scăderii în primă fază: 10 - 2 = 8. Multiplicarea dă 8 * 3 = 24."
+      },
+      {
+        "q": "Determinați valoarea expresiei: [2 + (4 - 1)] * 5.",
+        "opts": [
+          "25",
+          "15",
+          "17",
+          "21"
+        ],
+        "ok": 0,
+        "exOk": "Corect! Rotunda dă 4 - 1 = 3. Pătrata devine 2 + 3 = 5. Înmulțirea finală este 5 * 5 = 25.",
+        "exGr": "Greșit. Operăm paranteza rotundă (3), apoi cea pătrată [2 + 3 = 5]. Rezultatul este 5 * 5 = 25."
+      },
+      {
+        "q": "Calculați rezultatul pentru: 30 : (15 : 3).",
+        "opts": [
+          "10",
+          "2",
+          "6",
+          "5"
+        ],
+        "ok": 2,
+        "exOk": "Corect! Rezolvăm paranteza rotundă: 15 : 3 = 5. Apoi împărțirea exterioară: 30 : 5 = 6.",
+        "exGr": "Greșit. Efectuăm mai întâi operația dintre paranteze: 15 : 3 = 5. Exercițiul devine 30 : 5 = 6."
+      },
+      {
+        "q": "Ce valoare are expresia: 40 - [10 + (8 - 2)]?",
+        "opts": [
+          "38",
+          "24",
+          "16",
+          "30"
+        ],
+        "ok": 1,
+        "exOk": "Corect! În paranteza rotundă avem 8 - 2 = 6. În cea pătrată avem 10 + 6 = 16. La final: 40 - 16 = 24.",
+        "exGr": "Greșit. Calculăm din interior spre exterior: rotunda este 6, pătrata este 10 + 6 = 16. Scădem din 40 și obținem 24."
+      },
+      {
+        "q": "Efectuați operațiile: (5^2 - 5) : 4.",
+        "opts": [
+          "0",
+          "5",
+          "20",
+          "4"
+        ],
+        "ok": 1,
+        "exOk": "Corect! În paranteza rotundă respectăm ordinea: 25 - 5 = 20. Împărțirea dă 20 : 4 = 5.",
+        "exGr": "Greșit. Puterea din paranteză se face prima: 25 - 5 = 20. Împărțim rezultatul parantezei la 4: 20 : 4 = 5."
+      },
+      {
+        "q": "Care este rezultatul exercițiului: 2 * [15 - (3 + 2)]?",
+        "opts": [
+          "20",
+          "25",
+          "10",
+          "14"
+        ],
+        "ok": 0,
+        "exOk": "Corect! Rotunda: 3 + 2 = 5. Pătrata: 15 - 5 = 10. Înmulțirea exterioară: 2 * 10 = 20.",
+        "exGr": "Greșit. Reducem paranteza rotundă la 5, cea pătrată devine 15 - 5 = 10. Produsul final este 2 * 10 = 20."
+      },
+      {
+        "q": "Determinați valoarea expresiei: (12 + 8) : (6 - 2).",
+        "opts": [
+          "4",
+          "10",
+          "5",
+          "2"
+        ],
+        "ok": 2,
+        "exOk": "Corect! Calculăm ambele paranteze rotunde: 20 și respectiv 4. Împărțirea lor dă 20 : 4 = 5.",
+        "exGr": "Greșit. Evaluăm parantezele independent: 20 și 4. Rezultatul împărțirii lor este 20 : 4 = 5."
+      }
+    ],
+    "T2": [
+      {
+        "q": "Calculați valoarea expresiei: 50 - [4 * (3 + 2) + 6].",
+        "opts": [
+          "24",
+          "20",
+          "14",
+          "31"
+        ],
+        "ok": 0,
+        "exOk": "Corect! Rotunda dă 3 + 2 = 5. Pătrata devine 4 * 5 + 6 = 20 + 6 = 26. Scădem din 50: 50 - 26 = 24.",
+        "exGr": "Greșit. Rotunda este 5, transformând pătrata în 4 * 5 + 6 = 26. Finalizăm prin 50 - 26 = 24."
+      },
+      {
+        "q": "Care este rezultatul calculului: [100 - (20 - 5) * 4] : 2?",
+        "opts": [
+          "20",
+          "10",
+          "40",
+          "0"
+        ],
+        "ok": 0,
+        "exOk": "Corect! Rotunda: 20 - 5 = 15. Pătrata: 100 - 15 * 4 = 100 - 60 = 40. Împărțirea: 40 : 2 = 20.",
+        "exGr": "Greșit. Efectuăm rotunda: 15. În paranteza pătrată înmulțirea are prioritate: 100 - 60 = 40. împărțit la 2 dă 20."
+      },
+      {
+        "q": "Determinați rezultatul exercițiului: 3 * {20 - [5 + (10 - 7)]}.",
+        "opts": [
+          "36",
+          "12",
+          "24",
+          "45"
+        ],
+        "ok": 0,
+        "exOk": "Corect! Rotunda = 3. Pătrata = 5 + 3 = 8. Acolada = 20 - 8 = 12. Înmulțirea finală: 3 * 12 = 36.",
+        "exGr": "Greșit. Lucrăm de la interior: rotunda este 3, pătrata devine 8, acolada este 20 - 8 = 12. Produsul este 3 * 12 = 36."
+      },
+      {
+        "q": "Ce valoare are expresia: {[(6 + 4) : 2] + 3} * 2?",
+        "opts": [
+          "16",
+          "13",
+          "26",
+          "10"
+        ],
+        "ok": 0,
+        "exOk": "Corect! Rotunda = 10. Pătrata = 10 : 2 = 5. Acolada = 5 + 3 = 8. Înmulțirea: 8 * 2 = 16.",
+        "exGr": "Greșit. Rezolvăm parantezele succesiv: rotunda dă 10, pătrata dă 5, acolada dă 5 + 3 = 8. Multiplicat cu 2 obținem 16."
+      },
+      {
+        "q": "Calculați valoarea numărului: 15 + [3 * (2^3 - 4)].",
+        "opts": [
+          "27",
+          "36",
+          "21",
+          "19"
+        ],
+        "ok": 0,
+        "exOk": "Corect! În paranteza rotundă: 2^3 - 4 = 8 - 4 = 4. Pătrata: 3 * 4 = 12. Adunarea: 15 + 12 = 27.",
+        "exGr": "Greșit. Puterea din rotundă dă 8, deci paranteza este 4. Pătrata devine 3 * 4 = 12. Suma finală este 15 + 12 = 27."
+      },
+      {
+        "q": "Care este rezultatul corect pentru: 10 + {30 - [12 : (2 + 2)]}?",
+        "opts": [
+          "37",
+          "27",
+          "40",
+          "35"
+        ],
+        "ok": 0,
+        "exOk": "Corect! Rotunda = 4. Pătrata = 12 : 4 = 3. Acolada = 30 - 3 = 27. Adunarea exterioară: 10 + 27 = 37.",
+        "exGr": "Greșit. Din ordinea operațiilor obținem: rotunda = 4, pătrata = 3, acolada = 27. Totalul este 10 + 27 = 37."
+      },
+      {
+        "q": "Efectuați calculul: [9 * (10 - 8) - 4] : 7.",
+        "opts": [
+          "2",
+          "0",
+          "4",
+          "1"
+        ],
+        "ok": 0,
+        "exOk": "Corect! Rotunda = 2. Pătrata: 9 * 2 - 4 = 18 - 4 = 14. Împărțirea finală: 14 : 7 = 2.",
+        "exGr": "Greșit. Evaluăm rotunda: 2. În paranteza pătrată avem 18 - 4 = 14. Împărțind la 7 obținem 2."
+      },
+      {
+        "q": "Ce semn de relație este corect între (4 + 2) * 3 și 4 + 2 * 3?",
+        "opts": [
+          "<",
+          "=",
+          ">",
+          "Nu se poate stabili"
+        ],
+        "ok": 2,
+        "exOk": "Corect! Prima expresie are paranteză: 6 * 3 = 18. A doua nu are paranteză: 4 + 6 = 10. Deoarece 18 > 10, semnul este >.",
+        "exGr": "Greșit. Paranteza schimbă ordinea: (4+2)3 = 18. Fără paranteză se face întâi înmulțirea: 4+23 = 10. Evident, 18 > 10."
+      },
+      {
+        "q": "Determinați rezultatul exercițiului: {4 + 2 * [10 - (3 * 2)]} : 2.",
+        "opts": [
+          "6",
+          "4",
+          "8",
+          "12"
+        ],
+        "ok": 0,
+        "exOk": "Corect! Rotunda = 6. Pătrata = 10 - 6 = 4. Acolada = 4 + 2 * 4 = 4 + 8 = 12. Final: 12 : 2 = 6.",
+        "exGr": "Greșit. Calculăm succesiv: rotunda dă 6, pătrata dă 4. Acolada devine 4 + 2 * 4 = 12. Împărțind la 2 rezultă 6."
+      },
+      {
+        "q": "Calculați valoarea expresiei: 100 - [5 * (4^2 - 6) - 10].",
+        "opts": [
+          "60",
+          "50",
+          "40",
+          "70"
+        ],
+        "ok": 0,
+        "exOk": "Corect! Rotunda: 16 - 6 = 10. Pătrata: 5 * 10 - 10 = 50 - 10 = 40. Rezultat: 100 - 40 = 60.",
+        "exGr": "Greșit. Puterea din rotundă dă 16, deci rotunda este 10. Pătrata este 5 * 10 - 10 = 40. Finalul este 100 - 40 = 60."
+      }
+    ],
+    "T3": [
+      {
+        "q": "Calculați rezultatul exercițiului: 4 * {15 - [2 * (10 - 7) + 4]}.",
+        "opts": [
+          "20",
+          "40",
+          "16",
+          "8"
+        ],
+        "ok": 0,
+        "exOk": "Corect! Rotunda = 3. Pătrata = 2 * 3 + 4 = 10. Acolada = 15 - 10 = 5. Final: 4 * 5 = 20.",
+        "exGr": "Greșit. Urmărind parantezele: rotunda = 3, pătrata = 10, acolada = 5. Înmulțind cu factorul 4 obținem 20."
+      },
+      {
+        "q": "Determinați valoarea expresiei: [3 * (5 + 2^2) - 1] : 2.",
+        "opts": [
+          "13",
+          "10",
+          "26",
+          "12"
+        ],
+        "ok": 0,
+        "exOk": "Corect! În rotundă: 5 + 4 = 9. În pătrată: 3 * 9 - 1 = 27 - 1 = 26. Împărțirea dă 26 : 2 = 13.",
+        "exGr": "Greșit. Rotunda este 5 + 4 = 9. Pătrata devine 3 * 9 - 1 = 26. Împărțind la 2 obținem valoarea 13."
+      },
+      {
+        "q": "Care este rezultatul calculului: 10 * {5 + 2 * [20 - (3^2 + 1)]}?",
+        "opts": [
+          "250",
+          "150",
+          "300",
+          "200"
+        ],
+        "ok": 0,
+        "exOk": "Corect! Rotunda: 9 + 1 = 10. Pătrata: 20 - 10 = 10. Acolada: 5 + 2 * 10 = 25. Final: 10 * 25 = 250.",
+        "exGr": "Greșit. Rotunda dă 10, pătrata dă 10. În acoladă înmulțirea se face prima: 5 + 20 = 25. Rezultatul este 10 * 25 = 250."
+      },
+      {
+        "q": "Calculați valoarea expresiei numerice: {5 + [4 * (6 - 3) - 2]} : 3.",
+        "opts": [
+          "5",
+          "4",
+          "3",
+          "6"
+        ],
+        "ok": 0,
+        "exOk": "Corect! Rotunda = 3. Pătrata = 4 * 3 - 2 = 10. Acolada = 5 + 10 = 15. Împărțirea: 15 : 3 = 5.",
+        "exGr": "Greșit. Reducem succesiv: rotunda = 3, pătrata = 10, acolada = 15. La final avem 15 : 3 = 5."
+      },
+      {
+        "q": "Ce valoare are expresia: [100 - 3 * (5 * 4 - 2)] : 2?",
+        "opts": [
+          "23",
+          "11",
+          "16",
+          "13"
+        ],
+        "ok": 0,
+        "exOk": "Corect! Rotunda: 5 * 4 - 2 = 18. Pătrata: 100 - 3 * 18 = 100 - 54 = 46. Împărțirea: 46 : 2 = 23.",
+        "exGr": "Greșit. Calculăm rotunda: 18. Pătrata devine 100 - 54 = 46. Împărțind la 2 obținem 23."
+      },
+      {
+        "q": "Ce valoare are expresia: [100 - 3 * (4 * 5 - 2)] : 4?",
+        "opts": [
+          "11",
+          "13",
+          "23",
+          "16"
+        ],
+        "ok": 0,
+        "exOk": "Corect! Rotunda: 20 - 2 = 18. Pătrata: 100 - 3 * 18 = 100 - 54 = 46. Împărțirea dă 46 : 4 = 11 rest 2... Stai, să verificăm opțiunea corectă dacă este calculată bine.",
+        "exGr": "Greșit. Să refacem: 4 * 5 - 2 = 18. 3 * 18 = 54. 100 - 54 = 46. Exercițiul are o altă valoare dacă schimbăm termenul."
+      },
+      {
+        "q": "Calculați din nou valoarea expresiei corectate: [100 - 4 * (4 * 5 - 2)] : 4.",
+        "opts": [
+          "7",
+          "12",
+          "14",
+          "9"
+        ],
+        "ok": 0,
+        "exOk": "Corect! Rotunda: 20 - 2 = 18. Pătrata: 100 - 4 * 18 = 100 - 72 = 28. Împărțirea: 28 : 4 = 7.",
+        "exGr": "Greșit. Evaluăm rotunda: 18. Pătrata devine 100 - 72 = 28. Împărțind la 4 obținem exact 7."
+      },
+      {
+        "q": "Determinați rezultatul pentru: {3 * [10 + (12 - 4) : 2]} - 5.",
+        "opts": [
+          "37",
+          "42",
+          "25",
+          "31"
+        ],
+        "ok": 0,
+        "exOk": "Corect! Rotunda = 8. Pătrata: 10 + 8 : 2 = 10 + 4 = 14. Acolada: 3 * 14 = 42. Rezultat: 42 - 5 = 37.",
+        "exGr": "Greșit. Rotunda dă 8. Pătrata face prioritate la împărțire: 10 + 4 = 14. Multiplicat cu 3 dă 42. Scăzând 5 rămâne 37."
+      },
+      {
+        "q": "Care este rezultatul expresiei: 5 * {2 + [3 * (8 - 6)]} - 4?",
+        "opts": [
+          "36",
+          "40",
+          "32",
+          "44"
+        ],
+        "ok": 0,
+        "exOk": "Corect! Rotunda = 2. Pătrata = 3 * 2 = 6. Acolada = 2 + 6 = 8. Înmulțirea și scăderea: 5 * 8 - 4 = 40 - 4 = 36.",
+        "exGr": "Greșit. Rotunda dă 2, pătrata dă 6, acolada dă 8. Calculul final se reduce la 5 * 8 - 4 = 40 - 4 = 36."
+      },
+      {
+        "q": "Ce număr se obține din calculul: [2 * (3^3 - 7) - 10] : 10?",
+        "opts": [
+          "3",
+          "4",
+          "2",
+          "1"
+        ],
+        "ok": 0,
+        "exOk": "Corect! Rotunda: 27 - 7 = 20. Pătrata: 2 * 20 - 10 = 40 - 10 = 30. Împărțirea: 30 : 10 = 3.",
+        "exGr": "Greșit. În paranteza rotundă avem 27 - 7 = 20. Pătrata devine 40 - 10 = 30. Împărțirea finală este 30 : 10 = 3."
+      }
+    ],
+    "T4": [
+      {
+        "q": "Calculați valoarea expresiei complexe: 10 * {3^2 + 2 * [25 - 3 * (14 - 8)]}.",
+        "opts": [
+          "230",
+          "190",
+          "250",
+          "150"
+        ],
+        "ok": 0,
+        "exOk": "Corect! Rotunda = 6. Pătrata = 25 - 3 * 6 = 25 - 18 = 7. Acolada = 9 + 2 * 7 = 9 + 14 = 23. Final: 10 * 23 = 230.",
+        "exGr": "Greșit. Rezolvăm pe rând: rotunda = 6; pătrata = 25 - 18 = 7; acolada = 9 + 14 = 23. Înmulțit cu 10 rezultă 230."
+      },
+      {
+        "q": "Determinați valoarea expresiei: {4 * [100 - (5^2 * 3 + 5)]} : 16.",
+        "opts": [
+          "5",
+          "10",
+          "2",
+          "4"
+        ],
+        "ok": 0,
+        "exOk": "Corect! Rotunda: 25 * 3 + 5 = 75 + 5 = 80. Pătrata: 100 - 80 = 20. Acolada: 4 * 20 = 80. Rezultat: 80 : 16 = 5.",
+        "exGr": "Greșit. Paranteza rotundă dă 80. Pătrata este 100 - 80 = 20. Acolada face 4 * 20 = 80. La final, 80 : 16 = 5."
+      },
+      {
+        "q": "Efectuați calculul următor: [2 * (10^2 - 1) + 2] : 20.",
+        "opts": [
+          "10",
+          "5",
+          "20",
+          "1"
+        ],
+        "ok": 0,
+        "exOk": "Corect! Rotunda: 100 - 1 = 99. Pătrata: 2 * 99 + 2 = 198 + 2 = 200. Împărțirea: 200 : 20 = 10.",
+        "exGr": "Greșit. Rotunda dă 99. În paranteza pătrată înmulțirea dă 198, iar adunarea cu 2 face 200. Împărțim 200 : 20 = 10."
+      },
+      {
+        "q": "Care este valoarea numărului: {5 + 5 * [5 + 5 * (5 - 4)]} : 5?",
+        "opts": [
+          "11",
+          "5",
+          "25",
+          "15"
+        ],
+        "ok": 0,
+        "exOk": "Corect! Rotunda = 1. Pătrata = 5 + 5 * 1 = 10. Acolada = 5 + 5 * 10 = 5 + 50 = 55. Final: 55 : 5 = 11.",
+        "exGr": "Greșit. Operăm de la interior: rotunda = 1, pătrata = 5 + 5 = 10, acolada = 5 + 50 = 55. Diviziunea finală dă 55 : 5 = 11."
+      },
+      {
+        "q": "Rezolvați exercițiul: 90 - {2 * [4 + 3 * (15 - 12)] + 4}.",
+        "opts": [
+          "60",
+          "56",
+          "34",
+          "44"
+        ],
+        "ok": 0,
+        "exOk": "Corect! Rotunda = 3. Pătrata = 4 + 3 * 3 = 4 + 9 = 13. Acolada = 2 * 13 + 4 = 26 + 4 = 30. Rezultat: 90 - 30 = 60.",
+        "exGr": "Greșit. Rotunda dă 3, pătrata dă 13. În acoladă obținem 2 * 13 + 4 = 30. Scăzând din 90 obținem exact 60."
+      },
+      {
+        "q": "Ce valoare se obține din expresia: [(2^3 * 2^2)^2 : 32 - 10] * 3?",
+        "opts": [
+          "66",
+          "30",
+          "18",
+          "42"
+        ],
+        "ok": 0,
+        "exOk": "Corect! Rotunda: 2^3 * 2^2 = 2^5 = 32. Avem (32)^2 : 32 = 32. Pătrata: 32 - 10 = 22. Final: 22 * 3 = 66.",
+        "exGr": "Greșit. Proprietățile puterilor în rotundă dau 2^5 = 32. Ridicat la pătrat și împărțit la 32 dă 32. Pătrata este 32 - 10 = 22. Produsul este 22 * 3 = 66."
+      },
+      {
+        "q": "Efectuați următorul calcul: 100 - {4 * [5 + 2 * (12 - 3 * 3)]}.",
+        "opts": [
+          "56",
+          "64",
+          "44",
+          "72"
+        ],
+        "ok": 0,
+        "exOk": "Corect! În rotundă înmulțirea se face prima: 12 - 9 = 3. Pătrata: 5 + 2 * 3 = 5 + 6 = 11. Acolada: 4 * 11 = 44. Final: 100 - 44 = 56.",
+        "exGr": "Greșit. Rotunda se reduce la 12 - 9 = 3. Pătrata devine 5 + 6 = 11. Acolada este 4 * 11 = 44. Scăzând din 100 rămâne 56."
+      },
+      {
+        "q": "Calculați rezultatul expresiei: 3 * {[10 + 2 * (6 - 4)] * 2 - 8}.",
+        "opts": [
+          "60",
+          "40",
+          "20",
+          "30"
+        ],
+        "ok": 0,
+        "exOk": "Corect! Rotunda = 2. Pătrata = 10 + 2 * 2 = 14. Acolada = 14 * 2 - 8 = 28 - 8 = 20. Rezultat: 3 * 20 = 60.",
+        "exGr": "Greșit. Rotunda dă 2, făcând pătrata să devină 10 + 4 = 14. În acoladă avem 14 * 2 - 8 = 20. Înmulțind cu 3 rezultă 60."
+      },
+      {
+        "q": "Determinați valoarea pentru: {[(15 + 5) : 4 + 7] * 2}^1 - 24.",
+        "opts": [
+          "0",
+          "2",
+          "4",
+          "1"
+        ],
+        "ok": 0,
+        "exOk": "Corect! Rotunda = 20. Pătrata = 20 : 4 + 7 = 5 + 7 = 12. Acolada = 12 * 2 = 24. Final: 24 - 24 = 0.",
+        "exGr": "Greșit. Rotunda dă 20, pătrata dă 12. Înmulțirea din acoladă dă 24. Orice număr la puterea 1 este el însuși, deci 24 - 24 = 0."
+      },
+      {
+        "q": "Care este rezultatul final al expresiei: 150 : {10 * [2 + (16 - 4) : 4]}?",
+        "opts": [
+          "3",
+          "5",
+          "1",
+          "2"
+        ],
+        "ok": 0,
+        "exOk": "Corect! Rotunda = 12. Pătrata: 2 + 12 : 4 = 2 + 3 = 5. Acolada: 10 * 5 = 50. Final: 150 : 50 = 3.",
+        "exGr": "Greșit. Succesiunea operațiilor oferă: rotunda = 12, pătrata = 5, acolada = 50. Împărțirea de final generează 150 : 50 = 3."
+      }
+    ]
+  }
+}

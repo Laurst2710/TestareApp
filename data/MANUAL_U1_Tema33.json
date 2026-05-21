@@ -1,0 +1,508 @@
+{
+  "meta": {
+    "nivel": "Manual",
+    "dificultate": 1,
+    "clasa": "a V-a",
+    "unitate": "U1",
+    "titlu_unitate": "Numere Naturale",
+    "tema": "Tema33",
+    "titlu_tema": "Istoria numerelor: sisteme antice (egiptean, roman, mayas)",
+    "prag": 0.8,
+    "puncte_per_item": 10
+  },
+  "teorie": [
+    "Istoria numerelor reflectă evoluția gândirii matematice prin diverse sisteme antice de numerație, cum ar fi cel egiptean, roman sau mayaș.",
+    "Sistemul roman utilizează simboluri literale specifice și reguli additive sau subtractive stricte pentru formarea și citirea numerelor.",
+    "Sistemul mayaș se remarcă ca fiind unul pozițional în baza douăzeci și prin utilizarea timpurie a unui simbol special pentru cifra zero."
+  ],
+  "teste": {
+    "T1": [
+      {
+        "q": "Care dintre următoarele popoare antice folosea hieroglife (cum ar fi o linie, o frânghie sau o floare de lotus) pentru a scrie numerele?",
+        "opts": [
+          "Romanii",
+          "Egiptenii",
+          "Mayașii",
+          "Babilonienii"
+        ],
+        "ok": 1,
+        "exOk": "Corect! Sistemul egiptean antic folosea hieroglife bazate pe elemente din natură și viața cotidiană pentru a reprezenta puterile lui 10.",
+        "exGr": "Greșit. Egiptenii antici foloseau hieroglife specifice pentru reprezentarea numerică (de exemplu, o floare de lotus pentru numărul 1000)."
+      },
+      {
+        "q": "Ce cifră romană este reprezentată de simbolul literal 'X'?",
+        "opts": [
+          "1",
+          "5",
+          "10",
+          "50"
+        ],
+        "ok": 2,
+        "exOk": "Corect! În sistemul de numerație roman, simbolul X are valoarea zece.",
+        "exGr": "Greșit. Simbolul roman X corespunde numărului 10 în sistemul zecimal pozițional."
+      },
+      {
+        "q": "Sistemul de numerație utilizat de civilizația Maya avea ca bază numărul:",
+        "opts": [
+          "Baza 10 (zecimal)",
+          "Baza 20 (vigesimal)",
+          "Baza 60 (sexagesimal)",
+          "Baza 2 (binar)"
+        ],
+        "ok": 1,
+        "exOk": "Corect! Mayașii foloseau un sistem vigesimal, adică în baza 20, influențat probabil de numărul total de degete de la mâini și picioare.",
+        "exGr": "Greșit. Sistemul mayaș era un sistem pozițional structurat în baza 20."
+      },
+      {
+        "q": "Ce valoare are numărul scris cu cifre romane 'VI'?",
+        "opts": [
+          "4",
+          "6",
+          "11",
+          "51"
+        ],
+        "ok": 1,
+        "exOk": "Corect! Conform regulii additive, când o cifră mai mică (I=1) stă după una mai mare (V=5), valorile se adună: 5 + 1 = 6.",
+        "exGr": "Greșit. Deoarece I se află la dreapta lui V, aplicăm adunarea: 5 + 1 = 6."
+      },
+      {
+        "q": "Care dintre următoarele sisteme antice de numerație folosea puncte și linii orizontale pentru scrierea cifrelor de la 1 la 19?",
+        "opts": [
+          "Sistemul egiptean",
+          "Sistemul mayaș",
+          "Sistemul roman",
+          "Sistemul babilonian"
+        ],
+        "ok": 1,
+        "exOk": "Corect! În sistemul mayaș, un punct reprezenta unitatea (1), iar o linie orizontală reprezenta valoarea 5.",
+        "exGr": "Greșit. Mayașii scriau numerele combinând puncte (valoarea 1) și linii (valoarea 5)."
+      },
+      {
+        "q": "Ce număr reprezintă simbolul roman 'L'?",
+        "opts": [
+          "50",
+          "100",
+          "500",
+          "1000"
+        ],
+        "ok": 0,
+        "exOk": "Corect! În nomenclatorul roman, litera L desemnează valoarea cincizeci.",
+        "exGr": "Greșit. Simbolul literal L are valoarea fixă 50 în sistemul roman."
+      },
+      {
+        "q": "În sistemul roman, dacă o cifră mică este scrisă în stânga uneia mai mari, ca în exemplul 'IV', ce operație se execută?",
+        "opts": [
+          "Adunare",
+          "Scădere",
+          "Înmulțire",
+          "Împărțire"
+        ],
+        "ok": 1,
+        "exOk": "Corect! Regula subtractivă spune că o cifră mică în stânga uneia mai mari se scade din aceasta: 5 - 1 = 4.",
+        "exGr": "Greșit. Plasarea unei cifre mai mici în stânga obligă la scădere. Pentru IV avem 5 - 1 = 4."
+      },
+      {
+        "q": "Care dintre civilizațiile antice menționate a inventat și folosit un simbol asemănător unei scoici pentru cifra zero?",
+        "opts": [
+          "Romanii",
+          "Egiptenii",
+          "Mayașii",
+          "Grecii"
+        ],
+        "ok": 2,
+        "exOk": "Corect! Mayașii au fost printre primii care au utilizat conceptul și un simbol explicit (o scoică stilizată) pentru zero.",
+        "exGr": "Greșit. Civilizația Maya a introdus un simbol specific în formă de scoică pentru a marca poziția neutră (zero)."
+      },
+      {
+        "q": "Ce cifră romană este marcată prin litera 'C'?",
+        "opts": [
+          "50",
+          "100",
+          "500",
+          "1000"
+        ],
+        "ok": 1,
+        "exOk": "Corect! Litera C provine de la cuvântul latin 'centum' și reprezintă numărul o sută.",
+        "exGr": "Greșit. Simbolul C este echivalentul numărului 100 în scrierea romană."
+      },
+      {
+        "q": "Cum se scrie numărul natural 15 în sistemul de numerație roman?",
+        "opts": [
+          "VVV",
+          "XV",
+          "VX",
+          "XIIIII"
+        ],
+        "ok": 1,
+        "exOk": "Corect! 15 se descompune în 10 + 5, adică X urmat de V, rezultând XV.",
+        "exGr": "Greșit. Scrierea corectă și simplificată conform normelor romane este XV (10 + 5)."
+      }
+    ],
+    "T2": [
+      {
+        "q": "Care este valoarea numărului scris cu cifre romane 'IX'?",
+        "opts": [
+          "11",
+          "9",
+          "15",
+          "19"
+        ],
+        "ok": 1,
+        "exOk": "Corect! Cifra I (1) fiind în stânga lui X (10) se scade: 10 - 1 = 9.",
+        "exGr": "Greșit. Se aplică regula scăderii deoarece cifra mai mică este poziționată în față: 10 - 1 = 9."
+      },
+      {
+        "q": "În sistemul egiptean antic, ordinea scrierii simbolurilor contează pentru valoarea numărului sau este un sistem nepozițional?",
+        "opts": [
+          "Este pozițional, ordinea contează critic",
+          "Este nepozițional, valorile simbolurilor se adună indiferent de poziție",
+          "Este pozițional doar pentru numere mari",
+          "Funcționează ca sistemul binar"
+        ],
+        "ok": 1,
+        "exOk": "Corect! Sistemul egiptean era aditiv și nepozițional; valoarea numărului era suma valorilor hieroglifelor folosite, indiferent cum erau așezate.",
+        "exGr": "Greșit. Sistemul hieroglific egiptean era un sistem pur aditiv (nepozițional), unde poziția fizică a semnelor nu modifica valoarea lor intrinsecă."
+      },
+      {
+        "q": "Ce număr reprezintă simbolul roman 'D'?",
+        "opts": [
+          "50",
+          "100",
+          "500",
+          "1000"
+        ],
+        "ok": 2,
+        "exOk": "Corect! În cadrul sistemului roman, litera D are valoarea numerică de cinci sute.",
+        "exGr": "Greșit. Simbolul D este echivalentul numărului 500."
+      },
+      {
+        "q": "Cum se scrie numărul 40 în cifre romane, evitând repetarea aceleiași litere de patru ori?",
+        "opts": [
+          "XXXX",
+          "XL",
+          "LX",
+          "VL"
+        ],
+        "ok": 1,
+        "exOk": "Corect! Deoarece nu se permite repetarea aceleiași litere de 4 ori consecutiv (XXXX), se scrie ca 50 - 10, adică XL.",
+        "exGr": "Greșit. Scrierea corectă folosește scăderea din ordinul superior: XL reprezintă 50 - 10 = 40."
+      },
+      {
+        "q": "În sistemul mayaș, dacă o linie orizontală reprezintă 5, ce valoare reprezintă trei linii orizontale suprapuse în cadrul aceluiași nivel?",
+        "opts": [
+          "8",
+          "15",
+          "20",
+          "3"
+        ],
+        "ok": 1,
+        "exOk": "Corect! Fiecare linie valorează 5, deci trei linii însumează 5 + 5 + 5 = 15.",
+        "exGr": "Greșit. Valorile liniilor de pe același nivel se adună: 3 linii înseamnă 3 * 5 = 15."
+      },
+      {
+        "q": "Ce număr reprezintă ultima cifră de bază din sistemul roman, marcată prin litera 'M'?",
+        "opts": [
+          "500",
+          "1000",
+          "5000",
+          "10000"
+        ],
+        "ok": 1,
+        "exOk": "Corect! Litera M provine din latinescul 'mille' și înseamnă o mie.",
+        "exGr": "Greșit. În sistemul roman, litera M reprezintă valoarea 1000."
+      },
+      {
+        "q": "Care este valoarea numărului scris cu cifre romane 'XIV'?",
+        "opts": [
+          "16",
+          "14",
+          "24",
+          "15"
+        ],
+        "ok": 1,
+        "exOk": "Corect! Descompunem numărul: X = 10, iar IV = 4. Prin adunare obținem 10 + 4 = 14.",
+        "exGr": "Greșit. Analizăm grupurile: X (10) și IV (4). Numărul total este 10 + 4 = 14."
+      },
+      {
+        "q": "De câte ori consecutiv poate fi repetat un simbol principal (precum I, X, C, M) în scrierea corectă a unui număr roman?",
+        "opts": [
+          "De maximum două ori",
+          "De maximum trei ori",
+          "De maximum patru ori",
+          "De oricâte ori"
+        ],
+        "ok": 1,
+        "exOk": "Corect! Regulile sistemului roman interzic repetarea consecutivă a aceluiași simbol de mai mult de trei ori.",
+        "exGr": "Greșit. Standardul de scriere roman permite duplicarea sau triplicarea unui simbol de cel mult 3 ori consecutiv."
+      },
+      {
+        "q": "Ce număr este reprezentat de scrierea romană 'CX'?",
+        "opts": [
+          "90",
+          "110",
+          "200",
+          "101"
+        ],
+        "ok": 1,
+        "exOk": "Corect! C = 100 și X = 10. Deoarece X este mai mic și se află la dreapta, le adunăm: 100 + 10 = 110.",
+        "exGr": "Greșit. Ordinea implică adunarea valorilor elementelor componente: 100 + 10 = 110."
+      },
+      {
+        "q": "Care dintre următoarele numere este scris GREȘIT în sistemul roman?",
+        "opts": [
+          "VX",
+          "XV",
+          "VIII",
+          "XIX"
+        ],
+        "ok": 0,
+        "exOk": "Corect! Simbolul V (5) nu se scrie niciodată în stânga lui X pentru a scădea; pentru valoarea 5 se folosește direct simbolul V.",
+        "exGr": "Greșit. Numărul VX este incorect scris. Simbolurile care reprezintă subdiviziuni de tip '5' (V, L, D) nu se folosesc în operații de scădere."
+      }
+    ],
+    "T3": [
+      {
+        "q": "Efectuați conversia numărului roman 'CD' în sistemul zecimal pozițional.",
+        "opts": [
+          "600",
+          "400",
+          "900",
+          "150"
+        ],
+        "ok": 1,
+        "exOk": "Corect! C (100) se află în stânga lui D (500), deci se scade: 500 - 100 = 400.",
+        "exGr": "Greșit. Întrucât C este mai mic decât D și se află în fața lui, rezultatul este 500 - 100 = 400."
+      },
+      {
+        "q": "Sistemul mayaș fiind pozițional pe verticală, ce reprezenta primul nivel de jos al unei scrieri numerice?",
+        "opts": [
+          "Ordinul unităților simple (multiplu de 20^0)",
+          "Ordinul grupelor de 20 (multiplu de 20^1)",
+          "Ordinul grupelor de 400 (multiplu de 20^2)",
+          "Fracții ale numărului"
+        ],
+        "ok": 0,
+        "exOk": "Corect! La mayași, scrierea se citea de jos în sus, nivelul cel mai de jos fiind cel al unităților simple.",
+        "exGr": "Greșit. În sistemul vigesimal pozițional mayaș, nivelul inferior (de bază) reprezintă ordinul unităților."
+      },
+      {
+        "q": "Care este valoarea numărului scris cu cifre romane 'LXIII'?",
+        "opts": [
+          "43",
+          "63",
+          "53",
+          "62"
+        ],
+        "ok": 1,
+        "exOk": "Corect! Însumăm valorile literelor: L (50) + X (10) + I (1) + I (1) + I (1) = 63.",
+        "exGr": "Greșit. Toate cifrele sunt așezate în ordine descrescătoare a valorii, deci se adună: 50 + 10 + 3 = 63."
+      },
+      {
+        "q": "Cum se scrie numărul 90 în format roman, utilizând regula subtractivă?",
+        "opts": [
+          "LXXXX",
+          "XC",
+          "CX",
+          "IC"
+        ],
+        "ok": 1,
+        "exOk": "Corect! 90 se exprimă ca 100 - 10, ceea ce se notează prin plasarea lui X în fața lui C, adică XC.",
+        "exGr": "Greșit. Varianta corectă este XC, adică o sută minus zece."
+      },
+      {
+        "q": "Care este valoarea numărului roman 'CM'?",
+        "opts": [
+          "1100",
+          "900",
+          "1500",
+          "950"
+        ],
+        "ok": 1,
+        "exOk": "Corect! C (100) este plasat în stânga lui M (1000), reprezentând operația: 1000 - 100 = 900.",
+        "exGr": "Greșit. Poziționarea lui C în fața lui M indică scăderea a 100 de unități din 1000, adică 900."
+      },
+      {
+        "q": "Ce număr din sistemul nostru curent corespunde scrierii romane 'CLV'?",
+        "opts": [
+          "105",
+          "155",
+          "205",
+          "145"
+        ],
+        "ok": 1,
+        "exOk": "Corect! Adunăm componentele descrescătoare: C (100) + L (50) + V (5) = 155.",
+        "exGr": "Greșit. Suma termenilor poziționați corect este: 100 + 50 + 5 = 155."
+      },
+      {
+        "q": "În sistemul mayaș, un nivel conține două puncte și o linie orizontală dedesubt. Ce valoare numerică are acest nivel?",
+        "opts": [
+          "3",
+          "7",
+          "12",
+          "10"
+        ],
+        "ok": 1,
+        "exOk": "Corect! Linia are valoarea 5, iar cele două puncte aduc câte o unitate fiecare: 5 + 1 + 1 = 7.",
+        "exGr": "Greșit. Adunăm semnele de pe nivelul respectiv: linia (5) plus două puncte (2) oferă valoarea 7."
+      },
+      {
+        "q": "Care dintre următoarele simboluri romane NU se poate repeta niciodată consecutiv într-un număr?",
+        "opts": [
+          "X",
+          "V",
+          "C",
+          "I"
+        ],
+        "ok": 1,
+        "exOk": "Corect! Simbolurile V, L și D (cele care reprezintă valori de tip 5) nu se duplică niciodată, deoarece succesiunea VV ar însemna 10, care are deja simbolul X.",
+        "exGr": "Greșit. Simbolul V reprezintă o unitate de tip 5 și nu se poate repeta consecutiv conform regulilor romane."
+      },
+      {
+        "q": "Efectuați calculul numeric și exprimați rezultatul în sistemul zecimal: XI + IX.",
+        "opts": [
+          "18",
+          "20",
+          "22",
+          "21"
+        ],
+        "ok": 1,
+        "exOk": "Corect! XI = 11 și IX = 9. Suma lor este 11 + 9 = 20.",
+        "exGr": "Greșit. Transformăm ambele numere: 11 și 9. Suma lor simplă este 11 + 9 = 20."
+      },
+      {
+        "q": "Cum se scrie numărul natural 60 în cifre romane?",
+        "opts": [
+          "XL",
+          "LX",
+          "XXXXXX",
+          "LL"
+        ],
+        "ok": 1,
+        "exOk": "Corect! 60 se formează prin adunarea 50 + 10, adică L urmat de X, generând LX.",
+        "exGr": "Greșit. Semnul pentru 50 este L, iar adăugarea lui X la dreapta mărește valoarea cu 10, obținând LX."
+      }
+    ],
+    "T4": [
+      {
+        "q": "Care este echivalentul în sistemul zecimal al numărului roman complex 'MCCLIV'?",
+        "opts": [
+          "1254",
+          "1256",
+          "1154",
+          "1354"
+        ],
+        "ok": 0,
+        "exOk": "Corect! Descompunem: M(1000) + CC(200) + L(50) + IV(4) = 1254.",
+        "exGr": "Greșit. Evaluăm pe blocuri: M=1000, CC=200, L=50, IV=4. Suma lor este 1254."
+      },
+      {
+        "q": "Aflați valoarea numărului roman 'MMXXVI'. Cărui an din secolul XXI îi corespunde?",
+        "opts": [
+          "2024",
+          "2025",
+          "2026",
+          "2030"
+        ],
+        "ok": 2,
+        "exOk": "Corect! MM = 2000, XX = 20, VI = 6. Numărul reprezintă anul curent, 2026.",
+        "exGr": "Greșit. Suma valorilor literelor este: 2000 + 20 + 6 = 2026."
+      },
+      {
+        "q": "Dacă în sistemul mayaș un punct se află pe al doilea nivel de sus (ordinul al doilea), ce valoare reală reprezintă acesta în baza 20?",
+        "opts": [
+          "1",
+          "20",
+          "400",
+          "10"
+        ],
+        "ok": 1,
+        "exOk": "Corect! Al doilea nivel multiplică valoarea simbolică cu 20^1 = 20. Un punct pe acest nivel înseamnă 1 * 20 = 20.",
+        "exGr": "Greșit. Datorită poziționalității vigesimale, elementele de pe al doilea nivel ierarhic se multiplică cu 20."
+      },
+      {
+        "q": "Cum se scrie numărul 400 în sistemul roman de numerație?",
+        "opts": [
+          "CCCC",
+          "CD",
+          "DC",
+          "MCD"
+        ],
+        "ok": 1,
+        "exOk": "Corect! 400 se scrie ca 500 - 100, adică simbolul sutiei înaintea celui de 500: CD.",
+        "exGr": "Greșit. Repetarea CCCC fiind interzisă, utilizăm varianta subtractivă din 500: CD."
+      },
+      {
+        "q": "Care este rezultatul diferenței romane: XXV - XII, exprimat tot în cifre romane?",
+        "opts": [
+          "XIII",
+          "XII",
+          "XI",
+          "XIV"
+        ],
+        "ok": 0,
+        "exOk": "Corect! XXV = 25 și XII = 12. Diferența este 25 - 12 = 13, care se scrie ca XIII.",
+        "exGr": "Greșit. Efectuând calculul în baza 10 obținem 25 - 12 = 13. În format roman, 13 se notează XIII."
+      },
+      {
+        "q": "Ce număr reprezintă scrierea romană 'MCMXCI'?",
+        "opts": [
+          "1991",
+          "1911",
+          "2011",
+          "1891"
+        ],
+        "ok": 0,
+        "exOk": "Corect! M(1000) + CM(900) + XC(90) + I(1) = 1991.",
+        "exGr": "Greșit. Structura se traduce prin: 1000 + (1000 - 100) + (100 - 10) + 1 = 1000 + 900 + 90 + 1 = 1991."
+      },
+      {
+        "q": "În sistemul mayaș, un număr are pe al doilea nivel un punct (valoare 20) iar pe primul nivel de jos are simbolul scoicii (valoare 0). Ce număr este acesta?",
+        "opts": [
+          "1",
+          "20",
+          "0",
+          "40"
+        ],
+        "ok": 1,
+        "exOk": "Corect! Suma nivelelor poziționale oferă: (1 * 20) + 0 = 20.",
+        "exGr": "Greșit. Nivelul doi aduce 20, iar nivelul unu aduce 0. Numărul complet este 20."
+      },
+      {
+        "q": "Cum se scrie numărul natural 2026 în cifre romane?",
+        "opts": [
+          "MMXXVI",
+          "MMXXIV",
+          "MCMXXVI",
+          "MMXVI"
+        ],
+        "ok": 0,
+        "exOk": "Corect! 2026 se împarte în 2000 (MM) + 20 (XX) + 6 (VI), dând consecutiv MMXXVI.",
+        "exGr": "Greșit. Descompunerea pozițională zecimală a anului 2026 se traduce în format roman prin MMXXVI."
+      },
+      {
+        "q": "Care dintre următoarele litere NU are nicio valoare numerică stabilită în sistemul antic roman?",
+        "opts": [
+          "V",
+          "K",
+          "C",
+          "M"
+        ],
+        "ok": 1,
+        "exOk": "Corect! Litera K nu face parte din setul celor 7 simboluri de bază folosite pentru numere de către romani.",
+        "exGr": "Greșit. Simbolurile matematice romane sunt exclusiv I, V, X, L, C, D, M. Litera K nu are nicio semnificație numerică."
+      },
+      {
+        "q": "Efectuați operația și selectați răspunsul corect: C : XXV.",
+        "opts": [
+          "II",
+          "III",
+          "IV",
+          "V"
+        ],
+        "ok": 2,
+        "exOk": "Corect! C = 100 și XXV = 25. Împărțirea este 100 : 25 = 4, adică IV.",
+        "exGr": "Greșit. Traducem exercițiul: 100 împărțit la 25 rezultă 4. Valoarea 4 se scrie roman ca IV."
+      }
+    ]
+  }
+}

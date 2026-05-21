@@ -1,0 +1,508 @@
+{
+  "meta": {
+    "nivel": "Manual",
+    "dificultate": 1,
+    "clasa": "a V-a",
+    "unitate": "U1",
+    "titlu_unitate": "Numere Naturale",
+    "tema": "Tema25",
+    "titlu_tema": "Scrierea in baza 2; conversie baza 10->baza 2 (FARA operatii)",
+    "prag": 0.8,
+    "puncte_per_item": 10
+  },
+  "teorie": [
+    "Sistemul de numerație în baza 2 sau sistemul binar utilizează doar două cifre pentru scrierea numerelor, acestea fiind 0 și 1.",
+    "Pozițiile cifrelor într-un număr binar reprezintă puteri succesive ale lui 2, începând de la dreapta spre stânga cu 2^0, 2^1, 2^2, 2^3 și așa mai departe.",
+    "Conversia unui număr din baza 10 în baza 2 fără operații de împărțire se realizează prin descompunerea numărului ca sumă de puteri unice ale lui 2."
+  ],
+  "teste": {
+    "T1": [
+      {
+        "q": "Care sunt singurele cifre utilizate în sistemul binar (baza 2)?",
+        "opts": [
+          "0 și 1",
+          "1 și 2",
+          "0, 1 și 2",
+          "Orice cifre de la 0 la 9"
+        ],
+        "ok": 0,
+        "exOk": "Corect! Sistemul binar utilizează doar două cifre, 0 și 1, numite biți.",
+        "exGr": "Greșit. În baza 2 se folosesc exclusiv cifrele strict mai mici decât baza, adică 0 și 1."
+      },
+      {
+        "q": "Ce număr din baza 10 este reprezentat de numărul binar 1 în baza 2?",
+        "opts": [
+          "0",
+          "1",
+          "2",
+          "10"
+        ],
+        "ok": 1,
+        "exOk": "Corect! Numărul 1 are aceeași valoare atât în baza 10, cât și în baza 2.",
+        "exGr": "Greșit. Unitățile simple se scriu la fel în ambele baze de numerație, deci 1 în baza 2 este egal cu 1 în baza 10."
+      },
+      {
+        "q": "Cum se scrie numărul 2 din baza 10 în baza 2?",
+        "opts": [
+          "2",
+          "11",
+          "10",
+          "100"
+        ],
+        "ok": 2,
+        "exOk": "Corect! Numărul 2 reprezintă baza, fiind format dintr-o grupă de 2 și 0 unități, adică 10 în baza 2.",
+        "exGr": "Greșit. Deoarece 2 este chiar baza sistemului, el se scrie ca 10 în baza 2 (o grupă de doi și zero unități)."
+      },
+      {
+        "q": "Care este valoarea în baza 10 a numărului binar 100?",
+        "opts": [
+          "O sută",
+          "2",
+          "4",
+          "8"
+        ],
+        "ok": 2,
+        "exOk": "Corect! Pozițiile de la dreapta la stânga corespund puterilor lui 2: 100 în baza 2 înseamnă 1 * 2^2 = 4.",
+        "exGr": "Greșit. În baza 2, numărul 100 reprezintă a treia putere a bazei de la dreapta, adică 2^2 = 4."
+      },
+      {
+        "q": "Cum se scrie numărul 3 din baza 10 ca sumă de puteri ale lui 2?",
+        "opts": [
+          "2 + 1",
+          "3 + 0",
+          "2 + 2",
+          "1 + 1 + 1"
+        ],
+        "ok": 0,
+        "exOk": "Corect! 3 se descompune direct în puterile lui 2 ca 2^1 + 2^0, adică 2 + 1.",
+        "exGr": "Greșit. Pentru a converti fără operații, exprimăm numărul ca sumă de puteri ale lui 2: 3 = 2 + 1."
+      },
+      {
+        "q": "Știind că 3 = 2 + 1, care este scrierea lui 3 în baza 2?",
+        "opts": [
+          "10",
+          "11",
+          "101",
+          "100"
+        ],
+        "ok": 1,
+        "exOk": "Corect! 3 = 1 * 2^1 + 1 * 2^0, ceea ce oferă cifrele binarului: 11.",
+        "exGr": "Greșit. Deoarece 3 = 2 + 1, avem o grupă de doi și o unitate, adică 11 în baza 2."
+      },
+      {
+        "q": "Care dintre următoarele șiruri reprezintă o scriere corectă în baza 2?",
+        "opts": [
+          "1021",
+          "1101",
+          "301",
+          "120"
+        ],
+        "ok": 1,
+        "exOk": "Corect! Numărul 1101 conține doar cifrele permise în baza 2, adică 0 și 1.",
+        "exGr": "Greșit. În baza 2 nu pot apărea cifre precum 2, 3 etc. Singurul număr valid format doar din 0 și 1 este 1101."
+      },
+      {
+        "q": "Ce putere a lui 2 reprezintă numărul binar 1000?",
+        "opts": [
+          "2^1 = 2",
+          "2^2 = 4",
+          "2^3 = 8",
+          "2^4 = 16"
+        ],
+        "ok": 2,
+        "exOk": "Corect! Al patrulea ordin de la dreapta la stânga corespunde lui 2^3, adică 8.",
+        "exGr": "Greșit. Numărul binar 1000 reprezintă poziția unităților de mii binare, adică 1 * 2^3 = 8."
+      },
+      {
+        "q": "Cum se scrie numărul 5 din baza 10 în baza 2, știind că 5 = 4 + 1?",
+        "opts": [
+          "11",
+          "101",
+          "111",
+          "100"
+        ],
+        "ok": 1,
+        "exOk": "Corect! 5 = 2^2 + 2^0. Avem 1 la poziția lui 4, 0 la poziția lui 2 și 1 la unități, deci 101.",
+        "exGr": "Greșit. Descompunerea este 5 = 4 + 0 + 1 = 1 * 2^2 + 0 * 2^1 + 1 * 2^0, ceea ce dă numărul binar 101."
+      },
+      {
+        "q": "Care este valoarea în baza 10 a numărului scris în baza 2 ca 0?",
+        "opts": [
+          "0",
+          "1",
+          "2",
+          "10"
+        ],
+        "ok": 0,
+        "exOk": "Corect! Cifra 0 reprezintă numărul zero în orice bază de numerație.",
+        "exGr": "Greșit. Absența totală a unităților este marcată prin 0 în toate sistemele poziționale."
+      }
+    ],
+    "T2": [
+      {
+        "q": "Care este descompunerea corectă în puteri ale lui 2 pentru numărul 6?",
+        "opts": [
+          "4 + 2",
+          "4 + 1 + 1",
+          "2 + 2 + 2",
+          "5 + 1"
+        ],
+        "ok": 0,
+        "exOk": "Corect! Numărul 6 se scrie ca sumă de puteri distincte ale lui 2 prin 4 + 2 (adicie 2^2 + 2^1).",
+        "exGr": "Greșit. Puterile unice ale lui 2 care însumate dau 6 sunt 4 (2^2) și 2 (2^1), deci 4 + 2."
+      },
+      {
+        "q": "Folosind relația 6 = 4 + 2, care este scrierea lui 6 în baza 2?",
+        "opts": [
+          "111",
+          "101",
+          "110",
+          "100"
+        ],
+        "ok": 2,
+        "exOk": "Corect! 6 = 1 * 4 + 1 * 2 + 0 * 1, deci cifrele binare poziționale sunt 110.",
+        "exGr": "Greșit. Avem o grupă de 4, o grupă de 2 și zero unități. Numărul binar este 110."
+      },
+      {
+        "q": "Numărul binar 111 reprezintă în baza 10 valoarea:",
+        "opts": [
+          "3",
+          "5",
+          "7",
+          "111"
+        ],
+        "ok": 2,
+        "exOk": "Corect! 111 în baza 2 înseamnă 4 + 2 + 1 = 7 în baza 10.",
+        "exGr": "Greșit. Adunăm valorile pozițiilor ocupate de 1: 2^2 + 2^1 + 2^0 = 4 + 2 + 1 = 7."
+      },
+      {
+        "q": "Dacă un număr din baza 10 se scrie direct ca 2^3, cum arată el în baza 2?",
+        "opts": [
+          "100",
+          "1000",
+          "111",
+          "10"
+        ],
+        "ok": 1,
+        "exOk": "Corect! Orice putere pură a bazei se scrie ca cifra 1 urmată de un număr de zerouri egal cu exponentul.",
+        "exGr": "Greșit. 2^3 este baza la puterea a treia, deci se scrie ca 1 urmat de 3 zerouri: 1000."
+      },
+      {
+        "q": "Descompunerea unui număr este 8 + 1. Care este acest număr în baza 2?",
+        "opts": [
+          "1001",
+          "1010",
+          "1100",
+          "101"
+        ],
+        "ok": 0,
+        "exOk": "Corect! 8 este 2^3, iar 1 este 2^0. Pozițiile intermediare sunt 0, dând numărul 1001.",
+        "exGr": "Greșit. În structura binară avem 1 la mii (8) și 1 la unități, sutele și zecile fiind 0: 1001."
+      },
+      {
+        "q": "Numărul natural 9 din baza 10 se scrie în baza 2 sub forma:",
+        "opts": [
+          "1111",
+          "1001",
+          "1011",
+          "1000"
+        ],
+        "ok": 1,
+        "exOk": "Corect! Deoarece 9 = 8 + 1, scrierea sa binară este 1001.",
+        "exGr": "Greșit. Exprimat prin puteri ale lui 2, 9 = 8 + 1 = 2^3 + 2^0. Numărul generat este 1001."
+      },
+      {
+        "q": "Ce valoare în baza 10 are numărul binar 1010?",
+        "opts": [
+          "8",
+          "10",
+          "12",
+          "6"
+        ],
+        "ok": 1,
+        "exOk": "Corect! Pozițiile cifrelor de 1 corespund lui 8 (2^3) și 2 (2^1). Suma lor este 8 + 2 = 10.",
+        "exGr": "Greșit. Calculăm valoarea pozițională: 1 * 8 + 0 * 4 + 1 * 2 + 0 * 1 = 8 + 2 = 10."
+      },
+      {
+        "q": "Cum se scrie numărul 12 în baza 2, știind că se descompune în 8 + 4?",
+        "opts": [
+          "1100",
+          "1010",
+          "1110",
+          "1001"
+        ],
+        "ok": 0,
+        "exOk": "Corect! 12 = 1 * 8 + 1 * 4 + 0 * 2 + 0 * 1, obținând reprezentarea binară 1100.",
+        "exGr": "Greșit. Numărul conține o grupă de 8 și una de 4, restul ordinelor fiind zero, rezultând 1100."
+      },
+      {
+        "q": "Care este următorul număr natural în baza 2 după numărul binar 11?",
+        "opts": [
+          "12",
+          "20",
+          "100",
+          "110"
+        ],
+        "ok": 2,
+        "exOk": "Corect! 11 în baza 2 este egal cu 3. Următorul număr este 4, care se scrie ca 100 în baza 2.",
+        "exGr": "Greșit. Numărul binar 11 reprezintă valoarea 3. Succesorul lui 3 este 4, care se notează binar prin 100."
+      },
+      {
+        "q": "Numărul binar 1101 are cifra zero poziționată pe ordinul corespunzător lui:",
+        "opts": [
+          "1 (unități)",
+          "2 (zeci binare)",
+          "4 (sute binare)",
+          "8 (mii binare)"
+        ],
+        "ok": 1,
+        "exOk": "Corect! De la dreapta la stânga, a doua poziție corespunde puterii 2^1 = 2.",
+        "exGr": "Greșit. Pozițiile de la dreapta la stânga sunt: 1 (pentru valoarea 1), 0 (pentru valoarea 2). Deci cifra 0 corespunde ordinului 2."
+      }
+    ],
+    "T3": [
+      {
+        "q": "Descompuneți numărul 15 în puteri ale lui 2 pentru a-i găsi scrierea binară.",
+        "opts": [
+          "8 + 4 + 2 + 1",
+          "8 + 4 + 3",
+          "10 + 5",
+          "8 + 7"
+        ],
+        "ok": 0,
+        "exOk": "Corect! 15 se scrie ca sumă de puteri unice ale lui 2 prin forma: 8 + 4 + 2 + 1.",
+        "exGr": "Greșit. Toate numerele din sumă trebuie să fie puteri ale lui 2 (1, 2, 4, 8 etc.). Varianta corectă este 8 + 4 + 2 + 1."
+      },
+      {
+        "q": "Pe baza descompunerii 15 = 8 + 4 + 2 + 1, care este forma lui 15 în baza 2?",
+        "opts": [
+          "1000",
+          "1111",
+          "1010",
+          "1101"
+        ],
+        "ok": 1,
+        "exOk": "Corect! Fiecare ordin binar de la 1 la 8 are coeficientul 1, generând numărul binar 1111.",
+        "exGr": "Greșit. Deoarece toate puterile până la 8 sunt prezente, numărul conține patru cifre de 1, adică 1111."
+      },
+      {
+        "q": "Ce număr din baza 10 corespunde scrierii binare 10001?",
+        "opts": [
+          "17",
+          "9",
+          "33",
+          "10001"
+        ],
+        "ok": 0,
+        "exOk": "Corect! Cifrele de 1 sunt pe pozițiile puterilor 2^4 = 16 și 2^0 = 1. Suma lor este 16 + 1 = 17.",
+        "exGr": "Greșit. Evaluăm pozițiile binare: prima cifră din stânga înseamnă 16, iar ultima din dreapta înseamnă 1. 16 + 1 = 17."
+      },
+      {
+        "q": "Cum se scrie numărul 18 în baza 2 folosind descompunerea pozițională 18 = 16 + 2?",
+        "opts": [
+          "10100",
+          "10010",
+          "11000",
+          "10001"
+        ],
+        "ok": 1,
+        "exOk": "Corect! 16 este 2^4 și 2 este 2^1. Pozițiile pentru 8, 4 și 1 sunt 0, obținând 10010.",
+        "exGr": "Greșit. Numărul are 1 pe poziția lui 16 și 1 pe poziția lui 2, restul ordinelor fiind nule: 10010."
+      },
+      {
+        "q": "Care este valoarea sumei de numere binare 10 + 10 exprimate în baza 10?",
+        "opts": [
+          "2",
+          "4",
+          "20",
+          "1010"
+        ],
+        "ok": 1,
+        "exOk": "Corect! 10 în baza 2 înseamnă 2 în baza 10. Suma este 2 + 2 = 4.",
+        "exGr": "Greșit. Numărul binar 10 reprezintă valoarea 2. Prin urmare, adunarea înseamnă 2 + 2 = 4."
+      },
+      {
+        "q": "Alegeți numărul binar care este mai mare decât 1100 (valoarea 12 în baza 10).",
+        "opts": [
+          "1011",
+          "1101",
+          "1000",
+          "110"
+        ],
+        "ok": 1,
+        "exOk": "Corect! 1101 înseamnă 8 + 4 + 1 = 13, care este mai mare decât 12.",
+        "exGr": "Greșit. Numărul 1101 reprezintă 13 în baza 10, fiind singurul din listă mai mare decât 12 (1100)."
+      },
+      {
+        "q": "Câte cifre de zero conține scrierea în baza 2 a numărului 16?",
+        "opts": [
+          "1 zero",
+          "2 zerouri",
+          "3 zerouri",
+          "4 zerouri"
+        ],
+        "ok": 3,
+        "exOk": "Corect! 16 este egal cu 2^4, scriindu-se binar ca 1 urmat de 4 zerouri (10000).",
+        "exGr": "Greșit. Numărul 16 se scrie ca 2^4, ceea ce înseamnă că reprezentarea sa binară este 10000, având 4 zerouri."
+      },
+      {
+        "q": "Determinați valoarea numărului binar 10110.",
+        "opts": [
+          "22",
+          "14",
+          "18",
+          "26"
+        ],
+        "ok": 0,
+        "exOk": "Corect! Adunăm valorile pozițiilor cu cifra 1: 16 + 4 + 2 = 22.",
+        "exGr": "Greșit. Numărul se calculează prin adunarea puterilor corespunzătoare: 2^4 + 2^2 + 2^1 = 16 + 4 + 2 = 22."
+      },
+      {
+        "q": "Numărul natural 20 se descompune în 16 + 4. Care este reprezentarea sa binară?",
+        "opts": [
+          "10100",
+          "11000",
+          "10010",
+          "10001"
+        ],
+        "ok": 0,
+        "exOk": "Corect! Avem 1 la poziția lui 16 și 1 la poziția lui 4, restul fiind zerouri: 10100.",
+        "exGr": "Greșit. În baza 2, pentru 16 + 4 activăm pozițiile 2^4 și 2^2, rezultând numărul binar 10100."
+      },
+      {
+        "q": "Ce număr binar este predecesorul direct al numărului binar 100?",
+        "opts": [
+          "99",
+          "11",
+          "10",
+          "1"
+        ],
+        "ok": 1,
+        "exOk": "Corect! 100 în baza 2 este 4. Predecesorul său este 3, care se scrie ca 11 în baza 2.",
+        "exGr": "Greșit. Numărul binar 100 înseamnă valoarea 4. Numărul dinaintea lui este 3, care se scrie binar 11."
+      }
+    ],
+    "T4": [
+      {
+        "q": "Care este scrierea numărului 25 în baza 2, știind că descompunerea sa este 16 + 8 + 1?",
+        "opts": [
+          "11001",
+          "10101",
+          "11100",
+          "10011"
+        ],
+        "ok": 0,
+        "exOk": "Corect! Activăm pozițiile pentru 16 (2^4), 8 (2^3) și 1 (2^0). Pozițiile pentru 4 și 2 sunt 0, dând 11001.",
+        "exGr": "Greșit. Scrierea binară asociază câte un bit de 1 pentru 16, 8 și 1, restul fiind zero. Se obține 11001."
+      },
+      {
+        "q": "Determinați valoarea în baza 10 a numărului binar format din cinci cifre de 1 consecutive (11111).",
+        "opts": [
+          "15",
+          "31",
+          "25",
+          "63"
+        ],
+        "ok": 1,
+        "exOk": "Corect! Calculăm suma puterilor: 16 + 8 + 4 + 2 + 1 = 31.",
+        "exGr": "Greșit. Numărul binar 11111 se evaluează prin adunarea puterilor lui 2: 16 + 8 + 4 + 2 + 1 = 31."
+      },
+      {
+        "q": "Cum se scrie numărul 27 în baza 2, dacă știm că 27 = 16 + 8 + 2 + 1?",
+        "opts": [
+          "11011",
+          "11101",
+          "10111",
+          "11110"
+        ],
+        "ok": 0,
+        "exOk": "Corect! Toate pozițiile au cifra 1, cu excepția poziției valorii 4, obținând numărul binar 11011.",
+        "exGr": "Greșit. În structura sumei lipsește doar numărul 4 (2^2). Poziția sa va fi 0, rezultând numărul binar 11011."
+      },
+      {
+        "q": "Ce valoare în baza 10 are numărul binar 100101?",
+        "opts": [
+          "37",
+          "41",
+          "35",
+          "45"
+        ],
+        "ok": 0,
+        "exOk": "Corect! Pozițiile cifrelor de 1 corespund numerelor 32 (2^5), 4 (2^2) și 1 (2^0). Suma lor este 32 + 4 + 1 = 37.",
+        "exGr": "Greșit. Adunăm valorile corespunzătoare fiecărui bit de 1: 32 + 0 + 0 + 4 + 0 + 1 = 37."
+      },
+      {
+        "q": "Dacă un număr în baza 10 are descompunerea 32 + 8 + 2, care este forma lui în baza 2?",
+        "opts": [
+          "101010",
+          "110010",
+          "101100",
+          "100110"
+        ],
+        "ok": 0,
+        "exOk": "Corect! Numărul conține unități active la pozițiile 32, 8 și 2, generând tiparul alternant 101010.",
+        "exGr": "Greșit. Reprezentarea binară marchează cu 1 pozițiile lui 32, 8 și 2, completând cu 0 restul ordinelor: 101010."
+      },
+      {
+        "q": "Care este scrierea în baza 2 a numărului 40, utilizând descompunerea 40 = 32 + 8?",
+        "opts": [
+          "101000",
+          "110000",
+          "100100",
+          "100010"
+        ],
+        "ok": 0,
+        "exOk": "Corect! Se activează pozițiile 2^5 (32) și 2^3 (8), restul ordinelor fiind nule, dând 101000.",
+        "exGr": "Greșit. Numărul se compune din 32 și 8, adică pozițiile a șasea și a patra de la dreapta sunt 1. Rezultă 101000."
+      },
+      {
+        "q": "Ce număr din baza 10 este reprezentat prin numărul binar 110001?",
+        "opts": [
+          "49",
+          "51",
+          "45",
+          "53"
+        ],
+        "ok": 0,
+        "exOk": "Corect! Valorile biților sunt 32, 16 și 1. Efectuând suma: 32 + 16 + 1 = 49.",
+        "exGr": "Greșit. Evaluarea pozițională binară oferă: 2^5 + 2^4 + 2^0 = 32 + 16 + 1 = 49."
+      },
+      {
+        "q": "Numărul natural 50 se scrie ca 32 + 16 + 2. Care este scrierea sa binară?",
+        "opts": [
+          "110010",
+          "101100",
+          "110100",
+          "110001"
+        ],
+        "ok": 0,
+        "exOk": "Corect! Activăm biții pentru 32, 16 și 2, obținând secvența pozițională 110010.",
+        "exGr": "Greșit. Numărul are cifra 1 pe ordinul lui 32, 16 și 2. Formarea corectă este 110010."
+      },
+      {
+        "q": "Care este valoarea maximă care se poate scrie în baza 2 folosind exact 3 cifre binare?",
+        "opts": [
+          "3",
+          "4",
+          "7",
+          "8"
+        ],
+        "ok": 2,
+        "exOk": "Corect! Cel mai mare număr de 3 cifre binare este 111, care are valoarea 4 + 2 + 1 = 7.",
+        "exGr": "Greșit. Valoarea maximă din 3 cifre corespunde numărului binar 111, care convertit înseamnă 4 + 2 + 1 = 7."
+      },
+      {
+        "q": "Ce putere a lui 2 este egală cu numărul binar 100000 (1 urmat de 5 zerouri)?",
+        "opts": [
+          "2^4 = 16",
+          "2^5 = 32",
+          "2^6 = 64",
+          "2^3 = 8"
+        ],
+        "ok": 1,
+        "exOk": "Corect! Numărul are 5 zerouri, reprezentând direct puterea 2^5, a cărei valoare este 32.",
+        "exGr": "Greșit. Numărul de zerouri de după cifra 1 indică exponentul puterii lui 2. Fiind 5 zerouri, numărul este 2^5 = 32."
+      }
+    ]
+  }
+}

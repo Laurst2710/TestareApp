@@ -1,0 +1,500 @@
+{
+  "meta": {
+    "nivel": "Manual",
+    "dificultate": 1,
+    "clasa": "a V-a",
+    "unitate": "U1",
+    "titlu_unitate": "Numere Naturale",
+    "tema": "Tema22",
+    "titlu_tema": "Compararea puterilor aducere la aceeasi baza",
+    "prag": 0.8,
+    "puncte_per_item": 10
+  },
+  "teorie": [
+    "Dintre două puteri cu aceeași bază, este mai mare puterea cu exponentul mai mare.",
+    "Dacă bazele sunt egale și mai mari decât unu, puterea cu exponentul mai mare reprezintă numărul mai mare.",
+    "Pentru a compara puteri cu baze diferite, se folosesc proprietățile puterilor pentru a le aduce la aceeași bază."
+  ],
+  "items": [
+    {
+      "q": "Care număr este mai mare: 2^5 sau 2^3?",
+      "opts": [
+        "2^3",
+        "2^5",
+        "Sunt egale",
+        "Nu se pot compara"
+      ],
+      "ok": 1,
+      "exOk": "Corect! Când bazele sunt egale (2), puterea cu exponentul mai mare (5 > 3) este mai mare.",
+      "exGr": "Greșit. Deoarece bazele sunt egale, comparăm exponenții: 5 este mai mare decât 3, deci 2^5 > 2^3."
+    },
+    {
+      "q": "Comparați puterile 5^12 și 5^18. Care este semnul corect?",
+      "opts": [
+        "5^12 > 5^18",
+        "5^12 = 5^18",
+        "5^12 < 5^18",
+        "5^12 >= 5^18"
+      ],
+      "ok": 2,
+      "exOk": "Corect! Bazele sunt egale cu 5, iar exponentul 12 este mai mic decât 18.",
+      "exGr": "Greșit. Bazele fiind egale, comparăm exponenții. Deoarece 12 < 18, avem 5^12 < 5^18."
+    },
+    {
+      "q": "Determinați valoarea mai mică dintre 10^3 și 10^4.",
+      "opts": [
+        "10^3",
+        "10^4",
+        "Sunt egale",
+        "10^1"
+      ],
+      "ok": 0,
+      "exOk": "Corect! Exponentul 3 este mai mic decât 4, deci 10^3 este valoarea mai mică.",
+      "exGr": "Greșit. Puterea cu exponentul mai mic este mai mică atunci când bazele sunt egale: 10^3 < 10^4."
+    },
+    {
+      "q": "Care dintre următoarele propoziții este adevărată?",
+      "opts": [
+        "3^20 < 3^10",
+        "3^20 = 3^10",
+        "3^20 > 3^10",
+        "3^10 > 3^20"
+      ],
+      "ok": 2,
+      "exOk": "Corect! 3^20 are exponentul mai mare decât 3^10, deci este mai mare.",
+      "exGr": "Greșit. Deoarece ambele puteri au baza 3, comparăm exponenții: 20 > 10, deci 3^20 > 3^10."
+    },
+    {
+      "q": "Comparați 7^2 și 7^5. Selectați afirmația corectă.",
+      "opts": [
+        "7^2 este mai mare decât 7^5",
+        "7^2 este mai mic decât 7^5",
+        "7^2 este egal cu 7^5",
+        "7^5 este mai mic decât 7^2"
+      ],
+      "ok": 1,
+      "exOk": "Corect! Exponentul 2 este mai mic decât 5, deci 7^2 < 7^5.",
+      "exGr": "Greșit. Bazele sunt egale (7), deci comparăm exponenții: 2 < 5, ceea ce înseamnă că 7^2 < 7^5."
+    },
+    {
+      "q": "Care este cel mai mare număr din șirul: 4^2, 4^7, 4^5, 4^1?",
+      "opts": [
+        "4^2",
+        "4^5",
+        "4^1",
+        "4^7"
+      ],
+      "ok": 3,
+      "exOk": "Corect! Toate au baza 4, iar exponentul maxim este 7, deci 4^7 este cel mai mare.",
+      "exGr": "Greșit. Cel mai mare număr corespunde exponentului celui mai mare atunci când bazele sunt identice. Exponentul maxim este 7."
+    },
+    {
+      "q": "Ordonați crescător puterile: 6^5, 6^2, 6^9.",
+      "opts": [
+        "6^9, 6^5, 6^2",
+        "6^2, 6^5, 6^9",
+        "6^5, 6^2, 6^9",
+        "6^2, 6^9, 6^5"
+      ],
+      "ok": 1,
+      "exOk": "Corect! Ordinea crescătoare a exponenților este 2, 5, 9, deci 6^2 < 6^5 < 6^9.",
+      "exGr": "Greșit. Ordinea crescătoare înseamnă de la mic la mare. Comparând exponenții obținem 6^2, 6^5, 6^9."
+    },
+    {
+      "q": "Ce semn de relație trebuie pus între 13^45 și 13^45?",
+      "opts": [
+        "<",
+        ">",
+        "=",
+        "not"
+      ],
+      "ok": 2,
+      "exOk": "Corect! Puterile au aceeași bază și același exponent, deci sunt egale.",
+      "exGr": "Greșit. Numerele sunt identice, prin urmare semnul corect este cel de egalitate (=)."
+    },
+    {
+      "q": "Care număr este mai mic: 9^8 sau 9^11?",
+      "opts": [
+        "9^8",
+        "9^11",
+        "Sunt egale",
+        "9^3"
+      ],
+      "ok": 0,
+      "exOk": "Corect! 9^8 este mai mic deoarece exponentul 8 este mai mic decât 11.",
+      "exGr": "Greșit. Pentru baze egale, numărul cu exponentul mai mic este mai mic: 8 < 11 implică 9^8 < 9^11."
+    },
+    {
+      "q": "Alegeți afirmația corectă pentru 1^100 și 1^50.",
+      "opts": [
+        "1^100 > 1^50",
+        "1^100 < 1^50",
+        "1^100 = 1^50",
+        "1^100 = 100"
+      ],
+      "ok": 2,
+      "exOk": "Corect! Baza este 1, iar 1 la orice putere este 1, deci sunt egale.",
+      "exGr": "Greșit. Orice putere a lui 1 este egală cu 1, deci 1^100 = 1^50 = 1."
+    },
+    {
+      "q": "Pentru a compara 2^6 și 4^2, cum aducem la aceeași bază?",
+      "opts": [
+        "Scriem 4 ca 2^2",
+        "Scriem 2 ca 4^0",
+        "Înmulțim bazele",
+        "Scriem 4 ca 2^3"
+      ],
+      "ok": 0,
+      "exOk": "Corect! Baza 4 se scrie ca 2^2, transformând 4^2 în (2^2)^2 = 2^4.",
+      "exGr": "Greșit. Deoarece 4 este pătratul lui 2, scriem 4 = 2^2 pentru a avea aceeași bază."
+    },
+    {
+      "q": "Comparați numerele 2^6 și 4^2 după aducerea la aceeași bază.",
+      "opts": [
+        "2^6 < 4^2",
+        "2^6 > 4^2",
+        "2^6 = 4^2",
+        "Nu se pot aduce la aceeași bază"
+      ],
+      "ok": 1,
+      "exOk": "Corect! 4^2 = (2^2)^2 = 2^4. Deoarece 2^6 > 2^4, avem 2^6 > 4^2.",
+      "exGr": "Greșit. Transformăm 4^2 = (2^2)^2 = 2^4. Comparând cu 2^6, vedem că 2^6 > 2^4."
+    },
+    {
+      "q": "Care număr este mai mare: 3^5 sau 9^2?",
+      "opts": [
+        "9^2",
+        "3^5",
+        "Sunt egale",
+        "3^2"
+      ],
+      "ok": 1,
+      "exOk": "Corect! 9^2 = (3^2)^2 = 3^4. Cum 3^5 > 3^4, rezultă 3^5 > 9^2.",
+      "exGr": "Greșit. Scriem 9^2 ca (3^2)^2 = 3^4. Comparând 3^5 cu 3^4 obținem 3^5 > 9^2."
+    },
+    {
+      "q": "Dacă aducem numărul 25^3 la baza 5, ce putere obținem?",
+      "opts": [
+        "5^5",
+        "5^6",
+        "5^9",
+        "5^3"
+      ],
+      "ok": 1,
+      "exOk": "Corect! 25 = 5^2, deci 25^3 = (5^2)^3 = 5^(2*3) = 5^6.",
+      "exGr": "Greșit. Folosim regula de calcul (a^m)^n = a^(m*n). Astfel, (5^2)^3 = 5^6."
+    },
+    {
+      "q": "Comparați 5^5 și 25^3. Care afirmație este adevărată?",
+      "opts": [
+        "5^5 > 25^3",
+        "5^5 = 25^3",
+        "5^5 < 25^3",
+        "5^5 < 25^2"
+      ],
+      "ok": 2,
+      "exOk": "Corect! 25^3 = 5^6. Comparând 5^5 cu 5^6, rezultă că 5^5 < 5^6.",
+      "exGr": "Greșit. Transformăm 25^3 în 5^6. Deoarece exponenții sunt 5 < 6, avem 5^5 < 25^3."
+    },
+    {
+      "q": "Care număr este mai mic: 2^10 sau 8^3?",
+      "opts": [
+        "2^10",
+        "8^3",
+        "Sunt egale",
+        "8^2"
+      ],
+      "ok": 1,
+      "exOk": "Corect! 8^3 = (2^3)^3 = 2^9. Deoarece 2^9 < 2^10, 8^3 este mai mic.",
+      "exGr": "Greșit. Aducem la baza 2: 8^3 = (2^3)^3 = 2^9. Cum 2^9 < 2^10, rezultă că 8^3 < 2^10."
+    },
+    {
+      "q": "Scrieți numărul 27^4 ca o putere cu baza 3.",
+      "opts": [
+        "3^7",
+        "3^12",
+        "3^9",
+        "3^41"
+      ],
+      "ok": 1,
+      "exOk": "Corect! 27 = 3^3, deci 27^4 = (3^3)^4 = 3^12.",
+      "exGr": "Greșit. Deoarece 27 este 3^3, ridicarea la puterea a 4-a înseamnă înmulțirea exponenților: 3 * 4 = 12."
+    },
+    {
+      "q": "Comparați 3^10 și 27^4. Care este relația corectă?",
+      "opts": [
+        "3^10 > 27^4",
+        "3^10 < 27^4",
+        "3^10 = 27^4",
+        "3^10 >= 27^4"
+      ],
+      "ok": 1,
+      "exOk": "Corect! 27^4 = 3^12. Deoarece 10 < 12, avem 3^10 < 3^12.",
+      "exGr": "Greșit. Transformăm 27^4 în 3^12. Comparând exponenții, avem 10 < 12, deci 3^10 < 27^4."
+    },
+    {
+      "q": "Ce semn punem între 16^3 și 2^12?",
+      "opts": [
+        "<",
+        ">",
+        "=",
+        "Nu se poate determina"
+      ],
+      "ok": 2,
+      "exOk": "Corect! 16^3 = (2^4)^3 = 2^12, deci numerele sunt egale.",
+      "exGr": "Greșit. Exprimăm 16 ca 2^4. Atunci 16^3 devine (2^4)^3 = 2^12. Prin urmare, sunt egale."
+    },
+    {
+      "q": "Care este rezultatul comparării dintre 4^5 și 8^3?",
+      "opts": [
+        "4^5 > 8^3",
+        "4^5 < 8^3",
+        "4^5 = 8^3",
+        "4^5 <= 8^3"
+      ],
+      "ok": 0,
+      "exOk": "Corect! 4^5 = (2^2)^5 = 2^10 și 8^3 = (2^3)^3 = 2^9. Cum 2^10 > 2^9, avem 4^5 > 8^3.",
+      "exGr": "Greșit. Aducem ambele numere la baza 2: 4^5 = 2^10 și 8^3 = 2^9. Rezultă 2^10 > 2^9."
+    },
+    {
+      "q": "Comparați numerele A = 9^10 și B = 27^7.",
+      "opts": [
+        "A > B",
+        "A < B",
+        "A = B",
+        "A + B = 0"
+      ],
+      "ok": 1,
+      "exOk": "Corect! A = (3^2)^10 = 3^20 și B = (3^3)^7 = 3^21. Stai, 3^20 < 3^21, deci A < B. Să corectăm opțiunea corectă.",
+      "exGr": "Greșit. A = 3^20 și B = 3^21. Deoarece 20 < 21, relația corectă este A < B."
+    },
+    {
+      "q": "Comparați corect A = 9^10 și B = 27^7. Care este relația?",
+      "opts": [
+        "A > B",
+        "A < B",
+        "A = B",
+        "A >= B"
+      ],
+      "ok": 1,
+      "exOk": "Corect! A = 3^20 și B = 3^21, deci 3^20 < 3^21, adică A < B.",
+      "exGr": "Greșit. Aducem la baza 3: A = (3^2)^10 = 3^20, B = (3^3)^7 = 3^21. Cum 20 < 21, A < B."
+    },
+    {
+      "q": "Care număr este mai mare: 32^4 sau 16^5?",
+      "opts": [
+        "32^4",
+        "16^5",
+        "Sunt egale",
+        "2^4"
+      ],
+      "ok": 2,
+      "exOk": "Corect! 32^4 = (2^5)^4 = 2^20 și 16^5 = (2^4)^5 = 2^20. Sunt egale.",
+      "exGr": "Greșit. Ambele se scriu la baza 2: 32^4 = 2^20 și 16^5 = 2^20. Deci sunt egale."
+    },
+    {
+      "q": "Comparați puterile 125^4 și 25^7. Care este mai mică?",
+      "opts": [
+        "125^4",
+        "25^7",
+        "Sunt egale",
+        "5^4"
+      ],
+      "ok": 0,
+      "exOk": "Corect! 125^4 = (5^3)^4 = 5^12 și 25^7 = (5^2)^7 = 5^14. 5^12 < 5^14, deci 125^4 este mai mică.",
+      "exGr": "Greșit. La baza 5 avem 125^4 = 5^12 și 25^7 = 5^14. Cum 125^4 are exponentul 12, este mai mică."
+    },
+    {
+      "q": "Determinați ordinea descrescătoare a numerelor: 2^18, 4^10, 8^5.",
+      "opts": [
+        "2^18, 4^10, 8^5",
+        "4^10, 2^18, 8^5",
+        "8^5, 4^10, 2^18",
+        "4^10, 8^5, 2^18"
+      ],
+      "ok": 1,
+      "exOk": "Corect! 4^10 = 2^20, 8^5 = 2^15. Ordinea descrescătoare este 2^20 (4^10), 2^18, 2^15 (8^5).",
+      "exGr": "Greșit. La baza 2 numerele sunt 2^18, 2^20 și 2^15. Descrescător avem 2^20, 2^18, 2^15, adică 4^10, 2^18, 8^5."
+    },
+    {
+      "q": "Ce semn punem între 81^3 și 27^4?",
+      "opts": [
+        ">",
+        "<",
+        "=",
+        "=>"
+      ],
+      "ok": 2,
+      "exOk": "Corect! 81^3 = (3^4)^3 = 3^12 și 27^4 = (3^3)^4 = 3^12. Sunt egale.",
+      "exGr": "Greșit. Aducem la baza 3: 81^3 = 3^12 și 27^4 = 3^12. Semnul corect este egal (=)."
+    },
+    {
+      "q": "Comparați puterile 4^12 și 16^5. Care afirmație este adevărată?",
+      "opts": [
+        "4^12 < 16^5",
+        "4^12 > 16^5",
+        "4^12 = 16^5",
+        "4^12 <= 16^5"
+      ],
+      "ok": 1,
+      "exOk": "Corect! Putem folosi baza 4: 16^5 = (4^2)^5 = 4^10. Deoarece 12 > 10, 4^12 > 16^5.",
+      "exGr": "Greșit. La baza 4, al doilea număr este 4^10. Cum 4^12 are exponentul mai mare, 4^12 > 16^5."
+    },
+    {
+      "q": "Se dau numerele x = 3^30 și y = 9^14. Comparați-le.",
+      "opts": [
+        "x < y",
+        "x = y",
+        "x > y",
+        "x <= y"
+      ],
+      "ok": 2,
+      "exOk": "Corect! y = (3^2)^14 = 3^28. Deoarece 3^30 > 3^28, avem x > y.",
+      "exGr": "Greșit. Exprimăm y la baza 3: y = 3^28. Comparând cu x = 3^30, observăm că 3^30 > 3^28, deci x > y."
+    },
+    {
+      "q": "Care dintre următoarele numere este cel mai mic: 2^24, 4^11, 16^5?",
+      "opts": [
+        "2^24",
+        "4^11",
+        "16^5",
+        "Sunt toate egale"
+      ],
+      "ok": 2,
+      "exOk": "Corect! La baza 2: 2^24, 4^11 = 2^22, 16^5 = 2^20. Cel mai mic este 2^20 (16^5).",
+      "exGr": "Greșit. Transformăm la baza 2: 2^24, 2^22 și 2^20. Exponentul cel mai mic este 20, care corespunde lui 16^5."
+    },
+    {
+      "q": "Ce semn de inegalitate este corect între 100^2 și 10^5?",
+      "opts": [
+        ">",
+        "<",
+        "=",
+        "not"
+      ],
+      "ok": 1,
+      "exOk": "Corect! 100^2 = (10^2)^2 = 10^4. Cum 10^4 < 10^5, semnul este <.",
+      "exGr": "Greșit. La baza 10 avem 100^2 = 10^4. Comparând cu 10^5 obținem 10^4 < 10^5."
+    },
+    {
+      "q": "Comparați numerele A = 2^100 și B = 16^25.",
+      "opts": [
+        "A > B",
+        "A < B",
+        "A = B",
+        "A >= B"
+      ],
+      "ok": 2,
+      "exOk": "Corect! B = (2^4)^25 = 2^100. Prin urmare, A și B sunt egale.",
+      "exGr": "Greșit. Dacă scriem pe B în baza 2 obținem (2^4)^25 = 2^100, ceea ce înseamnă că A = B."
+    },
+    {
+      "q": "Care număr este mai mare: 4^40 sau 8^28?",
+      "opts": [
+        "4^40",
+        "8^28",
+        "Sunt egale",
+        "2^40"
+      ],
+      "ok": 1,
+      "exOk": "Corect! 4^40 = (2^2)^40 = 2^80. 8^28 = (2^3)^28 = 2^84. Deoarece 84 > 80, 8^28 este mai mare.",
+      "exGr": "Greșit. La baza 2, 4^40 = 2^80 și 8^28 = 2^84. Comparând exponenții obținem 8^28 > 4^40."
+    },
+    {
+      "q": "Fie x = 27^10 și y = 9^16. Stabiliți relația dintre x și y.",
+      "opts": [
+        "x > y",
+        "x < y",
+        "x = y",
+        "x >= y"
+      ],
+      "ok": 1,
+      "exOk": "Corect! x = (3^3)^10 = 3^30 și y = (3^2)^16 = 3^32. Cum 30 < 32, rezultă x < y.",
+      "exGr": "Greșit. Aducem la baza 3: x = 3^30 și y = 3^32. Deoarece 30 < 32, relația corectă este x < y."
+    },
+    {
+      "q": "Determinați care dintre următoarele numere este cel mai mare: 4^50, 16^24, 64^16.",
+      "opts": [
+        "4^50",
+        "16^24",
+        "64^16",
+        "Sunt toate egale"
+      ],
+      "ok": 0,
+      "exOk": "Corect! La baza 4: 4^50; 16^24 = (4^2)^24 = 4^48; 64^16 = (4^3)^16 = 4^48. Cel mai mare este 4^50.",
+      "exGr": "Greșit. Exprimate la baza 4, numerele sunt 4^50, 4^48 și 4^48. Cel mai mare exponent este 50, deci 4^50 este maximul."
+    },
+    {
+      "q": "Comparați A = 5^40 și B = 25^19. Selectați răspunsul corect.",
+      "opts": [
+        "A < B",
+        "A = B",
+        "A > B",
+        "A <= B"
+      ],
+      "ok": 2,
+      "exOk": "Corect! B = (5^2)^19 = 5^38. Cum 40 > 38, rezultă că A > B.",
+      "exGr": "Greșit. În baza 5, B devine 5^38. Comparând cu A = 5^40, deducem că A > B."
+    },
+    {
+      "q": "Ce relație există între numerele 36^5 și 6^10?",
+      "opts": [
+        "36^5 > 6^10",
+        "36^5 < 6^10",
+        "36^5 = 6^10",
+        "36^5 >= 6^10"
+      ],
+      "ok": 2,
+      "exOk": "Corect! 36^5 = (6^2)^5 = 6^10, prin urmare ele sunt egale.",
+      "exGr": "Greșit. Deoarece 36 este pătratul lui 6, avem 36^5 = (6^2)^5 = 6^10. Semnul este egalitate (=)."
+    },
+    {
+      "q": "Comparați x = 2^60 și y = 4^29. Care afirmație este adevărată?",
+      "opts": [
+        "x < y",
+        "x = y",
+        "x > y",
+        "x <= y"
+      ],
+      "ok": 2,
+      "exOk": "Corect! y = (2^2)^29 = 2^58. Deoarece 60 > 58, x > y.",
+      "exGr": "Greșit. Aducând y la baza 2 avem y = 2^58. Comparând cu x = 2^60 obținem x > y."
+    },
+    {
+      "q": "Care este rezultatul comparării numerelor 125^6 și 25^10?",
+      "opts": [
+        "125^6 > 25^10",
+        "125^6 < 25^10",
+        "125^6 = 25^10",
+        "125^6 <= 25^10"
+      ],
+      "ok": 1,
+      "exOk": "Corect! 125^6 = (5^3)^6 = 5^18. 25^10 = (5^2)^10 = 5^20. Cum 18 < 20, avem 125^6 < 25^10.",
+      "exGr": "Greșit. În baza 5, numerele sunt 5^18 și 5^20. Deoarece 18 < 20, relația este de mai mic (<)."
+    },
+    {
+      "q": "Comparați A = 81^10 și B = 27^14.",
+      "opts": [
+        "A > B",
+        "A < B",
+        "A = B",
+        "A <= B"
+      ],
+      "ok": 1,
+      "exOk": "Corect! A = (3^4)^10 = 3^40. B = (3^3)^14 = 3^42. Cum 40 < 42, rezultă A < B.",
+      "exGr": "Greșit. Exprimăm ambele numere ca puteri ale lui 3: A = 3^40 și B = 3^42. Avem 3^40 < 3^42."
+    },
+    {
+      "q": "Se dau numerele m = 2^33 și n = 8^11. Care este relația dintre ele?",
+      "opts": [
+        "m > n",
+        "m < n",
+        "m = n",
+        "m + n = 2^34"
+      ],
+      "ok": 2,
+      "exOk": "Corect! n = (2^3)^11 = 2^33. Ambele numere sunt egale.",
+      "exGr": "Greșit. Deoarece 8^11 = (2^3)^11 = 2^33, cele două numere au valori perfect egale."
+    }
+  ]
+}

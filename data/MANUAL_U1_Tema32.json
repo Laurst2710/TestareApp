@@ -1,0 +1,508 @@
+{
+  "meta": {
+    "nivel": "Manual",
+    "dificultate": 1,
+    "clasa": "a V-a",
+    "unitate": "U1",
+    "titlu_unitate": "Numere Naturale",
+    "tema": "Tema32",
+    "titlu_tema": "Metoda falsei ipoteze",
+    "prag": 0.8,
+    "puncte_per_item": 10
+  },
+  "teorie": [
+    "Metoda falsei ipoteze constă în a presupune că toate elementele sau obiectele dintr-o problemă sunt de același fel, corespunzând unei singure categorii.",
+    "Din această presupunere rezultă o diferență totală între rezultatul ipotetic calculat și rezultatul real enunțat în textul problemei.",
+    "Prin analizarea diferenței totale și a diferenței individuale dintre cele două categorii de obiecte, se determină numărul exact al elementelor căutate."
+  ],
+  "teste": {
+    "T1": [
+      {
+        "q": "Într-o curte sunt găini și iepuri, în total având 10 capete. Dacă presupunem că toate cele 10 animale sunt găini, câte picioare am număra în total?",
+        "opts": [
+          "20 de picioare",
+          "40 de picioare",
+          "30 de picioare",
+          "10 picioare"
+        ],
+        "ok": 0,
+        "exOk": "Corect! Presupunând că sunt doar găini, fiecare are 2 picioare, deci: 10 * 2 = 20 de picioare.",
+        "exGr": "Greșit. Dacă toate cele 10 animale ar fi găini, numărul total de picioare ar fi 10 * 2 = 20."
+      },
+      {
+        "q": "În aceeași curte cu 10 capete, numărul real de picioare este 26. Care este diferența totală dintre numărul real de picioare și cel obținut prin ipoteza că sunt doar găini (20 de picioare)?",
+        "opts": [
+          "16 picioare",
+          "6 picioare",
+          "10 picioare",
+          "4 picioare"
+        ],
+        "ok": 1,
+        "exOk": "Corect! Diferența totală este de 26 - 20 = 6 picioare.",
+        "exGr": "Greșit. Scădem numărul ipotetic de picioare din cel real: 26 - 20 = 6 picioare."
+      },
+      {
+        "q": "Care este diferența individuală de picioare dintre un iepure (4 picioare) și o găină (2 picioare)?",
+        "opts": [
+          "1 picior",
+          "2 picioare",
+          "3 picioare",
+          "4 picioare"
+        ],
+        "ok": 1,
+        "exOk": "Corect! Diferența individuală este de 4 - 2 = 2 picioare.",
+        "exGr": "Greșit. Un iepure are cu 4 - 2 = 2 picioare mai multe decât o găină."
+      },
+      {
+        "q": "Dacă diferența totală este de 6 picioare, iar diferența individuală este de 2 picioare, câți iepuri sunt în total în curte?",
+        "opts": [
+          "2 iepuri",
+          "3 iepuri",
+          "4 iepuri",
+          "5 iepuri"
+        ],
+        "ok": 1,
+        "exOk": "Corect! Împărțim diferența totală la diferența individuală: 6 : 2 = 3 iepuri.",
+        "exGr": "Greșit. Numărul de iepuri se determină împărțind surplusul total la cel individual: 6 : 2 = 3 iepuri."
+      },
+      {
+        "q": "Știind că în total sunt 10 animale și am aflat că sunt 3 iepuri, câte găini sunt în curte?",
+        "opts": [
+          "7 găini",
+          "5 găini",
+          "6 găini",
+          "8 găini"
+        ],
+        "ok": 0,
+        "exOk": "Corect! Din numărul total de capete scădem numărul de iepuri: 10 - 3 = 7 găini.",
+        "exGr": "Greșit. Numărul de găini reprezintă diferența până la totalul animalelor: 10 - 3 = 7 găini."
+      },
+      {
+        "q": "Într-un bloc sunt apartamente cu 2 camere și apartamente cu 4 camere, în total fiind 5 apartamente. Dacă presupunem că toate sunt cu 2 camere, câte camere ar fi în total?",
+        "opts": [
+          "10 camere",
+          "20 de camere",
+          "15 camere",
+          "12 camere"
+        ],
+        "ok": 0,
+        "exOk": "Corect! Cinci apartamente înmulțite cu câte 2 camere dau: 5 * 2 = 10 camere.",
+        "exGr": "Greșit. Ipoteza că toate apartamentele au câte 2 camere ne oferă: 5 * 2 = 10 camere."
+      },
+      {
+        "q": "Numărul real de camere din bloc este de 14. Care este diferența dintre numărul real și cel ipotetic (10 camere)?",
+        "opts": [
+          "2 camere",
+          "4 camere",
+          "6 camere",
+          "8 camere"
+        ],
+        "ok": 1,
+        "exOk": "Corect! Diferența dintre realitate și ipoteză este de 14 - 10 = 4 camere.",
+        "exGr": "Greșit. Scădem valoarea ipotetică din cea reală pentru a găsi restul de camere: 14 - 10 = 4 camere."
+      },
+      {
+        "q": "Cu câte camere are mai mult un apartament cu 4 camere față de unul cu 2 camere?",
+        "opts": [
+          "1 cameră",
+          "2 camere",
+          "3 camere",
+          "4 camere"
+        ],
+        "ok": 1,
+        "exOk": "Corect! Diferența individuală este de 4 - 2 = 2 camere.",
+        "exGr": "Greșit. Un apartament mare are cu 4 - 2 = 2 camere mai multe decât unul mic."
+      },
+      {
+        "q": "Împărțind diferența totală de 4 camere la diferența individuală de 2 camere, câte apartamente cu 4 camere avem în bloc?",
+        "opts": [
+          "1 apartament",
+          "2 apartamente",
+          "3 apartamente",
+          "4 apartamente"
+        ],
+        "ok": 1,
+        "exOk": "Corect! Numărul apartamentelor mari este 4 : 2 = 2 apartamente.",
+        "exGr": "Greșit. Împărțim restul total de camere la surplusul per apartament: 4 : 2 = 2 apartamente cu 4 camere."
+      },
+      {
+        "q": "Care este primul pas obligatoriu în aplicarea metodei falsei ipoteze?",
+        "opts": [
+          "Efectuarea unei împărțiri la întâmplare",
+          "Formularea unei presupuneri că toate elementele aparțin unei singure categorii",
+          "Adunarea tuturor datelor din textul problemei",
+          "Ghicirea rezultatului final"
+        ],
+        "ok": 1,
+        "exOk": "Corect! Metoda se bazează pe lansarea unei ipoteze false (presupuneri) pentru a crea o bază de comparație.",
+        "exGr": "Greșit. Pentru a începe rezolvarea, trebuie să presupunem că toate obiectele sunt de un singur fel."
+      }
+    ],
+    "T2": [
+      {
+        "q": "Într-un penar sunt 8 instrumente de scris: creioane și pixuri. Un creion costă 3 lei, iar un pix costă 5 lei. Dacă presupunem că toate sunt creioane, cât ar costa cele 8 instrumente?",
+        "opts": [
+          "24 de lei",
+          "40 de lei",
+          "32 de lei",
+          "30 de lei"
+        ],
+        "ok": 0,
+        "exOk": "Corect! Toate cele 8 obiecte înmulțite cu prețul unui creion înseamnă: 8 * 3 = 24 de lei.",
+        "exGr": "Greșit. Ipoteza că avem doar creioane ne dă un cost de 8 * 3 = 24 de lei."
+      },
+      {
+        "q": "Suma totală plătită în realitate pentru cele 8 instrumente este de 30 de lei. Care este diferența dintre suma reală și cea din ipoteza cu creioane (24 lei)?",
+        "opts": [
+          "4 lei",
+          "6 lei",
+          "8 lei",
+          "10 lei"
+        ],
+        "ok": 1,
+        "exOk": "Corect! Diferența de bani este de 30 - 24 = 6 lei.",
+        "exGr": "Greșit. Scădem suma ipotetică din valoarea totală achitată: 30 - 24 = 6 lei."
+      },
+      {
+        "q": "Care este diferența de preț dintre un pix (5 lei) și un creion (3 lei)?",
+        "opts": [
+          "1 leu",
+          "2 lei",
+          "3 lei",
+          "4 lei"
+        ],
+        "ok": 1,
+        "exOk": "Corect! Un pix este mai scump decât un creion cu 5 - 3 = 2 lei.",
+        "exGr": "Greșit. Diferența de preț individuală se calculează prin scădere: 5 - 3 = 2 lei."
+      },
+      {
+        "q": "Câte pixuri sunt în penar, dacă diferența totală este de 6 lei, iar un pix aduce un plus de 2 lei față de un creion?",
+        "opts": [
+          "2 pixuri",
+          "3 pixuri",
+          "4 pixuri",
+          "5 pixuri"
+        ],
+        "ok": 1,
+        "exOk": "Corect! Împărțim surplusul total la cel individual: 6 : 2 = 3 pixuri.",
+        "exGr": "Greșit. Numărul de pixuri se obține din raportul diferențelor: 6 : 2 = 3 pixuri."
+      },
+      {
+        "q": "Dacă din cele 8 instrumente de scris am aflat că 3 sunt pixuri, câte creioane sunt în penar?",
+        "opts": [
+          "5 creioane",
+          "4 creioane",
+          "6 creioane",
+          "3 creioane"
+        ],
+        "ok": 0,
+        "exOk": "Corect! Scădem numărul de pixuri din totalul obiectelor: 8 - 3 = 5 creioane.",
+        "exGr": "Greșit. Restul instrumentelor de scris sunt creioane: 8 - 3 = 5 creioane."
+      },
+      {
+        "q": "Pe o masă sunt 6 farfurii, unele întinse și altele adânci. Cele întinse cântăresc 200 g, iar cele adânci 300 g. Dacă presupunem că toate sunt întinse, ce masă totală obținem?",
+        "opts": [
+          "1200 g",
+          "1800 g",
+          "1500 g",
+          "1000 g"
+        ],
+        "ok": 0,
+        "exOk": "Corect! Masa ipotetică pentru 6 farfurii ușoare este 6 * 200 = 1200 g.",
+        "exGr": "Greșit. Multiplicăm numărul total de farfurii cu masa celei mai ușoare: 6 * 200 = 1200 g."
+      },
+      {
+        "q": "Masa reală a celor 6 farfurii este de 1400 g. Cu câte grame depășește realitatea ipoteza noastră de 1200 g?",
+        "opts": [
+          "100 g",
+          "200 g",
+          "300 g",
+          "400 g"
+        ],
+        "ok": 1,
+        "exOk": "Corect! Diferența totală de masă este de 1400 - 1200 = 200 g.",
+        "exGr": "Greșit. Găsim diferența dintre datele problemei și presupunere: 1400 - 1200 = 200 g."
+      },
+      {
+        "q": "Care este diferența de masă dintre o farfurie adâncă (300 g) și una întinsă (200 g)?",
+        "opts": [
+          "50 g",
+          "100 g",
+          "150 g",
+          "200 g"
+        ],
+        "ok": 1,
+        "exOk": "Corect! O farfurie adâncă are în plus 300 - 200 = 100 g.",
+        "exGr": "Greșit. Diferența individuală este masa farfuriei mari minus masa celei mici: 300 - 200 = 100 g."
+      },
+      {
+        "q": "Câte farfurii adânci sunt pe masă, dacă diferența totală este de 200 g, iar una adâncă aduce 100 g în plus?",
+        "opts": [
+          "1 farfurie",
+          "2 farfurii",
+          "3 farfurii",
+          "4 farfurii"
+        ],
+        "ok": 1,
+        "exOk": "Corect! Numărul farfuriilor adânci este 200 : 100 = 2 farfurii.",
+        "exGr": "Greșit. Împărțim surplusul total de masă la cel individual: 200 : 100 = 2 farfurii adânci."
+      },
+      {
+        "q": "Dacă presupunem la începutul unei probleme cu animale că toate sunt de categoria celor cu 4 picioare, ce fel de elemente vom descoperi în urma primei împărțiri?",
+        "opts": [
+          "Elementele cu 4 picioare",
+          "Elementele cu 2 picioare",
+          "Numărul total de animale",
+          "Niciun rezultat corect"
+        ],
+        "ok": 1,
+        "exOk": "Corect! Dacă facem ipoteza cu numărul maxim, diferențele obținute ne vor conduce la identificarea elementelor din categoria opusă (cea mai mică).",
+        "exGr": "Greșit. Presupunând valoarea maximă, deficitul calculat ne arată câte elemente cu valoare mică (2 picioare) au fost înlocuite."
+      }
+    ],
+    "T3": [
+      {
+        "q": "Într-un test sunt 10 întrebări. Pentru un răspuns corect se acordă 5 puncte, iar pentru unul greșit se scad 2 puncte. Dacă un elev răspunde corect la toate întrebările, câte puncte obține?",
+        "opts": [
+          "50 de puncte",
+          "30 de puncte",
+          "20 de puncte",
+          "40 de puncte"
+        ],
+        "ok": 0,
+        "exOk": "Corect! Ipoteza că toate răspunsurile sunt corecte oferă: 10 * 5 = 50 de puncte.",
+        "exGr": "Greșit. Zece întrebări multiplicate cu punctajul maxim înseamnă 10 * 5 = 50 de puncte."
+      },
+      {
+        "q": "Elevul a obținut în realitate 29 de puncte. Care este diferența dintre punctajul maxim posibil (50 puncte) și cel real?",
+        "opts": [
+          "11 puncte",
+          "21 de puncte",
+          "31 de puncte",
+          "15 puncte"
+        ],
+        "ok": 1,
+        "exOk": "Corect! Diferența totală de puncte este 50 - 29 = 21 de puncte.",
+        "exGr": "Greșit. Scădem punctajul realizat din cel ipotetic maxim: 50 - 29 = 21 de puncte."
+      },
+      {
+        "q": "Atenție la penalizare! Câte puncte se pierd de fapt pentru o singură întrebare greșită (se pierd cele 5 puncte pe care le-ar fi câștigat plus cele 2 puncte care se scad)?",
+        "opts": [
+          "3 puncte",
+          "5 puncte",
+          "7 puncte",
+          "2 puncte"
+        ],
+        "ok": 2,
+        "exOk": "Corect! Diferența individuală include câștigul ratat și penalizarea: 5 + 2 = 7 puncte.",
+        "exGr": "Greșit. Schimbarea unui răspuns corect cu unul greșit înseamnă o diferență de 5 - (-2) = 5 + 2 = 7 puncte."
+      },
+      {
+        "q": "Câte întrebări a greșit elevul, dacă diferența totală este de 21 de puncte, iar fiecare greșeală înseamnă o pierdere de 7 puncte?",
+        "opts": [
+          "2 întrebări",
+          "3 întrebări",
+          "4 întrebări",
+          "5 întrebări"
+        ],
+        "ok": 1,
+        "exOk": "Corect! Numărul de răspunsuri greșite este 21 : 7 = 3 întrebări.",
+        "exGr": "Greșit. Împărțim punctele pierdute în total la valoarea unei singure pierderi: 21 : 7 = 3 întrebări greșite."
+      },
+      {
+        "q": "Dacă din cele 10 întrebări elevul a greșit 3, la câte întrebări a răspuns corect?",
+        "opts": [
+          "7 întrebări",
+          "6 întrebări",
+          "8 întrebări",
+          "5 întrebări"
+        ],
+        "ok": 0,
+        "exOk": "Corect! Răspunsurile corecte sunt date de diferența: 10 - 3 = 7 întrebări.",
+        "exGr": "Greșit. Restul întrebărilor din test reprezintă răspunsurile corecte: 10 - 3 = 7 întrebări."
+      },
+      {
+        "q": "Un grup de 12 persoane a plătit la un spectacol 100 de lei. Biletele au costat 6 lei pentru copii și 10 lei pentru adulți. Dacă presupunem că toți sunt copii, ce sumă s-ar fi strâns?",
+        "opts": [
+          "72 de lei",
+          "120 de lei",
+          "60 de lei",
+          "90 de lei"
+        ],
+        "ok": 0,
+        "exOk": "Corect! Ipoteza cu toți membrii copii dă un cost de: 12 * 6 = 72 de lei.",
+        "exGr": "Greșit. Dacă toți cei 12 spectatori ar fi plătit tarif de copil, suma ar fi fost 12 * 6 = 72 de lei."
+      },
+      {
+        "q": "Care este diferența dintre suma real încasată (100 lei) și suma ipotetică de 72 de lei?",
+        "opts": [
+          "18 lei",
+          "28 de lei",
+          "38 de lei",
+          "20 de lei"
+        ],
+        "ok": 1,
+        "exOk": "Corect! Diferența totală de bani este de 100 - 72 = 28 de lei.",
+        "exGr": "Greșit. Calculăm diferența dintre valoarea reală și cea ipotetică: 100 - 72 = 28 de lei."
+      },
+      {
+        "q": "Care este diferența de preț dintre un bilet de adult (10 lei) și unul de copil (6 lei)?",
+        "opts": [
+          "4 lei",
+          "2 lei",
+          "6 lei",
+          "5 lei"
+        ],
+        "ok": 0,
+        "exOk": "Corect! Un bilet de adult costă cu 10 - 6 = 4 lei mai mult decât unul de copil.",
+        "exGr": "Greșit. Diferența individuală de cost este dată de relația: 10 - 6 = 4 lei."
+      },
+      {
+        "q": "Câți adulți sunt în grup, știind că diferența totală este de 28 de lei, iar un adult plătește cu 4 lei în plus?",
+        "opts": [
+          "5 adulți",
+          "7 adulți",
+          "6 adulți",
+          "8 adulți"
+        ],
+        "ok": 1,
+        "exOk": "Corect! Numărul de adulți se determină prin calculul: 28 : 4 = 7 adulți.",
+        "exGr": "Greșit. Raportul dintre restul de bani și diferența per bilet ne indică: 28 : 4 = 7 adulți."
+      },
+      {
+        "q": "Dacă în grupul de 12 persoane sunt 7 adulți, câți copii sunt în total?",
+        "opts": [
+          "5 copii",
+          "4 copii",
+          "6 copii",
+          "3 copii"
+        ],
+        "ok": 0,
+        "exOk": "Corect! Numărul de copii este 12 - 7 = 5 copii.",
+        "exGr": "Greșit. Scădem numărul de adulți din totalul persoanelor: 12 - 7 = 5 copii."
+      }
+    ],
+    "T4": [
+      {
+        "q": "O sumă de 230 de lei este formată din 15 bancnote de 10 lei și de 20 de lei. Dacă presupunem că toate cele 15 bancnote sunt de 10 lei, ce sumă am obține?",
+        "opts": [
+          "150 de lei",
+          "300 de lei",
+          "200 de lei",
+          "100 de lei"
+        ],
+        "ok": 0,
+        "exOk": "Corect! Ipoteza cu bancnote mici oferă o valoare de: 15 * 10 = 150 de lei.",
+        "exGr": "Greșit. Presupunând că toate bancnotele sunt de 10 lei, suma totală ar fi 15 * 10 = 150 de lei."
+      },
+      {
+        "q": "Care este diferența dintre valoarea reală a sumei (230 lei) și cea calculată prin ipoteză (150 lei)?",
+        "opts": [
+          "50 de lei",
+          "80 de lei",
+          "70 de lei",
+          "100 de lei"
+        ],
+        "ok": 1,
+        "exOk": "Corect! Diferența totală de bani este 230 - 150 = 80 de lei.",
+        "exGr": "Greșit. Calculăm diferența dintre realitate și ipoteza falsă lansată: 230 - 150 = 80 de lei."
+      },
+      {
+        "q": "Care este diferența de valoare dintre o bancnotă de 20 de lei și una de 10 lei?",
+        "opts": [
+          "5 lei",
+          "10 lei",
+          "15 lei",
+          "20 de lei"
+        ],
+        "ok": 1,
+        "exOk": "Corect! O bancnotă mare aduce în plus exact 20 - 10 = 10 lei.",
+        "exGr": "Greșit. Diferența individuală de valoare este de 20 - 10 = 10 lei."
+      },
+      {
+        "q": "Câte bancnote de 20 de lei sunt în total, dacă deficitul din ipoteză este de 80 de lei, iar fiecare bancnotă de 20 de lei acoperă 10 lei din el?",
+        "opts": [
+          "6 bancnote",
+          "8 bancnote",
+          "4 bancnote",
+          "10 bancnote"
+        ],
+        "ok": 1,
+        "exOk": "Corect! Numărul bancnotelor de 20 de lei este 80 : 10 = 8 bancnote.",
+        "exGr": "Greșit. Împărțim diferența totală la valoarea suplimentară a unei bancnote mari: 80 : 10 = 8 bancnote."
+      },
+      {
+        "q": "Dacă avem 8 bancnote de 20 de lei din totalul de 15 bancnote, câte sunt de 10 lei?",
+        "opts": [
+          "7 bancnote",
+          "5 bancnote",
+          "6 bancnote",
+          "8 bancnote"
+        ],
+        "ok": 0,
+        "exOk": "Corect! Scădem numărul bancnotelor mari din numărul total: 15 - 8 = 7 bancnote.",
+        "exGr": "Greșit. Diferența reprezintă numărul bancnotelor de 10 lei: 15 - 8 = 7 bancnote."
+      },
+      {
+        "q": "Un camion a transportat în 10 drumuri 34 de tone de marfă, având lăzi de 3 tone și lăzi de 5 tone. Dacă presupunem că toate drumurile au fost făcute cu încărcătură de 3 tone, ce masă totală s-ar fi transportat?",
+        "opts": [
+          "30 de tone",
+          "50 de tone",
+          "40 de tone",
+          "25 de tone"
+        ],
+        "ok": 0,
+        "exOk": "Corect! Masa ipotetică minimă este 10 drumuri * 3 tone = 30 de tone.",
+        "exGr": "Greșit. Presupunând capacitatea minimă pentru toate drumurile obținem: 10 * 3 = 30 de tone."
+      },
+      {
+        "q": "Care este diferența dintre masa reală transportată (34 tone) și cea din ipoteză (30 tone)?",
+        "opts": [
+          "2 tone",
+          "4 tone",
+          "6 tone",
+          "8 tone"
+        ],
+        "ok": 1,
+        "exOk": "Corect! Diferența totală de masă este de 34 - 30 = 4 tone.",
+        "exGr": "Greșit. Scădem rezultatul ipotetic din masa totală reală menționată: 34 - 30 = 4 tone."
+      },
+      {
+        "q": "Care este diferența dintre capacitatea unei lăzi mari (5 tone) și a uneia mici (3 tone)?",
+        "opts": [
+          "1 tonă",
+          "2 tone",
+          "3 tone",
+          "4 tone"
+        ],
+        "ok": 1,
+        "exOk": "Corect! Diferența individuală de masă este de 5 - 3 = 2 tone.",
+        "exGr": "Greșit. Diferența de capacitate per drum se calculează prin scădere: 5 - 3 = 2 tone."
+      },
+      {
+        "q": "Câte drumuri au fost făcute cu încărcătură de 5 tone, știind că diferența totală este de 4 tone, iar un drum mare aduce 2 tone în plus?",
+        "opts": [
+          "1 drum",
+          "2 drumuri",
+          "3 drumuri",
+          "4 drumuri"
+        ],
+        "ok": 1,
+        "exOk": "Corect! Numărul de drumuri mari este dat de raportul: 4 : 2 = 2 drumuri.",
+        "exGr": "Greșit. Împărțim restul de masă la capacitatea suplimentară per transport: 4 : 2 = 2 drumuri."
+      },
+      {
+        "q": "Dacă s-au efectuat 2 drumuri cu încărcătură de 5 tone dintr-un total de 10 drumuri, câte drumuri au fost făcute cu lăzi de 3 tone?",
+        "opts": [
+          "8 drumuri",
+          "7 drumuri",
+          "6 drumuri",
+          "5 drumuri"
+        ],
+        "ok": 0,
+        "exOk": "Corect! Drumurile mici se află prin diferența: 10 - 2 = 8 drumuri.",
+        "exGr": "Greșit. Scădem transporturile mari din numărul total de curse executate: 10 - 2 = 8 drumuri."
+      }
+    ]
+  }
+}

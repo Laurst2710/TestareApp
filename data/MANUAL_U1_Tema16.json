@@ -5,496 +5,504 @@
     "clasa": "a V-a",
     "unitate": "U1",
     "titlu_unitate": "Numere Naturale",
-    "tema": "Tema14",
-    "titlu_tema": "Impartire cu rest; D=IxC+R, 0<=R<I; proba",
+    "tema": "Tema16",
+    "titlu_tema": "Patratul unui numar natural; patrate perfecte: 1,4,9,16,25...",
     "prag": 0.8,
     "puncte_per_item": 10
   },
   "teorie": [
-    "Teorema împărțirii cu rest afirmă că pentru orice două numere naturale $D$ și $I$, cu $I$ strict mai mare decât zero, există două numere naturale unice $C$ și $R$ care verifică relația matematică.",
-    "Relația fundamentală a acestei operații este $D = I \times C + R$, unde descrierea heroglifelor este: deîmpărțit, împărțitor, cât și rest.",
-    "O condiție obligatorie și restrictivă a teoremei este ca valoarea restului să fie strict mai mică decât valoarea împărțitorului, adică $0 \\le R < I$."
+    "Pătratul unui număr natural se obține prin înmulțirea acelui număr cu el însuși și se scrie sub forma unei puteri cu exponentul doi.",
+    "Numerele naturale care pot fi scrise ca pătratul unui număr natural se numesc pătrate perfecte.",
+    "Șirul pătratelor perfecte este format din numere precum zero, unu, patru, nouă, șaisprezece, douăzeci și cinci și continuă la infinit."
   ],
-  "items": [
-    {
-      "q": "În scrierea teoremei împărțirii cu rest $D = I \times C + R$, ce reprezintă litera R?",
-      "opts": [
-        "Deîmpărțit",
-        "Împărțitor",
-        "Cât",
-        "Rest"
-      ],
-      "ok": 3,
-      "exOk": "Corect! Litera R reprezintă restul obținut în urma operației de împărțire.",
-      "exGr": "Greșit. În formula standard, D este deîmpărțitul, I este împărțitorul, C este câtul, iar R este restul."
-    },
-    {
-      "q": "Dacă împărțim un număr natural la 5, care este cea mai mare valoare posibilă pentru rest?",
-      "opts": [
-        "5",
-        "6",
-        "4",
-        "0"
-      ],
-      "ok": 2,
-      "exOk": "Corect! Restul trebuie să fie strict mai mic decât împărțitorul. Pentru $I = 5$, cel mai mare rest este 4.",
-      "exGr": "Greșit. Condiția este $R < I$. Dacă împărțitorul este 5, resturile pot fi 0, 1, 2, 3 sau 4, deci maximul este 4."
-    },
-    {
-      "q": "Care dintre următoarele relații dintre rest (R) și împărțitor (I) este întotdeauna adevărată?",
-      "opts": [
-        "R > I",
-        "R = I",
-        "R < I",
-        "R + I = D"
-      ],
-      "ok": 2,
-      "exOk": "Corect! Restul este întotdeauna strict mai mic decât împărțitorul.",
-      "exGr": "Greșit. Conform teoremei împărțirii cu rest, o condiție de bază este ca restul să fie strict mai mic decât împărțitorul ($R < I$)."
-    },
-    {
-      "q": "Efectuați împărțirea cu rest: $14 : 3$. Care sunt câtul și restul?",
-      "opts": [
-        "câtul 4, restul 2",
-        "câtul 3, restul 5",
-        "câtul 4, restul 1",
-        "câtul 5, restul 0"
-      ],
-      "ok": 0,
-      "exOk": "Corect! 3 se cuprinde de 4 ori în 14 și rămâne restul 2, deoarece $14 = 3 \times 4 + 2$.",
-      "exGr": "Greșit. Calculul corect este $14 = 3 \times 4 + 2$. Câtul este 4, iar restul este 2."
-    },
-    {
-      "q": "Efectuați împărțirea $25 : 6$ și precizați valoarea restului.",
-      "opts": [
-        "1",
-        "4",
-        "5",
-        "2"
-      ],
-      "ok": 0,
-      "exOk": "Corect! $25 = 6 \times 4 + 1$, deci restul este 1.",
-      "exGr": "Greșit. Deoarece 6 înmulțit cu 4 este 24, diferența până la 25 este 1, acesta fiind restul."
-    },
-    {
-      "q": "Dacă restul unei împărțiri este 0, cum se numește acea împărțire?",
-      "opts": [
-        "Împărțire cu rest",
-        "Împărțire exactă",
-        "Împărțire imposibilă",
-        "Înmulțire"
-      ],
-      "ok": 1,
-      "exOk": "Corect! O împărțire cu restul zero este o împărțire exactă (fără rest).",
-      "exGr": "Greșit. Când restul este zero, împărțirea se numește exactă, deoarece împărțitorul se cuprinde perfect în deîmpărțit."
-    },
-    {
-      "q": "Dacă împărțitorul este 7, câte valori diferite poate lua restul?",
-      "opts": [
-        "7 valori",
-        "6 valori",
-        "8 valori",
-        "o infinitate"
-      ],
-      "ok": 0,
-      "exOk": "Corect! Restul poate lua valorile de la 0 la 6, adică în total sunt 7 valori discrete.",
-      "exGr": "Greșit. Valorile posibile sunt 0, 1, 2, 3, 4, 5, 6. Numărându-le, obținem exact 7 valori posibile."
-    },
-    {
-      "q": "Efectuați proba împărțirii cu rest pentru a găsi deîmpărțitul dacă împărțitorul este 4, câtul este 5 și restul este 3.",
-      "opts": [
-        "20",
-        "23",
-        "17",
-        "12"
-      ],
-      "ok": 1,
-      "exOk": "Corect! Aplicăm relația $D = 4 \times 5 + 3 = 20 + 3 = 23$.",
-      "exGr": "Greșit. Conform formulei, înmulțim împărțitorul cu câtul și adunăm restul: $4 \times 5 + 3 = 23$."
-    },
-    {
-      "q": "Care este restul împărțirii numărului 40 la 10?",
-      "opts": [
-        "4",
-        "10",
-        "0",
-        "1"
-      ],
-      "ok": 2,
-      "exOk": "Corect! 10 se cuprinde exact de 4 ori în 40, deci este o împărțire exactă cu restul 0.",
-      "exGr": "Greșit. Deoarece $40 = 10 \times 4$, nu mai rămâne nicio diferență, prin urmare restul este 0."
-    },
-    {
-      "q": "Dacă împărțim numărul 9 la 12, care este câtul și care este restul?",
-      "opts": [
-        "câtul 1, restul 3",
-        "câtul 0, restul 9",
-        "nu se poate efectua",
-        "câtul 0, restul 0"
-      ],
-      "ok": 1,
-      "exOk": "Corect! 12 se cuprinde de 0 ori în 9, iar restul este numărul inițial 9, deoarece $9 = 12 \times 0 + 9$.",
-      "exGr": "Greșit. Când deîmpărțitul este mai mic decât împărțitorul, câtul este întotdeauna 0, iar restul este egal cu deîmpărțitul: cât 0, rest 9."
-    },
-    {
-      "q": "Aflați deîmpărțitul știind că împărțitorul este 12, câtul este 3 și restul este 5.",
-      "opts": [
-        "41",
-        "36",
-        "21",
-        "44"
-      ],
-      "ok": 0,
-      "exOk": "Corect! $D = 12 \times 3 + 5 = 36 + 5 = 41$.",
-      "exGr": "Greșit. Folosiți formula $D = I \times C + R$. Calculul este $12 \times 3 + 5 = 36 + 5 = 41$."
-    },
-    {
-      "q": "Într-o împărțire cu rest, deîmpărțitul este 38, iar împărțitorul este 7. Care este câtul?",
-      "opts": [
-        "6",
-        "5",
-        "4",
-        "3"
-      ],
-      "ok": 1,
-      "exOk": "Corect! Deoarece $38 = 7 \times 5 + 3$, câtul căutat este 5.",
-      "exGr": "Greșit. Cel mai apropiat multiplu de 7 mai mic decât 38 este 35 ($7 \times 5$). Câtul este 5."
-    },
-    {
-      "q": "Un număr natural n împărțit la 8 dă câtul 10 și restul 7. Aflați numărul n.",
-      "opts": [
-        "87",
-        "77",
-        "90",
-        "80"
-      ],
-      "ok": 0,
-      "exOk": "Corect! Aplicând relația obținem $n = 8 \times 10 + 7 = 80 + 7 = 87$.",
-      "exGr": "Greșit. Numărul se reconstituie prin operația: $8 \times 10 + 7 = 87$."
-    },
-    {
-      "q": "Aflați restul împărțirii numărului 125 la 12.",
-      "opts": [
-        "5",
-        "1",
-        "0",
-        "10"
-      ],
-      "ok": 1,
-      "exOk": "Corect! $125 = 12 \times 10 + 1$, deci restul este 1.",
-      "exGr": "Greșit. $12 \times 10 = 120$. Diferența până la 125 este $125 - 120 = 1$, care reprezintă restul."
-    },
-    {
-      "q": "Dacă n împărțit la 6 dă un rest, care sunt toate valorile posibile pentru acest rest?",
-      "opts": [
-        "1, 2, 3, 4, 5, 6",
-        "0, 1, 2, 3, 4, 5",
-        "1, 2, 3, 4, 5",
-        "0, 1, 2"
-      ],
-      "ok": 1,
-      "exOk": "Corect! Resturile posibile sunt numere naturale strict mai mici decât 6, începând de la 0.",
-      "exGr": "Greșit. Restul poate fi și 0 (împărțire exactă) și merge până la $6 - 1 = 5$. Deci mulțimea este {0, 1, 2, 3, 4, 5}."
-    },
-    {
-      "q": "Aflați cel mai mic număr natural care împărțit la 4 dă câtul 5.",
-      "opts": [
-        "20",
-        "21",
-        "23",
-        "24"
-      ],
-      "ok": 0,
-      "exOk": "Corect! Pentru ca numărul să fie cel mai mic, trebuie ca restul să fie cel mai mic posibil, adică 0. $D = 4 \times 5 + 0 = 20$.",
-      "exGr": "Greșit. Forma generală este $D = 4 \times 5 + R$. Cel mai mic deîmpărțit se obține pentru cel mai mic rest, adică $R = 0$: $4 \times 5 = 20$."
-    },
-    {
-      "q": "Aflați cel mai mare număr natural care împărțit la 4 dă câtul 5.",
-      "opts": [
-        "20",
-        "24",
-        "23",
-        "25"
-      ],
-      "ok": 2,
-      "exOk": "Corect! Pentru a obține cel mai mare număr, alegem cel mai mare rest posibil, adică $R = 3$. $D = 4 \times 5 + 3 = 23$.",
-      "exGr": "Greșit. Împărțitorul fiind 4, cel mai mare rest este 3. Numărul maxim este $4 \times 5 + 3 = 23$."
-    },
-    {
-      "q": "Dacă $a = 9 \times b + 4$, care este interpretarea corectă în cadrul împărțirii cu rest?",
-      "opts": [
-        "a împărțit la 4 dă restul 9",
-        "a împărțit la 9 dă restul 4",
-        "a împărțit la b dă restul 9",
-        "b împărțit la 9 dă restul 4"
-      ],
-      "ok": 1,
-      "exOk": "Corect! Structura corespunde împărțirii lui a la 9, obținându-se câtul b și restul 4 (deoarece $4 < 9$).",
-      "exGr": "Greșit. Deoarece numărul adunat este 4, iar acesta este mai mic decât 9, 9 joacă rolul de împărțitor, iar 4 este restul."
-    },
-    {
-      "q": "Ce număr natural împărțit la 10 dă câtul 0 și restul 7?",
-      "opts": [
-        "70",
-        "17",
-        "7",
-        "0"
-      ],
-      "ok": 2,
-      "exOk": "Corect! Reconstituind numărul obținem $10 \times 0 + 7 = 7$.",
-      "exGr": "Greșit. Aplicăm relația teoremei: $D = 10 \times 0 + 7 = 0 + 7 = 7$."
-    },
-    {
-      "q": "Dacă restul împărțirii lui x la 5 este 3, ce rest se obține dacă împărțim $x + 2$ la 5?",
-      "opts": [
-        "5",
-        "0",
-        "1",
-        "2"
-      ],
-      "ok": 1,
-      "exOk": "Corect! Adunând 2 la deîmpărțit, restul crește cu 2 și devine $3 + 2 = 5$. Deoarece restul nu poate fi egal cu împărțitorul, se împarte din nou și dă restul 0.",
-      "exGr": "Greșit. Noul rest teoretic ar fi $3 + 2 = 5$. Împărțint pe 5 la împărțitorul 5, obținem restul final 0."
-    },
-    {
-      "q": "Suma a două numere este 35. Împărțind numărul mai mare la cel mai mic obținem câtul 3 și restul 3. Aflați numărul mai mic.",
-      "opts": [
-        "8",
-        "11",
-        "7",
-        "9"
-      ],
-      "ok": 0,
-      "exOk": "Corect! Notăm numerele cu a și b. $a = 3b + 3$. Înlocuind în sumă: $3b + 3 + b = 35 \\Rightarrow 4b = 32 \\Rightarrow b = 8$.",
-      "exGr": "Greșit. Relațiile sunt $a + b = 35$ și $a = 3b + 3$. Obținem ecuația $4b + 3 = 35$, de unde $4b = 32$, deci $b = 8$."
-    },
-    {
-      "q": "Determinați toate numerele naturale care împărțite la 3 dau câtul egal cu restul.",
-      "opts": [
-        "0, 4, 8",
-        "3, 6, 9",
-        "4, 8, 12",
-        "0, 1, 2"
-      ],
-      "ok": 0,
-      "exOk": "Corect! Relația este $D = 3 \times R + R = 4 \times R$. Restul poate fi 0, 1, 2. Numerele sunt $4 \times 0 = 0$, $4 \times 1 = 4$, $4 \times 2 = 8$.",
-      "exGr": "Greșit. Relația dă $D = 3 \times c + r$. Cum $c = r$, avem $D = 3r + r = 4r$. Împărțitorul fiind 3, restul r poate fi 0, 1, 2. Numerele sunt 0, 4 și 8."
-    },
-    {
-      "q": "Diferența a două numere este 25. Împărțind numărul mare la cel mic obținem câtul 4 și restul 1. Care este numărul mic?",
-      "opts": [
-        "6",
-        "7",
-        "8",
-        "9"
-      ],
-      "ok": 2,
-      "exOk": "Corect! Notăm $a - b = 25$ și $a = 4b + 1$. Înlocuind obținem $4b + 1 - b = 25 \\Rightarrow 3b = 24 \\Rightarrow b = 8$.",
-      "exGr": "Greșit. Din relații rezultă $3b + 1 = 25$, de unde $3b = 24$, prin urmare numărul mic b este 8."
-    },
-    {
-      "q": "Un număr este cu 31 mai mare decât altul. Împărțind numărul mare la cel mic obținem câtul 4 și restul 4. Care este suma celor două numere?",
-      "opts": [
-        "40",
-        "49",
-        "45",
-        "36"
-      ],
-      "ok": 1,
-      "exOk": "Corect! Diferența este 31, deci $a - b = 31$. Relația împărțirii este $a = 4b + 4$. Obținem $3b + 4 = 31 \\Rightarrow 3b = 27 \\Rightarrow b = 9$. Atunci $a = 40$, iar suma este $40 + 9 = 49$.",
-      "exGr": "Greșit. Aflăm numărul mic b din ecuația $4b + 4 - b = 31 \\Rightarrow 3b = 27 \\Rightarrow b = 9$. Numărul mare este $9 + 31 = 40$. Suma lor este $40 + 9 = 49$."
-    },
-    {
-      "q": "Aflați suma tuturor resturilor posibile ale împărțirii unor numere naturale la 5.",
-      "opts": [
-        "15",
-        "10",
-        "14",
-        "5"
-      ],
-      "ok": 1,
-      "exOk": "Corect! Resturile posibile sunt 0, 1, 2, 3, 4. Suma lor este $0 + 1 + 2 + 3 + 4 = 10$.",
-      "exGr": "Greșit. La împărțirea cu 5, resturile sunt mai mici decât 5, adică 0, 1, 2, 3, 4. Suma lor reprezintă $1 + 2 + 3 + 4 = 10$."
-    },
-    {
-      "q": "Un număr natural x împărțit la 10 dă un rest egal cu pătratul câtului. Care este cea mai mare valoare posibilă a numărului x?",
-      "opts": [
-        "39",
-        "27",
-        "12",
-        "45"
-      ],
-      "ok": 0,
-      "exOk": "Corect! Restul trebuie să fie mai mic decât 10. Pătratele perfecte mai mici decât 10 sunt 0, 1, 4, 9. Cel mai mare rest este 9, care corespunde câtului 3 ($3^2 = 9$). $x = 10 \times 3 + 9 = 39$.",
-      "exGr": "Greșit. Condiția restului este $R < 10$. Cum $R = C^2$, cea mai mare valoare pentru C este 3, deoarece $3^2 = 9 < 10$. Numărul maxim este $10 \times 3 + 9 = 39$."
-    },
-    {
-      "q": "Aflați numărul natural care prin împărțire la 7 dă câtul 11, iar restul este cu 3 mai mic decât împărțitorul.",
-      "opts": [
-        "85",
-        "81",
-        "77",
-        "92"
-      ],
-      "ok": 1,
-      "exOk": "Corect! Pentru a respecta teorema, restul trebuie să fie mai mic decât 7. Restul este $7 - 3 = 4$. Numărul căutat este $7 \times 11 + 4 = 81$.",
-      "exGr": "Greșit. Pentru a respecta teorema, restul trebuie să fie mai mic decât 7. Restul este $7 - 3 = 4$. Numărul căutat este $7 \times 11 + 4 = 81$."
-    },
-    {
-      "q": "Aflați cel mai mic număr natural de trei cifre care împărțit la 9 dă restul 5.",
-      "opts": [
-        "100",
-        "104",
-        "113",
-        "105"
-      ],
-      "ok": 1,
-      "exOk": "Corect! $100 : 9 = 11$ rest 1. Următorul număr care dă restul 5 se calculează crescând câtul sau adunând diferența: $9 \times 11 + 5 = 99 + 5 = 104$.",
-      "exGr": "Greșit. Verificăm numerele de trei cifre. Cel mai mic este 104, deoarece $104 = 9 \times 11 + 5$."
-    },
-    {
-      "q": "Câte numere naturale de două cifre dau restul 2 la împărțirea cu 10?",
-      "opts": [
-        "9 numere",
-        "10 numere",
-        "8 numere",
-        "90 de numere"
-      ],
-      "ok": 0,
-      "exOk": "Corect! Numerele sunt de forma $10 \times c + 2$. Acestea sunt: 12, 22, 32, 42, 52, 62, 72, 82, 92. În total sunt 9 numere.",
-      "exGr": "Greșit. Numerele de două cifre care se termină cu cifra 2 sunt cele care dau restul 2 la împărțirea cu 10. Acestea sunt 9 numere (de la 12 la 92)."
-    },
-    {
-      "q": "Efectuați calculul pentru a găsi valoarea lui x din relația: $(x - 3) : 5 = 6$ rest 2.",
-      "opts": [
-        "32",
-        "35",
-        "30",
-        "33"
-      ],
-      "ok": 1,
-      "exOk": "Corect! Izolăm deîmpărțitul parțial: $x - 3 = 5 \times 6 + 2 = 32$. Rezultă $x = 32 + 3 = 35$.",
-      "exGr": "Greșit. Aplicăm proba pentru paranteză: $x - 3 = 5 \times 6 + 2 = 32$. Deci $x = 32 + 3 = 35$."
-    },
-    {
-      "q": "Un număr natural împărțit la 12 dă restul 7. Ce rest va da pătratul acestui număr împărțit la 12?",
-      "opts": [
-        "7",
-        "1",
-        "49",
-        "5"
-      ],
-      "ok": 1,
-      "exOk": "Corect! Numărul este $12k + 7. Pătratul său se reduce la analiza restului: $7^2 = 49$. Împărțind pe 49 la 12 obținem câtul 4 și restul 1.",
-      "exGr": "Greșit. Putem alege cel mai simplu număr care respectă regula, de exemplu 7. Pătratul lui 7 este 49. Efectuând $49 : 12$ obținem câtul 4 și restul 1."
-    },
-    {
-      "q": "Suma a trei numere naturale este 160. Împărțind primul număr la al doilea obținem câtul 2 și restul 5, iar împărțind al doilea număr la al treilea obținem tot câtul 2 și restul 5. Care este al treilea număr?",
-      "opts": [
-        "15",
-        "20",
-        "25",
-        "35"
-      ],
-      "ok": 1,
-      "exOk": "Corect! Notăm numerele cu a, b, c. $b = 2c + 5$ și $a = 2b + 5 = 2(2c + 5) + 5 = 4c + 15$. Suma lor: $4c + 15 + 2c + 5 + c = 160 \\Rightarrow 7c + 20 = 160 \\Rightarrow 7c = 140 \\Rightarrow c = 20$.",
-      "exGr": "Greșit. Notăm numerele cu a, b, c. Relațiile dau ecuația $7c + 20 = 160$, de unde $7c = 140$, deci $c = 20$."
-    },
-    {
-      "q": "Se împart numerele 85 și 105 la același număr natural x și se obțin resturile 5, respectiv 9. Aflați valoarea maximă a lui x.",
-      "opts": [
-        "10",
-        "16",
-        "8",
-        "12"
-      ],
-      "ok": 1,
-      "exOk": "Corect! Scăzând resturile obținem că x divide exact pe $85 - 5 = 80$ și pe $105 - 9 = 96$. Cel mai mare divizor comun al numerelor 80 și 96 este 16.",
-      "exGr": "Greșit. x trebuie să dividă numerele $80$ și $96$. Cel mai mare număr natural care le divide simultan pe amândouă este 16 (și îndeplinește condiția ca resturile 5 și 9 să fie mai mici decât el)."
-    },
-    {
-      "q": "Împărțind numărul natural numit deîmpărțit la un împărțitor de o singură cifră, obținem restul 8. Care este împărțitorul?",
-      "opts": [
-        "7",
-        "8",
-        "9",
-        "nu se poate determina"
-      ],
-      "ok": 2,
-      "exOk": "Corect! Condiția de bază este ca împărțitorul să fie mai mare decât restul. Restul fiind 8, împărțitorul de o singură cifră nu poate fi decât 9.",
-      "exGr": "Greșit. Deoarece $I > R$ și $R = 8$, împărțitorul trebuie să fie strict mai mare decât 8. Singura cifră mai mare decât 8 este 9."
-    },
-    {
-      "q": "Aflați suma tuturor numerelor naturale care împărțite la 4 dau câtul 3.",
-      "opts": [
-        "54",
-        "48",
-        "12",
-        "60"
-      ],
-      "ok": 0,
-      "exOk": "Corect! Numerele sunt de forma $4 \times 3 + R = 12 + R$, unde R poate fi 0, 1, 2, 3. Numerele sunt 12, 13, 14, 15. Suma lor este $12 + 13 + 14 + 15 = 54$.",
-      "exGr": "Greșit. Valorile posibile sunt pentru $R \\in {0,1,2,3}$, ceea ce generează numerele 12, 13, 14 și 15. Adunându-le obținem exact 54."
-    },
-    {
-      "q": "Care este restul împărțirii sumei $1 + 2 + 3 + ... + 9$ la 5?",
-      "opts": [
-        "0",
-        "1",
-        "2",
-        "4"
-      ],
-      "ok": 0,
-      "exOk": "Corect! Suma primelor 9 numere naturale este $9 \times 10 : 2 = 45$. Împărțind 45 la 5 obținem restul 0.",
-      "exGr": "Greșit. Calculăm valoarea sumei Gauss: $45$. Deoarece 45 se împarte exact la 5, restul acestei operații este 0."
-    },
-    {
-      "q": "Un număr natural n împărțit la 6 dă restul 4. Ce rest dă numărul $3 \times n$ împărțit la 6?",
-      "opts": [
-        "4",
-        "0",
-        "2",
-        "1"
-      ],
-      "ok": 1,
-      "exOk": "Corect! Dacă $n = 6k + 4$, atunci $3n = 18k + 12$. Atât 18 cât și 12 se împart exact la 6, deci noul rest este 0.",
-      "exGr": "Greșit. Multiplicând numărul cu 3, multiplicăm și restul: $4 \times 3 = 12$. Împărțind noul număr 12 la împărțitorul inițial 6, obținem restul final 0."
-    },
-    {
-      "q": "Aflați valoarea lui n din relația: $123 = n \times 10 + 3$, știind că este o scriere a teoremei împărțirii cu rest.",
-      "opts": [
-        "12",
-        "10",
-        "120",
-        "3"
-      ],
-      "ok": 0,
-      "exOk": "Corect! Structura indică împărțirea la 10, deci câtul n este egal cu 12, iar restul este 3, care validează condiția $3 < 10$.",
-      "exGr": "Greșit. Efectuând deducția directă, observăm că $123 - 3 = 120$. Prin urmare, $n \times 10 = 120 \\Rightarrow n = 12$."
-    },
-    {
-      "q": "Câte numere naturale mai mici decât 100 dau restul 5 la împărțirea cu 7?",
-      "opts": [
-        "14 numere",
-        "13 numere",
-        "15 numere",
-        "12 numere"
-      ],
-      "ok": 0,
-      "exOk": "Corect! Numerele sunt de forma $7 \times C + 5$. Pentru ca numărul să fie mai mic decât 100, câtul C poate lua valori de la 0 la 13 ($7 \times 13 + 5 = 96$). De la 0 la 13 sunt 14 valori.",
-      "exGr": "Greșit. Înșiruim valorile câtului începând cu $C = 0$ până la $C = 13$. Numărul total de valori valide pe care le poate lua câtul reprezintă $13 - 0 + 1 = 14$ numere."
-    },
-    {
-      "q": "Determinați valoarea numărului natural n dacă $[(n \times 5 + 3) : 4]$ reprezintă o împărțire cu câtul 7 și restul 0.",
-      "opts": [
-        "5",
-        "6",
-        "4",
-        "7"
-      ],
-      "ok": 0,
-      "exOk": "Corect! Expresia din paranteză este egală cu $4 \times 7 = 28$. Atunci $5n + 3 = 28 \\Rightarrow 5n = 25 \\Rightarrow n = 5$.",
-      "exGr": "Greșit. Din datele problemei rezultă ecuația $5n + 3 = 28$, de unde $5n = 25$, deci $n = 5$."
-    }
-  ]
+  "teste": {
+    "T1": [
+      {
+        "q": "Care este pătratul numărului natural 7?",
+        "opts": [
+          "14",
+          "49",
+          "9",
+          "35"
+        ],
+        "ok": 1,
+        "exOk": "Corect! Pătratul lui 7 se calculează înmulțind numărul cu el însuși: 7 * 7 = 49.",
+        "exGr": "Greșit. Pătratul unui număr înseamnă acel număr înmulțit cu el însuși, adică 7 * 7 = 49."
+      },
+      {
+        "q": "Care dintre următoarele numere naturale este un pătrat perfect?",
+        "opts": [
+          "12",
+          "20",
+          "36",
+          "50"
+        ],
+        "ok": 2,
+        "exOk": "Corect! Numărul 36 este pătrat perfect deoarece se poate scrie ca 6 * 6.",
+        "exGr": "Greșit. Pătratul perfect se obține înmulțind un număr natural cu el însuși. În acest caz, 6 * 6 = 36."
+      },
+      {
+        "q": "Scrieți numărul 121 sub formă de putere cu exponentul 2.",
+        "opts": [
+          "11^2",
+          "12^2",
+          "21^2",
+          "10^2"
+        ],
+        "ok": 0,
+        "exOk": "Corect! 11 ridicat la pătrat este egal cu 121.",
+        "exGr": "Greșit. Deoarece 11 * 11 = 121, scrierea corectă sub formă de putere este 11^2."
+      },
+      {
+        "q": "Care este valoarea numărului natural 0^2?",
+        "opts": [
+          "2",
+          "1",
+          "0",
+          "Nu există"
+        ],
+        "ok": 2,
+        "exOk": "Corect! 0 înmulțit cu el însuși este egal cu 0, deci 0 este pătrat perfect.",
+        "exGr": "Greșit. Ridicarea la pătrat a lui 0 înseamnă 0 * 0, iar rezultatul este întotdeauna 0."
+      },
+      {
+        "q": "Dintre numerele următoare, selectați-l pe cel care NU este pătrat perfect:",
+        "opts": [
+          "1",
+          "4",
+          "8",
+          "16"
+        ],
+        "ok": 2,
+        "exOk": "Corect! Nu există niciun număr natural al cărui pătrat să fie egal cu 8.",
+        "exGr": "Greșit. Numerele 1, 4 și 16 sunt pătratele numerelor 1, 2 și 4. Numărul 8 nu este pătrat perfect."
+      },
+      {
+        "q": "Calculați suma pătratelor primelor două numere naturale nenule.",
+        "opts": [
+          "2",
+          "5",
+          "9",
+          "3"
+        ],
+        "ok": 1,
+        "exOk": "Corect! Primele două numere nenule sunt 1 și 2. Suma pătratelor lor este 1^2 + 2^2 = 1 + 4 = 5.",
+        "exGr": "Greșit. Trebuie să calculăm 1^2 + 2^2. Rezultatul este 1 + 4 = 5."
+      },
+      {
+        "q": "Care este pătratul numărului natural 10?",
+        "opts": [
+          "20",
+          "100",
+          "1000",
+          "1"
+        ],
+        "ok": 1,
+        "exOk": "Corect! 10 la pătrat înseamnă 10 * 10 = 100.",
+        "exGr": "Greșit. Ridicarea la pătrat se face prin înmulțirea numărului cu el însuși: 10 * 10 = 100."
+      },
+      {
+        "q": "Găsiți numărul natural al cărui pătrat este egal cu 25.",
+        "opts": [
+          "5",
+          "50",
+          "2.5",
+          "12.5"
+        ],
+        "ok": 0,
+        "exOk": "Corect! Numărul căutat este 5, deoarece 5 * 5 = 25.",
+        "exGr": "Greșit. Căutăm numărul care înmulțit cu el însuși dă 25. Acest număr este 5."
+      },
+      {
+        "q": "Care este valoarea numărului natural 1^2?",
+        "opts": [
+          "2",
+          "1",
+          "0",
+          "11"
+        ],
+        "ok": 1,
+        "exOk": "Corect! 1 înmulțit cu 1 este egal cu 1.",
+        "exGr": "Greșit. Pătratul lui 1 se calculează prin produsul 1 * 1, iar rezultatul este 1."
+      },
+      {
+        "q": "Alegeți pătratul perfect care se află între numerele naturale 10 și 20.",
+        "opts": [
+          "12",
+          "15",
+          "16",
+          "18"
+        ],
+        "ok": 2,
+        "exOk": "Corect! Numărul 16 este pătrat perfect (4^2) și se află în intervalul cerut.",
+        "exGr": "Greșit. Singurul pătrat perfect din acest interval este 16, deoarece este egal cu 4 * 4."
+      }
+    ],
+    "T2": [
+      {
+        "q": "Care este rezultatul calculului: 3^2 + 4^2?",
+        "opts": [
+          "14",
+          "49",
+          "25",
+          "12"
+        ],
+        "ok": 2,
+        "exOk": "Corect! 3^2 = 9 și 4^2 = 16. Suma lor este 9 + 16 = 25.",
+        "exGr": "Greșit. Calculăm întâi pătratele: 9 + 16. Rezultatul final al adunării este 25."
+      },
+      {
+        "q": "Dacă pătratul unui număr natural este 64, care este acel număr?",
+        "opts": [
+          "6",
+          "7",
+          "8",
+          "9"
+        ],
+        "ok": 2,
+        "exOk": "Corect! Numărul este 8, deoarece 8 * 8 = 64.",
+        "exGr": "Greșit. Verificăm produsele: 8 înmulțit cu el însuși determină valoarea 64."
+      },
+      {
+        "q": "Care dintre următoarele numere este pătratul numărului natural 9?",
+        "opts": [
+          "18",
+          "81",
+          "27",
+          "99"
+        ],
+        "ok": 1,
+        "exOk": "Corect! Pătratul lui 9 este produsul 9 * 9 = 81.",
+        "exGr": "Greșit. Ridicarea la pătrat înseamnă multiplicarea numărului cu el însuși: 9 * 9 = 81."
+      },
+      {
+        "q": "Determinați pătratul perfect obținut prin ridicarea la pătrat a lui 12.",
+        "opts": [
+          "24",
+          "122",
+          "144",
+          "100"
+        ],
+        "ok": 2,
+        "exOk": "Corect! 12 * 12 = 144, deci 144 este pătratul perfect.",
+        "exGr": "Greșit. Valoarea se calculează efectuând înmulțirea directă 12 * 12 = 144."
+      },
+      {
+        "q": "Care este rezultatul scăderii: 5^2 - 2^2?",
+        "opts": [
+          "3",
+          "21",
+          "6",
+          "9"
+        ],
+        "ok": 1,
+        "exOk": "Corect! 5^2 = 25 și 2^2 = 4. Efectuând scăderea obținem 25 - 4 = 21.",
+        "exGr": "Greșit. Mai întâi determinăm puterile: 25 - 4. Rezultatul corect este 21."
+      },
+      {
+        "q": "Alegeți numărul care nu poate fi scris ca o putere cu exponentul 2:",
+        "opts": [
+          "49",
+          "64",
+          "70",
+          "81"
+        ],
+        "ok": 2,
+        "exOk": "Corect! Numărul 70 nu este pătratul niciunui număr natural.",
+        "exGr": "Greșit. Numerele 49, 64 și 81 sunt pătratele numerelor 7, 8 și 9. 70 este cel care nu respectă regula."
+      },
+      {
+        "q": "Câte pătrate perfecte nenule sunt mai mici sau egale cu 16?",
+        "opts": [
+          "3",
+          "4",
+          "5",
+          "2"
+        ],
+        "ok": 1,
+        "exOk": "Corect! Pătratele perfecte nenule sunt 1, 4, 9 și 16, adică în total 4 numere.",
+        "exGr": "Greșit. Pătratele perfecte căutate sunt 1^2, 2^2, 3^2 și 4^2. Sunt în total 4 numere."
+      },
+      {
+        "q": "Care este pătratul numărului natural 15?",
+        "opts": [
+          "30",
+          "150",
+          "225",
+          "200"
+        ],
+        "ok": 2,
+        "exOk": "Corect! Efectuând calculul obținem 15 * 15 = 225.",
+        "exGr": "Greșit. Pentru a ridica la pătrat numărul 15, efectuăm înmulțirea 15 * 15 = 225."
+      },
+      {
+        "q": "Dintre valorile următoare, selectați pătratul perfect egal cu 13^2.",
+        "opts": [
+          "169",
+          "26",
+          "133",
+          "196"
+        ],
+        "ok": 0,
+        "exOk": "Corect! 13 înmulțit cu 13 determină valoarea 169.",
+        "exGr": "Greșit. Exponentul 2 cere înmulțirea bazei cu ea însăși: 13 * 13 = 169."
+      },
+      {
+        "q": "Ce număr adunat cu pătratul lui 2 dă rezultatul 10?",
+        "opts": [
+          "8",
+          "6",
+          "4",
+          "2"
+        ],
+        "ok": 1,
+        "exOk": "Corect! Pătratul lui 2 este 4, iar 6 + 4 = 10.",
+        "exGr": "Greșit. Întâi calculăm pătratul: 2^2 = 4. Numărul care adunat cu 4 dă 10 este 6."
+      }
+    ],
+    "T3": [
+      {
+        "q": "Care este ultima cifră a pătratului unui număr natural care se termină în 5?",
+        "opts": [
+          "0",
+          "2",
+          "5",
+          "Nu se poate ști"
+        ],
+        "ok": 2,
+        "exOk": "Corect! Orice număr care are ultima cifră 5, ridicat la pătrat, se va termina mereu în 5.",
+        "exGr": "Greșit. Produsul a două numere terminate în 5 se va termina întotdeauna în cifra 5."
+      },
+      {
+        "q": "Care este rezultatul calculului: 2 * 5^2?",
+        "opts": [
+          "100",
+          "50",
+          "20",
+          "25"
+        ],
+        "ok": 1,
+        "exOk": "Corect! Respectăm ordinea operațiilor: întâi puterea 5^2 = 25, apoi înmulțirea 2 * 25 = 50.",
+        "exGr": "Greșit. Operația de ridicare la putere are prioritate: 5^2 = 25. Apoi calculăm 2 * 25 = 50."
+      },
+      {
+        "q": "Numărul natural 400 este pătratul numărului:",
+        "opts": [
+          "20",
+          "40",
+          "10",
+          "200"
+        ],
+        "ok": 0,
+        "exOk": "Corect! Numărul 20 înmulțit cu el însuși dă 400 (20 * 20 = 400).",
+        "exGr": "Greșit. Verificând variantele, observăm că 20^2 = 20 * 20 = 400."
+      },
+      {
+        "q": "Care este pătratul numărului natural 20?",
+        "opts": [
+          "40",
+          "200",
+          "400",
+          "800"
+        ],
+        "ok": 2,
+        "exOk": "Corect! Calculul corect este 20 * 20 = 400.",
+        "exGr": "Greșit. Ridicarea la pătrat reprezintă produsul numărului cu el însuși: 20 * 20 = 400."
+      },
+      {
+        "q": "Dacă un număr se scrie ca 2^2 * 3^2, ce pătrat perfect reprezintă?",
+        "opts": [
+          "12",
+          "36",
+          "24",
+          "18"
+        ],
+        "ok": 1,
+        "exOk": "Corect! 2^2 * 3^2 = 4 * 9 = 36. Acesta este pătratul lui 6.",
+        "exGr": "Greșit. Efectuăm calculul puterilor: 4 * 9 = 36. Numărul 36 este pătratul perfect căutat."
+      },
+      {
+        "q": "Care dintre următoarele numere poate fi ultima cifră a unui pătrat perfect?",
+        "opts": [
+          "2",
+          "3",
+          "6",
+          "7"
+        ],
+        "ok": 2,
+        "exOk": "Corect! Cifra 6 poate fi ultima cifră a unui pătrat perfect (de exemplu 4^2 = 16 sau 6^2 = 36).",
+        "exGr": "Greșit. Un pătrat perfect nu se poate termina niciodată în 2, 3, 7 sau 8. Singura variantă posibilă este 6."
+      },
+      {
+        "q": "Determinați valoarea numărului natural obținut din calculul: (2 + 3)^2.",
+        "opts": [
+          "13",
+          "25",
+          "10",
+          "16"
+        ],
+        "ok": 1,
+        "exOk": "Corect! Se execută mai întâi adunarea din paranteză: 2 + 3 = 5, apoi 5^2 = 25.",
+        "exGr": "Greșit. Operația din paranteză are prioritate: 2 + 3 = 5. Ridicând rezultatul la pătrat obținem 5^2 = 25."
+      },
+      {
+        "q": "Ce număr reprezintă pătratul numărului natural 11?",
+        "opts": [
+          "22",
+          "111",
+          "121",
+          "144"
+        ],
+        "ok": 2,
+        "exOk": "Corect! Produsul numărului 11 cu el însuși dă rezultatul 121.",
+        "exGr": "Greșit. Pătratul se determină prin înmulțire directă: 11 * 11 = 121."
+      },
+      {
+        "q": "Dacă x^2 = 9 și y^2 = 16, care este valoarea produsului x * y pentru numere naturale?",
+        "opts": [
+          "12",
+          "144",
+          "7",
+          "25"
+        ],
+        "ok": 0,
+        "exOk": "Corect! Numerele naturale sunt x = 3 și y = 4. Produsul lor este 3 * 4 = 12.",
+        "exGr": "Greșit. Identificăm bazele: x = 3 și y = 4. Produsul căutat este 3 * 4 = 12."
+      },
+      {
+        "q": "Care este cel mai mic pătrat perfect de două cifre?",
+        "opts": [
+          "10",
+          "16",
+          "25",
+          "9"
+        ],
+        "ok": 1,
+        "exOk": "Corect! Pătratele perfecte sunt 9 (o cifră) și apoi 16 (două cifre). 16 este cel mai mic.",
+        "exGr": "Greșit. Cel mai mic pătrat perfect structurat din două cifre este 16, obținut din 4 * 4."
+      }
+    ],
+    "T4": [
+      {
+        "q": "Care este ultima cifră a pătratului perfect obținut din numărul natural 1234?",
+        "opts": [
+          "4",
+          "6",
+          "8",
+          "2"
+        ],
+        "ok": 1,
+        "exOk": "Corect! Ultima cifră depinde doar de pătratul ultimei cifre a numărului: 4^2 = 16, deci se termină în 6.",
+        "exGr": "Greșit. Calculăm pătratul ultimei cifre: 4 * 4 = 16. Ultima cifră a rezultatului va fi întotdeauna 6."
+      },
+      {
+        "q": "Un număr natural se termină în cifra 2. Poate fi acesta un pătrat perfect?",
+        "opts": [
+          "Da, întotdeauna",
+          "Nu, niciodată",
+          "Doar dacă este par",
+          "Doar în anumite cazuri"
+        ],
+        "ok": 1,
+        "exOk": "Corect! Niciun pătrat perfect nu are ultima cifră egală cu 2, 3, 7 sau 8.",
+        "exGr": "Greșit. Cifrele 2, 3, 7 și 8 nu pot fi niciodată ultimele cifre ale unui pătrat perfect."
+      },
+      {
+        "q": "Calculați valoarea numărului natural n din ecuația: n^2 = 10^2 + 24^2.",
+        "opts": [
+          "34",
+          "26",
+          "100",
+          "576"
+        ],
+        "ok": 1,
+        "exOk": "Corect! 10^2 + 24^2 = 100 + 576 = 676. Deoarece 26 * 26 = 676, rezultă n = 26.",
+        "exGr": "Greșit. Efectuăm adunarea pătratelor: 100 + 576 = 676. Numărul al cărui pătrat este 676 este 26."
+      },
+      {
+        "q": "Care este valoarea numărului natural obținut din: 3^2 * 5^2?",
+        "opts": [
+          "15",
+          "30",
+          "225",
+          "60"
+        ],
+        "ok": 2,
+        "exOk": "Corect! 3^2 * 5^2 = 9 * 25 = 225. Acesta este pătratul lui 15.",
+        "exGr": "Greșit. Putem calcula direct 9 * 25 = 225 sau folosind regula puterilor (3 * 5)^2 = 15^2 = 225."
+      },
+      {
+        "q": "Ce număr natural ridicat la pătrat este egal cu 10000?",
+        "opts": [
+          "10",
+          "100",
+          "1000",
+          "50"
+        ],
+        "ok": 1,
+        "exOk": "Corect! Numărul 100 înmulțit cu 100 dublează numărul de zerouri, rezultând 10000.",
+        "exGr": "Greșit. Verificăm prin înmulțire: 100 * 100 = 10000. Deci baza căutată este 100."
+      },
+      {
+        "q": "Care este rezultatul calculului: 10^2 - 9^2?",
+        "opts": [
+          "1",
+          "19",
+          "100",
+          "81"
+        ],
+        "ok": 1,
+        "exOk": "Corect! Efectuăm ridicările la putere: 100 - 81 = 19.",
+        "exGr": "Greșit. Calculăm valoarea fiecărui pătrat: 100 și respectiv 81. Scăzându-le obținem 100 - 81 = 19."
+      },
+      {
+        "q": "Câte pătrate perfecte se află în șirul de numere naturale de la 1 la 30?",
+        "opts": [
+          "4",
+          "5",
+          "6",
+          "3"
+        ],
+        "ok": 1,
+        "exOk": "Corect! Pătratele perfecte din acest interval sunt 1, 4, 9, 16 și 25, în total 5 numere.",
+        "exGr": "Greșit. Numerele sunt 1^2, 2^2, 3^2, 4^2 și 5^2. Următorul este 36, care depășește 30. Sunt exact 5."
+      },
+      {
+        "q": "Dacă aria unui pătrat este de 49 cm^2, care este lungimea laturii sale?",
+        "opts": [
+          "14 cm",
+          "7 cm",
+          "9 cm",
+          "24.5 cm"
+        ],
+        "ok": 1,
+        "exOk": "Corect! Aria pătratului este latura ridicată la pătrat. Cum 7^2 = 49, latura este de 7 cm.",
+        "exGr": "Greșit. Formula ariei este latura înmulțită cu ea însăși. Numărul care respectă condiția este 7, deoarece 7 * 7 = 49."
+      },
+      {
+        "q": "Care dintre următoarele numere este un pătrat perfect?",
+        "opts": [
+          "2^3",
+          "3^3",
+          "4^3",
+          "5^3"
+        ],
+        "ok": 2,
+        "exOk": "Corect! 4^3 = 64, iar 64 este un pătrat perfect deoarece se poate scrie ca 8^2.",
+        "exGr": "Greșit. Evaluăm valorile: 2^3=8, 3^3=27, 4^3=64, 5^3=125. Dintre acestea, singurul pătrat perfect este 64 (8 * 8)."
+      },
+      {
+        "q": "Care este valoarea sumei primelor trei pătrate perfecte nenule?",
+        "opts": [
+          "14",
+          "9",
+          "5",
+          "6"
+        ],
+        "ok": 0,
+        "exOk": "Corect! Primele trei pătrate perfecte nenule sunt 1, 4 și 9. Suma lor este 1 + 4 + 9 = 14.",
+        "exGr": "Greșit. Adunăm numerele 1^2 + 2^2 + 3^2 = 1 + 4 + 9 = 14."
+      }
+    ]
+  }
 }

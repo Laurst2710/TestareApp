@@ -1,0 +1,508 @@
+{
+  "meta": {
+    "nivel": "Manual",
+    "dificultate": 1,
+    "clasa": "a V-a",
+    "unitate": "U1",
+    "titlu_unitate": "Numere Naturale",
+    "tema": "Tema24",
+    "titlu_tema": "Descompunere pozitionala in baza 10; valoarea cifrei pe pozitie",
+    "prag": 0.8,
+    "puncte_per_item": 10
+  },
+  "teorie": [
+    "Orice număr natural se poate scrie ca o sumă de produse în care un factor este o putere a lui 10, reprezentând descompunerea pozițională.",
+    "Valoarea unei cifre într-un număr natural depinde în mod direct de poziția sau ordinul pe care aceasta îl ocupă în scrierea numărului.",
+    "În baza 10, zece unități de un anumit ordin formează o singură unitate de ordin imediat superior."
+  ],
+  "teste": {
+    "T1": [
+      {
+        "q": "Care este valoarea cifrei 7 în numărul natural 475?",
+        "opts": [
+          "7",
+          "70",
+          "700",
+          "7000"
+        ],
+        "ok": 1,
+        "exOk": "Corect! Cifra 7 se află pe poziția zecilor, deci valoarea ei este 7 * 10 = 70.",
+        "exGr": "Greșit. În numărul 475, 7 reprezintă cifra zecilor, prin urmare valoarea pozițională este 70."
+      },
+      {
+        "q": "Ce ordin ocupă cifra 3 în scrierea numărului natural 3825?",
+        "opts": [
+          "Ordinul unităților",
+          "Ordinul zecilor",
+          "Ordinul sutelor",
+          "Ordinul miilor"
+        ],
+        "ok": 3,
+        "exOk": "Corect! Cifra 3 reprezintă numărul miilor în structura pozițională a numărului.",
+        "exGr": "Greșit. Numărând de la dreapta la stânga: 5 (unități), 2 (zeci), 8 (sute), 3 (mii). Ordinul este cel al miilor."
+      },
+      {
+        "q": "Care este descompunerea pozițională corectă în baza 10 pentru numărul 63?",
+        "opts": [
+          "6 * 10 + 3",
+          "6 * 1 + 3 * 10",
+          "60 * 10 + 3",
+          "6 + 3"
+        ],
+        "ok": 0,
+        "exOk": "Corect! Numărul 63 are 6 zeci și 3 unități, adică 6 * 10 + 3.",
+        "exGr": "Greșit. Descompunerea corectă evidențiază zecile și unitățile: 63 = 6 * 10 + 3."
+      },
+      {
+        "q": "În numărul 509, ce valoare reprezintă cifra 0?",
+        "opts": [
+          "Zece",
+          "O sută",
+          "Zero zeci",
+          "Nouă zeci"
+        ],
+        "ok": 2,
+        "exOk": "Corect! Cifra 0 arată absența unităților de ordinul zecilor, având valoarea 0.",
+        "exGr": "Greșit. Cifra 0 se află pe ordinul zecilor, indicând faptul că numărul are 0 zeci."
+      },
+      {
+        "q": "Care dintre următoarele numere are cifra sutelor egală cu 8?",
+        "opts": [
+          "812",
+          "182",
+          "218",
+          "88"
+        ],
+        "ok": 0,
+        "exOk": "Corect! În numărul 812, cifra 8 se află pe a treia poziție de la dreapta, care este ordinul sutelor.",
+        "exGr": "Greșit. Analizați ordinul sutelor (a treia cifră de la dreapta la stânga). În numărul 812, cifra sutelor este 8."
+      },
+      {
+        "q": "Suma 4 * 100 + 5 * 10 + 2 reprezintă descompunerea numărului:",
+        "opts": [
+          "45",
+          "4052",
+          "452",
+          "254"
+        ],
+        "ok": 2,
+        "exOk": "Corect! Efectuând calculul obținem 400 + 50 + 2 = 452.",
+        "exGr": "Greșit. Adunând produsele poziționale avem: 400 + 50 + 2 = 452."
+      },
+      {
+        "q": "Dacă un număr are 9 sute, 0 zeci și 4 unități, acesta se scrie:",
+        "opts": [
+          "94",
+          "940",
+          "904",
+          "409"
+        ],
+        "ok": 2,
+        "exOk": "Corect! Așezând cifrele la ordinele corespunzătoare obținem numărul 904.",
+        "exGr": "Greșit. Pozițiile sunt clar definite: sutele pe prima poziție din stânga, zecile la mijloc, unitățile la dreapta, rezultând 904."
+      },
+      {
+        "q": "Care este valoarea numărului format din două cifre identice, unde cifra unităților are valoarea pozițională 7?",
+        "opts": [
+          "70",
+          "77",
+          "7",
+          "17"
+        ],
+        "ok": 1,
+        "exOk": "Corect! Dacă cifra unităților este 7 și cifrele sunt identice, numărul este 77.",
+        "exGr": "Greșit. Cifra unităților fiind 7, iar cealaltă cifră identică, numărul format este 77."
+      },
+      {
+        "q": "Ce număr este egal cu descompunerea 7 * 10 + 0?",
+        "opts": [
+          "7",
+          "700",
+          "70",
+          "71"
+        ],
+        "ok": 2,
+        "exOk": "Corect! 7 * 10 + 0 = 70 + 0 = 70.",
+        "exGr": "Greșit. Calculul direct arată că 7 * 10 este egal cu 70."
+      },
+      {
+        "q": "Care este cifra unităților din numărul 1459?",
+        "opts": [
+          "1",
+          "4",
+          "5",
+          "9"
+        ],
+        "ok": 3,
+        "exOk": "Corect! Prima cifră de la dreapta reprezintă întotdeauna ordinul unităților, adică 9.",
+        "exGr": "Greșit. Ordinul unităților simple este prima poziție din dreapta numărului, adică 9."
+      }
+    ],
+    "T2": [
+      {
+        "q": "Care este descompunerea pozițională corectă a numărului 356?",
+        "opts": [
+          "3 * 100 + 5 * 10 + 6",
+          "3 * 10 + 5 * 10 + 6",
+          "300 + 56",
+          "3 * 100 + 56 * 10"
+        ],
+        "ok": 0,
+        "exOk": "Corect! 356 se descompune în 3 sute, 5 zeci și 6 unități: 3 * 100 + 5 * 10 + 6.",
+        "exGr": "Greșit. Fiecare cifră trebuie înmulțită cu puterea corespunzătoare a lui 10: 3 * 100 + 5 * 10 + 6."
+      },
+      {
+        "q": "Cât reprezintă suma valorilor cifrelor de 5 și 2 în numărul 524?",
+        "opts": [
+          "7",
+          "520",
+          "502",
+          "52"
+        ],
+        "ok": 1,
+        "exOk": "Corect! Valoarea lui 5 este 500, iar valoarea lui 2 este 20. Suma lor este 500 + 20 = 520.",
+        "exGr": "Greșit. Valoarea pozițională a lui 5 este 500, iar a lui 2 este 20. Suma lor este 520."
+      },
+      {
+        "q": "Determinați numărul care corespunde descompunerii: 8 * 1000 + 3 * 100 + 0 * 10 + 5.",
+        "opts": [
+          "835",
+          "8305",
+          "8350",
+          "8035"
+        ],
+        "ok": 1,
+        "exOk": "Corect! Calculând suma produselor, obținem 8000 + 300 + 0 + 5 = 8305.",
+        "exGr": "Greșit. Cifra zecilor este 0, iar a sutelor este 3, deci numărul căutat este 8305."
+      },
+      {
+        "q": "Dacă inversăm cifra sutelor cu cifra unităților la numărul 247, ce număr obținem?",
+        "opts": [
+          "742",
+          "274",
+          "427",
+          "724"
+        ],
+        "ok": 0,
+        "exOk": "Corect! Cifra sutelor este 2 și cifra unităților este 7. Inversându-le, numărul devine 742.",
+        "exGr": "Greșit. Cifra sutelor (2) și cea a unităților (7) își schimbă locurile, formând numărul 742."
+      },
+      {
+        "q": "Care este diferența dintre valoarea pozițională a cifrei 4 și valoarea pozițională a cifrei 1 în numărul 413?",
+        "opts": [
+          "3",
+          "390",
+          "300",
+          "400"
+        ],
+        "ok": 1,
+        "exOk": "Corect! Valoarea lui 4 este 400, iar valoarea lui 1 este 10. Diferența este 400 - 10 = 390.",
+        "exGr": "Greșit. Valoarea pozițională a lui 4 este 400, iar a lui 1 este 10. Calculul este 400 - 10 = 390."
+      },
+      {
+        "q": "Scrierea literară 'xy' cu bară deasupra reprezintă un număr de două cifre descompus astfel:",
+        "opts": [
+          "x + y",
+          "10 * x + y",
+          "10 * y + x",
+          "100 * x + y"
+        ],
+        "ok": 1,
+        "exOk": "Corect! Cifra x reprezintă zecile, iar y unitățile, deci structura este 10 * x + y.",
+        "exGr": "Greșit. În baza 10, prima cifră a unui număr de două cifre reprezintă ordinul zecilor: 10 * x + y."
+      },
+      {
+        "q": "Care este cel mai mic număr natural de trei cifre care are cifra zecilor egală cu 5?",
+        "opts": [
+          "150",
+          "151",
+          "105",
+          "500"
+        ],
+        "ok": 0,
+        "exOk": "Corect! Pentru ca numărul să fie minim, punem 1 la sute și 0 la unități, obținând 150.",
+        "exGr": "Greșit. Cel mai mic număr de trei cifre începe cu 1 la ordinul sutelor. Cu 5 la zeci și 0 la unități obținem 150."
+      },
+      {
+        "q": "Câte zeci conține numărul natural 760 în total?",
+        "opts": [
+          "6 zeci",
+          "7 zeci",
+          "76 zeci",
+          "60 zeci"
+        ],
+        "ok": 2,
+        "exOk": "Corect! Numărul conține în total 76 de zeci, deoarece 76 * 10 = 760.",
+        "exGr": "Greșit. Numărul total de zeci din număr se obține împărțind numărul la 10: 760 : 10 = 76."
+      },
+      {
+        "q": "Dacă într-un număr de trei cifre eliminăm cifra zecilor care este 0, numărul 804 devine:",
+        "opts": [
+          "840",
+          "84",
+          "48",
+          "80"
+        ],
+        "ok": 1,
+        "exOk": "Corect! Eliminând cifra din mijloc obținem numărul format din cifrele rămase: 84.",
+        "exGr": "Greșit. Prin eliminarea fizică a cifrei 0 din numărul 804, rămân doar cifrele 8 și 4, adică 84."
+      },
+      {
+        "q": "Ce număr adunat cu descompunerea pozițională a lui 30 structurat ca 3 * 10 dă 35?",
+        "opts": [
+          "5",
+          "0",
+          "5 * 10",
+          "2"
+        ],
+        "ok": 0,
+        "exOk": "Corect! 3 * 10 = 30, iar 30 + 5 = 35.",
+        "exGr": "Greșit. Valoarea căutată este numărul unităților simple care lipsesc din 30 pentru a ajunge la 35, adică 5."
+      }
+    ],
+    "T3": [
+      {
+        "q": "Care este descompunerea corectă în baza 10 folosind puteri ale lui 10 pentru numărul 425?",
+        "opts": [
+          "4 * 10^1 + 2 * 10^2 + 5 * 1",
+          "4 * 10^2 + 2 * 10^1 + 5 * 1",
+          "4 * 10^3 + 2 * 10^1 + 5",
+          "42 * 10^1 + 5"
+        ],
+        "ok": 1,
+        "exOk": "Corect! 10^2 = 100 și 10^1 = 10, deci descompunerea este 4 * 10^2 + 2 * 10^1 + 5 * 1.",
+        "exGr": "Greșit. Ordinul sutelor corespunde lui 10^2, iar ordinul zecilor lui 10^1. Structura corectă este 4 * 10^2 + 2 * 10^1 + 5 * 1."
+      },
+      {
+        "q": "Descompunerea 5 * 10^3 + 7 * 10^2 + 2 * 10^1 + 9 reprezintă numărul:",
+        "opts": [
+          "5729",
+          "50729",
+          "57290",
+          "572"
+        ],
+        "ok": 0,
+        "exOk": "Corect! Puterile succesive ale lui 10 indică mii (10^3), sute (10^2), zeci (10^1) și unități, adică 5729.",
+        "exGr": "Greșit. Calculând termenii: 5000 + 700 + 20 + 9 = 5729."
+      },
+      {
+        "q": "Se consideră un număr de forma 'abc' cu bară. Ce reprezintă termenul '100 * a' în descompunerea sa?",
+        "opts": [
+          "Numărul unităților",
+          "Valoarea pozițională a cifrei zecilor",
+          "Valoarea pozițională a cifrei sutelor",
+          "Numărul total de mii"
+        ],
+        "ok": 2,
+        "exOk": "Corect! Înmulțirea cu 100 definește valoarea pozițională a cifrei situată pe ordinul sutelor.",
+        "exGr": "Greșit. Cifra 'a' fiind pe prima poziție din stânga într-un număr de trei cifre reprezintă sutele, deci valoarea sa pozițională este 100 * a."
+      },
+      {
+        "q": "Determinați valoarea cifrei x, dacă numărul '2x5' scris în baza 10 este egal cu 200 + 40 + 5.",
+        "opts": [
+          "2",
+          "5",
+          "0",
+          "4"
+        ],
+        "ok": 3,
+        "exOk": "Corect! Comparând pozițiile, cifra zecilor x corespunde valorii 40, deci x = 4.",
+        "exGr": "Greșit. Din egalitatea 2x5 = 245 rezultă direct prin identificarea cifrei zecilor că x = 4."
+      },
+      {
+        "q": "Ce număr are descompunerea pozițională formată din 3 * 10^4 + 2 * 10^2 + 7?",
+        "opts": [
+          "327",
+          "3207",
+          "30207",
+          "32007"
+        ],
+        "ok": 2,
+        "exOk": "Corect! 10^4 reprezintă zecile de mii, iar 10^2 sutele. Lipsesc miile și zecile (sunt 0), deci numărul este 30207.",
+        "exGr": "Greșit. Calculul complet este 30000 + 200 + 7 = 30207. Atenție la pozițiile cu valoarea zero."
+      },
+      {
+        "q": "Dacă un număr natural de trei cifre are cifrele consecutive în ordine crescătoare și începe cu 1, descompunerea sa este:",
+        "opts": [
+          "1 * 100 + 2 * 10 + 3",
+          "1 * 100 + 1 * 10 + 1",
+          "3 * 100 + 2 * 10 + 1",
+          "1 * 100 + 3 * 10 + 2"
+        ],
+        "ok": 0,
+        "exOk": "Corect! Cifrele consecutive crescătoare care încep cu 1 sunt 1, 2, 3. Numărul este 123, descompus ca 1 * 100 + 2 * 10 + 3.",
+        "exGr": "Greșit. Cifrele sunt 1, 2 și 3. Numărul format este 123, iar descompunerea pozițională este 1 * 100 + 2 * 10 + 3."
+      },
+      {
+        "q": "Cât adunăm la numărul 652 pentru ca cifra sutelor să devină 9, fără a schimba celelalte cifre?",
+        "opts": [
+          "3",
+          "30",
+          "300",
+          "3000"
+        ],
+        "ok": 2,
+        "exOk": "Corect! Cifra sutelor trebuie să crească de la 6 la 9, adică adăugăm 3 sute (300).",
+        "exGr": "Greșit. Pentru a modifica doar ordinul sutelor cu 3 unități, trebuie să adunăm valoarea pozițională corespunzătoare, adică 300."
+      },
+      {
+        "q": "Dacă un număr de forma 'abc' cu bară are proprietatea că b = 0 și a = c, care este o formă posibilă a sa?",
+        "opts": [
+          "303",
+          "330",
+          "333",
+          "300"
+        ],
+        "ok": 0,
+        "exOk": "Corect! Numărul 303 are cifra zecilor 0, iar cifra sutelor este egală cu cea a unităților (3 = 3).",
+        "exGr": "Greșit. Căutăm un număr cu 0 la mijloc și cifre egale la extremități. Singura variantă corectă este 303."
+      },
+      {
+        "q": "Care este valoarea numărului 'ab' cu bară dacă a * 10 + b = 95?",
+        "opts": [
+          "59",
+          "95",
+          "90",
+          "5"
+        ],
+        "ok": 1,
+        "exOk": "Corect! Expresia a * 10 + b este chiar descompunerea numărului 'ab', deci numărul este 95.",
+        "exGr": "Greșit. Membrul stâng reprezintă scrierea pozițională a numărului format din zecile 'a' și unitățile 'b', adică 95."
+      },
+      {
+        "q": "Ce se întâmplă cu valoarea unui număr natural de trei cifre dacă îi adăugăm cifra 0 la sfârșit?",
+        "opts": [
+          "Crește cu 10 unități",
+          "Rămâne neschimbată",
+          "Se mărește de 10 ori",
+          "Se micșorează de 10 ori"
+        ],
+        "ok": 2,
+        "exOk": "Corect! Adăugarea unui zero la dreapta deplasează toate cifrele cu un ordin mai sus, înmulțind numărul cu 10.",
+        "exGr": "Greșit. În sistemul zecimal, adăugarea cifrei 0 la sfârșitul unui număr multiplică valoarea acestuia cu 10."
+      }
+    ],
+    "T4": [
+      {
+        "q": "Determinați numărul de forma 'abc' cu bară știind că descompunerea sa este a * 100 + b * 10 + c, iar a = 2, b = 3 * a, c = a + b.",
+        "opts": [
+          "235",
+          "268",
+          "257",
+          "264"
+        ],
+        "ok": 1,
+        "exOk": "Corect! Calculăm cifrele: a = 2; b = 3 * 2 = 6; c = 2 + 6 = 8. Numărul este 268.",
+        "exGr": "Greșit. Calculând valorile cifrelor obținem: a=2, b=6, c=8. Numărul pozițional format este 268."
+      },
+      {
+        "q": "Dacă numărul 'abc' adunat cu descompunerea sa pozițională respectă relația 100a + 10b + c = 345, care este suma cifrelor a + b + c?",
+        "opts": [
+          "12",
+          "34",
+          "15",
+          "45"
+        ],
+        "ok": 0,
+        "exOk": "Corect! Numărul este direct 345, deci cifrele sunt a=3, b=4, c=5. Suma lor este 3 + 4 + 5 = 12.",
+        "exGr": "Greșit. Deoarece expresia din stânga este chiar definiția numărului 345, cifrele sunt 3, 4 și 5. Suma lor este 12."
+      },
+      {
+        "q": "Care este descompunerea corectă a numărului de patru cifre 'a0b7' cu bară?",
+        "opts": [
+          "1000 * a + 100 * b + 7",
+          "1000 * a + 10 * b + 7",
+          "100 * a + 10 * b + 7",
+          "1000 * a + 7"
+        ],
+        "ok": 1,
+        "exOk": "Corect! Cifra a este la mii (1000 * a), cifra sutelor este 0, b este la zeci (10 * b) și unitățile sunt 7.",
+        "exGr": "Greșit. Ordinul sutelor fiind 0, termenul dispare. Rămâne: 1000 * a + 10 * b + 7."
+      },
+      {
+        "q": "Un număr natural de două cifre este cu 9 mai mare decât numărul răsturnat al său. Ce relație există între cifrele sale x și y?",
+        "opts": [
+          "x - y = 1",
+          "x + y = 9",
+          "x - y = 9",
+          "x = y"
+        ],
+        "ok": 0,
+        "exOk": "Corect! (10x + y) - (10y + x) = 9 => 9x - 9y = 9 => 9(x - y) = 9 => x - y = 1.",
+        "exGr": "Greșit. Descompunem numerele: 10x + y - (10y + x) = 9. Obținem 9(x - y) = 9, de unde rezultă x - y = 1."
+      },
+      {
+        "q": "Câte numere de forma 'ab' cu bară verifică relația a * 10 + b = b * 10 + a?",
+        "opts": [
+          "9 numere",
+          "10 numere",
+          "1 număr",
+          "Niciunul"
+        ],
+        "ok": 0,
+        "exOk": "Corect! Relația se reduce la 9a = 9b, deci a = b. Cifrele fiind egale și nenule (a diferit de 0), avem numerele 11, 22, ..., 99 (9 numere).",
+        "exGr": "Greșit. Relația înseamnă că numărul este egal cu răsturnatul său, deci are cifrele egale. De la 11 la 99 sunt exact 9 numere."
+      },
+      {
+        "q": "Fie numărul N = 5 * 10^3 + 4 * 10^1. Care este cifra sutelor pentru acest număr?",
+        "opts": [
+          "5",
+          "4",
+          "0",
+          "1"
+        ],
+        "ok": 2,
+        "exOk": "Corect! N = 5040. Deoarece lipsește termenul cu 10^2, cifra sutelor este 0.",
+        "exGr": "Greșit. Scrierea completă este 5040. Locul sutelor (puterea 10^2) nu este prezent, deci valoarea cifrei sutelor este 0."
+      },
+      {
+        "q": "Care este forma descompusă a numărului 'abcabc' cu bară?",
+        "opts": [
+          "1001 * 'abc'",
+          "1000 * 'abc'",
+          "2 * 'abc'",
+          "100000 * a + 1000 * b + c"
+        ],
+        "ok": 0,
+        "exOk": "Corect! 'abcabc' = 'abc' * 1000 + 'abc' = 'abc' * (1000 + 1) = 1001 * 'abc'.",
+        "exGr": "Greșit. Prin descompunere pe blocuri, numărul se scrie ca 'abc' * 1000 + 'abc', ceea ce dă factor comun 1001 * 'abc'."
+      },
+      {
+        "q": "Dacă într-un număr de forma 'abc' cu bară, cifra unităților c este triplul cifrei sutelor a, care este valoarea maximă a lui a?",
+        "opts": [
+          "1",
+          "2",
+          "3",
+          "9"
+        ],
+        "ok": 2,
+        "exOk": "Corect! Deoarece c = 3 * a și c trebuie să fie cifră (maximum 9), valoarea maximă a lui a este 3 (3 * 3 = 9).",
+        "exGr": "Greșit. Cifra unităților c poate fi cel mult 9. Din c = 3 * a rezultă că valoarea maximă a lui a este 3, caz în care c = 9."
+      },
+      {
+        "q": "Dacă la un număr de două cifre 'ab' cu bară adunăm suma cifrelor sale, obținem 11a + 2b. Acest rezultat provine din:",
+        "opts": [
+          "10a + b + a + b",
+          "10a + b + a - b",
+          "a + b",
+          "100a + 10b"
+        ],
+        "ok": 0,
+        "exOk": "Corect! Descompunerea pozițională a numărului este 10a + b. Adunând suma cifrelor (a + b), rezultă 10a + b + a + b = 11a + 2b.",
+        "exGr": "Greșit. Numărul se scrie pozițional ca 10a + b. Adunându-i suma cifrelor (a + b), obținem 11a + 2b."
+      },
+      {
+        "q": "Se dă numărul 7432. Cu cât crește valoarea acestui număr dacă mărim cifra miilor cu 2 și micșorăm cifra sutelor cu 3?",
+        "opts": [
+          "1700",
+          "2300",
+          "2000",
+          "1900"
+        ],
+        "ok": 0,
+        "exOk": "Corect! Modificarea valorii este determinată de poziții: +2 * 1000 - 3 * 100 = 2000 - 300 = 1700.",
+        "exGr": "Greșit. Creșterea de la mii aduce +2000, iar scăderea de la sute aduce -300. Modificarea totală este 2000 - 300 = 1700."
+      }
+    ]
+  }
+}

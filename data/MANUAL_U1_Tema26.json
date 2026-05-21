@@ -1,0 +1,508 @@
+{
+  "meta": {
+    "nivel": "Manual",
+    "dificultate": 1,
+    "clasa": "a V-a",
+    "unitate": "U1",
+    "titlu_unitate": "Numere Naturale",
+    "tema": "Tema26",
+    "titlu_tema": "Ordinea: putere >x/>+·",
+    "prag": 0.8,
+    "puncte_per_item": 10
+  },
+  "teorie": [
+    "Dacă într-un exercițiu de calcul numeric nu există paranteze, operațiile se efectuează respectând ordinea de prioritate a claselor de operații.",
+    "Ridicarea la putere este o operație de ordinul al treilea și se efectuează întotdeauna înaintea operațiilor de înmulțire și împărțire.",
+    "Înmulțirea și împărțirea sunt operații de ordinul al doilea, în timp ce adunarea și scăderea sunt de ordinul întâi, fiind ultimele executate."
+  ],
+  "teste": {
+    "T1": [
+      {
+        "q": "Care este prima operație care trebuie efectuată în exercițiul: 3 + 2 * 5^2?",
+        "opts": [
+          "Adunarea (3 + 2)",
+          "Înmulțirea (2 * 5)",
+          "Ridicarea la putere (5^2)",
+          "Toate operațiile au aceeași prioritate"
+        ],
+        "ok": 2,
+        "exOk": "Corect! Ridicarea la putere este o operație de ordinul III și se execută înaintea celor de ordinul II sau I.",
+        "exGr": "Greșit. Ridicarea la putere (5^2) are prioritate maximă în raport cu înmulțirea și adunarea."
+      },
+      {
+        "q": "Calculați rezultatul exercițiului: 2 * 3^2.",
+        "opts": [
+          "36",
+          "18",
+          "12",
+          "9"
+        ],
+        "ok": 1,
+        "exOk": "Corect! Mai întâi efectuăm puterea: 3^2 = 9. Apoi înmulțirea: 2 * 9 = 18.",
+        "exGr": "Greșit. Nu înmulțim bazele înainte. Calculul corect este 2 * 3^2 = 2 * 9 = 18."
+      },
+      {
+        "q": "Alegeți valoarea corectă pentru: 10 + 2^3.",
+        "opts": [
+          "18",
+          "16",
+          "1000",
+          "12"
+        ],
+        "ok": 0,
+        "exOk": "Corect! Efectuăm mai întâi ridicarea la putere: 2^3 = 8. Apoi adunăm: 10 + 8 = 18.",
+        "exGr": "Greșit. Trebuie realizată întâi puterea: 2^3 = 8. Exercițiul devine 10 + 8 = 18."
+      },
+      {
+        "q": "Care este rezultatul calculului: 5^2 - 4?",
+        "opts": [
+          "6",
+          "1",
+          "21",
+          "10"
+        ],
+        "ok": 2,
+        "exOk": "Corect! Puterea se calculează prima: 5^2 = 25. Apoi scădem: 25 - 4 = 21.",
+        "exGr": "Greșit. Calculăm întâi 5^2 = 25, după care efectuăm scăderea 25 - 4 = 21."
+      },
+      {
+        "q": "Calculați valoarea expresiei numerice: 4 * 5^0.",
+        "opts": [
+          "0",
+          "4",
+          "20",
+          "1"
+        ],
+        "ok": 1,
+        "exOk": "Corect! Orice număr nenul la puterea 0 este 1. Deci 4 * 5^0 = 4 * 1 = 4.",
+        "exGr": "Greșit. Întâi calculăm puterea: 5^0 = 1. Apoi facem înmulțirea: 4 * 1 = 4."
+      },
+      {
+        "q": "Efectuați operațiile în ordinea corectă: 3^3 : 9.",
+        "opts": [
+          "1",
+          "3",
+          "9",
+          "2"
+        ],
+        "ok": 1,
+        "exOk": "Corect! Puterea are prioritate: 3^3 = 27. Împărțirea finală dă 27 : 9 = 3.",
+        "exGr": "Greșit. Ridicăm întâi pe 3 la puterea a 3-a, rezultând 27. Împărțim 27 la 9 și obținem 3."
+      },
+      {
+        "q": "Care este rezultatul corect pentru expresia: 7 + 3 * 2^2?",
+        "opts": [
+          "40",
+          "19",
+          "33",
+          "26"
+        ],
+        "ok": 1,
+        "exOk": "Corect! Puterea: 2^2 = 4. Înmulțirea: 3 * 4 = 12. Adunarea: 7 + 12 = 19.",
+        "exGr": "Greșit. Respectăm ordinea: întâi puterea (2^2=4), apoi înmulțirea (34=12), și la final adunarea (7+12=19)."
+      },
+      {
+        "q": "Determinați rezultatul calculului: 10^2 - 6 * 10.",
+        "opts": [
+          "40",
+          "940",
+          "4",
+          "100"
+        ],
+        "ok": 0,
+        "exOk": "Corect! Puterea: 10^2 = 100. Înmulțirea: 6 * 10 = 60. Scăderea: 100 - 60 = 40.",
+        "exGr": "Greșit. Se calculează întâi puterea și înmulțirea: 100 - 60 = 40."
+      },
+      {
+        "q": "Calculați valoarea numărului: 2^4 + 3^1.",
+        "opts": [
+          "11",
+          "19",
+          "24",
+          "12"
+        ],
+        "ok": 1,
+        "exOk": "Corect! Calculăm ambele puteri: 2^4 = 16 și 3^1 = 3. Suma lor este 16 + 3 = 19.",
+        "exGr": "Greșit. Efectuăm ridicările la putere înainte de adunare: 16 + 3 = 19."
+      },
+      {
+        "q": "Ce valoare are expresia: 6^2 : 4 * 2?",
+        "opts": [
+          "18",
+          "4",
+          "3",
+          "9"
+        ],
+        "ok": 0,
+        "exOk": "Corect! Puterea: 6^2 = 36. Împărțirea și înmulțirea au ordine egală, deci lucrăm de la stânga la dreapta: 36 : 4 = 9, iar 9 * 2 = 18.",
+        "exGr": "Greșit. După putere (36), operațiile de ordinul II se fac în ordinea scrierii: 36 : 4 = 9, apoi 9 * 2 = 18."
+      }
+    ],
+    "T2": [
+      {
+        "q": "Calculați rezultatul exercițiului: 5 * 2^3 - 3 * 4.",
+        "opts": [
+          "28",
+          "120",
+          "22",
+          "8"
+        ],
+        "ok": 0,
+        "exOk": "Corect! Puterea: 2^3 = 8. Înmulțirile: 5 * 8 = 40 și 3 * 4 = 12. Scăderea: 40 - 12 = 28.",
+        "exGr": "Greșit. Se execută întâi puterea, apoi cele două înmulțiri: 40 - 12 = 28."
+      },
+      {
+        "q": "Determinați valoarea expresiei: 3^4 - 2^5 * 2.",
+        "opts": [
+          "49",
+          "17",
+          "130",
+          "5"
+        ],
+        "ok": 1,
+        "exOk": "Corect! Puterile: 3^4 = 81, 2^5 = 32. Înmulțirea: 32 * 2 = 64. Scăderea: 81 - 64 = 17.",
+        "exGr": "Greșit. Calculăm puterile: 81 - 32 * 2. Efectuăm înmulțirea: 81 - 64 = 17."
+      },
+      {
+        "q": "Care este rezultatul corect al calculului: 10 + 4^3 : 8?",
+        "opts": [
+          "12",
+          "18",
+          "16",
+          "2"
+        ],
+        "ok": 1,
+        "exOk": "Corect! Puterea: 4^3 = 64. Împărțirea: 64 : 8 = 8. Adunarea: 10 + 8 = 18.",
+        "exGr": "Greșit. Puterea are prioritate absolută aici: 4^3 = 64. Urmează împărțirea 64 : 8 = 8, apoi adunarea 10 + 8 = 18."
+      },
+      {
+        "q": "Efectuați calculul: 2 * 5^2 - 4^2.",
+        "opts": [
+          "84",
+          "34",
+          "4",
+          "16"
+        ],
+        "ok": 1,
+        "exOk": "Corect! Puterile: 5^2 = 25 și 4^2 = 16. Înmulțirea: 2 * 25 = 50. Scăderea: 50 - 16 = 34.",
+        "exGr": "Greșit. Evaluăm puterile: 2 * 25 - 16 = 50 - 16 = 34."
+      },
+      {
+        "q": "Care este valoarea expresiei: 9^2 - 3^3 * 2?",
+        "opts": [
+          "27",
+          "108",
+          "54",
+          "0"
+        ],
+        "ok": 0,
+        "exOk": "Corect! Puterile: 9^2 = 81 și 3^3 = 27. Înmulțirea: 27 * 2 = 54. Rezultat: 81 - 54 = 27.",
+        "exGr": "Greșit. Puterile se rezolvă primele: 81 - 27 * 2 = 81 - 54 = 27."
+      },
+      {
+        "q": "Calculați rezultatul expresiei: 7 * 2^4 : 8 + 5.",
+        "opts": [
+          "19",
+          "12",
+          "11",
+          "9"
+        ],
+        "ok": 0,
+        "exOk": "Corect! Puterea: 2^4 = 16. Înmulțirea și împărțirea: 7 * 16 = 112, apoi 112 : 8 = 14. Adunarea: 14 + 5 = 19.",
+        "exGr": "Greșit. Ordinea este: puterea 2^4=16, înmulțirea 716=112, împărțirea 112:8=14, iar adunarea 14+5=19."
+      },
+      {
+        "q": "Ce valoare obținem dacă calculăm: 8^2 - 4 * 2^3?",
+        "opts": [
+          "32",
+          "0",
+          "48",
+          "16"
+        ],
+        "ok": 0,
+        "exOk": "Corect! Puterile: 8^2 = 64, 2^3 = 8. Înmulțirea: 4 * 8 = 32. Scăderea: 64 - 32 = 32.",
+        "exGr": "Greșit. Evaluăm puterile: 64 - 4 * 8. Efectuăm înmulțirea: 64 - 32 = 32."
+      },
+      {
+        "q": "Alegeți rezultatul corect pentru: 15 + 5 * 3^2 - 2^3.",
+        "opts": [
+          "172",
+          "52",
+          "42",
+          "50"
+        ],
+        "ok": 1,
+        "exOk": "Corect! Puterile: 3^2 = 9 și 2^3 = 8. Înmulțirea: 5 * 9 = 45. Operăm: 15 + 45 - 8 = 60 - 8 = 52.",
+        "exGr": "Greșit. Calculăm puterile: 15 + 5 * 9 - 8. Efectuăm înmulțirea: 15 + 45 - 8 = 52."
+      },
+      {
+        "q": "Calculați valoarea expresiei: 12^2 : 6 : 2^2.",
+        "opts": [
+          "12",
+          "6",
+          "24",
+          "48"
+        ],
+        "ok": 1,
+        "exOk": "Corect! Puterile: 12^2 = 144 și 2^2 = 4. Operațiile rămase se fac de la stânga la dreapta: 144 : 6 = 24, iar 24 : 4 = 6.",
+        "exGr": "Greșit. Puterile dau 144 : 6 : 4. Efectuăm în ordinea scrierii: 144 : 6 = 24, iar 24 : 4 = 6."
+      },
+      {
+        "q": "Determinați rezultatul pentru: 10^3 : 25 - 2^5.",
+        "opts": [
+          "8",
+          "0",
+          "40",
+          "16"
+        ],
+        "ok": 0,
+        "exOk": "Corect! Puterile: 10^3 = 1000 și 2^5 = 32. Împărțirea: 1000 : 25 = 40. Scăderea: 40 - 32 = 8.",
+        "exGr": "Greșit. Calculăm puterile prima dată: 1000 : 25 - 32. Împărțirea dă 40, deci 40 - 32 = 8."
+      }
+    ],
+    "T3": [
+      {
+        "q": "Calculați valoarea expresiei: 2^6 - 5^2 * 2 + 10^1.",
+        "opts": [
+          "24",
+          "4",
+          "14",
+          "38"
+        ],
+        "ok": 0,
+        "exOk": "Corect! Puterile: 2^6 = 64, 5^2 = 25, 10^1 = 10. Înmulțirea: 25 * 2 = 50. Rezultat: 64 - 50 + 10 = 14 + 10 = 24.",
+        "exGr": "Greșit. Respectând ordinea obținem: 64 - 25 * 2 + 10 = 64 - 50 + 10 = 14 + 10 = 24."
+      },
+      {
+        "q": "Care este rezultatul exercițiului: 3^2 * 2^3 - 4^3 : 2?",
+        "opts": [
+          "8",
+          "40",
+          "104",
+          "72"
+        ],
+        "ok": 1,
+        "exOk": "Corect! Puterile: 9 * 8 - 64 : 2. Înmulțirea și împărțirea: 72 - 32 = 40.",
+        "exGr": "Greșit. Calculăm toate puterile în primă fază: 9 * 8 - 64 : 2. Obținem 72 - 32 = 40."
+      },
+      {
+        "q": "Determinați numărul reprezentat de: 7^2 + 3 * 5^2 - 12 * 2.",
+        "opts": [
+          "100",
+          "150",
+          "220",
+          "144"
+        ],
+        "ok": 0,
+        "exOk": "Corect! Puterile: 49 + 3 * 25 - 12 * 2. Înmulțirile: 3 * 25 = 75 și 12 * 2 = 24. Rezultat: 49 + 75 - 24 = 100.",
+        "exGr": "Greșit. Evaluăm puterile, apoi înmulțirile: 49 + 75 - 24. Efectuând calculele de la stânga la dreapta obținem 100."
+      },
+      {
+        "q": "Efectuați calculul: 10^2 - [2^3 * 5 - (4^2 - 6)]. Ce operație din paranteza rotundă se face prima?",
+        "opts": [
+          "Scăderea (4^2 - 6)",
+          "Ridicarea la putere (4^2)",
+          "Înmulțirea cu 5",
+          "Toate deodată"
+        ],
+        "ok": 1,
+        "exOk": "Corect! Chiar și în interiorul parantezelor, ordinea operațiilor se păstrează, deci puterea 4^2 are prioritate.",
+        "exGr": "Greșit. În paranteza rotundă avem o putere și o scădere. Puterea (4^2) se realizează întotdeauna prima."
+      },
+      {
+        "q": "Calculați rezultatul complet al expresiei: 5^3 - 2 * 3^3 + 4^1.",
+        "opts": [
+          "75",
+          "121",
+          "71",
+          "67"
+        ],
+        "ok": 0,
+        "exOk": "Corect! Puterile: 125 - 2 * 27 + 4. Înmulțirea: 2 * 27 = 54. Calculele finale: 125 - 54 + 4 = 71 + 4 = 75.",
+        "exGr": "Greșit. Puterile dau: 125 - 2 * 27 + 4. Înmulțirea dă 54. Obținem 125 - 54 + 4 = 75."
+      },
+      {
+        "q": "Care este valoarea numărului: 2^7 : 4^2 - 2^2?",
+        "opts": [
+          "4",
+          "0",
+          "8",
+          "12"
+        ],
+        "ok": 0,
+        "exOk": "Corect! Puterile: 2^7 = 128, 4^2 = 16, 2^2 = 4. Împărțirea: 128 : 16 = 8. Scăderea: 8 - 4 = 4.",
+        "exGr": "Greșit. Obținem din puteri: 128 : 16 - 4. Împărțirea dă 8, iar 8 - 4 = 4."
+      },
+      {
+        "q": "Alegeți rezultatul corect: 9 * 10^2 + 5 * 10^1 + 3 * 10^0.",
+        "opts": [
+          "950",
+          "953",
+          "9053",
+          "951"
+        ],
+        "ok": 1,
+        "exOk": "Corect! Puterile: 10^2 = 100, 10^1 = 10, 10^0 = 1. Înmulțirile dau: 900 + 50 + 3 = 953.",
+        "exGr": "Greșit. Puterile se calculează primele: 9 * 100 + 5 * 10 + 3 * 1 = 900 + 50 + 3 = 953."
+      },
+      {
+        "q": "Calculați valoarea expresiei: 11^2 - 2^4 * 5 + 3^2.",
+        "opts": [
+          "50",
+          "41",
+          "32",
+          "20"
+        ],
+        "ok": 0,
+        "exOk": "Corect! Puterile: 121 - 16 * 5 + 9. Înmulțirea: 16 * 5 = 80. Scăderea și adunarea: 121 - 80 + 9 = 41 + 9 = 50.",
+        "exGr": "Greșit. Evaluăm puterile: 121 - 16 * 5 + 9. Înmulțirea dă 80. Rezultatul este 121 - 80 + 9 = 50."
+      },
+      {
+        "q": "Ce valoare are expresia numerică: 2^3 * 3^2 : 6 - 4?",
+        "opts": [
+          "8",
+          "2",
+          "0",
+          "4"
+        ],
+        "ok": 0,
+        "exOk": "Corect! Puterile: 8 * 9 : 6 - 4. De la stânga la dreapta: 8 * 9 = 72, apoi 72 : 6 = 12. La final: 12 - 4 = 8.",
+        "exGr": "Greșit. Puterile dau 8 * 9 : 6 - 4. Înmulțirea dă 72, împărțirea la 6 dă 12, iar 12 - 4 = 8."
+      },
+      {
+        "q": "Determinați rezultatul exercițiului: 13^1 + 0^15 - 1^100 * 5.",
+        "opts": [
+          "8",
+          "13",
+          "0",
+          "12"
+        ],
+        "ok": 0,
+        "exOk": "Corect! Puterile: 13^1 = 13, 0^15 = 0, 1^100 = 1. Înmulțirea: 1 * 5 = 5. Exercițiul devine: 13 + 0 - 5 = 8.",
+        "exGr": "Greșit. Evaluăm puterile: 13 + 0 - 1 * 5. Efectuăm înmulțirea: 13 - 5 = 8."
+      }
+    ],
+    "T4": [
+      {
+        "q": "Calculați valoarea expresiei complexe: 2^3 * 5^2 - (4^3 + 2^5 * 3). Ce valoare obținem în total?",
+        "opts": [
+          "40",
+          "200",
+          "4",
+          "16"
+        ],
+        "ok": 0,
+        "exOk": "Corect! Puterile: 8 * 25 - (64 + 32 * 3) = 200 - (64 + 96) = 200 - 160 = 40.",
+        "exGr": "Greșit. Calculăm elementele: 8 * 25 - (64 + 32 * 3). Obținem 200 - (64 + 96) = 200 - 160 = 40."
+      },
+      {
+        "q": "Determinați rezultatul calculului: (3^2)^2 - 5 * 2^4 + 7^0.",
+        "opts": [
+          "2",
+          "1",
+          "0",
+          "12"
+        ],
+        "ok": 0,
+        "exOk": "Corect! (3^2)^2 = 3^4 = 81. 5 * 2^4 = 5 * 16 = 80. 7^0 = 1. Rezultat: 81 - 80 + 1 = 2.",
+        "exGr": "Greșit. Calculăm: 81 - 5 * 16 + 1 = 81 - 80 + 1 = 2."
+      },
+      {
+        "q": "Efectuați din nou calculul: (3^2)^2 - 5 * 2^4 + 7^0. Care este valoarea sa?",
+        "opts": [
+          "2",
+          "81",
+          "0",
+          "1"
+        ],
+        "ok": 0,
+        "exOk": "Corect! Puterile sunt 81, 16 și 1. Exercițiul se reduce la 81 - 80 + 1 = 2.",
+        "exGr": "Greșit. Puterea unei puteri dă 3^4 = 81. Avem 81 - 5 * 16 + 1 = 81 - 80 + 1 = 2."
+      },
+      {
+        "q": "Calculați valoarea numărului: 10^4 : 10^2 : 2^2 - 5^2.",
+        "opts": [
+          "0",
+          "25",
+          "75",
+          "1"
+        ],
+        "ok": 0,
+        "exOk": "Corect! 10^4 : 10^2 = 10^2 = 100. Apoi 100 : 2^2 = 100 : 4 = 25. Scăderea finală: 25 - 5^2 = 25 - 25 = 0.",
+        "exGr": "Greșit. Aplicăm regulile: 100 : 4 - 25 = 25 - 25 = 0."
+      },
+      {
+        "q": "Determinați rezultatul expresiei: 3^5 : 3^3 * 2^2 - 6^2.",
+        "opts": [
+          "0",
+          "36",
+          "12",
+          "6"
+        ],
+        "ok": 0,
+        "exOk": "Corect! Împărțirea puterilor: 3^5 : 3^3 = 3^2 = 9. Înmulțirea cu 2^2 (4) dă 9 * 4 = 36. Scădem 6^2 (36) și obținem 0.",
+        "exGr": "Greșit. Reducem prima parte: 3^2 * 4 - 36 = 9 * 4 - 36 = 36 - 36 = 0."
+      },
+      {
+        "q": "Care este rezultatul calculului: [2 * 5^2 - (3^2 + 1)] : 10?",
+        "opts": [
+          "4",
+          "5",
+          "40",
+          "2"
+        ],
+        "ok": 0,
+        "exOk": "Corect! Paranteza rotundă: 9 + 1 = 10. Paranteza pătrată: 2 * 25 - 10 = 50 - 10 = 40. Împărțirea: 40 : 10 = 4.",
+        "exGr": "Greșit. Calculăm din interior spre exterior: [2 * 25 - (9 + 1)] : 10 = [50 - 10] : 10 = 40 : 10 = 4."
+      },
+      {
+        "q": "Calculați valoarea expresiei: 4^3 - 2 * (5^2 - 3 * 2^2).",
+        "opts": [
+          "38",
+          "51",
+          "42",
+          "12"
+        ],
+        "ok": 0,
+        "exOk": "Corect! În paranteză: 2^2 = 4, înmulțirea 3 * 4 = 12. Scăderea: 25 - 12 = 13. În afară: 64 - 2 * 13 = 64 - 26 = 38.",
+        "exGr": "Greșit. Prioritatea în paranteză dă 25 - 12 = 13. Exercițiul devine 4^3 - 2 * 13 = 64 - 26 = 38."
+      },
+      {
+        "q": "Ce valoare obținem pentru: 1^50 * 5^3 - 10^2 : 4?",
+        "opts": [
+          "100",
+          "0",
+          "25",
+          "50"
+        ],
+        "ok": 0,
+        "exOk": "Corect! Puterile: 1 * 125 - 100 : 4. Împărțirea: 100 : 4 = 25. Final: 125 - 25 = 100.",
+        "exGr": "Greșit. Reducem puterile: 1 * 125 - 100 : 4. Efectuăm împărțirea: 125 - 25 = 100."
+      },
+      {
+        "q": "Efectuați următorul calcul complex: (2^2 * 3)^2 - 12^2 + 5^1.",
+        "opts": [
+          "5",
+          "0",
+          "25",
+          "149"
+        ],
+        "ok": 0,
+        "exOk": "Corect! În paranteză: 4 * 3 = 12. Expresia devine 12^2 - 12^2 + 5 = 0 + 5 = 5.",
+        "exGr": "Greșit. Calculul din paranteză dă 12. Ridicat la pătrat este 12^2. Astfel, 12^2 - 12^2 + 5 = 5."
+      },
+      {
+        "q": "Determinați valoarea finală a expresiei: 2 * 3^4 - 9^2 * 2 + 10^0.",
+        "opts": [
+          "1",
+          "0",
+          "162",
+          "2"
+        ],
+        "ok": 0,
+        "exOk": "Corect! Puterile: 3^4 = 81, 9^2 = 81, 10^0 = 1. Înmulțirile: 2 * 81 - 81 * 2 = 162 - 162 = 0. Adunăm 1 și obținem 1.",
+        "exGr": "Greșit. Transformăm puterile: 2 * 81 - 81 * 2 + 1. Deoarece 162 - 162 = 0, rezultatul final este 1."
+      }
+    ]
+  }
+}

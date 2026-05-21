@@ -1,0 +1,508 @@
+{
+  "meta": {
+    "nivel": "Manual",
+    "dificultate": 1,
+    "clasa": "a V-a",
+    "unitate": "U1",
+    "titlu_unitate": "Numere Naturale",
+    "tema": "Tema30",
+    "titlu_tema": "Metoda figurativa (reprezentare prin segmente)",
+    "prag": 0.8,
+    "puncte_per_item": 10
+  },
+  "teorie": [
+    "Metoda figurativă sau grafică constă în reprezentarea mărimilor necunoscute cu ajutorul unor segmente de dreaptă sau al altor figuri geometrice simple.",
+    "Pentru o rezolvare corectă, se stabilește o mărime de referință reprezentată printr-un singur segment, numit segment unitar sau o parte.",
+    "Prin compararea segmentelor și eliminarea diferențelor din suma totală, se determină valoarea segmentului unitar, aflându-se apoi toate necunoscutele."
+  ],
+  "teste": {
+    "T1": [
+      {
+        "q": "Suma a două numere este 20, iar unul este egal cu celălalt. Cât reprezintă un singur segment dacă le reprezentăm prin segmente egale?",
+        "opts": [
+          "5",
+          "10",
+          "15",
+          "20"
+        ],
+        "ok": 1,
+        "exOk": "Corect! Avem două segmente identice care adunate dau 20, deci un segment este 20 : 2 = 10.",
+        "exGr": "Greșit. Fiind două numere egale, reprezentate prin două segmente egale, valoarea unui segment este 20 : 2 = 10."
+      },
+      {
+        "q": "Suma a două numere este 15. Primul număr este reprezentat printr-un segment, iar al doilea prin două segmente egale. Câte segmente egale avem în total?",
+        "opts": [
+          "2 segmente",
+          "3 segmente",
+          "4 segmente",
+          "5 segmente"
+        ],
+        "ok": 1,
+        "exOk": "Corect! În total avem 1 + 2 = 3 segmente egale.",
+        "exGr": "Greșit. Adunând segmentele destinate primului număr cu cele ale celui de-al doilea număr, obținem 1 + 2 = 3 segmente egale."
+      },
+      {
+        "q": "Dacă 3 segmente egale au valoarea totală de 15, care este valoarea unui singur segment?",
+        "opts": [
+          "3",
+          "4",
+          "5",
+          "6"
+        ],
+        "ok": 2,
+        "exOk": "Corect! Împărțim suma totală la numărul de segmente egale: 15 : 3 = 5.",
+        "exGr": "Greșit. Valoarea unei părți se obține prin împărțirea sumei totale la numărul total de segmente egale: 15 : 3 = 5."
+      },
+      {
+        "q": "Suma a două numere este 12, iar unul este cu 2 mai mare decât celălalt. Dacă eliminăm această diferență din sumă, ce valoare ne rămâne pentru cele două segmente egale?",
+        "opts": [
+          "14",
+          "10",
+          "6",
+          "8"
+        ],
+        "ok": 1,
+        "exOk": "Corect! Scădem diferența din suma totală pentru a egala segmentele: 12 - 2 = 10.",
+        "exGr": "Greșit. Pentru a rămâne doar segmentele egale, se scade surplusul (diferența) din suma totală: 12 - 2 = 10."
+      },
+      {
+        "q": "După eliminarea diferenței, cele două segmente egale au împreună valoarea 10. Cât reprezintă segmentul cel mai mic?",
+        "opts": [
+          "2",
+          "4",
+          "5",
+          "6"
+        ],
+        "ok": 2,
+        "exOk": "Corect! Împărțim valoarea rămasă la cele 2 segmente: 10 : 2 = 5.",
+        "exGr": "Greșit. Segmentul mic se determină împărțind valoarea egalată la numărul de segmente: 10 : 2 = 5."
+      },
+      {
+        "q": "Dacă numărul mic este 5, iar numărul mare este cu 2 mai mare decât el, care este valoarea numărului mare?",
+        "opts": [
+          "3",
+          "5",
+          "7",
+          "10"
+        ],
+        "ok": 2,
+        "exOk": "Corect! Adunăm diferența la numărul mic: 5 + 2 = 7.",
+        "exGr": "Greșit. Numărul mare se află adăugând diferența la valoarea numărului mic: 5 + 2 = 7."
+      },
+      {
+        "q": "Suma a două numere este 18, iar unul este de două ori mai mare decât celălalt. Cât este numărul mic (o parte)?",
+        "opts": [
+          "6",
+          "9",
+          "4",
+          "12"
+        ],
+        "ok": 0,
+        "exOk": "Corect! Totalul are 3 părți egale (1 + 2 = 3). O parte reprezintă 18 : 3 = 6.",
+        "exGr": "Greșit. Numărul mare reprezintă două părți, iar cel mic o parte. În total sunt 3 părți. Partea mică este 18 : 3 = 6."
+      },
+      {
+        "q": "Dacă numărul mic este 6, iar numărul mare este de două ori mai mare, care este valoarea numărului mare?",
+        "opts": [
+          "8",
+          "12",
+          "18",
+          "3"
+        ],
+        "ok": 1,
+        "exOk": "Corect! Numărul mare reprezintă două părți, adică 2 * 6 = 12.",
+        "exGr": "Greșit. Înmulțim valoarea segmentului unitar cu 2 pentru a afla numărul mare: 6 * 2 = 12."
+      },
+      {
+        "q": "Două segmente egale au suma de 30. Cât valorează trei segmente de același fel?",
+        "opts": [
+          "15",
+          "45",
+          "60",
+          "35"
+        ],
+        "ok": 1,
+        "exOk": "Corect! Un segment valorează 30 : 2 = 15. Trei segmente valorează 15 * 3 = 45.",
+        "exGr": "Greșit. Aflăm întâi un segment: 30 : 2 = 15. Trei segmente vor avea valoarea 15 * 3 = 45."
+      },
+      {
+        "q": "Care este primul pas în rezolvarea unei probleme în care cunoaștem suma și diferența a două numere?",
+        "opts": [
+          "Împărțim suma la 2直接",
+          "Scădem diferența din sumă pentru a obține segmente egale",
+          "Înmulțim suma cu diferența",
+          "Desenăm segmente fără nicio regulă"
+        ],
+        "ok": 1,
+        "exOk": "Corect! Eliminarea diferenței din sumă ne permite să obținem o sumă formată doar din părți egale.",
+        "exGr": "Greșit. Pasul corect este îndepărtarea surplusului (diferenței) din sumă pentru a egala părțile reprezentate grafic."
+      }
+    ],
+    "T2": [
+      {
+        "q": "Suma a două numere este 25, iar diferența lor este 5. Care este valoarea numărului mai mic?",
+        "opts": [
+          "10",
+          "15",
+          "5",
+          "20"
+        ],
+        "ok": 0,
+        "exOk": "Corect! Scădem diferența: 25 - 5 = 20. Împărțim la 2 pentru a afla numărul mic: 20 : 2 = 10.",
+        "exGr": "Greșit. Egalăm segmentele scăzând diferența: 25 - 5 = 20. Numărul mic este jumătatea acestei valori, adică 10."
+      },
+      {
+        "q": "Aflați numărul mai mare, știind că suma a două numere este 25, iar diferența lor este 5.",
+        "opts": [
+          "10",
+          "15",
+          "20",
+          "30"
+        ],
+        "ok": 1,
+        "exOk": "Corect! Numărul mic fiind 10, numărul mai mare este 10 + 5 = 15.",
+        "exGr": "Greșit. Adăugăm diferența de 5 la numărul mic determinat anterior (10), obținând 10 + 5 = 15."
+      },
+      {
+        "q": "Suma a două numere este 24, iar unul este de 3 ori mai mare decât celălalt. Cât valorează segmentul unitar?",
+        "opts": [
+          "8",
+          "6",
+          "12",
+          "4"
+        ],
+        "ok": 1,
+        "exOk": "Corect! Numărul mic are 1 segment, cel mare are 3. Totalul are 1 + 3 = 4 segmente. Un segment are 24 : 4 = 6.",
+        "exGr": "Greșit. Împărțim suma totală la numărul total de segmente (1 + 3 = 4). Valoarea este 24 : 4 = 6."
+      },
+      {
+        "q": "Dacă o parte reprezintă 6, iar numărul mare are 3 părți, care este valoarea numărului mare?",
+        "opts": [
+          "18",
+          "12",
+          "24",
+          "9"
+        ],
+        "ok": 0,
+        "exOk": "Corect! Multiplicăm valoarea unei părți cu numărul de părți: 6 * 3 = 18.",
+        "exGr": "Greșit. Numărul mare reprezintă 3 segmente unitare, adică 6 * 3 = 18."
+      },
+      {
+        "q": "Suma a două numere este 30. Dacă adăugăm 6 la suma lor pentru că am mărit numărul mic cu 6, câte segmente egale obținem dacă numărul mare era oricum cu 6 mai mare?",
+        "opts": [
+          "2 segmente egale cu cel mic",
+          "2 segmente egale cu cel mare",
+          "3 segmente",
+          "4 segmente"
+        ],
+        "ok": 1,
+        "exOk": "Corect! Adăugând diferența la sumă, am completat segmentul mic, obținând 2 segmente egale cu cel mare.",
+        "exGr": "Greșit. Prin adăugarea diferenței la suma totală, transformăm simbolic numărul mic într-un număr egal cu cel mare."
+      },
+      {
+        "q": "Mama și fiica au împreună 40 de ani. Mama este de 3 ori mai în vârstă decât fiica. Câți ani are fiica?",
+        "opts": [
+          "10 ani",
+          "12 ani",
+          "15 ani",
+          "8 ani"
+        ],
+        "ok": 0,
+        "exOk": "Corect! Fiica are un segment, mama are 3. În total sunt 4 segmente: 40 : 4 = 10 ani are fiica.",
+        "exGr": "Greșit. Reprezentăm prin segmente: fiica = 1 segment, mama = 3 segmente. Suma este 4 segmente = 40, deci 1 segment = 10 ani."
+      },
+      {
+        "q": "În două cutii sunt 36 de creioane. În prima cutie sunt cu 8 creioane mai multe decât în a doua. Câte creioane sunt în a doua cutie?",
+        "opts": [
+          "14 creioane",
+          "22 creioane",
+          "18 creioane",
+          "12 creioane"
+        ],
+        "ok": 0,
+        "exOk": "Corect! Eliminăm diferența: 36 - 8 = 28 creioane. Împărțim la 2 cutii și obținem 28 : 2 = 14 creioane.",
+        "exGr": "Greșit. Scădem diferența din total: 36 - 8 = 28. Cutia mai mică (a doua) conține jumătate din rest, adică 28 : 2 = 14."
+      },
+      {
+        "q": "Dacă în a doua cutie sunt 14 creioane, iar în prima sunt cu 8 mai multe, câte creioane sunt în prima cutie?",
+        "opts": [
+          "20 creioane",
+          "22 creioane",
+          "24 creioane",
+          "14 creioane"
+        ],
+        "ok": 1,
+        "exOk": "Corect! Adunăm surplusul la cantitatea din a doua cutie: 14 + 8 = 22 de creioane.",
+        "exGr": "Greșit. Prima cutie are cu 8 mai multe decât a doua: 14 + 8 = 22 de creioane."
+      },
+      {
+        "q": "Pe două rafturi sunt 50 de cărți. Pe al doilea raft sunt de 4 ori mai multe cărți decât pe primul. Câte cărți sunt pe primul raft?",
+        "opts": [
+          "10 cărți",
+          "12 cărți",
+          "20 cărți",
+          "40 cărți"
+        ],
+        "ok": 0,
+        "exOk": "Corect! Totalul este format din 1 + 4 = 5 părți egale. O parte reprezintă 50 : 5 = 10 cărți.",
+        "exGr": "Greșit. Primul raft are 1 segment, al doilea are 4 segmente. Împreună au 5 segmente. Un segment înseamnă 50 : 5 = 10 cărți."
+      },
+      {
+        "q": "Dacă pe primul raft sunt 10 cărți, iar pe al doilea de 4 ori mai multe, câte cărți sunt pe al doilea raft?",
+        "opts": [
+          "30 cărți",
+          "40 cărți",
+          "20 cărți",
+          "50 cărți"
+        ],
+        "ok": 1,
+        "exOk": "Corect! Al doilea raft conține 4 părți, adică 10 * 4 = 40 de cărți.",
+        "exGr": "Greșit. Multiplicăm numărul de cărți de pe primul raft cu 4 pentru a afla conținutul celui de-al doilea: 10 * 4 = 40."
+      }
+    ],
+    "T3": [
+      {
+        "q": "Suma a trei numere consecutive este 33. Cum reprezentăm numerele prin segmente dacă diferența dintre două numere consecutive este 1?",
+        "opts": [
+          "Trei segmente complet egale",
+          "Primul are 1 segment, al doilea are 1 segment + 1, al treilea are 1 segment + 2",
+          "Primul are 1 segment, al doilea are 2 segmente, al treilea are 3 segmente",
+          "Trei segmente cu diferențe de câte 2 unități"
+        ],
+        "ok": 1,
+        "exOk": "Corect! Fiind numere consecutive, fiecare este cu 1 mai mare decât predecesorul său.",
+        "exGr": "Greșit. Numerele consecutive cresc cu câte o unitate: x, x+1, x+2. Reprezentarea grafică corectă adaugă +1 și respectiv +2 la segmentul de bază."
+      },
+      {
+        "q": "Suma a trei numere consecutive este 33. După ce scădem surplusul format din 1 și 2 (1 + 2 = 3) din suma totală, cât valorează cele 3 segmente egale rămase?",
+        "opts": [
+          "36",
+          "30",
+          "27",
+          "33"
+        ],
+        "ok": 1,
+        "exOk": "Corect! Eliminăm surplusul total din sumă: 33 - 3 = 30.",
+        "exGr": "Greșit. Suma segmentelor egale se determină scăzând toate unitățile adăugate peste nivelul de bază: 33 - 3 = 30."
+      },
+      {
+        "q": "Știind că 3 segmente egale însumează 30, care este valoarea primului număr (cel mai mic)?",
+        "opts": [
+          "9",
+          "10",
+          "11",
+          "12"
+        ],
+        "ok": 1,
+        "exOk": "Corect! Împărțim restul sumei la cele 3 segmente identice: 30 : 3 = 10.",
+        "exGr": "Greșit. Primul număr corespunde exact valorii unui segment unitar de bază: 30 : 3 = 10."
+      },
+      {
+        "q": "Dacă primul număr dintr-un șir de trei numere consecutive este 10, care sunt celelalte două numere?",
+        "opts": [
+          "11 și 12",
+          "12 și 13",
+          "10 și 11",
+          "9 și 11"
+        ],
+        "ok": 0,
+        "exOk": "Corect! Numerele consecutive sunt 10, 11 și 12.",
+        "exGr": "Greșit. Numerele fiind consecutive, adăugăm succesiv câte o unitate: 10 + 1 = 11, și 11 + 1 = 12."
+      },
+      {
+        "q": "Într-o curte sunt găini și rațe. Numărul găinilor este cu 15 mai mare decât al rațelor, iar în total sunt 45 de păsări. Câte rațe sunt în curte?",
+        "opts": [
+          "15 rațe",
+          "20 rațe",
+          "30 rațe",
+          "10 rațe"
+        ],
+        "ok": 0,
+        "exOk": "Corect! Eliminăm diferența: 45 - 15 = 30. Împărțim la cele 2 specii de păsări: 30 : 2 = 15 rațe.",
+        "exGr": "Greșit. Numărul rațelor este cel mai mic. Se calculează eliminând diferența și împărțind la doi: (45 - 15) : 2 = 15."
+      },
+      {
+        "q": "Dacă în curte sunt 15 rațe, iar găini sunt cu 15 mai multe, câte găini sunt în total?",
+        "opts": [
+          "20 găini",
+          "25 găini",
+          "30 găini",
+          "45 găini"
+        ],
+        "ok": 2,
+        "exOk": "Corect! Adunăm diferența la numărul de rațe: 15 + 15 = 30 de găini.",
+        "exGr": "Greșit. Numărul găinilor se determină prin adunarea diferenței la numărul rațelor: 15 + 15 = 30."
+      },
+      {
+        "q": "Doi frați au economisit împreună 60 de lei. Primul are de 5 ori mai mulți lei decât al doilea. Câți lei are al doilea frate?",
+        "opts": [
+          "10 lei",
+          "12 lei",
+          "15 lei",
+          "20 lei"
+        ],
+        "ok": 0,
+        "exOk": "Corect! Sunt 1 + 5 = 6 părți în total. O parte valorează 60 : 6 = 10 lei.",
+        "exGr": "Greșit. Al doilea frate reprezintă o singură parte din cele 6 componente totale. Valoarea este 60 : 6 = 10 lei."
+      },
+      {
+        "q": "Tatăl și fiul au împreună 60 de ani. Tatăl este cu 30 de ani mai în vârstă decât fiul. Câți ani are fiul?",
+        "opts": [
+          "15 ani",
+          "20 ani",
+          "25 ani",
+          "10 ani"
+        ],
+        "ok": 0,
+        "exOk": "Corect! Eliminăm diferența: 60 - 30 = 30. Împărțim la 2 pentru a afla vârsta fiului: 30 : 2 = 15 ani.",
+        "exGr": "Greșit. Reprezentarea prin segmente arată că fiul are (60 - 30) : 2 = 15 ani."
+      },
+      {
+        "q": "Dacă fiul are 15 ani, iar tatăl este cu 30 de ani mai în vârstă, ce vârstă are tatăl?",
+        "opts": [
+          "40 ani",
+          "45 ani",
+          "50 ani",
+          "35 ani"
+        ],
+        "ok": 1,
+        "exOk": "Corect! Adunăm diferența de vârstă la vârsta fiului: 15 + 30 = 45 de ani.",
+        "exGr": "Greșit. Vârsta tatălui se obține însumând vârsta fiului cu diferența specificată: 15 + 30 = 45 de ani."
+      },
+      {
+        "q": "Suma a două numere este 28. Primul număr este cu 4 mai mic decât al doilea. Cât este numărul cel mai mare?",
+        "opts": [
+          "12",
+          "16",
+          "20",
+          "14"
+        ],
+        "ok": 1,
+        "exOk": "Corect! Eliminăm diferența: 28 - 4 = 24. Numărul mic este 24 : 2 = 12. Numărul mare este 12 + 4 = 16.",
+        "exGr": "Greșit. Numărul mic este (28 - 4) : 2 = 12. Cel mare este cu 4 mai mare, adică 12 + 4 = 16."
+      }
+    ],
+    "T4": [
+      {
+        "q": "Suma a trei numere este 80. Al doilea este de două ori mai mare decât primul, iar al treilea este de două ori mai mare decât al doilea. Câte segmente unitare reprezintă al treilea număr?",
+        "opts": [
+          "2 segmente",
+          "3 segmente",
+          "4 segmente",
+          "5 segmente"
+        ],
+        "ok": 2,
+        "exOk": "Corect! Dacă primul este 1 segment, al doilea este 2 segmente, iar al treilea fiind dublul celui de-al doilea va avea 2 * 2 = 4 segmente.",
+        "exGr": "Greșit. Al treilea număr este dublul celui de-al doilea (care are 2 segmente), prin urmare este reprezentat grafic prin 4 segmente."
+      },
+      {
+        "q": "Având reprezentarea: primul = 1 segment, al doilea = 2 segmente, al treilea = 4 segmente, câte segmente egale avem în total pentru suma de 80?",
+        "opts": [
+          "6 segmente",
+          "7 segmente",
+          "8 segmente",
+          "5 segmente"
+        ],
+        "ok": 1,
+        "exOk": "Corect! Adunăm segmentele tuturor numerelor: 1 + 2 + 4 = 7 segmente.",
+        "exGr": "Greșit. Suma totală a segmentelor se calculează cumulând toate părțile desenate: 1 + 2 + 4 = 7 segmente."
+      },
+      {
+        "q": "Să modificăm datele pentru a fi divizibil: suma a trei numere este 70, iar segmentele sunt tot 1, 2 și 4. Cât valorează primul număr?",
+        "opts": [
+          "10",
+          "20",
+          "40",
+          "5"
+        ],
+        "ok": 0,
+        "exOk": "Corect! Numărul total de segmente este 7. Valoarea unui segment este 70 : 7 = 10.",
+        "exGr": "Greșit. Împărțim noua sumă la numărul total de segmente: 70 : 7 = 10. Acesta este primul număr."
+      },
+      {
+        "q": "Știind că primul număr este 10, al doilea este dublul său, iar al treilea este dublul celui de-al doilea, care sunt cele trei numere?",
+        "opts": [
+          "10, 20, 30",
+          "10, 20, 40",
+          "10, 30, 40",
+          "5, 10, 20"
+        ],
+        "ok": 1,
+        "exOk": "Corect! Numerele sunt 10, 10 * 2 = 20 și 20 * 2 = 40.",
+        "exGr": "Greșit. Calculăm valorile pe baza relațiilor descrise: primul este 10, al doilea este 20, iar al treilea este 40."
+      },
+      {
+        "q": "Suma a două numere este 45. Dacă împărțim numărul mare la cel mic, obținem câtul 3 și restul 5. Câte segmente și ce surplus are numărul mare?",
+        "opts": [
+          "3 segmente și +5 unități",
+          "4 segmente și +5 unități",
+          "1 segment și +3 unități",
+          "3 segmente fără rest"
+        ],
+        "ok": 0,
+        "exOk": "Corect! Conform teoremei împărțirii cu rest, numărul mare este egal cu 3 * numărul mic + 5.",
+        "exGr": "Greșit. Câtul indică numărul de segmente întregi (3), iar restul reprezintă surplusul adăugat la grafic (+5)."
+      },
+      {
+        "q": "În problema anterioară (suma = 45, mare = 3 segmente + 5, mic = 1 segment), cât reprezintă suma segmentelor egale după ce eliminăm restul de 5?",
+        "opts": [
+          "50",
+          "40",
+          "35",
+          "45"
+        ],
+        "ok": 1,
+        "exOk": "Corect! Îndepărtăm restul din suma totală a celor două numere: 45 - 5 = 40.",
+        "exGr": "Greșit. Pentru a rămâne doar cu segmente curate, scădem valoarea restului din sumă: 45 - 5 = 40."
+      },
+      {
+        "q": "Suma segmentelor curate este 40, iar numărul total de segmente este 1 + 3 = 4. Care este valoarea numărului mic?",
+        "opts": [
+          "5",
+          "10",
+          "15",
+          "8"
+        ],
+        "ok": 1,
+        "exOk": "Corect! Numărul mic reprezintă un singur segment: 40 : 4 = 10.",
+        "exGr": "Greșit. Împărțim valoarea curățată la numărul total de segmente componente: 40 : 4 = 10."
+      },
+      {
+        "q": "Dacă numărul mic este 10, iar suma lor este 45, care este valoarea numărului mare?",
+        "opts": [
+          "35",
+          "30",
+          "25",
+          "40"
+        ],
+        "ok": 0,
+        "exOk": "Corect! Scădem numărul mic din suma totală: 45 - 10 = 35.",
+        "exGr": "Greșit. Numărul mare se determină prin diferența dintre sumă și numărul mic: 45 - 10 = 35."
+      },
+      {
+        "q": "Trei frați au împreună 58 de bomboane. Primul are cu 2 mai multe decât al doilea, iar al treilea are de două ori mai multe decât al doilea. Câte bomboane are al doilea frate?",
+        "opts": [
+          "14 bomboane",
+          "16 bomboane",
+          "12 bomboane",
+          "20 bomboane"
+        ],
+        "ok": 0,
+        "exOk": "Corect! Reprezentare: al doilea = 1 segment, primul = 1 segment + 2, al treilea = 2 segmente. Eliminăm restul: 58 - 2 = 56. Total segmente = 4. Al doilea are 56 : 4 = 14 bomboane.",
+        "exGr": "Greșit. Notăm al doilea număr ca fiind baza. Suma segmentelor este 4, plus un surplus de 2. (58 - 2) : 4 = 14 bomboane."
+      },
+      {
+        "q": "Dacă al doilea frate are 14 bomboane, iar primul are cu 2 mai multe, iar al treilea de două ori mai multe decât al doilea, câte bomboane au primul și al treilea?",
+        "opts": [
+          "16 și 28",
+          "15 și 30",
+          "16 i 26",
+          "12 și 24"
+        ],
+        "ok": 0,
+        "exOk": "Corect! Primul are 14 + 2 = 16 bomboane, iar al treilea are 14 * 2 = 28 de bomboane.",
+        "exGr": "Greșit. Primul are 14 + 2 = 16, iar al treilea are un număr dublu față de al doilea, adică 14 * 2 = 28."
+      }
+    ]
+  }
+}

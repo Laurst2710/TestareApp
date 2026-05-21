@@ -1,0 +1,508 @@
+{
+  "meta": {
+    "nivel": "Manual",
+    "dificultate": 1,
+    "clasa": "a V-a",
+    "unitate": "U1",
+    "titlu_unitate": "Numere Naturale",
+    "tema": "Tema31",
+    "titlu_tema": "Metoda mersului invers",
+    "prag": 0.8,
+    "puncte_per_item": 10
+  },
+  "teorie": [
+    "Metoda mersului invers constă în rezolvarea unei probleme analizând operațiile în ordine inversă celei în care au fost enunțate, de la sfârșit către început.",
+    "Fiecare operație aritmetică din textul problemei se înlocuiește cu operația sa inversă: adunarea cu scăderea, scăderea cu adunarea, înmulțirea cu împărțirea și împărțirea cu înmulțirea.",
+    "În exercițiile matematice care conțin paranteze, ordinea de efectuare a calculelor se inversează radical, desființându-se treptat parantezele din exterior spre interior."
+  ],
+  "teste": {
+    "T1": [
+      {
+        "q": "Dacă mărim un număr necunoscut cu 5 și obținem 12, prin ce operație aflăm numărul inițial?",
+        "opts": [
+          "Adunare: 12 + 5",
+          "Scădere: 12 - 5",
+          "Înmulțire: 12 * 5",
+          "Împărțire: 12 : 5"
+        ],
+        "ok": 1,
+        "exOk": "Corect! Operația inversă adunării este scăderea, deci numărul se află prin calculul 12 - 5 = 7.",
+        "exGr": "Greșit. Pentru a anula mărirea cu 5, aplicăm operația inversă, adică scădem 5 din rezultatul total."
+      },
+      {
+        "q": "Un număr a fost micșorat cu 8 și s-a obținut 10. Care a fost numărul înainte de a fi micșorat?",
+        "opts": [
+          "2",
+          "18",
+          "80",
+          "4"
+        ],
+        "ok": 1,
+        "exOk": "Corect! Operația inversă scăderii este adunarea, deci numărul este 10 + 8 = 18.",
+        "exGr": "Greșit. Mersul invers ne cere să adunăm numărul scăzut la rezultatul obținut: 10 + 8 = 18."
+      },
+      {
+        "q": "Dacă înmulțim un număr cu 3 și rezultatul este 15, cum determinăm numărul de la care am pornit?",
+        "opts": [
+          "15 - 3",
+          "15 * 3",
+          "15 : 3",
+          "15 + 3"
+        ],
+        "ok": 2,
+        "exOk": "Corect! Pentru a afla numărul, aplicăm operația inversă înmulțirii, care este împărțirea: 15 : 3 = 5.",
+        "exGr": "Greșit. Inversa operației de înmulțire este împărțirea. Numărul se află prin 15 : 3."
+      },
+      {
+        "q": "Un număr împărțit la 4 dă câtul 6. Care este acel număr?",
+        "opts": [
+          "24",
+          "10",
+          "2",
+          "20"
+        ],
+        "ok": 0,
+        "exOk": "Corect! Operația inversă împărțirii este înmulțirea, deci numărul se află prin 6 * 4 = 24.",
+        "exGr": "Greșit. Pentru a reconstitui deîmpărțitul, înmulțim câtul cu împărțitorul: 6 * 4 = 24."
+      },
+      {
+        "q": "La ce număr ne gândim dacă adunăm 10, apoi scădem 4 și obținem rezultatul final 20?",
+        "opts": [
+          "14",
+          "26",
+          "6",
+          "34"
+        ],
+        "ok": 0,
+        "exOk": "Corect! Mergem invers: la 20 adunăm 4 (24), apoi scădem 10 (14). Numărul este 14.",
+        "exGr": "Greșit. Aplicăm inversarea de la sfârșit: 20 + 4 = 24, iar apoi 24 - 10 = 14."
+      },
+      {
+        "q": "Un număr necunoscut x se află din relația x + 7 = 15. Cât este x?",
+        "opts": [
+          "22",
+          "8",
+          "10",
+          "9"
+        ],
+        "ok": 1,
+        "exOk": "Corect! x reprezintă un termen al adunării și se determină prin scădere: 15 - 7 = 8.",
+        "exGr": "Greșit. Pentru a izola necunoscuta x, scădem 7 din rezultatul final: 15 - 7 = 8."
+      },
+      {
+        "q": "Dacă din x scădem 12 și obținem 5, care este valoarea lui x?",
+        "opts": [
+          "7",
+          "17",
+          "60",
+          "12"
+        ],
+        "ok": 1,
+        "exOk": "Corect! x este deîmpărțitul sau descăzutul, aflat prin operația de adunare: 5 + 12 = 17.",
+        "exGr": "Greșit. Adunăm numărul scăzut la rezultatul rămas pentru a afla valoarea inițială: 5 + 12 = 17."
+      },
+      {
+        "q": "Care este valoarea lui x dacă 5 * x = 30?",
+        "opts": [
+          "25",
+          "35",
+          "6",
+          "150"
+        ],
+        "ok": 2,
+        "exOk": "Corect! Factorul necunoscut x se obține prin împărțirea produsului la factorul cunoscut: 30 : 5 = 6.",
+        "exGr": "Greșit. Pentru a determina valoarea lui x, împărțim rezultatul la 5: 30 : 5 = 6."
+      },
+      {
+        "q": "Dacă x : 2 = 10, ce valoare are x?",
+        "opts": [
+          "5",
+          "12",
+          "8",
+          "20"
+        ],
+        "ok": 3,
+        "exOk": "Corect! Aflăm deîmpărțitul efectuând produsul dintre cât și împărțitor: 10 * 2 = 20.",
+        "exGr": "Greșit. Efectuăm operația inversă împărțirii pentru a găsi numărul inițial: 10 * 2 = 20."
+      },
+      {
+        "q": "Care este succesiunea corectă a operațiilor inversate pentru enunțul: 'măresc cu 3, apoi înmulțesc cu 2'?",
+        "opts": [
+          "Împărțire la 2, apoi scădere cu 3",
+          "Scădere cu 3, apoi împărțire la 2",
+          "Înmulțire cu 2, apoi adunare cu 3",
+          "Împărțire la 2, apoi adunare cu 3"
+        ],
+        "ok": 0,
+        "exOk": "Corect! Mersul invers pornește de la ultima operație (înmulțirea devine împărțire), continuând cu prima (adunarea devine scădere).",
+        "exGr": "Greșit. Se inversează atât ordinea etapelor, cât și operațiile: ultima devine prima cu semn schimbat, deci împărțire la 2, urmată de scădere cu 3."
+      }
+    ],
+    "T2": [
+      {
+        "q": "Aflați valoarea lui x din exercițiul: 2 * x + 4 = 14.",
+        "opts": [
+          "9",
+          "5",
+          "7",
+          "10"
+        ],
+        "ok": 1,
+        "exOk": "Corect! Mai întâi scădem 4: 2 * x = 14 - 4 = 10. Apoi împărțim la 2: x = 10 : 2 = 5.",
+        "exGr": "Greșit. Desfacem operațiile de la sfârșit: 14 - 4 = 10, apoi împărțim rezultatul la 2, obținând 10 : 2 = 5."
+      },
+      {
+        "q": "Determinați numărul x din ecuația: (x - 3) * 5 = 20.",
+        "opts": [
+          "7",
+          "4",
+          "1",
+          "15"
+        ],
+        "ok": 0,
+        "exOk": "Corect! Izolăm paranteza împărțind la 5: x - 3 = 20 : 5 = 4. Apoi adunăm 3: x = 4 + 3 = 7.",
+        "exGr": "Greșit. Începem prin eliminarea factorului exterior: x - 3 = 20 : 5 = 4. Apoi x = 4 + 3 = 7."
+      },
+      {
+        "q": "Mă gândesc la un număr. Îl împart la 3, adun 5 și obțin 12. La ce număr m-am gândit?",
+        "opts": [
+          "51",
+          "21",
+          "26",
+          "14"
+        ],
+        "ok": 1,
+        "exOk": "Corect! Mergem în sens invers: 12 - 5 = 7. Apoi înmulțim cu 3: 7 * 3 = 21.",
+        "exGr": "Greșit. Aplicăm mersul invers: eliminăm adunarea scăzând 5 (12 - 5 = 7), apoi eliminăm împărțirea prin înmulțire: 7 * 3 = 21."
+      },
+      {
+        "q": "Care este valoarea lui x în expresia: 3 * x - 7 = 8?",
+        "opts": [
+          "3",
+          "5",
+          "15",
+          "4"
+        ],
+        "ok": 1,
+        "exOk": "Corect! Adunăm 7 la rezultatul final: 3 * x = 8 + 7 = 15. Împărțim la 3 și avem x = 15 : 3 = 5.",
+        "exGr": "Greșit. Mersul invers ne dictează: 3 * x = 8 + 7 = 15, de unde x = 15 : 3 = 5."
+      },
+      {
+        "q": "Rezolvați ecuația folosind metoda mersului invers: (x + 10) : 2 = 8.",
+        "opts": [
+          "6",
+          "16",
+          "4",
+          "9"
+        ],
+        "ok": 0,
+        "exOk": "Corect! Înmulțim cu 2 rezultatul: x + 10 = 8 * 2 = 16. Scădem 10 și obținem x = 16 - 10 = 6.",
+        "exGr": "Greșit. Inversăm operațiile din exterior spre interior: x + 10 = 8 * 2 = 16, apoi x = 16 - 10 = 6."
+      },
+      {
+        "q": "Dacă micșorăm triplul unui număr cu 2, obținem 10. Care este numărul?",
+        "opts": [
+          "3",
+          "4",
+          "6",
+          "2"
+        ],
+        "ok": 1,
+        "exOk": "Corect! Notăm triplul cu 3 * x. Avem 3 * x - 2 = 10, deci 3 * x = 12, de unde x = 12 : 3 = 4.",
+        "exGr": "Greșit. Triplul numărului este 10 + 2 = 12. Numărul inițial se află împărțind la 3: 12 : 3 = 4."
+      },
+      {
+        "q": "Aflați valoarea necunoscutei din: 45 : x + 2 = 11.",
+        "opts": [
+          "5",
+          "9",
+          "4",
+          "3"
+        ],
+        "ok": 0,
+        "exOk": "Corect! Scădem mai întâi 2: 45 : x = 11 - 2 = 9. Împărțitorul x se află prin 45 : 9 = 5.",
+        "exGr": "Greșit. Operăm invers: 45 : x = 11 - 2 = 9. Pentru a găsi împărțitorul x, calculăm 45 : 9 = 5."
+      },
+      {
+        "q": "Determinați numărul x din relația: 100 - 4 * x = 60.",
+        "opts": [
+          "10",
+          "5",
+          "8",
+          "4"
+        ],
+        "ok": 0,
+        "exOk": "Corect! Scăzătorul 4 * x este egal cu 100 - 60 = 40. Apoi x = 40 : 4 = 10.",
+        "exGr": "Greșit. Izolăm termenul necunoscut: 4 * x = 100 - 60 = 40. Valoarea lui x este 40 : 4 = 10."
+      },
+      {
+        "q": "Dacă la sfertul unui număr adunăm 3 și obținem 7, care este numărul?",
+        "opts": [
+          "16",
+          "25",
+          "10",
+          "4"
+        ],
+        "ok": 0,
+        "exOk": "Corect! Sfertul numărului este 7 - 3 = 4. Numărul întreg este 4 * 4 = 16.",
+        "exGr": "Greșit. Sfertul înseamnă împărțire la 4. Mergând invers avem 7 - 3 = 4, iar numărul este 4 * 4 = 16."
+      },
+      {
+        "q": "Rezolvați pentru x: 2 * (x + 5) - 3 = 17.",
+        "opts": [
+          "5",
+          "10",
+          "7",
+          "6"
+        ],
+        "ok": 0,
+        "exOk": "Corect! 2 * (x + 5) = 17 + 3 = 20. Apoi x + 5 = 20 : 2 = 10. Rezultat final x = 10 - 5 = 5.",
+        "exGr": "Greșit. Desfacem succesiv: 2 * (x + 5) = 20, deci x + 5 = 10, de unde rezultă x = 10 - 5 = 5."
+      }
+    ],
+    "T3": [
+      {
+        "q": "Calculați valoarea lui x din exercițiul: [3 * (x - 2) + 4] : 2 = 5.",
+        "opts": [
+          "4",
+          "6",
+          "5",
+          "2"
+        ],
+        "ok": 0,
+        "exOk": "Corect! 3 * (x - 2) + 4 = 5 * 2 = 10. Atunci 3 * (x - 2) = 10 - 4 = 6. Rezultă x - 2 = 6 : 3 = 2, deci x = 4.",
+        "exGr": "Greșit. Înmulțim cu 2: paranteza dreaptă este 10. Scădem 4: obținem 6. Împărțim la 3: obținem 2. Adunăm 2 și rezultă x = 4."
+      },
+      {
+        "q": "Un călător parcurge un drum în trei zile. În prima zi parcurge jumătate din drum, iar a doua zi parcurge jumătate din rest. Dacă a treia zi parcurge ultimii 10 km, ce lungime are drumul?",
+        "opts": [
+          "30 km",
+          "40 km",
+          "50 km",
+          "60 km"
+        ],
+        "ok": 1,
+        "exOk": "Corect! Dacă a treia zi reprezintă jumătatea restului, atunci restul după prima zi era 10 * 2 = 20 km. Acest rest este jumătatea drumului total, deci drumul are 20 * 2 = 40 km.",
+        "exGr": "Greșit. Mergem invers de la ultima zi: restul dinaintea ultimei zile este 10 * 2 = 20 km. Întreg drumul fiind dublul acestui rest, lungimea totală este 40 km."
+      },
+      {
+        "q": "Determinați valoarea lui x din ecuația cu puteri: 2^3 + 2 * x = 24.",
+        "opts": [
+          "8",
+          "16",
+          "4",
+          "10"
+        ],
+        "ok": 0,
+        "exOk": "Corect! Calculăm puterea: 2^3 = 8. Ecuația devine 8 + 2 * x = 24. Atunci 2 * x = 24 - 8 = 16, deci x = 16 : 2 = 8.",
+        "exGr": "Greșit. Înlocuim 2^3 cu valoarea sa, 8. Avem 8 + 2 * x = 24, deci 2 * x = 16, ceea ce dă x = 8."
+      },
+      {
+        "q": "Aflați necunoscuta x din structura: {2 * [5 + (x - 1)]} - 4 = 16.",
+        "opts": [
+          "6",
+          "5",
+          "11",
+          "4"
+        ],
+        "ok": 0,
+        "exOk": "Corect! 2 * [5 + (x - 1)] = 16 + 4 = 20. Pătrata este 20 : 2 = 10. Rotunda x - 1 = 10 - 5 = 5. Final: x = 5 + 1 = 6.",
+        "exGr": "Greșit. Eliminăm operațiile pe rând: obținem acolada = 20, pătrata = 10, rotunda = 5. Deci x = 5 + 1 = 6."
+      },
+      {
+        "q": "Mă gândesc la un număr, îl măresc de 4 ori, din rezultat scad 10, noul rezultat îl împart la 5 și obțin 6. Care este numărul?",
+        "opts": [
+          "10",
+          "12",
+          "8",
+          "15"
+        ],
+        "ok": 0,
+        "exOk": "Corect! Înmulțim cu 5: 6 * 5 = 30. Adunăm 10: 30 + 10 = 40. Împărțim la 4: 40 : 4 = 10.",
+        "exGr": "Greșit. Aplicăm mersul invers punct cu punct: 6 * 5 = 30; 30 + 10 = 40; 40 : 4 = 10. Numărul căutat este 10."
+      },
+      {
+        "q": "Aflați valoarea lui x din ecuația: 120 : [2 * (x + 4)] = 6.",
+        "opts": [
+          "6",
+          "10",
+          "3",
+          "1"
+        ],
+        "ok": 0,
+        "exOk": "Corect! 2 * (x + 4) = 120 : 6 = 20. Atunci x + 4 = 20 : 2 = 10, deci x = 10 - 4 = 6.",
+        "exGr": "Greșit. Pătrata este 120 : 6 = 20. Avem 2 * (x + 4) = 20, deci x + 4 = 10 și x = 6."
+      },
+      {
+        "q": "Calculați din nou valoarea lui x pentru ecuația: 120 : [2 * (x + 4)] = 6.",
+        "opts": [
+          "6",
+          "4",
+          "8",
+          "10"
+        ],
+        "ok": 0,
+        "exOk": "Corect! Pătrata este 120 : 6 = 20. Rotunda este 20 : 2 = 10. x = 10 - 4 = 6.",
+        "exGr": "Greșit. Pătrata reprezintă un scăzător/împărțitor: 120 : 6 = 20. Apoi 2*(x+4) = 20 implică x+4 = 10, deci x = 6."
+      },
+      {
+        "q": "Determinați valoarea lui x din relația: 50 - [3 * (x + 1) + 2] = 30.",
+        "opts": [
+          "5",
+          "6",
+          "4",
+          "10"
+        ],
+        "ok": 0,
+        "exOk": "Corect! Pătrata este 50 - 30 = 20. Atunci 3 * (x + 1) = 20 - 2 = 18. Rotunda este 18 : 3 = 6, deci x = 6 - 1 = 5.",
+        "exGr": "Greșit. Scăzând obținem valoarea parantezei pătrate: 20. Eliminăm adunarea: 3 * (x + 1) = 18, deci x + 1 = 6, de unde x = 5."
+      },
+      {
+        "q": "Dintr-un depozit s-a vândut cantitatea de cartofi în două etape. Întâi s-a vândut jumătate din cantitate, iar a doua oară s-au vândut 15 tone, rămânând 5 tone. Câte tone au fost inițial?",
+        "opts": [
+          "30 tone",
+          "40 tone",
+          "50 tone",
+          "25 tone"
+        ],
+        "ok": 1,
+        "exOk": "Corect! Înainte de a doua vânzare erau 5 + 15 = 20 de tone. Această cantitate reprezintă jumătatea depozitului, deci inițial erau 20 * 2 = 40 de tone.",
+        "exGr": "Greșit. Cantitatea rămasă după prima zi este 5 + 15 = 20 tone. Deoarece s-a vândut jumătate, totalul este 20 * 2 = 40 de tone."
+      },
+      {
+        "q": "Care este valoarea lui x din: 4 * [2 * (x - 3)] = 32?",
+        "opts": [
+          "7",
+          "4",
+          "6",
+          "5"
+        ],
+        "ok": 0,
+        "exOk": "Corect! Pătrata este 32 : 4 = 8. Rotunda este 8 : 2 = 4. Final: x = 4 + 3 = 7.",
+        "exGr": "Greșit. Împărțim succesiv la factori: paranteza pătrată este 8, paranteza rotundă este 4. Obținem x - 3 = 4, deci x = 7."
+      }
+    ],
+    "T4": [
+      {
+        "q": "Rezolvați ecuația: 5 * {3 + [2 * (x + 1) - 4]} = 45. Determinați x.",
+        "opts": [
+          "4",
+          "7",
+          "10",
+          "1"
+        ],
+        "ok": 0,
+        "exOk": "Corect! Acolada = 45 : 5 = 9. Din pătrate: 2 * (x + 1) - 4 = 6, deci 2 * (x + 1) = 10, x + 1 = 5, x = 4.",
+        "exGr": "Greșit. Împărțim la 5: acolada = 9. Rotunda: 2 * (x + 1) - 4 = 6 → 2 * (x + 1) = 10 → x = 4."
+      },
+      {
+        "q": "Calculați valoarea lui x din: 2 * {4 + [3 * (x - 1)]} - 6 = 32.",
+        "opts": [
+          "6",
+          "4",
+          "5",
+          "7"
+        ],
+        "ok": 0,
+        "exOk": "Corect! 2 * (4 + 3 * (x - 1)) = 38. Acolada = 19. Rotunda: 3 * (x - 1) = 15, deci x - 1 = 5 și x = 6.",
+        "exGr": "Greșit. Adunăm 6: 2 * (4 + 3 * (x - 1)) = 38. Acolada este 19, deci 3 * (x - 1) = 15 și x = 6."
+      },
+      {
+        "q": "Rezolvați exercițiul din manual: {3 * [2 * (x + 1) - 4] + 6} : 3 = 8. Cât este x?",
+        "opts": [
+          "4",
+          "5",
+          "3",
+          "6"
+        ],
+        "ok": 0,
+        "exOk": "Corect! Acolada este 8 * 3 = 24. Termenul cu pătrată este 24 - 6 = 18. Pătrata este 18 : 3 = 6. Termenul cu rotundă este 6 + 4 = 10. Rotunda este 10 : 2 = 5, deci x = 5 - 1 = 4.",
+        "exGr": "Greșit. Reconstituim pas cu pas: acolada = 24, pătrata înmulțită = 18, pătrata = 6, rotunda înmulțită = 10, rotunda = 5. Rezultă x = 4."
+      },
+      {
+        "q": "Un număr este adunat cu 5, rezultatul este înmulțit cu 2, din noul rezultat se scade 8, iar după ce se împarte totul la 4, se obține 3. Care este numărul?",
+        "opts": [
+          "5",
+          "10",
+          "15",
+          "2"
+        ],
+        "ok": 0,
+        "exOk": "Corect! În ordine inversă: 3 * 4 = 12; 12 + 8 = 20; 20 : 2 = 10; 10 - 5 = 5.",
+        "exGr": "Greșit. Traseul invers este: 3 * 4 = 12. Adunăm 8 și avem 20. Împărțim la 2 și obținem 10. Scădem 5 și rezultatul este 5."
+      },
+      {
+        "q": "Aflați valoarea lui x din relația: 6 + 3 * [4 + 2 * (x - 1)] = 24.",
+        "opts": [
+          "2",
+          "3",
+          "4",
+          "5"
+        ],
+        "ok": 0,
+        "exOk": "Corect! 3 * (4 + 2 * (x - 1)) = 18. Pătrata: 4 + 2 * (x - 1) = 6. Rotunda: 2 * (x - 1) = 2, deci x = 2.",
+        "exGr": "Greșit. Scădem 6 și împărțim la 3: pătrata = 6. Rotunda dă 2 * (x - 1) = 2, de unde x = 2."
+      },
+      {
+        "q": "Rezolvați ecuația: 10 + 2 * [6 + 3 * (x - 2)] = 46. Cât este x?",
+        "opts": [
+          "6",
+          "4",
+          "5",
+          "8"
+        ],
+        "ok": 0,
+        "exOk": "Corect! 2 * (6 + 3 * (x - 2)) = 36. Pătrata: 6 + 3 * (x - 2) = 18. Rotunda: 3 * (x - 2) = 12, x = 6.",
+        "exGr": "Greșit. Scădem 10 și împărțim la 2: pătrata = 18. Rotunda dă 3 * (x - 2) = 12, de unde x = 6."
+      },
+      {
+        "q": "Aflați x din varianta simplificată: 10 + 5 * [2 + 2 * (x - 1)] = 40.",
+        "opts": [
+          "3",
+          "4",
+          "2",
+          "5"
+        ],
+        "ok": 0,
+        "exOk": "Corect! 5 * pătrata = 40 - 10 = 30. Pătrata = 30 : 5 = 6. Atunci 2 * (x - 1) = 6 - 2 = 4. Rotunda este 4 : 2 = 2, deci x = 2 + 1 = 3.",
+        "exGr": "Greșit. Urmăm pașii: 5 * pătrata = 30 => pătrata = 6. Apoi 2 * (x - 1) = 4 => x - 1 = 2 => x = 3."
+      },
+      {
+        "q": "Determinați x din relația: 4^2 + 2 * (x : 3 - 1) = 24.",
+        "opts": [
+          "15",
+          "12",
+          "9",
+          "18"
+        ],
+        "ok": 0,
+        "exOk": "Corect! 4^2 = 16. Ecuația devine 16 + 2 * (x : 3 - 1) = 24. Atunci 2 * (x : 3 - 1) = 8, deci x : 3 - 1 = 4. x : 3 = 5, de unde x = 15.",
+        "exGr": "Greșit. Înlocuim 4^2 cu 16. Obținem 2 * (x : 3 - 1) = 24 - 16 = 8. Diviziunea dă x : 3 - 1 = 4, deci x : 3 = 5, de unde rezultă x = 15."
+      },
+      {
+        "q": "O sumă de bani este cheltuită astfel: în prima zi jumătate din sumă, a doua zi jumătate din rest, iar a treia zi restul de 20 de lei. Care a fost suma inițială?",
+        "opts": [
+          "80 lei",
+          "40 lei",
+          "60 lei",
+          "100 lei"
+        ],
+        "ok": 0,
+        "exOk": "Corect! Restul de după prima zi este 20 * 2 = 40 de lei. Suma totală inițială este 40 * 2 = 80 de lei.",
+        "exGr": "Greșit. Lucrăm de la sfârșit: valoarea dinaintea ultimei zile este 20 * 2 = 40 lei. Suma totală este dublul acesteia: 40 * 2 = 80 lei."
+      },
+      {
+        "q": "Aflați valoarea lui x din: 100 - {2 * [3 + (x - 1)]} = 80.",
+        "opts": [
+          "8",
+          "7",
+          "9",
+          "6"
+        ],
+        "ok": 0,
+        "exOk": "Corect! Acolada este 100 - 80 = 20. Pătrata este 20 : 2 = 10. Rotunda este 10 - 3 = 7. x = 7 + 1 = 8.",
+        "exGr": "Greșit. Izolăm scăzătorul: acolada = 20. Împărțim la 2: pătrata = 10. Scădem 3: rotunda = 7. Adunăm 1 și obținem x = 8."
+      }
+    ]
+  }
+}
