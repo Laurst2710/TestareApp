@@ -322,7 +322,7 @@ body{display:flex;flex-direction:column;align-items:center;padding:20px 16px 40p
 <!-- QUIZ -->
 <div id="s-quiz" class="screen">
   <div class="quiz-bars">
-    <div class="bar-row"><span style="color:var(--dim);font-size:.8rem">Progres</span><span id="lbl-progres" style="color:var(--accent)">0/10</span></div>
+    <div class="bar-row"><span style="color:var(--dim);font-size:.8rem">Progres</span><span id="quiz-tema" style="display:none"></span><span id="lbl-progres" style="color:var(--accent)">0/10</span></div>
     <div class="bar-track"><div class="bar-fill" id="fill-progres" style="width:0%"></div></div>
     <div class="bar-row"><span>Acuratețe</span><span id="lbl-acuratete">—</span></div>
     <div class="bar-track"><div class="bar-fill" id="fill-acuratete" style="width:0%"></div></div>
@@ -517,7 +517,7 @@ function renderQ(){
     wrap.appendChild(btn);
   });
   document.getElementById('feedback-box').className='feedback-box';
-  const bn=document.getElementById('btn-next');bn.style.display='block';bn.textContent=state.cur<state.questions.length-1?'Următoarea →':'Vezi rezultatul →';
+  document.getElementById('btn-next').textContent=state.cur<state.questions.length-1?'Următoarea →':'Vezi rezultatul →';
 }
 
 function answer(idx,newOk,q){
@@ -531,6 +531,7 @@ function answer(idx,newOk,q){
   fb.className='feedback-box show '+(isOk?'fb-ok':'fb-err');
   document.getElementById('fb-label').textContent=isOk?'✓ Corect!':'✗ De revăzut';
   document.getElementById('fb-text').textContent=isOk?(q.exOk||'Răspuns corect.'):(q.exGr||'Răspuns greșit.');
+  document.getElementById('btn-next').style.display='block';
   state.cur++;
   updateBars();
   state.cur--;
