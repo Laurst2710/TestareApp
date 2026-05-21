@@ -148,8 +148,8 @@ body{display:flex;flex-direction:column;align-items:center;padding:20px 16px 40p
 .fb-ok .fb-label{color:var(--ok)}
 .fb-err .fb-label{color:var(--err)}
 .fb-text{font-size:.83rem;color:var(--dim);line-height:1.6}
-.btn-next{margin-top:11px;background:var(--surf3);border:none;color:var(--text);border-radius:7px;padding:8px 18px;font-size:.83rem;font-weight:600;cursor:pointer;font-family:'Outfit',sans-serif;transition:background .2s}
-.btn-next:hover{background:var(--accent)}
+.btn-next{position:fixed;bottom:18px;left:50%;transform:translateX(-50%);background:var(--accent);border:none;color:#fff;border-radius:10px;padding:13px 36px;font-size:.95rem;font-weight:700;cursor:pointer;font-family:'Outfit',sans-serif;transition:background .2s;z-index:200;display:none;box-shadow:0 4px 20px rgba(108,92,231,.4)}
+.btn-next:hover{background:var(--acl)}
 
 /* RESULT */
 #s-result{padding-top:32px;text-align:center}
@@ -172,6 +172,17 @@ body{display:flex;flex-direction:column;align-items:center;padding:20px 16px 40p
 
 .meta-footer{font-size:.63rem;color:var(--grey-t);text-align:center;margin-top:24px;padding-top:12px;border-top:1px solid var(--surf3)}
 @media(max-width:540px){.themes-grid{grid-template-columns:1fr}.diff2-row{grid-template-columns:1fr}.result-btns{flex-direction:column;align-items:center}}
+
+.rb-clickable{cursor:pointer;transition:background .15s}
+.rb-clickable:hover{background:rgba(220,20,60,.08);border-radius:7px}
+#sol-overlay{display:none;position:fixed;inset:0;background:rgba(0,0,0,.78);z-index:400;align-items:center;justify-content:center}
+#sol-overlay.open{display:flex}
+.sol-box{background:var(--surface);border:1.5px solid var(--err);border-radius:16px;padding:24px 22px;max-width:460px;width:92%;position:relative}
+.sol-nr{font-size:.72rem;color:var(--dim);font-family:'JetBrains Mono',monospace;margin-bottom:6px}
+.sol-q{font-size:.92rem;font-weight:600;margin-bottom:14px;line-height:1.4}
+.sol-ans{background:rgba(0,200,83,.1);border:1px solid var(--ok);border-radius:8px;padding:10px 13px;font-size:.88rem;color:var(--ok);font-weight:600;margin-bottom:12px}
+.sol-ex{font-size:.82rem;color:var(--dim);line-height:1.5}
+.sol-close{position:absolute;top:12px;right:14px;background:none;border:none;color:var(--dim);font-size:1.2rem;cursor:pointer}
 </style>
 </head>
 <body>
@@ -311,7 +322,7 @@ body{display:flex;flex-direction:column;align-items:center;padding:20px 16px 40p
 <!-- QUIZ -->
 <div id="s-quiz" class="screen">
   <div class="quiz-bars">
-    <div class="bar-row"><span id="quiz-tema">—</span><span id="lbl-progres" style="color:var(--accent)">0/10</span></div>
+    <div class="bar-row"><span style="color:var(--dim);font-size:.8rem">Progres</span><span id="lbl-progres" style="color:var(--accent)">0/10</span></div>
     <div class="bar-track"><div class="bar-fill" id="fill-progres" style="width:0%"></div></div>
     <div class="bar-row"><span>Acuratețe</span><span id="lbl-acuratete">—</span></div>
     <div class="bar-track"><div class="bar-fill" id="fill-acuratete" style="width:0%"></div></div>
@@ -340,7 +351,7 @@ body{display:flex;flex-direction:column;align-items:center;padding:20px 16px 40p
   <div class="result-status" id="res-status"></div>
   <div class="mastery-banner" id="mastery-banner"><p>🏆 Temă antrenată!</p><small id="mastery-msg"></small></div>
   <div class="result-breakdown" id="res-breakdown"></div>
-  <div class="result-btns">
+  <div class="result-btns"><button class="btn-sec" onclick="exportPDF()">⬇ Export PDF</button>
     <button class="btn-primary" onclick="goSetup()">Alt test</button>
     <button class="btn-sec" onclick="retryTest()">Încearcă din nou</button>
   </div>
@@ -489,6 +500,7 @@ function updateBars(){
 }
 
 function renderQ(){
+  document.getElementById('btn-next').style.display='none';
   const q=state.questions[state.cur];
   document.getElementById('q-text').textContent=q.q;
   const wrap=document.getElementById('opts-wrap');
@@ -505,14 +517,14 @@ function renderQ(){
     wrap.appendChild(btn);
   });
   document.getElementById('feedback-box').className='feedback-box';
-  document.getElementById('btn-next').textContent=state.cur<state.questions.length-1?'Următoarea →':'Vezi rezultatul →';
+  const bn=document.getElementById('btn-next');bn.style.display='block';bn.textContent=state.cur<state.questions.length-1?'Următoarea →':'Vezi rezultatul →';
 }
 
 function answer(idx,newOk,q){
   document.querySelectorAll('.opt').forEach(o=>o.disabled=true);
   const isOk=idx===newOk;
   if(isOk) state.correct++;
-  state.answers.push({q:q.q,correct:isOk});
+  state.answers.push({q:q.q,correct:isOk,correctText:q.opts[q.ok],exOk:q.exOk||'',exGr:q.exGr||''});
   document.querySelectorAll('.opt')[idx].classList.add(isOk?'opt-ok':'opt-err');
   if(!isOk) document.querySelectorAll('.opt')[newOk].classList.add('opt-reveal');
   const fb=document.getElementById('feedback-box');
@@ -547,10 +559,10 @@ function showResult(){
     document.getElementById('mastery-msg').textContent=`Ai trecut ${passCount(th.key)} teste cu 80%+ la ${th.label}`;
   } else { banner.classList.remove('show'); }
   document.getElementById('res-breakdown').innerHTML=state.answers.map((a,i)=>`
-    <div class="rb-row">
+    <div class="rb-row${a.correct?'':' rb-clickable'}" ${a.correct?'':'onclick="showSol('+i+')"'} title="${a.correct?'':'Apasă pentru soluție'}">
       <span style="color:var(--dim);font-size:.74rem">Î${i+1}</span>
       <span style="flex:1;margin:0 7px;font-size:.77rem;color:var(--dim)">${state.questions[i].q.substring(0,52)}…</span>
-      <span class="${a.correct?'rb-ok':'rb-err'}">${a.correct?'✓':'✗'}</span>
+      <span class="${a.correct?'rb-ok':'rb-err'}">${a.correct?'✓':'↗'}</span>
     </div>`).join('');
   document.getElementById('res-footer').textContent=`${state.name} · Clasa ${state.clasa} · ${th.label} · OMENCS 3393/2017`;
   show('s-result');
@@ -562,6 +574,30 @@ function closeGlossar(){ document.getElementById('modal-glosar').classList.remov
 
 renderCatalog();
 show('s-setup');
+
+function showSol(i){
+  const a=state.answers[i];
+  document.getElementById('sol-nr').textContent='Î'+(i+1);
+  document.getElementById('sol-q').textContent=state.questions[i].q;
+  document.getElementById('sol-ans').textContent='✓ Răspuns corect: '+a.correctText;
+  document.getElementById('sol-ex').textContent=a.exOk;
+  document.getElementById('sol-overlay').classList.add('open');
+}
+function closeSol(){document.getElementById('sol-overlay').classList.remove('open');}
+
+function exportPDF(){
+  window.print();
+}
 </script>
+
+<div id="sol-overlay" onclick="closeSol()">
+  <div class="sol-box" onclick="event.stopPropagation()">
+    <button class="sol-close" onclick="closeSol()">✕</button>
+    <div class="sol-nr" id="sol-nr">Î1</div>
+    <div class="sol-q" id="sol-q"></div>
+    <div class="sol-ans" id="sol-ans"></div>
+    <div class="sol-ex" id="sol-ex"></div>
+  </div>
+</div>
 </body>
 </html>
